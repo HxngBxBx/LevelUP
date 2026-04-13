@@ -2,7 +2,7 @@
    🧙‍♂️ ไฟล์: js/app_wizard.js
    หน้าที่: ระบบ Smart Exam Wizard (แสกนหาข้อสอบ, โหลดไฟล์, จัดการตะกร้าข้อสอบ)
    ===================================================================== */
-console.log("🧙‍♂️ [START] โมดูลเริ่มทำงาน: app_wizard.js (ระบบค้นหาและเลือกข้อสอบ)");
+console.log("🧙‍♂️ [START] โมดูลเริ่มทำงาน: app_wizard.js (ระบบค้นหาและเลือกข้อสอบแบบเจาะจงบทเรียน)");
 
 // หมายเหตุ: ตัวแปร wizardOverlay ถูกประกาศไว้ใน app_core.js แล้ว จึงไม่ต้องประกาศซ้ำที่นี่
 
@@ -89,7 +89,7 @@ function openExamWizard_Grade(subjKey) {
     for (let gradeKey in subject.grades) {
         const grade = subject.grades[gradeKey];
         html += `
-            <button onclick="openExamWizard_Scan('${subjKey}', '${gradeKey}')" style="background:rgba(112,0,255,0.1); border:2px solid var(--accent); color:var(--text-color); padding:11px 10px; border-radius:12px; font-size:0.95rem; font-weight:bold; cursor:pointer; transition:0.2s; box-sizing:border-box;" onmouseover="this.style.background='var(--accent)'; this.style.color='white';" onmouseout="this.style.background='rgba(112,0,255,0.1)'; this.style.color='var(--text-color)';">
+            <button onclick="openExamWizard_Unit('${subjKey}', '${gradeKey}')" style="background:rgba(112,0,255,0.1); border:2px solid var(--accent); color:var(--text-color); padding:11px 10px; border-radius:12px; font-size:0.95rem; font-weight:bold; cursor:pointer; transition:0.2s; box-sizing:border-box;" onmouseover="this.style.background='var(--accent)'; this.style.color='white';" onmouseout="this.style.background='rgba(112,0,255,0.1)'; this.style.color='var(--text-color)';">
                 ${grade.title[lang]}
             </button>
         `;
@@ -98,17 +98,77 @@ function openExamWizard_Grade(subjKey) {
     content.innerHTML = html;
 }
 
-// Step 3: แสกนหาไฟล์ที่มีอยู่จริงในโฟลเดอร์ (อัปเกรดกัน Netlify หลอก)
-async function openExamWizard_Scan(subjKey, gradeKey) {
+// Step 3 (ใหม่): เลือกบทเรียน (Unit) 
+function openExamWizard_Unit(subjKey, gradeKey) {
     const content = document.getElementById('exam-wizard-content');
     const subject = NEW_EXAM_STRUCTURE[subjKey];
     const grade = subject.grades[gradeKey];
     
+    let html = `
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px dashed var(--secondary); padding-bottom:15px; margin-bottom:15px; position:sticky; top:0; background:var(--card-bg); z-index:10;">
+            <h2 style="margin:0; color:var(--text-color);">📄 ${lang === 'th' ? 'เลือกบทเรียน' : 'Select Unit'}</h2>
+            <div style="display:flex; gap:10px;">
+                <button onclick="openExamWizard_Grade('${subjKey}')" style="background:var(--primary); color:white; border:none; padding:6px 12px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:0.85rem;">⬅️ ${lang==='th'?'กลับ':'Back'}</button>
+                <button onclick="document.getElementById('exam-wizard-overlay').style.display='none'" style="background:var(--danger); color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-weight:bold; font-size:1rem; flex-shrink:0;">✕</button>
+            </div>
+        </div>
+        <h4 style="color:var(--secondary); margin-top:0; margin-bottom:15px;">${subject.title[lang]} > ${grade.title[lang]}</h4>
+    `;
+
+    for (let tKey in grade.terms) {
+        const term = grade.terms[tKey];
+        html += `<h3 style="color:var(--accent); background:rgba(0,0,0,0.05); padding:8px 12px; border-radius:8px; margin-top:15px; font-size:0.95rem;">📅 ${term.title[lang]}</h3>`;
+        html += `<div style="display:flex; flex-direction:column; gap:8px; margin-bottom: 20px;">`;
+        
+        term.units.forEach(unit => {
+            // เช็กก่อนว่าบทนี้มีกำหนดข้อสอบไว้บ้างไหม
+            let hasAnySets = false;
+            if (unit.maxSets) {
+                if (unit.maxSets.easy > 0 || unit.maxSets.medium > 0 || unit.maxSets.hard > 0 || unit.maxSets.extreme > 0) {
+                    hasAnySets = true;
+                }
+            }
+
+            if (hasAnySets) {
+                html += `
+                    <button onclick="openExamWizard_ScanUnit('${subjKey}', '${gradeKey}', '${tKey}', '${unit.id}')" 
+                        style="background:rgba(0,240,255,0.08); border:1px solid var(--secondary); color:var(--text-color); padding:12px 15px; border-radius:10px; font-size:0.9rem; text-align:left; cursor:pointer; transition:0.2s; line-height:1.4;" 
+                        onmouseover="this.style.background='rgba(0,240,255,0.2)'; this.style.borderColor='var(--primary)';" 
+                        onmouseout="this.style.background='rgba(0,240,255,0.08)'; this.style.borderColor='var(--secondary)';">
+                        ${unit.name[lang]}
+                    </button>
+                `;
+            } else {
+                html += `
+                    <button disabled
+                        style="background:rgba(0,0,0,0.03); border:1px dashed rgba(0,0,0,0.1); color:var(--text-muted); padding:12px 15px; border-radius:10px; font-size:0.9rem; text-align:left; cursor:not-allowed; line-height:1.4;">
+                        ${unit.name[lang]} <span style="font-size:0.75rem; color:var(--danger); float:right;">(ยังไม่มีข้อสอบ)</span>
+                    </button>
+                `;
+            }
+        });
+        html += `</div>`;
+    }
+
+    content.innerHTML = html;
+}
+
+// Step 4: แสกนหาไฟล์ที่มีอยู่จริง (สแกนเจาะจงเฉพาะบทเรียน พร้อมกัน Netlify หลอก)
+async function openExamWizard_ScanUnit(subjKey, gradeKey, tKey, unitId) {
+    const content = document.getElementById('exam-wizard-content');
+    const subject = NEW_EXAM_STRUCTURE[subjKey];
+    const grade = subject.grades[gradeKey];
+    const term = grade.terms[tKey];
+    const unit = term.units.find(u => u.id === unitId);
+    
+    // ดึงชื่อบทแบบลบ Tag HTML ออกเพื่อความสวยงาม
+    let cleanUnitName = unit.name[lang].replace(/<[^>]*>?/gm, ' ').trim();
+
     content.innerHTML = `
         <div style="text-align:center; padding: 30px 15px;">
             <div style="font-size: 3rem; display:inline-block; animation: kruheng-pulse 1s infinite alternate;">📡</div>
             <h2 style="margin-top: 15px; color: var(--primary);">${lang === 'th' ? 'กำลังสแกนหาข้อสอบ...' : 'Scanning for exams...'}</h2>
-            <p style="color: var(--text-color); font-size: 0.95rem;">${lang === 'th' ? 'ค้นหาข้อสอบทั้งหมดใน ' + grade.title[lang] : 'Searching in ' + grade.title[lang]}</p>
+            <p style="color: var(--text-color); font-size: 0.95rem;">${lang === 'th' ? 'ค้นหาข้อสอบในบท: ' + cleanUnitName : 'Searching in: ' + cleanUnitName}</p>
             <div style="margin-top:20px; width:100%; height:15px; background:rgba(0,0,0,0.1); border-radius:10px; overflow:hidden; border: 1px solid var(--secondary);">
                 <div id="scan-progress" style="width:0%; height:100%; background:linear-gradient(90deg, var(--primary), var(--success)); transition:width 0.2s;"></div>
             </div>
@@ -118,41 +178,38 @@ async function openExamWizard_Scan(subjKey, gradeKey) {
     let potentialFiles = [];
     const diffNames = { easy: 'ระดับง่าย', medium: 'ระดับกลาง', hard: 'ระดับยาก', extreme: 'ระดับโหดสุด' };
     
-    for (let tKey in grade.terms) {
-        grade.terms[tKey].units.forEach(unit => {
-            ['easy', 'medium', 'hard', 'extreme'].forEach(diff => {
-                const count = (unit.maxSets && unit.maxSets[diff]) ? unit.maxSets[diff] : 0;
-                for (let i = 1; i <= count; i++) {
-                    const fileName = `${subjKey}_${gradeKey}_${tKey}_${unit.id}_${diff}_${i}.json`;
-                    potentialFiles.push({ 
-                        fileName, 
-                        termTitle: grade.terms[tKey].title[lang], 
-                        unitName: unit.name[lang], 
-                        diffText: diffNames[diff], 
-                        setNum: i 
-                    });
-                }
+    // สร้างคิวสแกนเฉพาะของบทนี้บทเดียว
+    ['easy', 'medium', 'hard', 'extreme'].forEach(diff => {
+        const count = (unit.maxSets && unit.maxSets[diff]) ? unit.maxSets[diff] : 0;
+        for (let i = 1; i <= count; i++) {
+            const fileName = `${subjKey}_${gradeKey}_${tKey}_${unit.id}_${diff}_${i}.json`;
+            potentialFiles.push({ 
+                fileName, 
+                termTitle: term.title[lang], 
+                unitName: cleanUnitName, 
+                diffText: diffNames[diff], 
+                setNum: i 
             });
-        });
-    }
+        }
+    });
 
     let validExams = [];
     const total = potentialFiles.length;
     
     if(total === 0) {
-        renderScanResult(validExams, subjKey, gradeKey, subject, grade);
+        renderScanUnitResult(validExams, subjKey, gradeKey, tKey, unit);
         return;
     }
 
     let completed = 0;
     const progressBar = document.getElementById('scan-progress');
 
+    // ส่ง HEAD Request ไปเช็กไฟล์
     await Promise.all(potentialFiles.map(async (fileObj) => {
         try {
             const response = await fetch('json/' + fileObj.fileName, { method: 'HEAD' }); 
-            
-            // 🛑 [เพิ่มส่วนนี้] กัน Netlify คืนค่า 200 OK หน้าเว็บ HTML ปลอมๆ
             const contentType = response.headers.get('content-type');
+            // 🛡️ ตรวจจับ 200 OK และต้องไม่ใช่หน้าเว็บ HTML ปลอมๆ ของ Netlify
             if (response.ok && contentType && !contentType.includes('text/html')) {
                 validExams.push(fileObj);
             }
@@ -162,12 +219,18 @@ async function openExamWizard_Scan(subjKey, gradeKey) {
     }));
 
     validExams.sort((a,b) => a.fileName.localeCompare(b.fileName));
-    setTimeout(() => renderScanResult(validExams, subjKey, gradeKey, subject, grade), 300);
+    // หน่วงเวลานิดนึงให้หลอดโหลดเต็มก่อนเปลี่ยนหน้า
+    setTimeout(() => renderScanUnitResult(validExams, subjKey, gradeKey, tKey, unit), 300);
 }
 
-// Step 4: วาดผลลัพธ์ที่หาเจอ
-function renderScanResult(validExams, subjKey, gradeKey, subject, grade) {
+// Step 5: วาดผลลัพธ์ที่หาเจอ (เฉพาะบทเรียนนั้นๆ พร้อมเช็กประวัติ NEW/100%)
+function renderScanUnitResult(validExams, subjKey, gradeKey, tKey, unit) {
     const content = document.getElementById('exam-wizard-content');
+    
+    const subject = NEW_EXAM_STRUCTURE[subjKey];
+    const grade = subject.grades[gradeKey];
+    const term = grade.terms[tKey];
+    let cleanUnitName = unit.name[lang].replace(/<[^>]*>?/gm, ' ').trim();
     
     const role = sessionStorage.getItem('kruHengRole');
     const currentUser = sessionStorage.getItem('kruHengCurrentUser');
@@ -177,12 +240,13 @@ function renderScanResult(validExams, subjKey, gradeKey, subject, grade) {
     const history = (role === 'guest') ? JSON.parse(sessionStorage.getItem('kruHengTempGuestHistory') || '[]') : JSON.parse(localStorage.getItem('kruHengHistory') || '[]');
     const userHistory = history.filter(h => h.name === userNick);
 
+    // 🛑 ไม่เจอข้อสอบ
     if (validExams.length === 0) {
         content.innerHTML = `
             <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px dashed var(--secondary); padding-bottom:15px; margin-bottom:20px;">
-                <h2 style="margin:0; color:var(--text-color);">🎓 ${grade.title[lang]}</h2>
+                <h2 style="margin:0; color:var(--text-color); font-size:1rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">📄 ${cleanUnitName}</h2>
                 <div style="display:flex; gap:10px;">
-                    <button onclick="openExamWizard_Grade('${subjKey}')" style="background:var(--primary); color:white; border:none; padding:6px 12px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:0.85rem;">⬅️ ${lang==='th'?'กลับ':'Back'}</button>
+                    <button onclick="openExamWizard_Unit('${subjKey}', '${gradeKey}')" style="background:var(--primary); color:white; border:none; padding:6px 12px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:0.85rem;">⬅️ ${lang==='th'?'กลับ':'Back'}</button>
                     <button onclick="document.getElementById('exam-wizard-overlay').style.display='none'" style="background:var(--danger); color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-weight:bold; font-size:1rem; flex-shrink:0;">✕</button>
                 </div>
             </div>
@@ -190,91 +254,73 @@ function renderScanResult(validExams, subjKey, gradeKey, subject, grade) {
                 <div style="font-size: 3.5rem; margin-bottom: 10px;">🚧</div>
                 <h2 style="color: var(--danger); margin-bottom: 10px; font-weight: 900;">${lang === 'th' ? 'เนื้อหากำลังอัปเดต' : 'Updating...'}</h2>
                 <p style="color: var(--text-color); line-height: 1.6; font-size: 0.95rem;">
-                    ${lang === 'th' ? 'ยังไม่มีข้อสอบในระดับชั้นนี้ครับ<br>ครูเฮงกำลังเร่งจัดทำอยู่นะ อดใจรออีกนิดนึงน้า! ✌️' : 'No exams available for this grade yet.<br>Please check back soon! ✌️'}
+                    ${lang === 'th' ? 'ครูเฮงกำลังเร่งจัดทำข้อสอบชุดนี้อยู่นะครับ<br>อดใจรออีกนิดนึงน้า! ✌️' : 'Exams for this unit are being prepared.<br>Please check back soon! ✌️'}
                 </p>
             </div>
         `;
         return;
     }
 
-    let grouped = {};
-    validExams.forEach(ex => {
-        if(!grouped[ex.termTitle]) grouped[ex.termTitle] = {};
-        if(!grouped[ex.termTitle][ex.unitName]) grouped[ex.termTitle][ex.unitName] = [];
-        grouped[ex.termTitle][ex.unitName].push(ex);
-    });
-
+    // ✅ เจอข้อสอบ
     let html = `
         <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px dashed var(--secondary); padding-bottom:15px; margin-bottom:20px; position:sticky; top:0; background:var(--card-bg); z-index:10;">
-            <h2 style="margin:0; color:var(--text-color);">✅ ${lang==='th'?'ข้อสอบที่พร้อมทำ':'Available Exams'}</h2>
+            <h2 style="margin:0; color:var(--text-color); font-size:1.1rem; max-width:65%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${cleanUnitName}">📄 ${cleanUnitName}</h2>
             <div style="display:flex; gap:10px;">
-                <button onclick="openExamWizard_Grade('${subjKey}')" style="background:var(--primary); color:white; border:none; padding:6px 12px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:0.85rem;">⬅️ ${lang==='th'?'กลับ':'Back'}</button>
+                <button onclick="openExamWizard_Unit('${subjKey}', '${gradeKey}')" style="background:var(--primary); color:white; border:none; padding:6px 12px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:0.85rem;">⬅️ ${lang==='th'?'กลับ':'Back'}</button>
                 <button onclick="document.getElementById('exam-wizard-overlay').style.display='none'" style="background:var(--danger); color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-weight:bold; font-size:1rem; flex-shrink:0;">✕</button>
             </div>
         </div>
-        <div style="margin-bottom: 12px; font-size: 0.85rem; color: var(--success); font-weight: bold; text-align:center; background: rgba(0,255,136,0.1); padding: 9px 12px; border-radius: 10px; border: 1px dashed var(--success);">
-            🎉 ${lang==='th'?`พบข้อสอบทั้งหมด ${validExams.length} ชุด กดเพื่อเล่นได้เลย!`: `Found ${validExams.length} exam sets ready to play!`}
+        <div style="margin-bottom: 15px; font-size: 0.85rem; color: var(--success); font-weight: bold; text-align:center; background: rgba(0,255,136,0.1); padding: 9px 12px; border-radius: 10px; border: 1px dashed var(--success);">
+            🎉 ${lang==='th'?`พบข้อสอบพร้อมทำ ${validExams.length} ชุด กดเลือกใส่ตะกร้าได้เลย!`: `Found ${validExams.length} ready exam sets!`}
         </div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
     `;
 
-    for(let term in grouped) {
-        html += `<h3 style="color:var(--secondary); background:rgba(0,0,0,0.05); padding:10px; border-radius:8px; margin-top:20px;">📅 ${term}</h3>`;
-        for(let unit in grouped[term]) {
-            html += `<div style="margin-bottom:15px; border:1px solid rgba(0,0,0,0.1); padding:15px; border-radius:12px;">
-                <h4 style="margin-top:0; color:var(--text-color); margin-bottom:12px; line-height: 1.4;">📄 ${unit}</h4>
-                <div style="display:flex; flex-wrap:wrap; gap:10px;">
-            `;
-            
-            grouped[term][unit].forEach(ex => {
-                let color = 'var(--primary)';
-                if(ex.diffText.includes('ง่าย')) color = 'var(--success)';
-                if(ex.diffText.includes('กลาง')) color = '#ff9800';
-                if(ex.diffText.includes('ยาก')) color = 'var(--danger)';
-                if(ex.diffText.includes('โหด')) color = '#ff007f';
+    validExams.forEach(ex => {
+        let color = 'var(--primary)';
+        if(ex.diffText.includes('ง่าย')) color = 'var(--success)';
+        if(ex.diffText.includes('กลาง')) color = '#ff9800';
+        if(ex.diffText.includes('ยาก')) color = 'var(--danger)';
+        if(ex.diffText.includes('โหด')) color = '#ff007f';
 
-                // ชื่อเต็มสำหรับเก็บประวัติและแสดงตอนเริ่มทำ
-                let cleanUnitName = ex.unitName.replace(/<[^>]*>?/gm, ' ').trim();
-                const currentExamName = `${grade.title[lang]} ${ex.termTitle} ${cleanUnitName} (${ex.diffText} ชุดที่ ${ex.setNum})`;
-                
-                // ค้นหาในประวัติ
-                const historyCheckNameClean = `${cleanUnitName} (${ex.diffText} ชุดที่ ${ex.setNum})`;
-                const historyCheckNameRaw = `${ex.unitName} (${ex.diffText} ชุดที่ ${ex.setNum})`;
+        // จัดชื่อเต็มยศสำหรับบันทึก
+        const currentExamName = `${grade.title[lang]} ${ex.termTitle} ${ex.unitName} (${ex.diffText} ชุดที่ ${ex.setNum})`;
+        
+        // เช็กประวัติ
+        const shortExamNameClean = `${ex.unitName} (${ex.diffText} ชุดที่ ${ex.setNum})`;
+        const pastAttempts = userHistory.filter(h => h.title && (h.title === currentExamName || h.title === shortExamNameClean || h.title.includes(shortExamNameClean)));
+        
+        let isNew = pastAttempts.length === 0; 
+        let isPerfect = pastAttempts.some(h => h.correct === h.total && h.total > 0); 
 
-                const pastAttempts = userHistory.filter(h => h.title && (h.title === currentExamName || h.title === historyCheckNameClean || h.title.includes(historyCheckNameClean) || h.title.includes(historyCheckNameRaw)));
-                
-                let isNew = pastAttempts.length === 0; 
-                let isPerfect = pastAttempts.some(h => h.correct === h.total && h.total > 0); 
-
-                let opacity = isNew ? '1' : '0.85';   
-                let saturate = isNew ? '1' : '0.7';   
-                
-                let badgeHtml = '';
-                if (isPerfect) {
-                    badgeHtml = `<span style="position:absolute; top:-8px; right:-8px; background:linear-gradient(45deg, #ffd700, #ff8c00); color:#000; font-size:0.65rem; padding:3px 8px; border-radius:10px; font-weight:900; box-shadow:0 2px 5px rgba(0,0,0,0.3); border: 1px solid #fff; z-index:2;">🏆 100%</span>`;
-                } else if (isNew) {
-                    badgeHtml = `<span style="position:absolute; top:-8px; right:-8px; background:var(--danger); color:white; font-size:0.65rem; padding:3px 8px; border-radius:10px; font-weight:900; box-shadow:0 2px 5px rgba(0,0,0,0.3); animation: kruheng-pulse 1s infinite alternate; border: 1px solid #fff; z-index:2;">🔥 NEW</span>`;
-                }
-
-                html += `
-                    <div style="position:relative; display:inline-block; margin-top:8px; margin-right:5px;">
-                        <button onclick="quickPlayExam('${ex.fileName}', '${currentExamName.replace(/'/g, "\\'")}', this)" 
-                            style="background:${color}; color:white; border:none; padding:10px 15px; border-radius:8px; font-weight:bold; cursor:pointer; font-size:0.9rem; transition:0.2s; box-shadow:0 3px 6px rgba(0,0,0,0.15); opacity:${opacity}; filter:saturate(${saturate}); width:100%; position:relative; z-index:1;" 
-                            onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='1'; this.style.filter='saturate(1)';" 
-                            onmouseout="this.style.transform='scale(1)'; this.style.opacity='${opacity}'; this.style.filter='saturate(${saturate})';">
-                            ${ex.diffText} ชุดที่ ${ex.setNum}
-                        </button>
-                        ${badgeHtml}
-                    </div>
-                `;
-            });
-            html += `</div></div>`;
+        let opacity = isNew ? '1' : '0.85';   
+        let saturate = isNew ? '1' : '0.7';   
+        
+        let badgeHtml = '';
+        if (isPerfect) {
+            badgeHtml = `<span style="position:absolute; top:50%; right:15px; transform:translateY(-50%); background:linear-gradient(45deg, #ffd700, #ff8c00); color:#000; font-size:0.75rem; padding:4px 10px; border-radius:12px; font-weight:900; box-shadow:0 2px 5px rgba(0,0,0,0.3); border: 2px solid #fff; z-index:2;">🏆 100%</span>`;
+        } else if (isNew) {
+            badgeHtml = `<span style="position:absolute; top:50%; right:15px; transform:translateY(-50%); background:var(--danger); color:white; font-size:0.75rem; padding:4px 10px; border-radius:12px; font-weight:900; box-shadow:0 2px 5px rgba(0,0,0,0.3); animation: kruheng-pulse 1s infinite alternate; border: 2px solid #fff; z-index:2;">🔥 NEW</span>`;
         }
-    }
 
+        html += `
+            <div style="position:relative; width:100%;">
+                <button onclick="quickPlayExam('${ex.fileName}', '${currentExamName.replace(/'/g, "\\'")}', this)" 
+                    style="background:${color}; color:white; border:none; padding:15px; border-radius:12px; font-weight:bold; cursor:pointer; font-size:1rem; transition:0.2s; box-shadow:0 4px 8px rgba(0,0,0,0.15); opacity:${opacity}; filter:saturate(${saturate}); width:100%; text-align:left; padding-right: 80px;" 
+                    onmouseover="this.style.transform='scale(1.02)'; this.style.opacity='1'; this.style.filter='saturate(1)';" 
+                    onmouseout="this.style.transform='scale(1)'; this.style.opacity='${opacity}'; this.style.filter='saturate(${saturate})';">
+                    ⭐ ${ex.diffText} ชุดที่ ${ex.setNum}
+                </button>
+                ${badgeHtml}
+            </div>
+        `;
+    });
+    
+    html += `</div>`;
     content.innerHTML = html;
 }
 
-// Step 5: กดปุ๊บโหลดไฟล์จริง แล้วเข้าสอบทันที
+// Step 6: กดปุ๊บโหลดไฟล์จริง ใส่ตะกร้า แล้วเลื่อนจอ (ระบบโควต้าบัญชี)
 async function quickPlayExam(fileName, examTitle, btnElement) {
     const originalText = btnElement.innerText;
     btnElement.innerText = "⏳...";
@@ -293,6 +339,7 @@ async function quickPlayExam(fileName, examTitle, btnElement) {
         const isDuplicate = selectedFiles.some(f => f.filename === fileName);
         if (!isDuplicate) {
             
+            // 👑 ตรวจสอบโควต้าการโหลดข้อสอบตามบทบาท
             const role = sessionStorage.getItem('kruHengRole');
             const currentUser = sessionStorage.getItem('kruHengCurrentUser');
             
@@ -325,6 +372,7 @@ async function quickPlayExam(fileName, examTitle, btnElement) {
         
         updateFileListUI();
         
+        // 🛝 วาร์ปหน้าจอไปที่ผลรวม
         setTimeout(() => {
             const totalRow = document.querySelector('.total-row');
             if (totalRow) {
@@ -346,7 +394,7 @@ async function quickPlayExam(fileName, examTitle, btnElement) {
     }
 }
 
-// ปุ่มเปิด Wizard แบบหรูๆ
+// ปุ่มเปิด Wizard แบบหรูๆ (ปุ่มเมนูหลัก)
 function renderServerExamList() {
     const container = document.getElementById('server-exam-list');
     if (!container) return;
@@ -444,7 +492,6 @@ async function loadServerExams() {
         try {
             const response = await fetch('json/' + fileName);
             if(!response.ok) {
-                // แก้ไขเครื่องหมาย \\ ออกแล้ว
                 alert(lang === 'th' ? 
                     `🚧 ชุดข้อสอบนี้กำลังอัปเดตข้อมูล... \nอดใจรอ "ครูเฮง" แป๊บเดียวครับ!` : 
                     `🚧 This exam set is updating... \nPlease wait for Kru Heng!`);
@@ -468,7 +515,6 @@ async function loadServerExams() {
             }
         } catch(error) {
             console.error("Error loading exam:", error);
-            // แก้ไขเครื่องหมาย \\ ออกแล้ว
             alert(lang === 'th' ? 
                 `🚧 โหลดข้อสอบไม่สำเร็จ หรือข้อสอบกำลังอัปเดตอยู่ครับ` : 
                 `🚧 Failed to load exam or it is currently updating.`);
