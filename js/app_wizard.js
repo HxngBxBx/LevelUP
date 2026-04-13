@@ -1,666 +1,616 @@
 /* =====================================================================
-   🎰 ไฟล์: js/gacha.js
-   หน้าที่: ระบบกาชาปองทั้งหมด (Logic เท่านั้น ไม่มี UI)
-   เชื่อมกับ: app.js (verify, stat, coins), auth.js (inventory, studentDB)
-   วิธีใช้: โหลดก่อน gacha_ui.js และ app.js ใน index.html
+   🧙‍♂️ ไฟล์: js/app_wizard.js
+   หน้าที่: ระบบ Smart Exam Wizard (แสกนหาข้อสอบ, โหลดไฟล์, จัดการตะกร้าข้อสอบ)
    ===================================================================== */
+console.log("🧙‍♂️ [START] โมดูลเริ่มทำงาน: app_wizard.js (ระบบค้นหาและเลือกข้อสอบแบบเจาะจงบทเรียน)");
 
-console.log("🎰 [START] โมดูลเริ่มทำงาน: gacha.js (ระบบสุ่มกาชาปอง)");
+// หมายเหตุ: ตัวแปร wizardOverlay ถูกประกาศไว้ใน app_core.js แล้ว จึงไม่ต้องประกาศซ้ำที่นี่
 
-// ============================================================
-// 📦 1. ฐานข้อมูลไอเทม 13 ชนิด
-//    rarity: "common" | "rare" | "epic" | "mythic" | "godlike"
-//    effect: รหัสที่ gacha_ui.js และ verify() ใน app.js จะ switch-case ตาม
-// ============================================================
-const GACHA_ITEMS = [
-    {
-        id: "madness_coin",
-        nameTh: "ความบ้าคลั่งของยูเมะโกะ",
-        nameEn: "Madness Coin",
-        rarity: "rare",
-        icon: "🪙",
-        description: "ถ้าตอบถูกหรือผิดก็ ×3 ของเหรียญที่ได้/เสียในข้อนั้น (ไม่ว่าจะ + หรือ −)",
-        effect: "MADNESS_COIN",
-        // เงิน: ×3 (ทั้งบวกและลบ) | สถิติ: นับปกติ | EXP: ถูกปกติผิด 0
-        coinMult: 3,
-        countStat: true,
-        expOnWrong: 0,
-    },
-    {
-        id: "maple_shield",
-        nameTh: "โล่ของเมเปิล",
-        nameEn: "Maple Shield",
-        rarity: "rare",
-        icon: "🛡️",
-        description: "ตอบผิดจะไม่โดนหักคะแนนและจะไม่นับลงในสถิติ (ไม่นับผิด)",
-        effect: "MAPLE_SHIELD",
-        // เงิน: ถูกปกติ ผิด 0 | สถิติ: ถูกนับ ผิดไม่นับ | EXP: ถูกปกติ ผิด 0
-        coinMult: 1,
-        countStat: false, // ถ้าผิด → ไม่นับ
-        expOnWrong: 0,
-    },
-    {
-        id: "jinchuriki",
-        nameTh: "พลังสถิตร่างแมกโทมัส",
-        nameEn: "MacThomas's Jinchuriki",
-        rarity: "godlike",
-        icon: "🦊",
-        description: "จะตัดช้อยเหลือ 1 ข้อและตอบถูกจะได้คะแนน ×10 ไปเลย (เหลือแค่ 1 ตัวเลือก — ตอบได้เลย)",
-        effect: "JINCHURIKI",
-        // เงิน: ×10 | สถิติ: นับปกติ | EXP: ×10
-        coinMult: 10,
-        countStat: true,
-        expOnWrong: 0,
-    },
-    {
-        id: "king_engine",
-        nameTh: "คิงเอนจิน",
-        nameEn: "King Engine",
-        rarity: "mythic",
-        icon: "⚙️",
-        description: "ตอบถูกครั้งแรก ×3 | ครั้งที่สอง ×2 | ครั้งที่สาม ×1 | ครั้งสุดท้ายไม่ได้คะแนน (นับถูกทุกครั้ง)",
-        effect: "KING_ENGINE",
-        // ตัวคูณเงิน/คะแนนขึ้นอยู่กับ kingEngineCount (ดูด้านล่าง)
-        coinMult: 1, // จะถูก override โดย kingEngineCount
-        countStat: true,
-        expOnWrong: 0,
-    },
-    {
-        id: "the_planet",
-        nameTh: "หยุดเวลาโจโจ้",
-        nameEn: "The Planet",
-        rarity: "epic",
-        icon: "🌍",
-        description: "หยุดเวลาได้ 2 นาที (เพิ่มเวลาให้ข้อนั้น +120 วินาที)",
-        effect: "THE_PLANET",
-        coinMult: 1,
-        countStat: true,
-        expOnWrong: 0,
-        bonusTimeSec: 120,
-    },
-    {
-        id: "phoenix_heart",
-        nameTh: "หัวใจฟินิกส์",
-        nameEn: "Phoenix Heart",
-        rarity: "epic",
-        icon: "🔥",
-        description: "ตอบผิดตอบใหม่ได้อีก 1 ครั้ง (โอกาส retry เพียงครั้งเดียว)",
-        effect: "PHOENIX_HEART",
-        coinMult: 1,
-        countStat: true,
-        expOnWrong: 0,
-    },
-    {
-        id: "divine_grace",
-        nameTh: "ความเมตตาของครูเฮง",
-        nameEn: "The Divine Grace of Master Heng",
-        rarity: "epic",
-        icon: "✨",
-        description: "ตัดให้เหลือ 3 ช้อย พร้อมข้อความแนะนำให้เลือกข้อนั้น (โอกาสถูก ~40%)",
-        effect: "DIVINE_GRACE",
-        coinMult: 1,
-        countStat: true,
-        expOnWrong: 0,
-    },
-    {
-        id: "witch_melody",
-        nameTh: "ถุงมือแม่มดน้อย",
-        nameEn: "The Gauntlets of the Witch's Melody",
-        rarity: "mythic",
-        icon: "🧤",
-        description: "ด้วยพลังสามารถดีดนิ้วแล้วเหลือข้อที่ถูกเพียงข้อเดียว (เฉลยอัตโนมัติ — นับถูกเสมอ)",
-        effect: "WITCH_MELODY",
-        coinMult: 1,
-        countStat: true,
-        expOnWrong: 0,
-    },
-    {
-        id: "absolute_zone",
-        nameTh: "โซนแห่งการเรียนรู้สัมบูรณ์",
-        nameEn: "The Absolute Zone",
-        rarity: "common",
-        icon: "📡",
-        description: "×EXP 1.2 เท่า ทั้งชุดข้อสอบ (บัพแบบ passive ทั้งชุด)",
-        effect: "ABSOLUTE_ZONE",
-        coinMult: 1,
-        countStat: true,
-        expOnWrong: 0,
-        expMultiplier: 1.2, // passive ทั้งชุด — ใช้ตอน finish()
-    },
-    {
-        id: "ryoiki_tenkai",
-        nameTh: "กางอาณาเขต",
-        nameEn: "Ryoiki Tenkai",
-        rarity: "common",
-        icon: "🌐",
-        description: "×เงิน 1.2 เท่า ทั้งชุด (บัพแบบ passive ทั้งชุด)",
-        effect: "RYOIKI_TENKAI",
-        coinMult: 1,
-        countStat: true,
-        expOnWrong: 0,
-        coinMultiplier: 1.2, // passive ทั้งชุด — ใช้ตอน finish()
-    },
-    {
-        id: "ciel",
-        nameTh: "ชิเอล",
-        nameEn: "Ciel",
-        rarity: "mythic",
-        icon: "🎭",
-        description: "เปลี่ยนโจทย์ข้อนั้นให้กลายเป็น 1+0=? (มีแค่ 2 ตัวเลือก: 1 กับ 0 — ตอบถูกรับคะแนนปกติ)",
-        effect: "CIEL",
-        coinMult: 1,
-        countStat: true,
-        expOnWrong: 0,
-    },
-    {
-        id: "sixth_sense",
-        nameTh: "สัมผัสที่ 6",
-        nameEn: "The 6th Sense",
-        rarity: "rare",
-        icon: "👁️",
-        description: "ตัดให้เหลือ 3 ช้อย (ลดตัวเลือกจาก 4 → 3)",
-        effect: "SIXTH_SENSE",
-        coinMult: 1,
-        countStat: true,
-        expOnWrong: 0,
-    },
-    {
-        id: "trust_me_bro",
-        nameTh: "เชื่อผมเถอะ พี่ชาย",
-        nameEn: "Trust Me Bro",
-        rarity: "mythic",
-        icon: "🤙",
-        description: "ตัดช้อยออก 2 ข้อ เหลือ 2 ตัวเลือก พร้อมคำแนะนำจาก AI เบียวๆ โอกาสถูก ~51%",
-        effect: "TRUST_ME_BRO",
-        coinMult: 1,
-        countStat: true,
-        expOnWrong: 0,
-    },
-];
-
-// ============================================================
-// 🎯 2. Config อัตราดรอปตาม Rarity
-// ============================================================
-const GACHA_RARITY_CONFIG = {
-    godlike: { weight: 0.5,  label: "✦ Godlike", color: "#ff0055", glowColor: "rgba(255,0,85,0.6)" },
-    mythic:  { weight: 2.5,  label: "★ Mythic",  color: "#ae57ff", glowColor: "rgba(174,87,255,0.5)" },
-    epic:    { weight: 7,    label: "◆ Epic",    color: "#ff9800", glowColor: "rgba(255,152,0,0.5)"  },
-    rare:    { weight: 40,   label: "▲ Rare",    color: "#00b4d8", glowColor: "rgba(0,180,216,0.4)"  },
-    common:  { weight: 50,   label: "● Common",  color: "#9e9e9e", glowColor: "rgba(158,158,158,0.3)"},
-};
-// หมายเหตุ: weight รวม = 100 → common 50%, rare 40%, epic 7%, mythic 2.5%, godlike 0.5%
-
-// ============================================================
-// 🔢 3. ระบบ Pity (รับประกันการดรอป)
-//    - ทุก 30 pull ที่ยังไม่ได้ Mythic+ → การันตี Mythic(90%) หรือ Godlike(10%)
-//    - รีเซ็ต counter เมื่อได้ Mythic หรือ Godlike
-// ============================================================
-const PITY_THRESHOLDS = {
-    mythic: 30, // ทุก 30 pull → การันตี mythic+
-};
-
-// ============================================================
-// 🎰 4. ฟังก์ชันหลัก: สุ่มไอเทม 1 ชิ้น
-// ============================================================
-function gachaPullOne(userId) {
-    const pity = loadPityCounter(userId);
-
-    let pickedRarity;
-
-    // ถ้าถึง pity threshold → การันตี mythic(80%) หรือ godlike(20%)
-    if (pity.count >= PITY_THRESHOLDS.mythic) {
-        pickedRarity = Math.random() < 0.9 ? 'mythic' : 'godlike';
-    } else {
-        pickedRarity = rollRarity();
-    }
-
-    // กรองไอเทมตาม rarity
-    let pool = GACHA_ITEMS.filter(item => item.rarity === pickedRarity);
-    if (pool.length === 0) pool = GACHA_ITEMS; // fallback
-
-    // สุ่มไอเทมใน pool
-    const picked = pool[Math.floor(Math.random() * pool.length)];
-
-    // รีเซ็ต pity เฉพาะเมื่อได้ mythic หรือ godlike
-    const resetPity = ['mythic', 'godlike'].includes(pickedRarity);
-    savePityCounter(userId, resetPity ? 0 : pity.count + 1);
-
-    return picked; // ไม่หัก booster ที่นี่ — gachaAction_Single/Ten จัดการ
-}
-
-// ============================================================
-// 🎰 5. ฟังก์ชัน: สุ่มไอเทม 10 ครั้งพร้อมกัน (10-Pull)
-//    booster ใช้ได้ตลอด 10 pull แต่หักเพียงครั้งเดียวหลังจบ
-// ============================================================
-function gachaPullTen(userId) {
-    const results = [];
-    for (let i = 0; i < 10; i++) {
-        results.push(gachaPullOne(userId));
-    }
-    // หัก booster หลังจบ 10 pull (gachaPullOne ไม่หักในโหมด ten)
-    gachaDeductBoosters(userId);
-    return results;
-}
-
-// ============================================================
-// 🎲 6. สุ่ม rarity (คำนึง pity)
-// ============================================================
-function rollRarity() {
-    const order = ["godlike", "mythic", "epic", "rare", "common"];
-    const w = gachaGetBoostedWeights();
-    const totalW = order.reduce((sum, r) => sum + (w[r] || 0), 0);
-    let rand = Math.random() * totalW;
-    for (const r of order) {
-        rand -= (w[r] || 0);
-        if (rand <= 0) return r;
-    }
-    return 'common';
-}
-
-// ============================================================
-// 💾 7. Pity Counter (เก็บใน localStorage)
-// ============================================================
-function loadPityCounter(userId) {
-    try {
-        const raw = localStorage.getItem(`kruHengPity_${userId}`);
-        return raw ? JSON.parse(raw) : { count: 0 };
-    } catch { return { count: 0 }; }
-}
-
-function savePityCounter(userId, count) {
-    localStorage.setItem(`kruHengPity_${userId}`, JSON.stringify({ count }));
-}
-
-function resetPityCounter(userId) {
-    localStorage.removeItem(`kruHengPity_${userId}`);
-}
-
-// ============================================================
-// 🎒 8. Inventory System (เก็บไอเทมที่นักเรียนดึงได้)
-// ============================================================
-
-/**
- * เพิ่มไอเทมเข้า inventory ของผู้ใช้
- * @param {string} userId
- * @param {object} item - object จาก GACHA_ITEMS
- * @param {number} qty - จำนวนที่จะเพิ่ม (default: 1)
- */
-function gachaAddToInventory(userId, item, qty = 1) {
-    const role = sessionStorage.getItem('kruHengRole');
-    if (!userId) return;
-
-    if (role === 'guest') {
-        let gInfo = JSON.parse(sessionStorage.getItem('kruHengGuestInfo') || '{}');
-        if (!gInfo.inventory) gInfo.inventory = {};
-        gInfo.inventory[item.id] = (gInfo.inventory[item.id] || 0) + qty;
-        sessionStorage.setItem('kruHengGuestInfo', JSON.stringify(gInfo));
-    } else {
-        const dbStudent = JSON.parse(localStorage.getItem('kruHengStudentDB') || '{}') || defaultStudentDB;
-        if (!dbStudent[userId]) return;
-        if (!dbStudent[userId].inventory) dbStudent[userId].inventory = {};
-        dbStudent[userId].inventory[item.id] = (dbStudent[userId].inventory[item.id] || 0) + qty;
-        localStorage.setItem('kruHengStudentDB', JSON.stringify(dbStudent));
-    }
-}
-
-/**
- * ดึง inventory ของผู้ใช้ออกมา
- * @param {string} userId
- * @returns {object} { itemId: quantity, ... }
- */
-function gachaGetInventory(userId) {
-    const role = sessionStorage.getItem('kruHengRole');
-    let dbInv = {};
-    
-    if (role === 'guest') {
-        const gInfo = JSON.parse(sessionStorage.getItem('kruHengGuestInfo') || '{}');
-        dbInv = gInfo.inventory || {};
-    } else {
-        const dbStudent = JSON.parse(localStorage.getItem('kruHengStudentDB') || '{}') || (typeof defaultStudentDB !== 'undefined' ? defaultStudentDB : {});
-        dbInv = (dbStudent[userId] && dbStudent[userId].inventory) ? dbStudent[userId].inventory : {};
-    }
-
-    // 🛠️ FIX: ระบบตัดสต๊อคเสมือนแบบทันทีที่ศูนย์กลาง (Centralized Virtual Stock)
-    // ทำให้เวลา UI ดึงไปแสดงผล ไอเทมที่ถูกเอาไปใส่ช่อง Booster หรือ Loadout จะหายวับไปทันที!
-    const virtualInv = { ...dbInv };
-    
-    if (window.currentLoadout && window.currentLoadout.length > 0) {
-        window.currentLoadout.forEach(id => {
-            if (virtualInv[id] && virtualInv[id] > 0) virtualInv[id]--;
+function createWizardOverlay() {
+    if (!wizardOverlay) {
+        wizardOverlay = document.createElement('div');
+        wizardOverlay.id = 'exam-wizard-overlay';
+        wizardOverlay.style.cssText = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:10000; display:none; justify-content:center; align-items:center; backdrop-filter:blur(8px);";
+        
+        const content = document.createElement('div');
+        content.id = 'exam-wizard-content';
+        content.style.cssText = "background:var(--card-bg, #fff); padding:18px; border-radius:16px; width:92%; max-width:600px; max-height:88vh; overflow-y:auto; box-shadow:0 15px 40px rgba(0,0,0,0.5); position:relative; box-sizing:border-box;";
+        
+        wizardOverlay.appendChild(content);
+        document.body.appendChild(wizardOverlay);
+        
+        wizardOverlay.addEventListener('click', (e) => {
+            if (e.target === wizardOverlay) wizardOverlay.style.display = 'none';
         });
-    }
-    
-    if (window.gachaBoosters && window.gachaBoosters.length > 0) {
-        window.gachaBoosters.forEach(b => {
-            if (virtualInv[b.itemId] && virtualInv[b.itemId] > 0) virtualInv[b.itemId]--;
-        });
-    }
 
-    return virtualInv;
-}
-
-/**
- * ใช้ไอเทม 1 ชิ้น (ลดจำนวนใน inventory)
- * @returns {boolean} สำเร็จหรือไม่
- */
-function gachaUseItem(userId, itemId) {
-    const role = sessionStorage.getItem('kruHengRole');
-    if (role === 'guest') {
-        let gInfo = JSON.parse(sessionStorage.getItem('kruHengGuestInfo') || '{}');
-        if (!gInfo.inventory || !gInfo.inventory[itemId] || gInfo.inventory[itemId] <= 0) return false;
-        gInfo.inventory[itemId]--;
-        if (gInfo.inventory[itemId] <= 0) delete gInfo.inventory[itemId];
-        sessionStorage.setItem('kruHengGuestInfo', JSON.stringify(gInfo));
-        return true;
-    } else {
-        const dbStudent = JSON.parse(localStorage.getItem('kruHengStudentDB') || '{}') || defaultStudentDB;
-        if (!dbStudent[userId] || !dbStudent[userId].inventory) return false;
-        if (!dbStudent[userId].inventory[itemId] || dbStudent[userId].inventory[itemId] <= 0) return false;
-        dbStudent[userId].inventory[itemId]--;
-        if (dbStudent[userId].inventory[itemId] <= 0) delete dbStudent[userId].inventory[itemId];
-        localStorage.setItem('kruHengStudentDB', JSON.stringify(dbStudent));
-        return true;
-    }
-}
-
-// ============================================================
-// 💰 9. ระบบจ่ายเหรียญสำหรับดึงกาชา
-// ============================================================
-const GACHA_COST = {
-    single: 1000,  // เหรียญสำหรับดึง 1 ครั้ง
-    ten:    10000, // เหรียญสำหรับดึง 10 ครั้ง (ส่วนลด ~17%)
-};
-
-/**
- * ดึงยอดเหรียญปัจจุบัน
- */
-function gachaGetCoins(userId) {
-    const role = sessionStorage.getItem('kruHengRole');
-    if (role === 'guest') {
-        return JSON.parse(sessionStorage.getItem('kruHengGuestInfo') || '{}').coins || 0;
-    } else {
-        const dbStudent = JSON.parse(localStorage.getItem('kruHengStudentDB') || '{}') || defaultStudentDB;
-        return (dbStudent[userId] && dbStudent[userId].coins) ? dbStudent[userId].coins : 0;
-    }
-}
-
-/**
- * หักเหรียญหลังดึงกาชา
- * @returns {boolean} สำเร็จหรือไม่
- */
-function gachaDeductCoins(userId, amount) {
-    const role = sessionStorage.getItem('kruHengRole');
-    const currentCoins = gachaGetCoins(userId);
-    if (currentCoins < amount) return false;
-
-    if (role === 'guest') {
-        let gInfo = JSON.parse(sessionStorage.getItem('kruHengGuestInfo') || '{}');
-        gInfo.coins = (gInfo.coins || 0) - amount;
-        sessionStorage.setItem('kruHengGuestInfo', JSON.stringify(gInfo));
-    } else {
-        const dbStudent = JSON.parse(localStorage.getItem('kruHengStudentDB') || '{}') || defaultStudentDB;
-        if (!dbStudent[userId]) return false;
-        dbStudent[userId].coins = (dbStudent[userId].coins || 0) - amount;
-        localStorage.setItem('kruHengStudentDB', JSON.stringify(dbStudent));
-    }
-    return true;
-}
-
-// ============================================================
-// 🎮 10. API หลักสำหรับเรียกใช้จาก gacha_ui.js
-// ============================================================
-
-/**
- * ดึงกาชา 1 ครั้ง — ตรวจสอบเหรียญ, หัก, เพิ่ม inventory, คืน item
- * @returns {{ success: boolean, item?: object, message?: string, remainingCoins: number }}
- */
-function gachaAction_Single(userId) {
-    if (!gachaDeductCoins(userId, GACHA_COST.single)) {
-        return { success: false, message: `เหรียญไม่พอ! ต้องการ ${GACHA_COST.single} เหรียญ`, remainingCoins: gachaGetCoins(userId) };
-    }
-    const item = gachaPullOne(userId);
-    gachaAddToInventory(userId, item, 1);
-    gachaDeductBoosters(userId);
-    return { success: true, item, remainingCoins: gachaGetCoins(userId) };
-}
-
-/**
- * ดึงกาชา 10 ครั้ง
- * @returns {{ success: boolean, items?: object[], message?: string, remainingCoins: number }}
- */
-function gachaAction_Ten(userId) {
-    if (!gachaDeductCoins(userId, GACHA_COST.ten)) {
-        return { success: false, message: `เหรียญไม่พอ! ต้องการ ${GACHA_COST.ten} เหรียญ`, remainingCoins: gachaGetCoins(userId) };
-    }
-    const items = gachaPullTen(userId); // gachaPullTen จัดการหัก booster เองแล้ว
-    items.forEach(item => gachaAddToInventory(userId, item, 1));
-    return { success: true, items, remainingCoins: gachaGetCoins(userId) };
-}
-
-// ============================================================
-// 🔍 11. Helper: ดึงข้อมูลไอเทมจาก id
-// ============================================================
-function getGachaItemById(itemId) {
-    return GACHA_ITEMS.find(i => i.id === itemId) || null;
-}
-
-/**
- * สรุปคลังไอเทมของผู้ใช้ (พร้อมข้อมูลครบ)
- * @returns {Array} [{ item, quantity }, ...]
- */
-function gachaGetInventorySummary(userId) {
-    const inv = gachaGetInventory(userId); // ได้รับ Virtual Stock ที่ถูกหักออกไปแล้ว!
-    return Object.keys(inv)
-        .map(id => ({ item: getGachaItemById(id), quantity: inv[id] }))
-        .filter(e => e.item && e.quantity > 0) // ซ่อนไอเทมที่เหลือ 0 ทันที ทำให้กดเบิ้ลไม่ได้แน่นอน
-        .sort((a, b) => {
-            const order = ["godlike", "mythic", "epic", "rare", "common"];
-            return order.indexOf(a.item.rarity) - order.indexOf(b.item.rarity);
-        });
-}
-
-// ============================================================
-// ⚡ 12. ระบบ Effect ระหว่างทำข้อสอบ
-//    window.activeItemEffects = { EFFECT_CODE: true/data }
-//    window.currentLoadout = [itemId, ...]  (สูงสุด 3 ชิ้น)
-//    ฟังก์ชัน applyGachaEffect() ถูกเรียกจาก verify() ใน app.js
-// ============================================================
-
-/** King Engine counter (รีเซ็ตทุก render ใหม่) */
-window.kingEngineCount = window.kingEngineCount || 0;
-
-/**
- * เพิ่มไอเทมเข้า loadout (กระเป๋าพกเข้าสอบ)
- * สูงสุด 3 ชิ้น / ชนิดเดียวกันพกได้
- */
-function gachaEquipItem(userId, itemId) {
-    if (!window.currentLoadout) window.currentLoadout = [];
-    const MAX_LOADOUT = 5;
-    if (window.currentLoadout.length >= MAX_LOADOUT) {
-        return { success: false, message: `พกได้สูงสุด ${MAX_LOADOUT} ชิ้นต่อรอบ` };
-    }
-
-    // ABSOLUTE_ZONE และ RYOIKI_TENKAI พกได้อย่างละ 1 เท่านั้น
-    const item = getGachaItemById(itemId);
-    const uniqueEffects = ['ABSOLUTE_ZONE', 'RYOIKI_TENKAI'];
-    if (item && uniqueEffects.includes(item.effect)) {
-        const alreadyEquipped = window.currentLoadout.some(id => id === itemId);
-        if (alreadyEquipped) {
-            return { success: false, message: `${item.nameTh} พกได้แค่ 1 ชิ้นต่อรอบ` };
+        // แอนิเมชันสำหรับตอนโหลดสแกน
+        if(!document.getElementById('kruheng-anim-style')) {
+            const style = document.createElement('style');
+            style.id = 'kruheng-anim-style';
+            style.innerHTML = `
+                @keyframes kruheng-pulse { 0% { transform: scale(0.9); opacity: 0.7; } 100% { transform: scale(1.1); opacity: 1; } }
+                #exam-wizard-content h2 { font-size: 1.1rem; }
+                #exam-wizard-content h3 { font-size: 0.95rem; }
+                #exam-wizard-content h4 { font-size: 0.88rem; }
+                @media (max-width: 480px) {
+                    #exam-wizard-content { padding: 12px !important; }
+                    #exam-wizard-content h2 { font-size: 1rem !important; }
+                }
+            `;
+            document.head.appendChild(style);
         }
     }
+    return document.getElementById('exam-wizard-content');
+}
 
-    // gachaGetInventory หักลบเสร็จสรรพแล้วจากศูนย์กลาง
-    const inv = gachaGetInventory(userId);
+// Step 1: เลือกวิชา
+function openExamWizard_Subject() {
+    const content = createWizardOverlay();
+    wizardOverlay.style.display = 'flex';
     
-    // คำนวณแบบ Virtual Stock ตัดสต๊อคเสมือน ป้องกันการเอา 1 ชิ้นไปใส่ 2 ที่ (Loadout และ Booster) พร้อมกัน
-    // (หมายเหตุ: ย้ายตรรกะการหักลบไปตัดสต๊อคทันทีที่ศูนย์กลาง gachaGetInventory แล้ว จึงเหลือแค่เช็คยอดตรงๆ ได้เลย)
-    const available = inv[itemId] || 0;
+    let html = `
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px dashed var(--secondary); padding-bottom:15px; margin-bottom:20px;">
+            <h2 style="margin:0; color:var(--text-color);">📚 ${lang === 'th' ? 'เลือกรายวิชา' : 'Select Subject'}</h2>
+            <button onclick="document.getElementById('exam-wizard-overlay').style.display='none'" style="background:var(--danger); color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-weight:bold; font-size:1rem; flex-shrink:0;">✕</button>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr; gap:12px;">
+    `;
     
-    if (available <= 0) {
-        return { success: false, message: "ไอเทมไม่พอ! (อาจถูกใช้งานในช่อง Booster อยู่)" };
+    for (let subjKey in NEW_EXAM_STRUCTURE) {
+        const subject = NEW_EXAM_STRUCTURE[subjKey];
+        html += `
+            <button onclick="openExamWizard_Grade('${subjKey}')" style="background:rgba(0,240,255,0.1); border:2px solid var(--secondary); color:var(--text-color); padding:11px 14px; border-radius:12px; font-size:1rem; font-weight:bold; cursor:pointer; text-align:left; transition:0.2s; display:flex; justify-content:space-between; align-items:center; width:100%; box-sizing:border-box;" onmouseover="this.style.background='var(--secondary)'; this.style.color='white';" onmouseout="this.style.background='rgba(0,240,255,0.1)'; this.style.color='var(--text-color)';">
+                ${subject.title[lang]}
+                <span style="font-size:1.2rem; flex-shrink:0;">👉</span>
+            </button>
+        `;
     }
+    html += `</div>`;
+    content.innerHTML = html;
+}
+
+// Step 2: เลือกระดับชั้น
+function openExamWizard_Grade(subjKey) {
+    const content = document.getElementById('exam-wizard-content');
+    const subject = NEW_EXAM_STRUCTURE[subjKey];
     
-    window.currentLoadout.push(itemId);
-    return { success: true };
+    let html = `
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px dashed var(--secondary); padding-bottom:15px; margin-bottom:20px;">
+            <h2 style="margin:0; color:var(--text-color);">🎓 ${lang === 'th' ? 'เลือกระดับชั้น' : 'Select Grade'}</h2>
+            <div style="display:flex; gap:10px;">
+                <button onclick="openExamWizard_Subject()" style="background:var(--primary); color:white; border:none; padding:6px 12px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:0.85rem;">⬅️ ${lang==='th'?'กลับ':'Back'}</button>
+                <button onclick="document.getElementById('exam-wizard-overlay').style.display='none'" style="background:var(--danger); color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-weight:bold; font-size:1rem; flex-shrink:0;">✕</button>
+            </div>
+        </div>
+        <h4 style="color:var(--secondary); margin-top:0; margin-bottom:15px;">วิชา: ${subject.title[lang]}</h4>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:8px;">
+    `;
+
+    for (let gradeKey in subject.grades) {
+        const grade = subject.grades[gradeKey];
+        html += `
+            <button onclick="openExamWizard_Unit('${subjKey}', '${gradeKey}')" style="background:rgba(112,0,255,0.1); border:2px solid var(--accent); color:var(--text-color); padding:11px 10px; border-radius:12px; font-size:0.95rem; font-weight:bold; cursor:pointer; transition:0.2s; box-sizing:border-box;" onmouseover="this.style.background='var(--accent)'; this.style.color='white';" onmouseout="this.style.background='rgba(112,0,255,0.1)'; this.style.color='var(--text-color)';">
+                ${grade.title[lang]}
+            </button>
+        `;
+    }
+    html += `</div>`;
+    content.innerHTML = html;
 }
 
-function gachaUnequipItem(slot) {
-    if (!window.currentLoadout) return;
-    window.currentLoadout.splice(slot, 1);
+// Step 3 (ใหม่): เลือกบทเรียน (Unit) พร้อมปุ่มหลากสี
+function openExamWizard_Unit(subjKey, gradeKey) {
+    const content = document.getElementById('exam-wizard-content');
+    const subject = NEW_EXAM_STRUCTURE[subjKey];
+    const grade = subject.grades[gradeKey];
+    
+    let html = `
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px dashed var(--secondary); padding-bottom:15px; margin-bottom:15px; position:sticky; top:0; background:var(--card-bg); z-index:10;">
+            <h2 style="margin:0; color:var(--text-color);">📄 ${lang === 'th' ? 'เลือกบทเรียน' : 'Select Unit'}</h2>
+            <div style="display:flex; gap:10px;">
+                <button onclick="openExamWizard_Grade('${subjKey}')" style="background:var(--primary); color:white; border:none; padding:6px 12px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:0.85rem;">⬅️ ${lang==='th'?'กลับ':'Back'}</button>
+                <button onclick="document.getElementById('exam-wizard-overlay').style.display='none'" style="background:var(--danger); color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-weight:bold; font-size:1rem; flex-shrink:0;">✕</button>
+            </div>
+        </div>
+        <h4 style="color:var(--secondary); margin-top:0; margin-bottom:15px;">${subject.title[lang]} > ${grade.title[lang]}</h4>
+    `;
+
+    // 🎨 ธีมสีธาตุเวทมนตร์สำหรับกระดานเควส
+    let unitCount = 0; 
+    const colorThemes = [
+        { bg: 'rgba(174,87,255,0.1)', hover: 'rgba(174,87,255,0.25)', border: '#ae57ff' }, // 🔮 ม่วงเวทมนตร์
+        { bg: 'rgba(0,240,255,0.1)', hover: 'rgba(0,240,255,0.25)', border: '#00f0ff' }, // ❄️ ฟ้าสไลม์
+        { bg: 'rgba(0,255,136,0.1)', hover: 'rgba(0,255,136,0.25)', border: '#00ff88' }, // 🍃 เขียวฮีลลิ่ง
+        { bg: 'rgba(255,152,0,0.1)',  hover: 'rgba(255,152,0,0.25)', border: '#ff9800' }, // 🔥 ส้มเพลิง
+        { bg: 'rgba(255,0,127,0.1)',  hover: 'rgba(255,0,127,0.25)', border: '#ff007f' }  // 🌸 ชมพูซากุระ
+    ];
+
+    for (let tKey in grade.terms) {
+        const term = grade.terms[tKey];
+        html += `<h3 style="color:var(--accent); background:rgba(0,0,0,0.05); padding:8px 12px; border-radius:8px; margin-top:15px; font-size:0.95rem;">📅 ${term.title[lang]}</h3>`;
+        html += `<div style="display:flex; flex-direction:column; gap:10px; margin-bottom: 25px;">`;
+        
+        term.units.forEach(unit => {
+            // เช็กก่อนว่าบทนี้มีกำหนดข้อสอบไว้บ้างไหม
+            let hasAnySets = false;
+            if (unit.maxSets) {
+                if (unit.maxSets.easy > 0 || unit.maxSets.medium > 0 || unit.maxSets.hard > 0 || unit.maxSets.extreme > 0) {
+                    hasAnySets = true;
+                }
+            }
+
+            const theme = colorThemes[unitCount % colorThemes.length]; // ดึงสีตามคิว
+            unitCount++;
+
+            if (hasAnySets) {
+                html += `
+                    <button onclick="openExamWizard_ScanUnit('${subjKey}', '${gradeKey}', '${tKey}', '${unit.id}')" 
+                        style="background:${theme.bg}; border:1px solid ${theme.border}; border-left: 6px solid ${theme.border}; color:var(--text-color); padding:14px 18px; border-radius:12px; font-size:0.95rem; text-align:left; cursor:pointer; transition:all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275); line-height:1.5; box-shadow: 0 4px 6px rgba(0,0,0,0.05); position:relative; overflow:hidden;" 
+                        onmouseover="this.style.background='${theme.hover}'; this.style.transform='translateX(8px)';" 
+                        onmouseout="this.style.background='${theme.bg}'; this.style.transform='translateX(0)';">
+                        <span style="font-weight:bold; text-shadow:0 1px 1px rgba(0,0,0,0.05); display:block;">${unit.name[lang]}</span>
+                    </button>
+                `;
+            } else {
+                html += `
+                    <button disabled
+                        style="background:rgba(0,0,0,0.03); border:1px dashed rgba(0,0,0,0.15); color:var(--text-muted); padding:14px 18px; border-radius:12px; font-size:0.9rem; text-align:left; cursor:not-allowed; line-height:1.5; opacity:0.8;">
+                        ${unit.name[lang]} 
+                        <span style="font-size:0.75rem; color:var(--danger); float:right; background:rgba(255,0,0,0.08); padding:3px 10px; border-radius:12px; font-weight:bold; margin-top:-2px;">🔒 ปลดล็อกเร็วๆ นี้</span>
+                    </button>
+                `;
+            }
+        });
+        html += `</div>`;
+    }
+
+    content.innerHTML = html;
 }
 
-/**
- * คำนวณ passive multiplier ทั้งชุด (เรียกจาก finish() ใน app.js)
- * @returns {{ expMult: number, coinMult: number }}
- */
-function gachaGetPassiveMultipliers() {
-    let expMult = 1.0;
-    let coinMult = 1.0;
+// Step 4: แสกนหาไฟล์ที่มีอยู่จริง (สแกนเจาะจงเฉพาะบทเรียน พร้อมกัน Netlify หลอก)
+async function openExamWizard_ScanUnit(subjKey, gradeKey, tKey, unitId) {
+    const content = document.getElementById('exam-wizard-content');
+    const subject = NEW_EXAM_STRUCTURE[subjKey];
+    const grade = subject.grades[gradeKey];
+    const term = grade.terms[tKey];
+    const unit = term.units.find(u => u.id === unitId);
+    
+    // ดึงชื่อบทแบบลบ Tag HTML ออกเพื่อความสวยงาม
+    let cleanUnitName = unit.name[lang].replace(/<[^>]*>?/gm, ' ').trim();
 
-    if (!window.currentLoadout) return { expMult, coinMult };
-
-    window.currentLoadout.forEach(itemId => {
-        const item = getGachaItemById(itemId);
-        if (!item) return;
-        if (item.effect === "ABSOLUTE_ZONE") expMult *= (item.expMultiplier || 1.2);
-        if (item.effect === "RYOIKI_TENKAI") coinMult *= (item.coinMultiplier || 1.2);
+    content.innerHTML = `
+        <div style="text-align:center; padding: 30px 15px;">
+            <div style="font-size: 3rem; display:inline-block; animation: kruheng-pulse 1s infinite alternate;">📡</div>
+            <h2 style="margin-top: 15px; color: var(--primary);">${lang === 'th' ? 'กำลังสแกนหาข้อสอบ...' : 'Scanning for exams...'}</h2>
+            <p style="color: var(--text-color); font-size: 0.95rem;">${lang === 'th' ? 'ค้นหาข้อสอบในบท: ' + cleanUnitName : 'Searching in: ' + cleanUnitName}</p>
+            <div style="margin-top:20px; width:100%; height:15px; background:rgba(0,0,0,0.1); border-radius:10px; overflow:hidden; border: 1px solid var(--secondary);">
+                <div id="scan-progress" style="width:0%; height:100%; background:linear-gradient(90deg, var(--primary), var(--success)); transition:width 0.2s;"></div>
+            </div>
+        </div>
+    `;
+    
+    let potentialFiles = [];
+    const diffNames = { easy: 'ระดับง่าย', medium: 'ระดับกลาง', hard: 'ระดับยาก', extreme: 'ระดับโหดสุด' };
+    
+    // สร้างคิวสแกนเฉพาะของบทนี้บทเดียว
+    ['easy', 'medium', 'hard', 'extreme'].forEach(diff => {
+        const count = (unit.maxSets && unit.maxSets[diff]) ? unit.maxSets[diff] : 0;
+        for (let i = 1; i <= count; i++) {
+            const fileName = `${subjKey}_${gradeKey}_${tKey}_${unit.id}_${diff}_${i}.json`;
+            potentialFiles.push({ 
+                fileName, 
+                termTitle: term.title[lang], 
+                unitName: cleanUnitName, 
+                diffText: diffNames[diff], 
+                setNum: i 
+            });
+        }
     });
 
-    return { expMult, coinMult };
+    let validExams = [];
+    const total = potentialFiles.length;
+    
+    if(total === 0) {
+        renderScanUnitResult(validExams, subjKey, gradeKey, tKey, unit);
+        return;
+    }
+
+    let completed = 0;
+    const progressBar = document.getElementById('scan-progress');
+
+    // ส่ง HEAD Request ไปเช็กไฟล์
+    await Promise.all(potentialFiles.map(async (fileObj) => {
+        try {
+            const response = await fetch('json/' + fileObj.fileName, { method: 'HEAD' }); 
+            const contentType = response.headers.get('content-type');
+            // 🛡️ ตรวจจับ 200 OK และต้องไม่ใช่หน้าเว็บ HTML ปลอมๆ ของ Netlify
+            if (response.ok && contentType && !contentType.includes('text/html')) {
+                validExams.push(fileObj);
+            }
+        } catch(e) {}
+        completed++;
+        if(progressBar) progressBar.style.width = (completed / total * 100) + '%';
+    }));
+
+    validExams.sort((a,b) => a.fileName.localeCompare(b.fileName));
+    // หน่วงเวลานิดนึงให้หลอดโหลดเต็มก่อนเปลี่ยนหน้า
+    setTimeout(() => renderScanUnitResult(validExams, subjKey, gradeKey, tKey, unit), 300);
 }
 
-// ============================================================
-// 🗑️ 13. ตัดสต็อก loadout ทันที (เรียกตอนเริ่มสอบ)
-//    - หัก inventory ทุกชิ้นใน currentLoadout ทันที
-//    - ไม่ว่าจะใช้หรือไม่ใช้ก็ตาม ไม่มีการคืน
-// ============================================================
-
-/**
- * ตัดสต็อก loadout ทั้งหมดทันที
- * เรียกตอนเริ่มข้อสอบ (และตอน suspend)
- * @param {string} userId
- * @param {string[]} loadout - array ของ itemId
- */
-function gachaDeductLoadout(userId, loadout) {
-    if (!userId || !loadout || loadout.length === 0) return;
-    loadout.forEach(itemId => {
-        gachaUseItem(userId, itemId);
-    });
-}
-
-/**
- * คืนไอเทมกลับคลัง (เรียกตอนพักข้อสอบ — ไอเทมที่ยังไม่ได้ใช้ควรได้คืน)
- * @param {string} userId
- * @param {string[]} loadout - array ของ itemId ที่เหลืออยู่ใน currentLoadout
- */
-function gachaRestoreLoadout(userId, loadout) {
-    if (!userId || !loadout || loadout.length === 0) return;
+// Step 5: วาดผลลัพธ์ที่หาเจอ (เฉพาะบทเรียนนั้นๆ พร้อมเช็กประวัติ NEW/100%)
+function renderScanUnitResult(validExams, subjKey, gradeKey, tKey, unit) {
+    const content = document.getElementById('exam-wizard-content');
+    
+    const subject = NEW_EXAM_STRUCTURE[subjKey];
+    const grade = subject.grades[gradeKey];
+    const term = grade.terms[tKey];
+    let cleanUnitName = unit.name[lang].replace(/<[^>]*>?/gm, ' ').trim();
+    
     const role = sessionStorage.getItem('kruHengRole');
-    if (role === 'guest') {
-        let gInfo = JSON.parse(sessionStorage.getItem('kruHengGuestInfo') || '{}');
-        if (!gInfo.inventory) gInfo.inventory = {};
-        loadout.forEach(itemId => {
-            gInfo.inventory[itemId] = (gInfo.inventory[itemId] || 0) + 1;
-        });
-        sessionStorage.setItem('kruHengGuestInfo', JSON.stringify(gInfo));
-    } else {
-        const dbStudent = JSON.parse(localStorage.getItem('kruHengStudentDB') || '{}') || defaultStudentDB;
-        if (!dbStudent[userId]) return;
-        if (!dbStudent[userId].inventory) dbStudent[userId].inventory = {};
-        loadout.forEach(itemId => {
-            dbStudent[userId].inventory[itemId] = (dbStudent[userId].inventory[itemId] || 0) + 1;
-        });
-        localStorage.setItem('kruHengStudentDB', JSON.stringify(dbStudent));
+    const currentUser = sessionStorage.getItem('kruHengCurrentUser');
+    const dbStudent = JSON.parse(localStorage.getItem('kruHengStudentDB')) || {};
+    const userNick = (role === 'guest') ? (currentUser ? currentUser.replace('Guest_', '') : 'Unknown') : (currentUser && dbStudent[currentUser] ? dbStudent[currentUser].nick : currentUser);
+    
+    const history = (role === 'guest') ? JSON.parse(sessionStorage.getItem('kruHengTempGuestHistory') || '[]') : JSON.parse(localStorage.getItem('kruHengHistory') || '[]');
+    const userHistory = history.filter(h => h.name === userNick);
+
+    // 🛑 ไม่เจอข้อสอบ
+    if (validExams.length === 0) {
+        content.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px dashed var(--secondary); padding-bottom:15px; margin-bottom:20px;">
+                <h2 style="margin:0; color:var(--text-color); font-size:1rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">📄 ${cleanUnitName}</h2>
+                <div style="display:flex; gap:10px;">
+                    <button onclick="openExamWizard_Unit('${subjKey}', '${gradeKey}')" style="background:var(--primary); color:white; border:none; padding:6px 12px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:0.85rem;">⬅️ ${lang==='th'?'กลับ':'Back'}</button>
+                    <button onclick="document.getElementById('exam-wizard-overlay').style.display='none'" style="background:var(--danger); color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-weight:bold; font-size:1rem; flex-shrink:0;">✕</button>
+                </div>
+            </div>
+            <div style="text-align:center; padding:25px 10px;">
+                <div style="font-size: 3.5rem; margin-bottom: 10px;">🚧</div>
+                <h2 style="color: var(--danger); margin-bottom: 10px; font-weight: 900;">${lang === 'th' ? 'เนื้อหากำลังอัปเดต' : 'Updating...'}</h2>
+                <p style="color: var(--text-color); line-height: 1.6; font-size: 0.95rem;">
+                    ${lang === 'th' ? 'ครูเฮงกำลังเร่งจัดทำข้อสอบชุดนี้อยู่นะครับ<br>อดใจรออีกนิดนึงน้า! ✌️' : 'Exams for this unit are being prepared.<br>Please check back soon! ✌️'}
+                </p>
+            </div>
+        `;
+        return;
+    }
+
+    // ✅ เจอข้อสอบ
+    let html = `
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px dashed var(--secondary); padding-bottom:15px; margin-bottom:20px; position:sticky; top:0; background:var(--card-bg); z-index:10;">
+            <h2 style="margin:0; color:var(--text-color); font-size:1.1rem; max-width:65%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${cleanUnitName}">📄 ${cleanUnitName}</h2>
+            <div style="display:flex; gap:10px;">
+                <button onclick="openExamWizard_Unit('${subjKey}', '${gradeKey}')" style="background:var(--primary); color:white; border:none; padding:6px 12px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:0.85rem;">⬅️ ${lang==='th'?'กลับ':'Back'}</button>
+                <button onclick="document.getElementById('exam-wizard-overlay').style.display='none'" style="background:var(--danger); color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-weight:bold; font-size:1rem; flex-shrink:0;">✕</button>
+            </div>
+        </div>
+        <div style="margin-bottom: 15px; font-size: 0.85rem; color: var(--success); font-weight: bold; text-align:center; background: rgba(0,255,136,0.1); padding: 9px 12px; border-radius: 10px; border: 1px dashed var(--success);">
+            🎉 ${lang==='th'?`พบข้อสอบพร้อมทำ ${validExams.length} ชุด กดเลือกใส่ตะกร้าได้เลย!`: `Found ${validExams.length} ready exam sets!`}
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+    `;
+
+    validExams.forEach(ex => {
+        let color = 'var(--primary)';
+        if(ex.diffText.includes('ง่าย')) color = 'var(--success)';
+        if(ex.diffText.includes('กลาง')) color = '#ff9800';
+        if(ex.diffText.includes('ยาก')) color = 'var(--danger)';
+        if(ex.diffText.includes('โหด')) color = '#ff007f';
+
+        // จัดชื่อเต็มยศสำหรับบันทึก (วิชา > เทอม > บทเรียน > ชุด)
+        const currentExamName = `${grade.title[lang]} ${ex.termTitle} ${ex.unitName} (${ex.diffText} ชุดที่ ${ex.setNum})`;
+        
+        // เช็กประวัติ
+        const shortExamNameClean = `${ex.unitName} (${ex.diffText} ชุดที่ ${ex.setNum})`;
+        const pastAttempts = userHistory.filter(h => h.title && (h.title === currentExamName || h.title === shortExamNameClean || h.title.includes(shortExamNameClean)));
+        
+        let isNew = pastAttempts.length === 0; 
+        let isPerfect = pastAttempts.some(h => h.correct === h.total && h.total > 0); 
+
+        let opacity = isNew ? '1' : '0.85';   
+        let saturate = isNew ? '1' : '0.7';   
+        
+        let badgeHtml = '';
+        if (isPerfect) {
+            badgeHtml = `<span style="position:absolute; top:50%; right:15px; transform:translateY(-50%); background:linear-gradient(45deg, #ffd700, #ff8c00); color:#000; font-size:0.75rem; padding:4px 10px; border-radius:12px; font-weight:900; box-shadow:0 2px 5px rgba(0,0,0,0.3); border: 2px solid #fff; z-index:2;">🏆 100%</span>`;
+        } else if (isNew) {
+            badgeHtml = `<span style="position:absolute; top:50%; right:15px; transform:translateY(-50%); background:var(--danger); color:white; font-size:0.75rem; padding:4px 10px; border-radius:12px; font-weight:900; box-shadow:0 2px 5px rgba(0,0,0,0.3); animation: kruheng-pulse 1s infinite alternate; border: 2px solid #fff; z-index:2;">🔥 NEW</span>`;
+        }
+
+        html += `
+            <div style="position:relative; width:100%;">
+                <button onclick="quickPlayExam('${ex.fileName}', '${currentExamName.replace(/'/g, "\\'")}', this)" 
+                    style="background:${color}; color:white; border:none; padding:15px; border-radius:12px; font-weight:bold; cursor:pointer; font-size:1rem; transition:0.2s; box-shadow:0 4px 8px rgba(0,0,0,0.15); opacity:${opacity}; filter:saturate(${saturate}); width:100%; text-align:left; padding-right: 80px;" 
+                    onmouseover="this.style.transform='scale(1.02)'; this.style.opacity='1'; this.style.filter='saturate(1)';" 
+                    onmouseout="this.style.transform='scale(1)'; this.style.opacity='${opacity}'; this.style.filter='saturate(${saturate})';">
+                    ⭐ ${ex.diffText} ชุดที่ ${ex.setNum}
+                </button>
+                ${badgeHtml}
+            </div>
+        `;
+    });
+    
+    html += `</div>`;
+    content.innerHTML = html;
+}
+
+// Step 6: กดปุ๊บโหลดไฟล์จริง ใส่ตะกร้า แล้วเลื่อนจอ (ระบบโควต้าบัญชี)
+async function quickPlayExam(fileName, examTitle, btnElement) {
+    const originalText = btnElement.innerText;
+    btnElement.innerText = "⏳...";
+    btnElement.style.pointerEvents = "none";
+
+    try {
+        const response = await fetch('json/' + fileName);
+        if (!response.ok) throw new Error('Not found');
+        const textData = await response.text();
+        const cleanText = sanitizeJSON(textData);
+        const json = JSON.parse(cleanText);
+        const questions = json.questions || [];
+
+        document.getElementById('exam-wizard-overlay').style.display = 'none';
+        
+        const isDuplicate = selectedFiles.some(f => f.filename === fileName);
+        if (!isDuplicate) {
+            
+            // 👑 ตรวจสอบโควต้าการโหลดข้อสอบตามบทบาท
+            const role = sessionStorage.getItem('kruHengRole');
+            const currentUser = sessionStorage.getItem('kruHengCurrentUser');
+            
+            let maxAllowed = 1; 
+            if (currentUser === 'KruHeng' || role === 'master') {
+                maxAllowed = 40; 
+            } else if (role === 'student') {
+                maxAllowed = 15; 
+            }
+
+            if (selectedFiles.length >= maxAllowed) {
+                alert(lang === 'th' ? 
+                    `⚠️ โควต้าเต็ม!\nระดับบัญชีของคุณสามารถผสมข้อสอบได้สูงสุด ${maxAllowed} ชุดครับ 🛒\n\n(หากต้องการเลือกชุดนี้ กรุณาลบชุดเก่าในตะกร้าออกก่อนนะครับ)` : 
+                    `⚠️ Quota Reached!\nYour account tier can mix up to ${maxAllowed} sets. 🛒\n\n(Please remove an old set from the cart first)`);
+                
+                btnElement.innerText = originalText;
+                btnElement.style.pointerEvents = "auto";
+                return; 
+            }
+
+            selectedFiles.push({ 
+                title: examTitle, 
+                allQuestions: questions, 
+                takeCount: questions.length,
+                filename: fileName 
+            });
+        } else {
+            alert(lang === 'th' ? 'มีชุดข้อสอบนี้ในตะกร้าแล้วครับ! 🛒' : 'This exam is already in your cart! 🛒');
+        }
+        
+        updateFileListUI();
+        
+        // 🛝 วาร์ปหน้าจอไปที่ผลรวม
+        setTimeout(() => {
+            const totalRow = document.querySelector('.total-row');
+            if (totalRow) {
+                const yOffset = totalRow.getBoundingClientRect().top + window.scrollY - (window.innerHeight / 2) + 50;
+                window.scrollTo({ top: yOffset, behavior: 'smooth' });
+            } else {
+                const startBtn = document.getElementById('btn-start-builder');
+                if (startBtn) {
+                    const yOffset = startBtn.getBoundingClientRect().top + window.scrollY - (window.innerHeight / 2) + 100;
+                    window.scrollTo({ top: yOffset, behavior: 'smooth' });
+                }
+            }
+        }, 100); 
+
+    } catch (e) {
+        alert(lang==='th'?'เกิดข้อผิดพลาดในการโหลดไฟล์ หรือไฟล์อาจมีปัญหา':'Error loading file or file is corrupted.');
+        btnElement.innerText = originalText;
+        btnElement.style.pointerEvents = "auto";
     }
 }
 
-// ============================================================
-// 🚀 14. ระบบ Booster (เพิ่มเรทสุ่มชั่วคราว)
-//    - ใช้ไอเทม common หรือ rare ใน inventory เป็น booster
-//    - common 1 ชิ้น = +1%, rare 1 ชิ้น = +2% (สูงสุด 5 ช่อง)
-//    - ส่วนที่เพิ่มมาจะหักจาก common และ rare แบ่งตามสัดส่วน
-//    - window.gachaBoosters = [{ itemId, bonus }, ...]
-// ============================================================
+// ปุ่มเปิด Wizard แบบหรูๆ (ปุ่มเมนูหลัก)
+function renderServerExamList() {
+    const container = document.getElementById('server-exam-list');
+    if (!container) return;
+    container.innerHTML = `
+        <button onclick="openExamWizard_Subject()" style="width: 100%; padding: 25px; background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; border: none; border-radius: 20px; font-size: 1.5rem; font-weight: 900; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.3); transition: transform 0.2s, box-shadow 0.2s; display:flex; flex-direction:column; align-items:center; gap:10px; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)';">
+            <span style="display:flex; align-items:center; gap:15px; font-size: 4rem; text-shadow: 0 5px 10px rgba(0,0,0,0.3);">📚<span style="font-size: 4rem; font-weight: 900;">เควสหลัก</span></span>
+            <span style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">${lang === 'th' ? 'คลิกเข้าสู่... คลังข้อสอบบนระบบ' : 'Open Server Exams'}</span>
+            <span style="font-size: 1rem; font-weight: normal; opacity: 0.9; background: rgba(0,0,0,0.2); padding: 5px 15px; border-radius: 20px; margin-top: 5px;">
+                ${lang === 'th' ? '🔍 กดเพื่อสแกนและค้นหาข้อสอบที่พร้อมทำอัตโนมัติ' : 'Click to auto-scan for available exams'}
+            </span>
+            <span onclick="event.stopPropagation(); showExpGuidePopup();" title="${lang==='th'?'ดูวิธีได้ EXP':'How to earn EXP'}"
+                style="position:absolute; top:12px; right:14px; width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,0.18); border:2px solid rgba(255,255,255,0.5); display:flex; justify-content:center; align-items:center; font-size:1.1rem; cursor:pointer; transition:background 0.2s; backdrop-filter:blur(4px);"
+                onmouseover="this.style.background='rgba(255,255,255,0.35)';" onmouseout="this.style.background='rgba(255,255,255,0.18)';">ℹ️</span>
+        </button>
+    `;
+}
 
-window.gachaBoosters = window.gachaBoosters || [];
+function showExpGuidePopup() {
+    const isTh = lang === 'th';
+    const rows = [
+        { grade: isTh ? 'ป.1 – ป.3' : 'P.1 – P.3', base: 10, color: '#4caf50' },
+        { grade: isTh ? 'ป.4 – ป.6' : 'P.4 – P.6', base: 50, color: '#2196f3' },
+        { grade: isTh ? 'ม.1 – ม.3' : 'M.1 – M.3', base: 200, color: '#9c27b0' },
+        { grade: isTh ? 'ม.4 – ม.6' : 'M.4 – M.6', base: 400, color: '#ff9800' },
+    ];
+    const diffRows = [
+        { label: isTh ? 'ง่าย'      : 'Easy',    mult: '×1.0', color: '#4caf50' },
+        { label: isTh ? 'ปานกลาง'  : 'Medium',  mult: '×1.1', color: '#2196f3' },
+        { label: isTh ? 'ยาก'       : 'Hard',    mult: '×1.2', color: '#ff9800' },
+        { label: isTh ? 'โหด/แข่ง' : 'Extreme', mult: '×1.3', color: '#e53935' },
+    ];
 
-function gachaAddBooster(userId, itemId) {
-    if (!window.gachaBoosters) window.gachaBoosters = [];
-    if (window.gachaBoosters.length >= 5) {
-        return { success: false, message: 'ใส่บูสเตอร์ได้สูงสุด 5 ช่อง' };
+    const tableRows = rows.map(r => `
+        <tr>
+            <td style="padding:5px 10px;"><span style="background:${r.color};color:#fff;padding:2px 9px;border-radius:8px;font-weight:700;font-size:0.85rem;">${r.grade}</span></td>
+            <td style="padding:5px 10px; text-align:center; font-weight:900; color:${r.color};">${r.base}</td>
+            <td style="padding:5px 10px; font-size:0.82rem; color:var(--text-muted);">${isTh ? 'EXP/30 ข้อ (ก่อนคูณ)' : 'EXP/30 qs (before ×)'}</td>
+        </tr>`).join('');
+
+    const diffTableRows = diffRows.map(r => `
+        <tr>
+            <td style="padding:4px 10px;"><span style="background:${r.color};color:#fff;padding:1px 8px;border-radius:8px;font-size:0.83rem;font-weight:700;">${r.label}</span></td>
+            <td style="padding:4px 10px; text-align:center; font-weight:900; color:${r.color};">${r.mult}</td>
+        </tr>`).join('');
+
+    const html = `
+        <div id="exp-guide-overlay" onclick="if(event.target===this)this.remove();"
+            style="position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:99999;display:flex;justify-content:center;align-items:center;padding:16px;">
+            <div style="background:var(--card-bg);border-radius:18px;max-width:420px;width:100%;padding:22px 20px;box-shadow:0 8px 40px rgba(0,0,0,0.4);border:1px solid rgba(0,240,255,0.2);position:relative;max-height:90vh;overflow-y:auto;">
+                <button onclick="document.getElementById('exp-guide-overlay').remove();"
+                    style="position:absolute;top:10px;right:12px;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--text-muted);">✕</button>
+                <div style="font-size:1.15rem;font-weight:900;margin-bottom:14px;color:var(--text-color);">📖 ${isTh ? 'วิธีคำนวณ EXP จากข้อสอบ' : 'How Exam EXP is Calculated'}</div>
+
+                <div style="font-size:0.88rem;font-weight:700;color:var(--text-muted);margin-bottom:6px;">1. ${isTh ? 'EXP พื้นฐาน (ตามระดับชั้น)' : 'Base EXP (by grade level)'}</div>
+                <table style="width:100%;border-collapse:collapse;margin-bottom:14px;">${tableRows}</table>
+
+                <div style="font-size:0.88rem;font-weight:700;color:var(--text-muted);margin-bottom:6px;">2. ${isTh ? 'ตัวคูณความยาก' : 'Difficulty Multiplier'}</div>
+                <table style="width:100%;border-collapse:collapse;margin-bottom:14px;">${diffTableRows}</table>
+
+                <div style="background:rgba(0,240,255,0.06);border-left:3px solid var(--secondary);border-radius:8px;padding:10px 12px;font-size:0.84rem;margin-bottom:10px;">
+                    <b>3. ${isTh ? 'จำนวนข้อ' : 'Question Count'}</b><br>
+                    ${isTh ? '× (จำนวนข้อที่ทำ ÷ 30) — ทำมากได้เยอะ ทำน้อยได้น้อย' : '× (questions done ÷ 30) — more questions = more EXP'}
+                </div>
+                <div style="background:rgba(255,0,127,0.05);border-left:3px solid var(--primary);border-radius:8px;padding:10px 12px;font-size:0.84rem;margin-bottom:10px;">
+                    <b>4. ${isTh ? 'ความแม่นยำ' : 'Accuracy'}</b><br>
+                    ${isTh ? '× % ที่ตอบถูก — ตอบถูก 100% รับ EXP เต็ม!' : '× correct % — 100% correct = max EXP!'}
+                </div>
+                <div style="background:rgba(255,152,0,0.06);border-left:3px solid #ff9800;border-radius:8px;padding:10px 12px;font-size:0.84rem;">
+                    <b>5. ${isTh ? 'กฎข้ามรุ่น (Level Gap)' : 'Level Gap Penalty'}</b><br>
+                    ${isTh ? 'ระดับผู้เล่นสูงกว่าระดับข้อสอบ → EXP ถูกหัก (สูงสุดเหลือ 1%)' : 'If player level >> exam level → EXP reduced (down to 1%)'}
+                </div>
+
+                <div style="margin-top:14px;padding:10px 14px;background:rgba(0,200,83,0.07);border-radius:10px;font-size:0.83rem;text-align:center;color:var(--text-muted);">
+                    <b style="color:var(--success);">${isTh ? 'สูตรรวม' : 'Formula'}:</b><br>
+                    <code style="font-size:0.9rem;">EXP = BaseEXP × ความยาก × (ข้อ÷30) × %ถูก × gapMult</code>
+                </div>
+            </div>
+        </div>`;
+
+    // ลบ popup เก่าถ้ามี
+    const old = document.getElementById('exp-guide-overlay');
+    if (old) old.remove();
+    document.body.insertAdjacentHTML('beforeend', html);
+}
+
+// ฟังก์ชันโหลดข้อสอบแบบ Manual (ถ้ามี)
+const attemptLoadServerExams = (typeof throttleAction === 'function') ? throttleAction(loadServerExams, 1500) : loadServerExams;
+
+async function loadServerExams() {
+    if(window.selectedServerExamData.size === 0) {
+        alert(lang === 'th' ? 'กรุณาเลือกชุดข้อสอบก่อนครับ' : 'Please select exams first.');
+        return;
     }
-    const item = getGachaItemById(itemId);
-    if (!item || !['common', 'rare'].includes(item.rarity)) {
-        return { success: false, message: 'ใช้เป็นบูสเตอร์ได้เฉพาะ Common และ Rare เท่านั้น' };
+    for(let [fileName, titleName] of window.selectedServerExamData.entries()) {
+        try {
+            const response = await fetch('json/' + fileName);
+            if(!response.ok) {
+                alert(lang === 'th' ? 
+                    `🚧 ชุดข้อสอบนี้กำลังอัปเดตข้อมูล... \nอดใจรอ "ครูเฮง" แป๊บเดียวครับ!` : 
+                    `🚧 This exam set is updating... \nPlease wait for Kru Heng!`);
+                continue; 
+            }
+            const textData = await response.text();
+            const cleanText = sanitizeJSON(textData);
+            const json = JSON.parse(cleanText);
+            const questions = json.questions || [];
+            const examTitleData = json.metadata?.exam_title || titleName;
+            
+            const duplicate = selectedFiles.some(f => getText(f.title, 'th') === getText(examTitleData, 'th'));
+            
+            if(!duplicate) {
+                selectedFiles.push({ 
+                    title: examTitleData, 
+                    allQuestions: questions, 
+                    takeCount: questions.length,
+                    filename: fileName 
+                });
+            }
+        } catch(error) {
+            console.error("Error loading exam:", error);
+            alert(lang === 'th' ? 
+                `🚧 โหลดข้อสอบไม่สำเร็จ หรือข้อสอบกำลังอัปเดตอยู่ครับ` : 
+                `🚧 Failed to load exam or it is currently updating.`);
+        }
+    }
+    window.selectedServerExamData.clear();
+    if(typeof updateLoadButtonUI === 'function') updateLoadButtonUI();
+    updateFileListUI();
+}
+
+// อัปเดตตะกร้า UI
+function updateFileListUI() {
+    const fileListBox = document.getElementById('file-list-box'); 
+    const fileListObj = document.getElementById('file-list');
+    if(fileListObj) fileListObj.style.display = selectedFiles.length ? 'table' : 'none';
+    
+    const tbody = document.getElementById('file-list-body');
+    if(!tbody) return;
+    tbody.innerHTML = "";
+    
+    let grandTotalAll = 0;
+    let grandTotalPick = 0;
+
+    selectedFiles.forEach((f, idx) => {
+        if (f.takeCount > f.allQuestions.length) f.takeCount = f.allQuestions.length;
+        if (f.takeCount < 0) f.takeCount = 0;
+
+        grandTotalAll += f.allQuestions.length;
+        grandTotalPick += parseInt(f.takeCount) || 0;
+
+        tbody.innerHTML += `
+            <tr>
+                <td data-label="${lang === 'th' ? 'ชื่อข้อสอบ' : 'Exam Name'}" style="text-align: left; font-weight: bold; font-size: 0.82rem; line-height: 1.4;">
+                    ${getText(f.title, lang)}
+                </td>
+                <td data-label="${lang === 'th' ? 'ข้อทั้งหมด' : 'Total'}" style="font-size: 1.1rem;">
+                    ${f.allQuestions.length}
+                </td>
+                <td data-label="${lang === 'th' ? 'เลือกดึง' : 'Pick'}">
+                    <input type="number" value="${f.takeCount}" min="0" max="${f.allQuestions.length}" 
+                        onchange="updateTakeCount(${idx}, this.value)" 
+                        style="width: 80px; padding: 8px; font-size: 1.1rem; font-weight: bold; color: var(--primary); text-align: center; border: 2px solid var(--secondary); border-radius: 8px; background: var(--bg-color);">
+                </td>
+                <td data-label="${lang === 'th' ? 'จัดการ' : 'Action'}">
+                    <button onclick="selectedFiles.splice(${idx},1); updateFileListUI();" class="btn btn-red" style="padding: 5px 10px; font-size: 0.8rem; border-radius: 8px;">
+                        ${lang === 'th' ? '🗑️ ลบ' : '🗑️ Del'}
+                    </button>
+                </td>
+            </tr>
+        `;
+    });
+    
+    if (selectedFiles.length > 0) {
+        tbody.innerHTML += `
+            <tr class="total-row" style="background: rgba(0, 240, 255, 0.1); border-top: 2px solid var(--secondary);">
+                <td data-label="${lang === 'th' ? 'สรุป' : 'Summary'}" style="text-align: right; font-weight: bold; font-size: 1.1rem; color: var(--accent);">
+                    ${lang === 'th' ? '🎯 รวมที่เลือก:' : '🎯 Grand Total:'}
+                </td>
+                <td data-label="${lang === 'th' ? 'รวมทั้งหมด' : 'Grand Total'}">${grandTotalAll}</td>
+                <td data-label="${lang === 'th' ? 'รวมที่ดึง' : 'Total Pick'}" style="color: var(--primary); font-weight: bold; font-size: 1.4rem;">${grandTotalPick}</td>
+                <td></td>
+            </tr>
+        `;
     }
     
-    // gachaGetInventory หักลบเสร็จสรรพแล้วจากศูนย์กลาง
-    const inv = gachaGetInventory(userId);
+    const hasFiles = selectedFiles.length > 0;
+    const btnStart = document.getElementById('btn-start-builder');
+    if(btnStart) btnStart.style.display = hasFiles ? "inline-flex" : "none";
     
-    // คำนวณแบบ Virtual Stock ตัดสต๊อคเสมือน ป้องกันการเอา 1 ชิ้นไปใส่ 2 ที่ (Booster และ Loadout) พร้อมกัน
-    // (หมายเหตุ: ย้ายการคำนวณหักลบไปตัดสต๊อคทันทีที่ศูนย์กลาง gachaGetInventory แล้ว)
-    const available = inv[itemId] || 0;
+    const btnPrint = document.getElementById('btn-print-direct');
+    if(btnPrint) btnPrint.style.display = hasFiles ? "inline-flex" : "none";
     
-    if (available <= 0) {
-        return { success: false, message: 'ไอเทมไม่พอ! (อาจถูกพกเข้าห้องสอบอยู่)' };
-    }
-    
-    const bonus = item.rarity === 'common' ? 2 : 3;
-    window.gachaBoosters.push({ itemId, bonus, rarity: item.rarity });
-    return { success: true, bonus };
+    const nameWrapper = document.getElementById('name-wrapper');
+    if(nameWrapper) nameWrapper.style.display = "none";
 }
 
-function gachaRemoveBooster(index) {
-    if (!window.gachaBoosters) return;
-    window.gachaBoosters.splice(index, 1);
+function updateTakeCount(idx, val) {
+    let parsed = parseInt(val) || 0;
+    if (parsed > selectedFiles[idx].allQuestions.length) parsed = selectedFiles[idx].allQuestions.length;
+    if (parsed < 0) parsed = 0;
+    selectedFiles[idx].takeCount = parsed;
+    updateFileListUI();
 }
 
-/**
- * คำนวณ weight ที่ปรับด้วย booster
- * หัก bonus% จาก common+rare ตามสัดส่วน แล้วแจก epic/mythic/godlike
- */
-function gachaGetBoostedWeights() {
-    const base = {
-        godlike: GACHA_RARITY_CONFIG.godlike.weight,
-        mythic:  GACHA_RARITY_CONFIG.mythic.weight,
-        epic:    GACHA_RARITY_CONFIG.epic.weight,
-        rare:    GACHA_RARITY_CONFIG.rare.weight,
-        common:  GACHA_RARITY_CONFIG.common.weight,
-    };
-    if (!window.gachaBoosters || window.gachaBoosters.length === 0) return base;
-
-    const totalBonus = window.gachaBoosters.reduce((s, b) => s + b.bonus, 0);
-    if (totalBonus === 0) return base;
-
-    // แจก bonus ให้ epic/mythic/godlike ตามสัดส่วน weight เดิม
-    const highTotal = base.epic + base.mythic + base.godlike;
-    const w = { ...base };
-    w.epic    += totalBonus * (base.epic    / highTotal);
-    w.mythic  += totalBonus * (base.mythic  / highTotal);
-    w.godlike += totalBonus * (base.godlike / highTotal);
-
-    // หักจาก common+rare ตามสัดส่วน
-    const lowTotal = base.common + base.rare;
-    w.common -= totalBonus * (base.common / lowTotal);
-    w.rare   -= totalBonus * (base.rare   / lowTotal);
-
-    // clamp ไม่ต่ำกว่า 0
-    Object.keys(w).forEach(k => { if (w[k] < 0) w[k] = 0; });
-    return w;
-}
-
-/**
- * หัก inventory ของไอเทมที่ใช้เป็น booster (เรียกตอนกดดึง)
- */
-function gachaDeductBoosters(userId) {
-    if (!window.gachaBoosters || window.gachaBoosters.length === 0) return;
-    window.gachaBoosters.forEach(b => gachaUseItem(userId, b.itemId));
-    window.gachaBoosters = [];
-}
-
-console.log("✅ [SUCCESS] gacha.js โหลดเสร็จสมบูรณ์!");
-
-/* =====================================================================
-   สิ้นสุดไฟล์ gacha.js
-   ===================================================================== */
+console.log("✅ [SUCCESS] app_wizard.js โหลดเสร็จสมบูรณ์!");
