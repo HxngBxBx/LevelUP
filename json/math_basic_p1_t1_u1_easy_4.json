@@ -1,0 +1,606 @@
+{
+  "metadata": {
+    "exam_title": {
+      "th": "คณิตศาสตร์ ป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0 (ง่าย ชุดที่ 4)",
+      "en": "Math P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0 (Easy Set 4)"
+    },
+    "total_questions": 30,
+    "difficulty_distribution": {
+      "description": {
+        "th": "คำแนะนำ: ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุด้านล่างนี้อย่างเคร่งครัด",
+        "en": "Guideline: When generating the exam, strictly ensure that the difficulty level of the questions matches the percentage distribution specified below."
+      },
+      "Easy": "100%",
+      "Medium": "0%",
+      "Hard": "0%",
+      "Extreme": "0%"
+    },
+    "dashboard_config": {
+      "theme": "modern_ai_bright",
+      "watermark_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "header_footer_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "active_recall_mode": true
+    },
+    "ai_prompt_guidelines": {
+      "description": "คำสั่งเฉพาะสำหรับ AI ในการสร้างข้อสอบ (Prompt Instructions)",
+      "rules": [
+        "1. ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุอย่างเคร่งครัด",
+        "2. สกิล (Skill): ให้คัดลอก 1 ใน 4 สกิลนี้ไปใส่ในตัวแปร 'skill' ของแต่ละข้อ: 'จำนวนและพีชคณิต', 'การวัดและเรขาคณิต', 'สถิติและความน่าจะเป็น', หรือ 'แคลคูลัส'",
+        "3. รูปภาพประกอบ (SVG): หากข้อสอบข้อไหนสามารถอธิบายด้วยภาพวาดได้ ให้ใช้ SVG code สร้างรูปภาพประกอบง่ายๆ สีสันสดใส แทรกไว้ในโจทย์หรือตัวเลือกด้วยเสมอ(ถ้าทำได้)",
+        "4. ภาษา (Language): ข้อมูลข้อสอบต้องรองรับ 2 ภาษา (th และ en) ทุกจุด ทั้งโจทย์ ตัวเลือก และเฉลย"
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จากรูป มีปราสาทกี่หลัง?<br><div style='font-size:3rem; margin-top:10px;'>🏰</div>",
+        "en": "How many castles are there in the picture?<br><div style='font-size:3rem; margin-top:10px;'>🏰</div>"
+      },
+      "options": {
+        "th": ["1", "2", "3", "4"],
+        "en": ["1", "2", "3", "4"]
+      },
+      "answer": { "th": "1", "en": "1" },
+      "explanation": {
+        "th": "ในรูปมีปราสาทเพียง 1 หลังเท่านั้น",
+        "en": "There is only 1 castle in the picture."
+      }
+    },
+    {
+      "id": 2,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "มีเชอร์รี่ทั้งหมดกี่ผล?<br><div style='font-size:2.5rem; letter-spacing:10px; margin-top:10px;'>🍒🍒</div>",
+        "en": "How many cherries are there?<br><div style='font-size:2.5rem; letter-spacing:10px; margin-top:10px;'>🍒🍒</div>"
+      },
+      "options": {
+        "th": ["1", "2", "3", "4"],
+        "en": ["1", "2", "3", "4"]
+      },
+      "answer": { "th": "2", "en": "2" },
+      "explanation": {
+        "th": "นับเชอร์รี่ได้ 1, 2 ผล",
+        "en": "We can count 1, 2 cherries."
+      }
+    },
+    {
+      "id": 3,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ในขวดโหลใบนี้มีขนมกี่ชิ้น?<br><svg viewBox='0 0 100 100' style='height:60px; margin-top:10px;'><path d='M30,20 L70,20 L80,90 L20,90 Z' fill='none' stroke='var(--text-color)' stroke-width='3' stroke-dasharray='4,4'/><text x='50' y='60' text-anchor='middle' font-size='12' fill='var(--text-muted)'>ไม่มีของ</text></svg>",
+        "en": "How many snacks are in this jar?<br><svg viewBox='0 0 100 100' style='height:60px; margin-top:10px;'><path d='M30,20 L70,20 L80,90 L20,90 Z' fill='none' stroke='var(--text-color)' stroke-width='3' stroke-dasharray='4,4'/><text x='50' y='60' text-anchor='middle' font-size='12' fill='var(--text-muted)'>Empty</text></svg>"
+      },
+      "options": {
+        "th": ["0", "1", "2", "3"],
+        "en": ["0", "1", "2", "3"]
+      },
+      "answer": { "th": "0", "en": "0" },
+      "explanation": {
+        "th": "เมื่อขวดโหลว่างเปล่า ไม่มีอะไรเลย จะใช้ตัวเลข 0 แทนจำนวน",
+        "en": "When the jar is empty, we use the number 0 to represent the amount."
+      }
+    },
+    {
+      "id": 4,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จากรูป มีเห็ดกี่ดอก?<br><div style='font-size:2.5rem; letter-spacing:10px; margin-top:10px;'>🍄🍄🍄</div>",
+        "en": "How many mushrooms are there?<br><div style='font-size:2.5rem; letter-spacing:10px; margin-top:10px;'>🍄🍄🍄</div>"
+      },
+      "options": {
+        "th": ["2", "3", "4", "5"],
+        "en": ["2", "3", "4", "5"]
+      },
+      "answer": { "th": "3", "en": "3" },
+      "explanation": {
+        "th": "นับเห็ดได้ 1, 2, 3 ดอก",
+        "en": "Counting the mushrooms gives 1, 2, 3."
+      }
+    },
+    {
+      "id": 5,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "มีเต่ากี่ตัว?<br><div style='font-size:2.5rem; letter-spacing:10px; margin-top:10px;'>🐢🐢🐢🐢</div>",
+        "en": "How many turtles are there?<br><div style='font-size:2.5rem; letter-spacing:10px; margin-top:10px;'>🐢🐢🐢🐢</div>"
+      },
+      "options": {
+        "th": ["2", "3", "4", "5"],
+        "en": ["2", "3", "4", "5"]
+      },
+      "answer": { "th": "4", "en": "4" },
+      "explanation": {
+        "th": "นับเต่าได้ทั้งหมด 4 ตัว",
+        "en": "There are exactly 4 turtles."
+      }
+    },
+    {
+      "id": 6,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "นับจำนวนกล่องของขวัญได้กี่กล่อง?<br><div style='font-size:2.5rem; letter-spacing:10px; margin-top:10px;'>🎁🎁🎁🎁🎁</div>",
+        "en": "How many gift boxes are there?<br><div style='font-size:2.5rem; letter-spacing:10px; margin-top:10px;'>🎁🎁🎁🎁🎁</div>"
+      },
+      "options": {
+        "th": ["4", "5", "6", "7"],
+        "en": ["4", "5", "6", "7"]
+      },
+      "answer": { "th": "5", "en": "5" },
+      "explanation": {
+        "th": "นับกล่องของขวัญได้ทั้งหมด 5 กล่อง",
+        "en": "Counting the gift boxes gives exactly 5."
+      }
+    },
+    {
+      "id": 7,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "มีโดนัทกี่ชิ้น?<br><div style='font-size:2.5rem; letter-spacing:5px; margin-top:10px;'>🍩🍩🍩🍩🍩🍩</div>",
+        "en": "How many donuts are there?<br><div style='font-size:2.5rem; letter-spacing:5px; margin-top:10px;'>🍩🍩🍩🍩🍩🍩</div>"
+      },
+      "options": {
+        "th": ["5", "6", "7", "8"],
+        "en": ["5", "6", "7", "8"]
+      },
+      "answer": { "th": "6", "en": "6" },
+      "explanation": {
+        "th": "นับโดนัทได้ 1, 2, 3, 4, 5, 6 ชิ้น",
+        "en": "We can count 1, 2, 3, 4, 5, 6 donuts."
+      }
+    },
+    {
+      "id": 8,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ในรูปมีผึ้งกี่ตัว?<br><div style='font-size:2.5rem; letter-spacing:5px; margin-top:10px;'>🐝🐝🐝🐝🐝🐝🐝</div>",
+        "en": "How many bees are in the picture?<br><div style='font-size:2.5rem; letter-spacing:5px; margin-top:10px;'>🐝🐝🐝🐝🐝🐝🐝</div>"
+      },
+      "options": {
+        "th": ["6", "7", "8", "9"],
+        "en": ["6", "7", "8", "9"]
+      },
+      "answer": { "th": "7", "en": "7" },
+      "explanation": {
+        "th": "นับจำนวนผึ้งได้ทั้งหมด 7 ตัวพอดี",
+        "en": "There are exactly 7 bees."
+      }
+    },
+    {
+      "id": 9,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "มีกระดิ่งทั้งหมดกี่อัน?<br><div style='font-size:2rem; letter-spacing:5px; margin-top:10px;'>🔔🔔🔔🔔🔔🔔🔔🔔</div>",
+        "en": "How many bells are there?<br><div style='font-size:2rem; letter-spacing:5px; margin-top:10px;'>🔔🔔🔔🔔🔔🔔🔔🔔</div>"
+      },
+      "options": {
+        "th": ["7", "8", "9", "10"],
+        "en": ["7", "8", "9", "10"]
+      },
+      "answer": { "th": "8", "en": "8" },
+      "explanation": {
+        "th": "นับกระดิ่งได้ 8 อัน",
+        "en": "Counting the bells gives 8."
+      }
+    },
+    {
+      "id": 10,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "มีเพชรกี่เม็ด?<br><div style='font-size:2rem; letter-spacing:5px; margin-top:10px;'>💎💎💎💎💎💎💎💎💎</div>",
+        "en": "How many diamonds are there?<br><div style='font-size:2rem; letter-spacing:5px; margin-top:10px;'>💎💎💎💎💎💎💎💎💎</div>"
+      },
+      "options": {
+        "th": ["8", "9", "10", "11"],
+        "en": ["8", "9", "10", "11"]
+      },
+      "answer": { "th": "9", "en": "9" },
+      "explanation": {
+        "th": "ในรูปมีเพชรเรียงกันทั้งหมด 9 เม็ด",
+        "en": "There are exactly 9 diamonds."
+      }
+    },
+    {
+      "id": 11,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "มีเหรียญทองกี่เหรียญ?<br><div style='font-size:1.8rem; letter-spacing:2px; margin-top:10px;'>🥇🥇🥇🥇🥇🥇🥇🥇🥇🥇</div>",
+        "en": "How many gold medals are there?<br><div style='font-size:1.8rem; letter-spacing:2px; margin-top:10px;'>🥇🥇🥇🥇🥇🥇🥇🥇🥇🥇</div>"
+      },
+      "options": {
+        "th": ["8", "9", "10", "11"],
+        "en": ["8", "9", "10", "11"]
+      },
+      "answer": { "th": "10", "en": "10" },
+      "explanation": {
+        "th": "นับเหรียญทองได้ครบ 10 เหรียญพอดี",
+        "en": "Counting them one by one gives 10 gold medals."
+      }
+    },
+    {
+      "id": 12,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ตัวหนังสือคำว่า <b>\"เจ็ด\"</b> ตรงกับตัวเลขใด?",
+        "en": "Which number matches the Thai word <b>\"เจ็ด\" (Jed)</b>?"
+      },
+      "options": {
+        "th": ["6", "7", "8", "9"],
+        "en": ["6", "7", "8", "9"]
+      },
+      "answer": { "th": "7", "en": "7" },
+      "explanation": {
+        "th": "คำว่า \"เจ็ด\" เขียนแทนด้วยตัวเลข 7",
+        "en": "The word \"เจ็ด\" (Seven) is written as the number 7."
+      }
+    },
+    {
+      "id": 13,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ตัวหนังสือคำว่า <b>\"เก้า\"</b> ตรงกับตัวเลขใด?",
+        "en": "Which number matches the Thai word <b>\"เก้า\" (Kao)</b>?"
+      },
+      "options": {
+        "th": ["6", "7", "8", "9"],
+        "en": ["6", "7", "8", "9"]
+      },
+      "answer": { "th": "9", "en": "9" },
+      "explanation": {
+        "th": "คำว่า \"เก้า\" เขียนแทนด้วยตัวเลข 9",
+        "en": "The word \"เก้า\" (Nine) is written as the number 9."
+      }
+    },
+    {
+      "id": 14,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ตัวหนังสือคำว่า <b>\"สอง\"</b> ตรงกับตัวเลขใด?",
+        "en": "Which number matches the Thai word <b>\"สอง\" (Song)</b>?"
+      },
+      "options": {
+        "th": ["1", "2", "3", "4"],
+        "en": ["1", "2", "3", "4"]
+      },
+      "answer": { "th": "2", "en": "2" },
+      "explanation": {
+        "th": "คำว่า \"สอง\" เขียนแทนด้วยตัวเลข 2",
+        "en": "The word \"สอง\" (Two) is written as the number 2."
+      }
+    },
+    {
+      "id": 15,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ตัวหนังสือคำว่า <b>\"หนึ่ง\"</b> ตรงกับตัวเลขใด?",
+        "en": "Which number matches the Thai word <b>\"หนึ่ง\" (Nueng)</b>?"
+      },
+      "options": {
+        "th": ["0", "1", "2", "3"],
+        "en": ["0", "1", "2", "3"]
+      },
+      "answer": { "th": "1", "en": "1" },
+      "explanation": {
+        "th": "คำว่า \"หนึ่ง\" เขียนแทนด้วยตัวเลข 1",
+        "en": "The word \"หนึ่ง\" (One) is written as the number 1."
+      }
+    },
+    {
+      "id": 16,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ตัวเลข <b>4</b> เขียนเป็นตัวหนังสือได้อย่างไร?",
+        "en": "How do you write the number <b>4</b> in Thai word?"
+      },
+      "options": {
+        "th": ["สาม", "สี่", "ห้า", "หก"],
+        "en": ["สาม (Three)", "สี่ (Four)", "ห้า (Five)", "หก (Six)"]
+      },
+      "answer": { "th": "สี่", "en": "สี่ (Four)" },
+      "explanation": {
+        "th": "ตัวเลข 4 ตรงกับคำอ่านว่า \"สี่\"",
+        "en": "The number 4 is written as \"สี่\" (See) in Thai."
+      }
+    },
+    {
+      "id": 17,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ตัวเลข <b>7</b> เขียนเป็นตัวหนังสือได้อย่างไร?",
+        "en": "How do you write the number <b>7</b> in Thai word?"
+      },
+      "options": {
+        "th": ["หก", "เจ็ด", "แปด", "เก้า"],
+        "en": ["หก (Six)", "เจ็ด (Seven)", "แปด (Eight)", "เก้า (Nine)"]
+      },
+      "answer": { "th": "เจ็ด", "en": "เจ็ด (Seven)" },
+      "explanation": {
+        "th": "ตัวเลข 7 ตรงกับคำอ่านว่า \"เจ็ด\"",
+        "en": "The number 7 is written as \"เจ็ด\" (Jed) in Thai."
+      }
+    },
+    {
+      "id": 18,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ตัวเลข <b>6</b> เขียนเป็นตัวหนังสือได้อย่างไร?",
+        "en": "How do you write the number <b>6</b> in Thai word?"
+      },
+      "options": {
+        "th": ["ห้า", "หก", "เจ็ด", "แปด"],
+        "en": ["ห้า (Five)", "หก (Six)", "เจ็ด (Seven)", "แปด (Eight)"]
+      },
+      "answer": { "th": "หก", "en": "หก (Six)" },
+      "explanation": {
+        "th": "ตัวเลข 6 ตรงกับคำอ่านว่า \"หก\"",
+        "en": "The number 6 is written as \"หก\" (Hok) in Thai."
+      }
+    },
+    {
+      "id": 19,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ตัวเลข <b>1</b> เขียนเป็นตัวหนังสือได้อย่างไร?",
+        "en": "How do you write the number <b>1</b> in Thai word?"
+      },
+      "options": {
+        "th": ["ศูนย์", "หนึ่ง", "สอง", "สาม"],
+        "en": ["ศูนย์ (Zero)", "หนึ่ง (One)", "สอง (Two)", "สาม (Three)"]
+      },
+      "answer": { "th": "หนึ่ง", "en": "หนึ่ง (One)" },
+      "explanation": {
+        "th": "ตัวเลข 1 ตรงกับคำอ่านว่า \"หนึ่ง\"",
+        "en": "The number 1 is written as \"หนึ่ง\" (Nueng) in Thai."
+      }
+    },
+    {
+      "id": 20,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ตัวเลข <b>9</b> เขียนเป็นตัวหนังสือได้อย่างไร?",
+        "en": "How do you write the number <b>9</b> in Thai word?"
+      },
+      "options": {
+        "th": ["เจ็ด", "แปด", "เก้า", "สิบ"],
+        "en": ["เจ็ด (Seven)", "แปด (Eight)", "เก้า (Nine)", "สิบ (Ten)"]
+      },
+      "answer": { "th": "เก้า", "en": "เก้า (Nine)" },
+      "explanation": {
+        "th": "ตัวเลข 9 ตรงกับคำอ่านว่า \"เก้า\"",
+        "en": "The number 9 is written as \"เก้า\" (Kao) in Thai."
+      }
+    },
+    {
+      "id": 21,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ตัวเลขใดหายไปจากช่องว่าง ?<br><b>2 , 3 , _ , 5</b>",
+        "en": "What is the missing number?<br><b>2 , 3 , _ , 5</b>"
+      },
+      "options": {
+        "th": ["1", "4", "6", "7"],
+        "en": ["1", "4", "6", "7"]
+      },
+      "answer": { "th": "4", "en": "4" },
+      "explanation": {
+        "th": "ตัวเลขที่อยู่ระหว่าง 3 กับ 5 คือ 4",
+        "en": "The number between 3 and 5 is 4."
+      }
+    },
+    {
+      "id": 22,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ตัวเลขใดหายไปจากช่องว่าง ?<br><b>8 , _ , 10</b>",
+        "en": "What is the missing number?<br><b>8 , _ , 10</b>"
+      },
+      "options": {
+        "th": ["7", "9", "11", "0"],
+        "en": ["7", "9", "11", "0"]
+      },
+      "answer": { "th": "9", "en": "9" },
+      "explanation": {
+        "th": "ตัวเลขที่อยู่ระหว่าง 8 กับ 10 คือ 9",
+        "en": "The number between 8 and 10 is 9."
+      }
+    },
+    {
+      "id": 23,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ตัวเลขใดหายไปจากช่องว่าง ?<br><b>_ , 1 , 2</b>",
+        "en": "What is the missing number?<br><b>_ , 1 , 2</b>"
+      },
+      "options": {
+        "th": ["0", "3", "4", "5"],
+        "en": ["0", "3", "4", "5"]
+      },
+      "answer": { "th": "0", "en": "0" },
+      "explanation": {
+        "th": "ตัวเลขที่มาก่อนหน้า 1 คือ 0",
+        "en": "The number before 1 is 0."
+      }
+    },
+    {
+      "id": 24,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ในการนับเลข ตัวเลขใดอยู่ถัดจาก 7 ?<br>( 5 , 6 , 7 , _ )",
+        "en": "In counting, what number comes after 7?<br>( 5 , 6 , 7 , _ )"
+      },
+      "options": {
+        "th": ["6", "8", "9", "10"],
+        "en": ["6", "8", "9", "10"]
+      },
+      "answer": { "th": "8", "en": "8" },
+      "explanation": {
+        "th": "นับเพิ่มทีละ 1 ถัดจาก 7 ก็คือ 8",
+        "en": "Counting up by 1, the number after 7 is 8."
+      }
+    },
+    {
+      "id": 25,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เลขใดมีค่า<b>มากกว่า</b> ระหว่าง 2 กับ 5 ?",
+        "en": "Which number is <b>greater</b>: 2 or 5?"
+      },
+      "options": {
+        "th": ["1", "2", "3", "5"],
+        "en": ["1", "2", "3", "5"]
+      },
+      "answer": { "th": "5", "en": "5" },
+      "explanation": {
+        "th": "5 มีจำนวนสิ่งของเยอะกว่า 2 ดังนั้น 5 จึงมีค่ามากกว่า",
+        "en": "5 represents more items than 2, so 5 is greater."
+      }
+    },
+    {
+      "id": 26,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เลขใดมีค่า<b>มากกว่า</b> ระหว่าง 3 กับ 7 ?",
+        "en": "Which number is <b>greater</b>: 3 or 7?"
+      },
+      "options": {
+        "th": ["3", "5", "6", "7"],
+        "en": ["3", "5", "6", "7"]
+      },
+      "answer": { "th": "7", "en": "7" },
+      "explanation": {
+        "th": "7 มาทีหลังในการนับเลข จึงมีค่ามากกว่า 3",
+        "en": "7 comes later when counting, so it is greater than 3."
+      }
+    },
+    {
+      "id": 27,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เลขใดมีค่า<b>น้อยกว่า</b> ระหว่าง 9 กับ 10 ?",
+        "en": "Which number is <b>smaller</b>: 9 or 10?"
+      },
+      "options": {
+        "th": ["8", "9", "10", "11"],
+        "en": ["8", "9", "10", "11"]
+      },
+      "answer": { "th": "9", "en": "9" },
+      "explanation": {
+        "th": "9 มีจำนวนสิ่งของน้อยกว่า 10 ดังนั้น 9 จึงมีค่าน้อยกว่า",
+        "en": "9 has fewer items than 10, so 9 is smaller."
+      }
+    },
+    {
+      "id": 28,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เลขใดมีค่า<b>น้อยกว่า</b> ระหว่าง 4 กับ 1 ?",
+        "en": "Which number is <b>smaller</b>: 4 or 1?"
+      },
+      "options": {
+        "th": ["1", "2", "3", "4"],
+        "en": ["1", "2", "3", "4"]
+      },
+      "answer": { "th": "1", "en": "1" },
+      "explanation": {
+        "th": "1 มาก่อน 4 ในการนับ จึงมีค่าน้อยที่สุด",
+        "en": "1 comes before 4 when counting, so it is smaller."
+      }
+    },
+    {
+      "id": 29,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "มด 1 ตัว มีขากี่ขา? <br><div style='font-size:3rem; margin-top:10px;'>🐜</div>",
+        "en": "How many legs does an ant have? <br><div style='font-size:3rem; margin-top:10px;'>🐜</div>"
+      },
+      "options": {
+        "th": ["4", "6", "8", "10"],
+        "en": ["4", "6", "8", "10"]
+      },
+      "answer": { "th": "6", "en": "6" },
+      "explanation": {
+        "th": "มดเป็นแมลง แมลงจะมีขาทั้งหมด 6 ขา",
+        "en": "An ant is an insect, and insects have 6 legs."
+      }
+    },
+    {
+      "id": 30,
+      "topic": { "th": "คณิตศาสตร์พื้นฐานป.1 เทอม 1 - บทที่ 1 จำนวนนับ 1 ถึง 10 และ 0", "en": "Basic Mathematics P.1 Term 1 - Unit 1: Numbers 1 to 10 and 0" },
+      "skill": { "th": "จำนวนและพีชคณิต", "en": "Numbers & Algebra" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัญญาณไฟจราจร มีทั้งหมดกี่สี? <br><div style='font-size:3rem; margin-top:10px;'>🚦</div>",
+        "en": "How many colors does a traffic light have? <br><div style='font-size:3rem; margin-top:10px;'>🚦</div>"
+      },
+      "options": {
+        "th": ["2", "3", "4", "5"],
+        "en": ["2", "3", "4", "5"]
+      },
+      "answer": { "th": "3", "en": "3" },
+      "explanation": {
+        "th": "ไฟจราจรมี 3 สี คือ แดง เหลือง และเขียว",
+        "en": "A traffic light has 3 colors: red, yellow, and green."
+      }
+    }
+  ]
+}
