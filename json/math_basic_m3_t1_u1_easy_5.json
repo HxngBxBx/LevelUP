@@ -1,0 +1,851 @@
+{
+  "metadata": {
+    "exam_title": {
+      "th": "คณิตศาสตร์ ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว (ง่าย ชุดที่ 5)",
+      "en": "Math M.3 Term 1 - Unit 1: Linear Inequalities with One Variable (Easy Set 5)"
+    },
+    "total_questions": 30,
+    "difficulty_distribution": {
+      "description": {
+        "th": "คำแนะนำ: ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุด้านล่างนี้อย่างเคร่งครัด",
+        "en": "Guideline: When generating the exam, strictly ensure that the difficulty level of the questions matches the percentage distribution specified below."
+      },
+      "Easy": "100%",
+      "Medium": "0%",
+      "Hard": "0%",
+      "Extreme": "0%"
+    },
+    "dashboard_config": {
+      "theme": "modern_ai_bright",
+      "watermark_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "header_footer_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "active_recall_mode": true
+    },
+    "ai_prompt_guidelines": {
+      "description": "คำสั่งเฉพาะสำหรับ AI ในการสร้างข้อสอบ (Prompt Instructions)",
+      "rules": [
+        "1. ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุอย่างเคร่งครัด",
+        "2. สกิล (Skill): ให้คัดลอก 1 ใน 4 สกิลนี้ไปใส่ในตัวแปร 'skill' ของแต่ละข้อ: 'จำนวนและพีชคณิต', 'การวัดและเรขาคณิต', 'สถิติและความน่าจะเป็น', หรือ 'แคลคูลัส'",
+        "3. รูปภาพประกอบ (SVG): หากข้อสอบข้อไหนสามารถอธิบายด้วยภาพวาดได้ ให้ใช้ SVG code สร้างรูปภาพประกอบง่ายๆ สีสันสดใส แทรกไว้ในโจทย์หรือตัวเลือกด้วยเสมอ(ถ้าทำได้)",
+        "4. ภาษา (Language): ข้อมูลข้อสอบต้องรองรับ 2 ภาษา (th และ en) ทุกจุด ทั้งโจทย์ ตัวเลือก และเฉลย"
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อความ 'สองเท่าของ x รวมกับ 5 มีค่าน้อยกว่า 15' เขียนเป็นประโยคสัญลักษณ์อสมการได้ตรงกับข้อใด?",
+        "en": "Which inequality represents 'Twice x added to 5 is less than 15'?"
+      },
+      "options": {
+        "th": ["$2x + 5 < 15$", "$2x + 5 \\le 15$", "$2x + 5 > 15$", "$2x + 5 \\ge 15$"],
+        "en": ["$2x + 5 < 15$", "$2x + 5 \\le 15$", "$2x + 5 > 15$", "$2x + 5 \\ge 15$"]
+      },
+      "answer": { "th": "$2x + 5 < 15$", "en": "$2x + 5 < 15$" },
+      "explanation": {
+        "th": "1. <b>'สองเท่าของ x'</b> คือ $2x$<br>2. <b>'รวมกับ 5'</b> คือบวก 5 ($2x + 5$)<br>3. <b>'น้อยกว่า'</b> ใช้เครื่องหมาย $<$<br>ดังนั้นจึงเขียนได้เป็น <b>$2x + 5 < 15$</b>",
+        "en": "1. <b>'Twice x'</b> is $2x$.<br>2. <b>'Added to 5'</b> means plus 5 ($2x + 5$).<br>3. <b>'Less than'</b> is $<$.<br>Thus, <b>$2x + 5 < 15$</b>."
+      }
+    },
+    {
+      "id": 2,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อความ 'ครึ่งหนึ่งของ y หักออกด้วย 4 มีค่าอย่างน้อย 10' เขียนเป็นประโยคสัญลักษณ์อสมการได้ตรงกับข้อใด?",
+        "en": "Which inequality represents 'Half of y decreased by 4 is at least 10'?"
+      },
+      "options": {
+        "th": ["$\\frac{y}{2} - 4 \\ge 10$", "$\\frac{y}{2} - 4 > 10$", "$\\frac{y}{2} - 4 \\le 10$", "$\\frac{y}{2} - 4 < 10$"],
+        "en": ["$\\frac{y}{2} - 4 \\ge 10$", "$\\frac{y}{2} - 4 > 10$", "$\\frac{y}{2} - 4 \\le 10$", "$\\frac{y}{2} - 4 < 10$"]
+      },
+      "answer": { "th": "$\\frac{y}{2} - 4 \\ge 10$", "en": "$\\frac{y}{2} - 4 \\ge 10$" },
+      "explanation": {
+        "th": "1. <b>'ครึ่งหนึ่งของ y'</b> คือ $\\frac{y}{2}$<br>2. <b>'หักออกด้วย 4'</b> คือ $-\\ 4$<br>3. <b>'อย่างน้อย'</b> หมายถึงมากกว่าหรือเท่ากับ $\\ge$<br>ดังนั้น <b>$\\frac{y}{2} - 4 \\ge 10$</b>",
+        "en": "1. <b>'Half of y'</b> is $\\frac{y}{2}$.<br>2. <b>'Decreased by 4'</b> is $-\\ 4$.<br>3. <b>'At least'</b> means greater than or equal to $\\ge$.<br>Thus, <b>$\\frac{y}{2} - 4 \\ge 10$</b>."
+      }
+    },
+    {
+      "id": 3,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อความ 'ผลบวกของสามเท่าของ a กับ 7 ไม่เกิน 25' เขียนเป็นประโยคสัญลักษณ์อสมการได้ตรงกับข้อใด?",
+        "en": "Which inequality represents 'The sum of three times a and 7 is not more than 25'?"
+      },
+      "options": {
+        "th": ["$3a + 7 \\le 25$", "$3a + 7 < 25$", "$3a + 7 \\ge 25$", "$3a + 7 > 25$"],
+        "en": ["$3a + 7 \\le 25$", "$3a + 7 < 25$", "$3a + 7 \\ge 25$", "$3a + 7 > 25$"]
+      },
+      "answer": { "th": "$3a + 7 \\le 25$", "en": "$3a + 7 \\le 25$" },
+      "explanation": {
+        "th": "1. <b>'สามเท่าของ a'</b> คือ $3a$<br>2. <b>'ผลบวก...กับ 7'</b> คือ $+ 7$<br>3. <b>'ไม่เกิน'</b> หมายถึงน้อยกว่าหรือเท่ากับ $\\le$<br>ดังนั้น <b>$3a + 7 \\le 25$</b>",
+        "en": "1. <b>'Three times a'</b> is $3a$.<br>2. <b>'Sum with 7'</b> is $+ 7$.<br>3. <b>'Not more than'</b> means less than or equal to $\\le$.<br>Thus, <b>$3a + 7 \\le 25$</b>."
+      }
+    },
+    {
+      "id": 4,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ประโยคสัญลักษณ์ '$4m - 3 > 17$' ตรงกับข้อความในข้อใด?",
+        "en": "Which statement corresponds to the inequality '$4m - 3 > 17$'?"
+      },
+      "options": {
+        "th": ["สี่เท่าของ m ลบด้วย 3 มีค่ามากกว่า 17", "สี่เท่าของ m ลบด้วย 3 มีค่าอย่างน้อย 17", "สี่เท่าของ m ลบด้วย 3 มีค่าน้อยกว่า 17", "สี่เท่าของ m ลบด้วย 3 มีค่าไม่เกิน 17"],
+        "en": ["Four times m minus 3 is greater than 17", "Four times m minus 3 is at least 17", "Four times m minus 3 is less than 17", "Four times m minus 3 is not more than 17"]
+      },
+      "answer": { "th": "สี่เท่าของ m ลบด้วย 3 มีค่ามากกว่า 17", "en": "Four times m minus 3 is greater than 17" },
+      "explanation": {
+        "th": "1. $4m - 3$ คือ <b>'สี่เท่าของ m ลบด้วย 3'</b><br>2. เครื่องหมาย $>$ คือ <b>'มากกว่า'</b><br>จึงแปลได้ว่า <b>'สี่เท่าของ m ลบด้วย 3 มีค่ามากกว่า 17'</b>",
+        "en": "1. $4m - 3$ translates to <b>'Four times m minus 3'</b>.<br>2. The $>$ symbol means <b>'greater than'</b>.<br>So, <b>'Four times m minus 3 is greater than 17'</b>."
+      }
+    },
+    {
+      "id": 5,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ประโยคสัญลักษณ์ '$\\frac{x}{3} + 5 $ ≠ $ 20$' ตรงกับข้อความในข้อใด?",
+        "en": "Which statement corresponds to the inequality '$\\frac{x}{3} + 5 $ ≠ $ 20$'?"
+      },
+      "options": {
+        "th": ["ผลบวกของหนึ่งในสามของ x กับ 5 มีค่าไม่เท่ากับ 20", "ผลบวกของหนึ่งในสามของ x กับ 5 มีค่าน้อยกว่า 20", "ผลบวกของหนึ่งในสามของ x กับ 5 มีค่ามากกว่า 20", "ผลบวกของหนึ่งในสามของ x กับ 5 มีค่าเท่ากับ 20"],
+        "en": ["The sum of one-third of x and 5 is not equal to 20", "The sum of one-third of x and 5 is less than 20", "The sum of one-third of x and 5 is greater than 20", "The sum of one-third of x and 5 is equal to 20"]
+      },
+      "answer": { "th": "ผลบวกของหนึ่งในสามของ x กับ 5 มีค่าไม่เท่ากับ 20", "en": "The sum of one-third of x and 5 is not equal to 20" },
+      "explanation": {
+        "th": "1. $\\frac{x}{3} + 5$ คือ <b>'ผลบวกของหนึ่งในสามของ x กับ 5'</b><br>2. เครื่องหมาย $$ ≠ $$ คือ <b>'ไม่เท่ากับ'</b><br>จึงแปลได้ตรงตัวว่า <b>'ผลบวกของหนึ่งในสามของ x กับ 5 มีค่าไม่เท่ากับ 20'</b>",
+        "en": "1. $\\frac{x}{3} + 5$ translates to <b>'The sum of one-third of x and 5'</b>.<br>2. The $$ ≠ $$ symbol means <b>'not equal to'</b>.<br>So, <b>'The sum of one-third of x and 5 is not equal to 20'</b>."
+      }
+    },
+    {
+      "id": 6,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ประโยคสัญลักษณ์ '$2(y - 4) \\le 16$' ตรงกับข้อความในข้อใด?",
+        "en": "Which statement corresponds to the inequality '$2(y - 4) \\le 16$'?"
+      },
+      "options": {
+        "th": ["สองเท่าของผลต่างของ y กับ 4 มีค่าไม่เกิน 16", "สองเท่าของผลต่างของ y กับ 4 มีค่าน้อยกว่า 16", "สองเท่าของผลต่างของ y กับ 4 มีค่าอย่างน้อย 16", "สองเท่าของผลต่างของ y กับ 4 มีค่ามากกว่า 16"],
+        "en": ["Twice the difference of y and 4 is not more than 16", "Twice the difference of y and 4 is less than 16", "Twice the difference of y and 4 is at least 16", "Twice the difference of y and 4 is greater than 16"]
+      },
+      "answer": { "th": "สองเท่าของผลต่างของ y กับ 4 มีค่าไม่เกิน 16", "en": "Twice the difference of y and 4 is not more than 16" },
+      "explanation": {
+        "th": "1. $2(y - 4)$ คือ <b>'สองเท่าของผลต่างของ y กับ 4'</b> (ทำในวงเล็บก่อน)<br>2. เครื่องหมาย $\\le$ หมายถึงน้อยกว่าหรือเท่ากับ ตรงกับคำว่า <b>'ไม่เกิน'</b><br>จึงแปลได้ว่า <b>'สองเท่าของผลต่างของ y กับ 4 มีค่าไม่เกิน 16'</b>",
+        "en": "1. $2(y - 4)$ translates to <b>'Twice the difference of y and 4'</b>.<br>2. The $\\le$ symbol means <b>'not more than'</b>.<br>So, <b>'Twice the difference of y and 4 is not more than 16'</b>."
+      }
+    },
+    {
+      "id": 7,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "คำตอบของอสมการ $x $ ≠ $ 3$ เขียนแทนด้วยกราฟเส้นจำนวนในข้อใด?",
+        "en": "Which number line represents the solution for the inequality $x $ ≠ $ 3$?"
+      },
+      "options": {
+        "th": [
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5zM54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5zM50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+        ],
+        "en": [
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5zM54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5zM50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+        ]
+      },
+      "answer": {
+        "th": "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5zM54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+        "en": "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5zM54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+      },
+      "explanation": {
+        "th": "เครื่องหมาย $$ ≠ $$ คือ <b>ไม่เท่ากับ</b> หมายถึงเป็นจำนวนใดๆ ก็ได้ยกเว้น 3 จึงต้องใช้ <b>จุดโปร่ง</b> ที่เลข 3 และเส้นจำนวนชี้ไปทั้ง <b>ซ้ายและขวา</b>",
+        "en": "The $$ ≠ $$ symbol means <b>not equal to</b> (any number except 3), so we use an <b>open circle</b> at 3 and arrows pointing both <b>left and right</b>."
+      }
+    },
+    {
+      "id": 8,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "คำตอบของอสมการ $x \\le 4$ เขียนแทนด้วยกราฟเส้นจำนวนในข้อใด?",
+        "en": "Which number line represents the solution for the inequality $x \\le 4$?"
+      },
+      "options": {
+        "th": [
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+        ],
+        "en": [
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+        ]
+      },
+      "answer": {
+        "th": "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+        "en": "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+      },
+      "explanation": {
+        "th": "เครื่องหมาย $\\le$ คือ <b>น้อยกว่าหรือเท่ากับ</b> (รวม 4 ด้วย) จึงต้องใช้ <b>จุดทึบ</b> และชี้ลูกศรไปทาง <b>ซ้าย</b>",
+        "en": "The $\\le$ symbol means <b>less than or equal to</b> (including 4), so we use a <b>closed circle</b> and an arrow pointing to the <b>left</b>."
+      }
+    },
+    {
+      "id": 9,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "คำตอบของอสมการ $x \\ge -1$ เขียนแทนด้วยกราฟเส้นจำนวนในข้อใด?",
+        "en": "Which number line represents the solution for the inequality $x \\ge -1$?"
+      },
+      "options": {
+        "th": [
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>0</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>0</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>0</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>0</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+        ],
+        "en": [
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>0</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>0</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>0</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>0</text><circle cx='50' cy='15' r='4' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+        ]
+      },
+      "answer": {
+        "th": "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>0</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+        "en": "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>0</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+      },
+      "explanation": {
+        "th": "เครื่องหมาย $\\ge$ คือ <b>มากกว่าหรือเท่ากับ</b> (รวม -1 ด้วย) จึงต้องใช้ <b>จุดทึบ</b> และชี้ลูกศรไปทาง <b>ขวา</b>",
+        "en": "The $\\ge$ symbol means <b>greater than or equal to</b> (including -1), so we use a <b>closed circle</b> and an arrow pointing to the <b>right</b>."
+      }
+    },
+    {
+      "id": 10,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "คำตอบของอสมการ $x < 5$ สามารถเขียนในรูปแบบ 'ช่วงของคำตอบ' ได้ตรงกับข้อใด?",
+        "en": "Which interval notation represents the solution to the inequality $x < 5$?"
+      },
+      "options": {
+        "th": ["$(-\\infty, 5)$", "$(-\\infty, 5]$", "$(5, \\infty)$", "$[5, \\infty)$"],
+        "en": ["$(-\\infty, 5)$", "$(-\\infty, 5]$", "$(5, \\infty)$", "$[5, \\infty)$"]
+      },
+      "answer": { "th": "$(-\\infty, 5)$", "en": "$(-\\infty, 5)$" },
+      "explanation": {
+        "th": "เครื่องหมาย $<$ หมายถึง <b>น้อยกว่า</b> (ไม่รวมค่า 5) จะใช้ <b>วงเล็บโค้ง ()</b> แทนจุดโปร่ง และเส้นจำนวนชี้ไปทางซ้ายเรื่อยๆ จนถึงลบอนันต์ ดังนั้นจึงเขียนได้เป็น <b>$(-\\infty, 5)$</b>",
+        "en": "The $<$ symbol means <b>less than</b> (excluding 5). We use <b>parentheses ()</b> for an open interval. Since it points left indefinitely, it starts from negative infinity. Thus, <b>$(-\\infty, 5)$</b>."
+      }
+    },
+    {
+      "id": 11,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "คำตอบของอสมการ $x \\ge -3$ สามารถเขียนในรูปแบบ 'ช่วงของคำตอบ' ได้ตรงกับข้อใด?",
+        "en": "Which interval notation represents the solution to the inequality $x \\ge -3$?"
+      },
+      "options": {
+        "th": ["$[-3, \\infty)$", "$(-3, \\infty)$", "$(-\\infty, -3]$", "$(-\\infty, -3)$"],
+        "en": ["$[-3, \\infty)$", "$(-3, \\infty)$", "$(-\\infty, -3]$", "$(-\\infty, -3)$"]
+      },
+      "answer": { "th": "$[-3, \\infty)$", "en": "$[-3, \\infty)$" },
+      "explanation": {
+        "th": "เครื่องหมาย $\\ge$ หมายถึง <b>มากกว่าหรือเท่ากับ</b> (รวมค่า -3) จะใช้ <b>วงเล็บเหลี่ยม []</b> แทนจุดทึบ และเส้นจำนวนชี้ไปทางขวาเรื่อยๆ จนถึงบวกอนันต์ ดังนั้นจึงเขียนได้เป็น <b>$[-3, \\infty)$</b>",
+        "en": "The $\\ge$ symbol means <b>greater than or equal to</b> (including -3). We use <b>brackets []</b> for a closed interval. It points right indefinitely to positive infinity. Thus, <b>$[-3, \\infty)$</b>."
+      }
+    },
+    {
+      "id": 12,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "คำตอบของอสมการ $x \\le 8$ สามารถเขียนในรูปแบบ 'ช่วงของคำตอบ' ได้ตรงกับข้อใด?",
+        "en": "Which interval notation represents the solution to the inequality $x \\le 8$?"
+      },
+      "options": {
+        "th": ["$(-\\infty, 8]$", "$(-\\infty, 8)$", "$[8, \\infty)$", "$(8, \\infty)$"],
+        "en": ["$(-\\infty, 8]$", "$(-\\infty, 8)$", "$[8, \\infty)$", "$(8, \\infty)$"]
+      },
+      "answer": { "th": "$(-\\infty, 8]$", "en": "$(-\\infty, 8]$" },
+      "explanation": {
+        "th": "เครื่องหมาย $\\le$ หมายถึง <b>น้อยกว่าหรือเท่ากับ</b> (รวมค่า 8) จะใช้ <b>วงเล็บเหลี่ยม []</b> ปิดที่เลข 8 และเนื่องจากเป็นค่าน้อยกว่า เส้นจำนวนจึงลากยาวมาจากลบอนันต์ ได้เป็น <b>$(-\\infty, 8]$</b>",
+        "en": "The $\\le$ symbol means <b>less than or equal to</b> (including 8). We use a <b>bracket ]</b> at 8. Since it points left indefinitely, it starts from negative infinity. Thus, <b>$(-\\infty, 8]$</b>."
+      }
+    },
+    {
+      "id": 13,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กราฟเส้นจำนวนด้านล่างนี้ แทนคำตอบของอสมการในข้อใด?<br><br><svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>1</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+        "en": "Which inequality does the number line below represent?<br><br><svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>1</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+      },
+      "options": {
+        "th": ["$x \\ge 2$", "$x > 2$", "$x \\le 2$", "$x < 2$"],
+        "en": ["$x \\ge 2$", "$x > 2$", "$x \\le 2$", "$x < 2$"]
+      },
+      "answer": { "th": "$x \\ge 2$", "en": "$x \\ge 2$" },
+      "explanation": {
+        "th": "สังเกตจากกราฟ:<br>1. เป็น <b>จุดทึบ</b> ที่เลข 2 หมายความว่า <b>รวม</b> เลข 2 ด้วย (ใช้ $\\le$ หรือ $\\ge$)<br>2. ลูกศรชี้ไปทาง <b>ขวา</b> หมายถึง <b>มากกว่า</b><br>สรุปได้เป็น <b>$x \\ge 2$</b>",
+        "en": "From the graph:<br>1. It's a <b>closed circle</b> at 2, meaning 2 is <b>included</b> (use $\\le$ or $\\ge$).<br>2. The arrow points <b>right</b>, meaning <b>greater than</b>.<br>Conclusion: <b>$x \\ge 2$</b>."
+      }
+    },
+    {
+      "id": 14,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กราฟเส้นจำนวนด้านล่างนี้ แทนคำตอบของอสมการในข้อใด?<br><br><svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5zM54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+        "en": "Which inequality does the number line below represent?<br><br><svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5zM54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+      },
+      "options": {
+        "th": ["$x $ ≠ $ -2$", "$x = -2$", "$x > -2$", "$x < -2$"],
+        "en": ["$x $ ≠ $ -2$", "$x = -2$", "$x > -2$", "$x < -2$"]
+      },
+      "answer": { "th": "$x $ ≠ $ -2$", "en": "$x $ ≠ $ -2$" },
+      "explanation": {
+        "th": "สังเกตจากกราฟ:<br>1. เป็น <b>จุดโปร่ง</b> ที่เลข -2 หมายความว่า <b>ไม่รวม</b> เลข -2<br>2. ลูกศรชี้ไปทาง <b>ซ้ายและขวา</b> หมายถึงเป็นจำนวนใดๆ ก็ได้ที่น้อยกว่าและมากกว่า -2<br>สรุปได้เป็น <b>$x $ ≠ $ -2$</b>",
+        "en": "From the graph:<br>1. It's an <b>open circle</b> at -2, meaning -2 is <b>excluded</b>.<br>2. Arrows point both <b>left and right</b>, meaning any number less than and greater than -2.<br>Conclusion: <b>$x $ ≠ $ -2$</b>."
+      }
+    },
+    {
+      "id": 15,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กราฟเส้นจำนวนด้านล่างนี้ สามารถเขียนในรูปแบบ 'ช่วงของคำตอบ' ได้ตรงกับข้อใด?<br><br><svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>0</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+        "en": "Which interval notation represents the number line below?<br><br><svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>0</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+      },
+      "options": {
+        "th": ["$(-\\infty, -1]$", "$(-\\infty, -1)$", "$[-1, \\infty)$", "$(-1, \\infty)$"],
+        "en": ["$(-\\infty, -1]$", "$(-\\infty, -1)$", "$[-1, \\infty)$", "$(-1, \\infty)$"]
+      },
+      "answer": { "th": "$(-\\infty, -1]$", "en": "$(-\\infty, -1]$" },
+      "explanation": {
+        "th": "จากกราฟคือ $x \\le -1$ (จุดทึบ ชี้ซ้าย) <br>เนื่องจากชี้ไปทางซ้ายเรื่อยๆ จะเริ่มต้นที่ <b>$-\\infty$</b> และไปสิ้นสุดที่ <b>-1 แบบรวมค่า (ใช้ปีกกา [])</b> <br>จึงได้ช่วงเป็น <b>$(-\\infty, -1]$</b>",
+        "en": "The graph shows $x \\le -1$ (closed circle, left arrow). <br>It starts from <b>$-\\infty$</b> and ends at <b>-1 (inclusive, using bracket [])</b>. <br>Thus, it is <b>$(-\\infty, -1]$</b>."
+      }
+    },
+    {
+      "id": 16,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กราฟเส้นจำนวนด้านล่างนี้ สามารถเขียนในรูปแบบ 'ช่วงของคำตอบ' ได้ตรงกับข้อใด?<br><br><svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+        "en": "Which interval notation represents the number line below?<br><br><svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+      },
+      "options": {
+        "th": ["$(3, \\infty)$", "$[3, \\infty)$", "$(-\\infty, 3)$", "$(-\\infty, 3]$"],
+        "en": ["$(3, \\infty)$", "$[3, \\infty)$", "$(-\\infty, 3)$", "$(-\\infty, 3]$"]
+      },
+      "answer": { "th": "$(3, \\infty)$", "en": "$(3, \\infty)$" },
+      "explanation": {
+        "th": "จากกราฟคือ $x > 3$ (จุดโปร่ง ชี้ขวา) <br>เริ่มต้นที่ <b>3 แบบไม่รวมค่า (ใช้วงเล็บโค้ง ())</b> และไปทางขวาเรื่อยๆ จนถึง <b>$\\infty$</b> <br>จึงได้ช่วงเป็น <b>$(3, \\infty)$</b>",
+        "en": "The graph shows $x > 3$ (open circle, right arrow). <br>It starts from <b>3 (exclusive, using parenthesis ())</b> and goes to <b>$\\infty$</b>. <br>Thus, it is <b>$(3, \\infty)$</b>."
+      }
+    },
+    {
+      "id": 17,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ช่วงของคำตอบ $(-\\infty, 10)$ ตรงกับอสมการในข้อใด?",
+        "en": "Which inequality corresponds to the interval notation $(-\\infty, 10)$?"
+      },
+      "options": {
+        "th": ["$x < 10$", "$x \\le 10$", "$x > 10$", "$x \\ge 10$"],
+        "en": ["$x < 10$", "$x \\le 10$", "$x > 10$", "$x \\ge 10$"]
+      },
+      "answer": { "th": "$x < 10$", "en": "$x < 10$" },
+      "explanation": {
+        "th": "ช่วง <b>$(-\\infty, 10)$</b> หมายถึง ค่าทุกค่าที่น้อยกว่า 10 ลงไปเรื่อยๆ โดย <b>ไม่รวม 10</b> (เพราะใช้วงเล็บโค้ง) <br>ดังนั้นจึงตรงกับอสมการ <b>$x < 10$</b>",
+        "en": "The interval <b>$(-\\infty, 10)$</b> means all values strictly less than 10 <b>(excluding 10</b> due to parenthesis). <br>Thus, it corresponds to <b>$x < 10$</b>."
+      }
+    },
+    {
+      "id": 18,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ช่วงของคำตอบ $[-4, \\infty)$ ตรงกับอสมการในข้อใด?",
+        "en": "Which inequality corresponds to the interval notation $[-4, \\infty)$?"
+      },
+      "options": {
+        "th": ["$x \\ge -4$", "$x > -4$", "$x \\le -4$", "$x < -4$"],
+        "en": ["$x \\ge -4$", "$x > -4$", "$x \\le -4$", "$x < -4$"]
+      },
+      "answer": { "th": "$x \\ge -4$", "en": "$x \\ge -4$" },
+      "explanation": {
+        "th": "ช่วง <b>$[-4, \\infty)$</b> หมายถึง ค่าทุกค่าตั้งแต่ -4 ขึ้นไป โดย <b>รวม -4 ด้วย</b> (เพราะใช้วงเล็บเหลี่ยม) <br>ดังนั้นจึงตรงกับอสมการ <b>$x \\ge -4$</b>",
+        "en": "The interval <b>$[-4, \\infty)$</b> means all values from -4 upwards, <b>including -4</b> (due to bracket). <br>Thus, it corresponds to <b>$x \\ge -4$</b>."
+      }
+    },
+    {
+      "id": 19,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ช่วงของคำตอบ $(5, \\infty)$ สามารถแสดงด้วยกราฟเส้นจำนวนในข้อใด?",
+        "en": "Which number line represents the interval notation $(5, \\infty)$?"
+      },
+      "options": {
+        "th": [
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>6</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>6</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>6</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>6</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+        ],
+        "en": [
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>6</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>6</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>6</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>6</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+        ]
+      },
+      "answer": {
+        "th": "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>6</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+        "en": "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>5</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>6</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+      },
+      "explanation": {
+        "th": "ช่วง <b>$(5, \\infty)$</b> มีความหมายเดียวกับ $x > 5$<br>1. วงเล็บโค้ง () หมายถึงไม่รวมค่า ต้องใช้ <b>จุดโปร่ง</b> ที่เลข 5<br>2. $\\infty$ หมายถึงไปทางบวกเรื่อยๆ ลูกศรจึงชี้ <b>ขวา</b>",
+        "en": "The interval <b>$(5, \\infty)$</b> is equivalent to $x > 5$.<br>1. Parenthesis () means exclusive, so use an <b>open circle</b> at 5.<br>2. $\\infty$ means towards positive, so the arrow points <b>right</b>."
+      }
+    },
+    {
+      "id": 20,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ช่วงของคำตอบ $(-\\infty, -2]$ สามารถแสดงด้วยกราฟเส้นจำนวนในข้อใด?",
+        "en": "Which number line represents the interval notation $(-\\infty, -2]$?"
+      },
+      "options": {
+        "th": [
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+        ],
+        "en": [
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M46 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+          "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+        ]
+      },
+      "answer": {
+        "th": "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+        "en": "<svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+      },
+      "explanation": {
+        "th": "ช่วง <b>$(-\\infty, -2]$</b> มีความหมายเดียวกับ $x \\le -2$<br>1. วงเล็บเหลี่ยม [] หมายถึงรวมค่าด้วย ต้องใช้ <b>จุดทึบ</b> ที่เลข -2<br>2. $-\\infty$ หมายถึงไปทางลบเรื่อยๆ ลูกศรจึงชี้ <b>ซ้าย</b>",
+        "en": "The interval <b>$(-\\infty, -2]$</b> is equivalent to $x \\le -2$.<br>1. Bracket [] means inclusive, so use a <b>closed circle</b> at -2.<br>2. $-\\infty$ means towards negative, so the arrow points <b>left</b>."
+      }
+    },
+    {
+      "id": 21,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $x + 6 < 12$",
+        "en": "Find the solution to the inequality $x + 6 < 12$"
+      },
+      "options": {
+        "th": ["$x < 6$", "$x \\le 6$", "$x > 6$", "$x \\ge 6$"],
+        "en": ["$x < 6$", "$x \\le 6$", "$x > 6$", "$x \\ge 6$"]
+      },
+      "answer": { "th": "$x < 6$", "en": "$x < 6$" },
+      "explanation": {
+        "th": "$x + 6 < 12$<br>ย้าย $+6$ ไปลบอีกฝั่ง:<br>$\\Rightarrow x < 12 - 6$<br>$\\Rightarrow x < 6$",
+        "en": "$x + 6 < 12$<br>Move $+6$ to subtract on the other side:<br>$\\Rightarrow x < 12 - 6$<br>$\\Rightarrow x < 6$"
+      }
+    },
+    {
+      "id": 22,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $x - 3 \\le 9$",
+        "en": "Find the solution to the inequality $x - 3 \\le 9$"
+      },
+      "options": {
+        "th": ["$x \\le 12$", "$x < 12$", "$x \\ge 12$", "$x > 12$"],
+        "en": ["$x \\le 12$", "$x < 12$", "$x \\ge 12$", "$x > 12$"]
+      },
+      "answer": { "th": "$x \\le 12$", "en": "$x \\le 12$" },
+      "explanation": {
+        "th": "$x - 3 \\le 9$<br>ย้าย $-3$ ไปบวกอีกฝั่ง:<br>$\\Rightarrow x \\le 9 + 3$<br>$\\Rightarrow x \\le 12$",
+        "en": "$x - 3 \\le 9$<br>Move $-3$ to add on the other side:<br>$\\Rightarrow x \\le 9 + 3$<br>$\\Rightarrow x \\le 12$"
+      }
+    },
+    {
+      "id": 23,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $2x > 18$",
+        "en": "Find the solution to the inequality $2x > 18$"
+      },
+      "options": {
+        "th": ["$x > 9$", "$x \\ge 9$", "$x < 9$", "$x \\le 9$"],
+        "en": ["$x > 9$", "$x \\ge 9$", "$x < 9$", "$x \\le 9$"]
+      },
+      "answer": { "th": "$x > 9$", "en": "$x > 9$" },
+      "explanation": {
+        "th": "$2x > 18$<br>ย้าย $2$ ที่คูณอยู่ไปหาร (ตัวหารเป็นบวก เครื่องหมายเหมือนเดิม):<br>$\\Rightarrow x > \\frac{18}{2}$<br>$\\Rightarrow x > 9$",
+        "en": "$2x > 18$<br>Move $2$ to divide (divisor is positive, sign remains):<br>$\\Rightarrow x > \\frac{18}{2}$<br>$\\Rightarrow x > 9$"
+      }
+    },
+    {
+      "id": 24,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $3x + 1 \\ge 10$",
+        "en": "Find the solution to the inequality $3x + 1 \\ge 10$"
+      },
+      "options": {
+        "th": ["$x \\ge 3$", "$x > 3$", "$x \\le 3$", "$x < 3$"],
+        "en": ["$x \\ge 3$", "$x > 3$", "$x \\le 3$", "$x < 3$"]
+      },
+      "answer": { "th": "$x \\ge 3$", "en": "$x \\ge 3$" },
+      "explanation": {
+        "th": "$3x + 1 \\ge 10$<br>$\\Rightarrow 3x \\ge 10 - 1$<br>$\\Rightarrow 3x \\ge 9$<br>$\\Rightarrow x \\ge \\frac{9}{3}$<br>$\\Rightarrow x \\ge 3$",
+        "en": "$3x + 1 \\ge 10$<br>$\\Rightarrow 3x \\ge 10 - 1$<br>$\\Rightarrow 3x \\ge 9$<br>$\\Rightarrow x \\ge \\frac{9}{3}$<br>$\\Rightarrow x \\ge 3$"
+      }
+    },
+    {
+      "id": 25,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $5x $ ≠ $ 20$",
+        "en": "Find the solution to the inequality $5x $ ≠ $ 20$"
+      },
+      "options": {
+        "th": ["$x $ ≠ $ 4$", "$x > 4$", "$x < 4$", "$x = 4$"],
+        "en": ["$x $ ≠ $ 4$", "$x > 4$", "$x < 4$", "$x = 4$"]
+      },
+      "answer": { "th": "$x $ ≠ $ 4$", "en": "$x $ ≠ $ 4$" },
+      "explanation": {
+        "th": "$5x $ ≠ $ 20$<br>การแก้อสมการ $$ ≠ $$ ใช้วิธีเหมือนสมการปกติ:<br>$\\Rightarrow x $ ≠ $ \\frac{20}{5}$<br>$\\Rightarrow x $ ≠ $ 4$",
+        "en": "$5x $ ≠ $ 20$<br>Solving $$ ≠ $$ is like solving a normal equation:<br>$\\Rightarrow x $ ≠ $ \\frac{20}{5}$<br>$\\Rightarrow x $ ≠ $ 4$"
+      }
+    },
+    {
+      "id": 26,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $-2x < 14$",
+        "en": "Find the solution to the inequality $-2x < 14$"
+      },
+      "options": {
+        "th": ["$x > -7$", "$x < -7$", "$x \\ge -7$", "$x \\le -7$"],
+        "en": ["$x > -7$", "$x < -7$", "$x \\ge -7$", "$x \\le -7$"]
+      },
+      "answer": { "th": "$x > -7$", "en": "$x > -7$" },
+      "explanation": {
+        "th": "$-2x < 14$<br>เมื่อนำจำนวนติดลบ (-2) ไปหารอีกฝั่ง <b>ต้องกลับเครื่องหมายอสมการ</b> จาก $<$ เป็น $>$ เสมอ:<br>$\\Rightarrow x > \\frac{14}{-2}$<br>$\\Rightarrow x > -7$",
+        "en": "$-2x < 14$<br>When dividing by a negative number (-2), you <b>must flip the inequality sign</b> from $<$ to $>$:<br>$\\Rightarrow x > \\frac{14}{-2}$<br>$\\Rightarrow x > -7$"
+      }
+    },
+    {
+      "id": 27,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $-3x \\le -15$",
+        "en": "Find the solution to the inequality $-3x \\le -15$"
+      },
+      "options": {
+        "th": ["$x \\ge 5$", "$x \\le 5$", "$x > 5$", "$x < 5$"],
+        "en": ["$x \\ge 5$", "$x \\le 5$", "$x > 5$", "$x < 5$"]
+      },
+      "answer": { "th": "$x \\ge 5$", "en": "$x \\ge 5$" },
+      "explanation": {
+        "th": "$-3x \\le -15$<br>นำจำนวนติดลบ (-3) ไปหารอีกฝั่ง <b>ต้องกลับเครื่องหมาย</b> จาก $\\le$ เป็น $\\ge$:<br>$\\Rightarrow x \\ge \\frac{-15}{-3}$<br>$\\Rightarrow x \\ge 5$",
+        "en": "$-3x \\le -15$<br>Divide by a negative number (-3), so <b>flip the sign</b> from $\\le$ to $\\ge$:<br>$\\Rightarrow x \\ge \\frac{-15}{-3}$<br>$\\Rightarrow x \\ge 5$"
+      }
+    },
+    {
+      "id": 28,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $-\\frac{x}{4} > 2$",
+        "en": "Find the solution to the inequality $-\\frac{x}{4} > 2$"
+      },
+      "options": {
+        "th": ["$x < -8$", "$x > -8$", "$x \\le -8$", "$x \\ge -8$"],
+        "en": ["$x < -8$", "$x > -8$", "$x \\le -8$", "$x \\ge -8$"]
+      },
+      "answer": { "th": "$x < -8$", "en": "$x < -8$" },
+      "explanation": {
+        "th": "$-\\frac{x}{4} > 2$<br>นำจำนวนติดลบ (-4) ไปคูณอีกฝั่ง <b>ต้องกลับเครื่องหมาย</b> จาก $>$ เป็น $<$:<br>$\\Rightarrow x < 2 \\times (-4)$<br>$\\Rightarrow x < -8$",
+        "en": "$-\\frac{x}{4} > 2$<br>Multiply by a negative number (-4), so <b>flip the sign</b> from $>$ to $<$:<br>$\\Rightarrow x < 2 \\times (-4)$<br>$\\Rightarrow x < -8$"
+      }
+    },
+    {
+      "id": 29,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $-5x + 2 \\ge -13$",
+        "en": "Find the solution to the inequality $-5x + 2 \\ge -13$"
+      },
+      "options": {
+        "th": ["$x \\le 3$", "$x \\ge 3$", "$x < 3$", "$x > 3$"],
+        "en": ["$x \\le 3$", "$x \\ge 3$", "$x < 3$", "$x > 3$"]
+      },
+      "answer": { "th": "$x \\le 3$", "en": "$x \\le 3$" },
+      "explanation": {
+        "th": "$-5x + 2 \\ge -13$<br>$\\Rightarrow -5x \\ge -13 - 2$<br>$\\Rightarrow -5x \\ge -15$<br>ย้าย -5 ไปหาร <b>ต้องกลับเครื่องหมาย</b>:<br>$\\Rightarrow x \\le \\frac{-15}{-5}$<br>$\\Rightarrow x \\le 3$",
+        "en": "$-5x + 2 \\ge -13$<br>$\\Rightarrow -5x \\ge -13 - 2$<br>$\\Rightarrow -5x \\ge -15$<br>Divide by -5, <b>flip the sign</b>:<br>$\\Rightarrow x \\le \\frac{-15}{-5}$<br>$\\Rightarrow x \\le 3$"
+      }
+    },
+    {
+      "id": 30,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $10 - x $ ≠ $ 4$",
+        "en": "Find the solution to the inequality $10 - x $ ≠ $ 4$"
+      },
+      "options": {
+        "th": ["$x $ ≠ $ 6$", "$x $ ≠ $ -6$", "$x > 6$", "$x < 6$"],
+        "en": ["$x $ ≠ $ 6$", "$x $ ≠ $ -6$", "$x > 6$", "$x < 6$"]
+      },
+      "answer": { "th": "$x $ ≠ $ 6$", "en": "$x $ ≠ $ 6$" },
+      "explanation": {
+        "th": "$10 - x $ ≠ $ 4$<br>ย้าย 10 ไปลบฝั่งขวาจะได้ $-x $ ≠ $ 4 - 10$<br>$\\Rightarrow -x $ ≠ $ -6$<br>นำ -1 ไปคูณ/หาร (เครื่องหมาย $$ ≠ $$ ไม่ต้องกลับด้าน):<br>$\\Rightarrow x $ ≠ $ 6$",
+        "en": "$10 - x $ ≠ $ 4$<br>Move 10 to subtract: $-x $ ≠ $ 4 - 10$<br>$\\Rightarrow -x $ ≠ $ -6$<br>Divide by -1 (the $$ ≠ $$ sign does not flip):<br>$\\Rightarrow x $ ≠ $ 6$"
+      }
+    }
+  ]
+}

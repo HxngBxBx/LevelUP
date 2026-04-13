@@ -1,0 +1,786 @@
+{
+  "metadata": {
+    "exam_title": {
+      "th": "คณิตศาสตร์ ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว (ง่าย ชุดที่ 2)",
+      "en": "Math M.3 Term 1 - Unit 1: Linear Inequalities with One Variable (Easy Set 2)"
+    },
+    "total_questions": 30,
+    "difficulty_distribution": {
+      "description": {
+        "th": "คำแนะนำ: ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุด้านล่างนี้อย่างเคร่งครัด",
+        "en": "Guideline: When generating the exam, strictly ensure that the difficulty level of the questions matches the percentage distribution specified below."
+      },
+      "Easy": "100%",
+      "Medium": "0%",
+      "Hard": "0%",
+      "Extreme": "0%"
+    },
+    "dashboard_config": {
+      "theme": "modern_ai_bright",
+      "watermark_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "header_footer_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "active_recall_mode": true
+    },
+    "ai_prompt_guidelines": {
+      "description": "คำสั่งเฉพาะสำหรับ AI ในการสร้างข้อสอบ (Prompt Instructions)",
+      "rules": [
+        "1. ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุอย่างเคร่งครัด",
+        "2. สกิล (Skill): ให้คัดลอก 1 ใน 4 สกิลนี้ไปใส่ในตัวแปร 'skill' ของแต่ละข้อ: 'จำนวนและพีชคณิต', 'การวัดและเรขาคณิต', 'สถิติและความน่าจะเป็น', หรือ 'แคลคูลัส'",
+        "3. รูปภาพประกอบ (SVG): หากข้อสอบข้อไหนสามารถอธิบายด้วยภาพวาดได้ ให้ใช้ SVG code สร้างรูปภาพประกอบง่ายๆ สีสันสดใส แทรกไว้ในโจทย์หรือตัวเลือกด้วยเสมอ(ถ้าทำได้)",
+        "4. ภาษา (Language): ข้อมูลข้อสอบต้องรองรับ 2 ภาษา (th และ en) ทุกจุด ทั้งโจทย์ ตัวเลือก และเฉลย"
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อความ 'ผลต่างของ x กับ 4 น้อยกว่า 10' เขียนเป็นประโยคสัญลักษณ์อสมการได้ตรงกับข้อใด?",
+        "en": "Which inequality represents the statement 'The difference between x and 4 is less than 10'?"
+      },
+      "options": {
+        "th": ["$x - 4 < 10$", "$x - 4 \\le 10$", "$x - 4 > 10$", "$x - 4 \\ge 10$"],
+        "en": ["$x - 4 < 10$", "$x - 4 \\le 10$", "$x - 4 > 10$", "$x - 4 \\ge 10$"]
+      },
+      "answer": { "th": "$x - 4 < 10$", "en": "$x - 4 < 10$" },
+      "explanation": {
+        "th": "คำว่า 'ผลต่าง' ในที่นี้คือการลบ และ 'น้อยกว่า' ใช้เครื่องหมาย $<$ จึงเขียนได้เป็น $x - 4 < 10$",
+        "en": "The word 'difference' implies subtraction, and 'less than' uses the $<$ symbol. Thus, it is written as $x - 4 < 10$."
+      }
+    },
+    {
+      "id": 2,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อความ 'สามเท่าของ y รวมกับ 5 มีค่าอย่างน้อย 20' เขียนเป็นประโยคสัญลักษณ์อสมการได้ตรงกับข้อใด?",
+        "en": "Which inequality represents the statement 'Three times y added to 5 is at least 20'?"
+      },
+      "options": {
+        "th": ["$3y + 5 \\le 20$", "$3y + 5 < 20$", "$3y + 5 > 20$", "$3y + 5 \\ge 20$"],
+        "en": ["$3y + 5 \\le 20$", "$3y + 5 < 20$", "$3y + 5 > 20$", "$3y + 5 \\ge 20$"]
+      },
+      "answer": { "th": "$3y + 5 \\ge 20$", "en": "$3y + 5 \\ge 20$" },
+      "explanation": {
+        "th": "คำว่า 'อย่างน้อย' หมายถึง มากกว่าหรือเท่ากับ ($\\ge$) จึงเขียนได้เป็น $3y + 5 \\ge 20$",
+        "en": "The phrase 'at least' means greater than or equal to ($\\ge$). Thus, it is written as $3y + 5 \\ge 20$."
+      }
+    },
+    {
+      "id": 3,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อความ 'ครึ่งหนึ่งของจำนวนจำนวนหนึ่งมีค่าไม่เกิน 18' เขียนเป็นประโยคสัญลักษณ์อสมการได้ตรงกับข้อใด? (ให้ x แทนจำนวนนั้น)",
+        "en": "Which inequality represents 'Half of a number is not more than 18'? (Let x be that number)"
+      },
+      "options": {
+        "th": ["$\\frac{x}{2} < 18$", "$\\frac{x}{2} \\le 18$", "$\\frac{x}{2} > 18$", "$\\frac{x}{2} \\ge 18$"],
+        "en": ["$\\frac{x}{2} < 18$", "$\\frac{x}{2} \\le 18$", "$\\frac{x}{2} > 18$", "$\\frac{x}{2} \\ge 18$"]
+      },
+      "answer": { "th": "$\\frac{x}{2} \\le 18$", "en": "$\\frac{x}{2} \\le 18$" },
+      "explanation": {
+        "th": "คำว่า 'ไม่เกิน' หมายถึง น้อยกว่าหรือเท่ากับ ($\\le$) จึงเขียนได้เป็น $\\frac{x}{2} \\le 18$",
+        "en": "The phrase 'not more than' means less than or equal to ($\\le$). Thus, it is written as $\\frac{x}{2} \\le 18$."
+      }
+    },
+    {
+      "id": 4,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อความ '7 หักออกด้วย a มีค่ามากกว่า 2' เขียนเป็นประโยคสัญลักษณ์อสมการได้ตรงกับข้อใด?",
+        "en": "Which inequality represents '7 decreased by a is greater than 2'?"
+      },
+      "options": {
+        "th": ["$a - 7 > 2$", "$a - 7 < 2$", "$7 - a > 2$", "$7 - a < 2$"],
+        "en": ["$a - 7 > 2$", "$a - 7 < 2$", "$7 - a > 2$", "$7 - a < 2$"]
+      },
+      "answer": { "th": "$7 - a > 2$", "en": "$7 - a > 2$" },
+      "explanation": {
+        "th": "7 เป็นตัวตั้ง หักออกด้วย a คือ $7 - a$ และ 'มากกว่า' คือ $>$ จึงเขียนได้เป็น $7 - a > 2$",
+        "en": "7 is the base number, decreased by a is $7 - a$, and 'greater than' is $>$. Thus, $7 - a > 2$."
+      }
+    },
+    {
+      "id": 5,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อความ 'ห้าเท่าของผลบวกของ x กับ 2 ไม่เท่ากับ 30' เขียนเป็นประโยคสัญลักษณ์อสมการได้ตรงกับข้อใด?",
+        "en": "Which inequality represents 'Five times the sum of x and 2 is not equal to 30'?"
+      },
+      "options": {
+        "th": ["$5x + 2$ ≠ $30$", "$5(x + 2)$ ≠ $30$", "$5(x + 2) < 30$", "$5x + 2 > 30$"],
+        "en": ["$5x + 2$ ≠ $30$", "$5(x + 2)$ ≠ $30$", "$5(x + 2) < 30$", "$5x + 2 > 30$"]
+      },
+      "answer": { "th": "$5(x + 2)$ ≠ $30$", "en": "$5(x + 2)$ ≠ $30$" },
+      "explanation": {
+        "th": "ต้องหาผลบวกของ x กับ 2 ก่อนคือ $(x + 2)$ แล้วคูณ 5 จึงใช้เครื่องหมายวงเล็บ และ 'ไม่เท่ากับ' ใช้ ≠",
+        "en": "First, find the sum of x and 2 which is $(x + 2)$, then multiply by 5 (requires parentheses). 'Not equal to' uses ≠."
+      }
+    },
+    {
+      "id": 6,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ประโยคสัญลักษณ์ '$x + 6 \\ge 15$' ตรงกับข้อความในข้อใด?",
+        "en": "Which statement corresponds to the inequality '$x + 6 \\ge 15$'?"
+      },
+      "options": {
+        "th": ["ผลบวกของ x กับ 6 มีค่ามากกว่า 15", "ผลบวกของ x กับ 6 มีค่าไม่เกิน 15", "ผลบวกของ x กับ 6 มีค่าอย่างน้อย 15", "ผลบวกของ x กับ 6 มีค่าน้อยกว่า 15"],
+        "en": ["The sum of x and 6 is greater than 15", "The sum of x and 6 is not more than 15", "The sum of x and 6 is at least 15", "The sum of x and 6 is less than 15"]
+      },
+      "answer": { "th": "ผลบวกของ x กับ 6 มีค่าอย่างน้อย 15", "en": "The sum of x and 6 is at least 15" },
+      "explanation": {
+        "th": "เครื่องหมาย $\\ge$ คือ 'มากกว่าหรือเท่ากับ' ซึ่งมีความหมายตรงกับคำว่า 'อย่างน้อย'",
+        "en": "The $\\ge$ symbol means 'greater than or equal to', which corresponds to the phrase 'at least'."
+      }
+    },
+    {
+      "id": 7,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ประโยคสัญลักษณ์ '$2m - 3 < 8$' ตรงกับข้อความในข้อใด?",
+        "en": "Which statement corresponds to the inequality '$2m - 3 < 8$'?"
+      },
+      "options": {
+        "th": ["สองเท่าของ m ลบด้วย 3 มีค่าไม่เกิน 8", "สองเท่าของ m ลบด้วย 3 มีค่าน้อยกว่า 8", "สองเท่าของ m ลบด้วย 3 มีค่าไม่น้อยกว่า 8", "สองเท่าของ m ลบด้วย 3 มีค่าเท่ากับ 8"],
+        "en": ["Twice m minus 3 is not more than 8", "Twice m minus 3 is less than 8", "Twice m minus 3 is not less than 8", "Twice m minus 3 is equal to 8"]
+      },
+      "answer": { "th": "สองเท่าของ m ลบด้วย 3 มีค่าน้อยกว่า 8", "en": "Twice m minus 3 is less than 8" },
+      "explanation": {
+        "th": "เครื่องหมาย $<$ อ่านว่า 'น้อยกว่า' ตรงตัว",
+        "en": "The symbol $<$ literally reads as 'less than'."
+      }
+    },
+    {
+      "id": 8,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ประโยคสัญลักษณ์ '$\\frac{y}{4} \\le 10$' ตรงกับข้อความในข้อใด?",
+        "en": "Which statement corresponds to the inequality '$\\frac{y}{4} \\le 10$'?"
+      },
+      "options": {
+        "th": ["หนึ่งในสี่ของ y มีค่าน้อยกว่า 10", "หนึ่งในสี่ของ y มีค่าไม่เกิน 10", "สี่เท่าของ y มีค่าน้อยกว่า 10", "สี่เท่าของ y มีค่าไม่เกิน 10"],
+        "en": ["One-fourth of y is less than 10", "One-fourth of y is not more than 10", "Four times y is less than 10", "Four times y is not more than 10"]
+      },
+      "answer": { "th": "หนึ่งในสี่ของ y มีค่าไม่เกิน 10", "en": "One-fourth of y is not more than 10" },
+      "explanation": {
+        "th": "$\\frac{y}{4}$ หมายถึงการหารด้วย 4 หรือ 'หนึ่งในสี่' ส่วน $\\le$ หมายถึง 'ไม่เกิน'",
+        "en": "$\\frac{y}{4}$ means divided by 4 or 'one-fourth', and $\\le$ means 'not more than'."
+      }
+    },
+    {
+      "id": 9,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ประโยคสัญลักษณ์ '$3(a + 1)$ ≠ $12$' ตรงกับข้อความในข้อใด?",
+        "en": "Which statement corresponds to the inequality '$3(a + 1)$ ≠ $12$'?"
+      },
+      "options": {
+        "th": ["สามเท่าของ a บวกด้วย 1 มีค่าไม่เท่ากับ 12", "สามเท่าของ a บวกด้วย 1 มีค่าน้อยกว่า 12", "สามเท่าของผลบวกของ a กับ 1 มีค่าไม่เท่ากับ 12", "สามเท่าของผลบวกของ a กับ 1 มีค่ามากกว่า 12"],
+        "en": ["Three times a plus 1 is not equal to 12", "Three times a plus 1 is less than 12", "Three times the sum of a and 1 is not equal to 12", "Three times the sum of a and 1 is greater than 12"]
+      },
+      "answer": { "th": "สามเท่าของผลบวกของ a กับ 1 มีค่าไม่เท่ากับ 12", "en": "Three times the sum of a and 1 is not equal to 12" },
+      "explanation": {
+        "th": "มีวงเล็บที่ $(a + 1)$ ต้องใช้คำว่า 'ผลบวกของ...' ก่อน แล้วจึงนำไปคูณสาม",
+        "en": "The parentheses at $(a + 1)$ require the phrase 'the sum of...' first, which is then multiplied by three."
+      }
+    },
+    {
+      "id": 10,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ประโยคสัญลักษณ์ '$x - 9 > 0$' ตรงกับข้อความในข้อใด?",
+        "en": "Which statement corresponds to the inequality '$x - 9 > 0$'?"
+      },
+      "options": {
+        "th": ["ผลต่างของ x กับ 9 มากกว่า 0", "x ลดลง 9 มีค่าไม่เกิน 0", "x เพิ่มขึ้น 9 มีค่ามากกว่า 0", "9 หักออกด้วย x มีค่ามากกว่า 0"],
+        "en": ["The difference between x and 9 is greater than 0", "x decreased by 9 is not more than 0", "x increased by 9 is greater than 0", "9 decreased by x is greater than 0"]
+      },
+      "answer": { "th": "ผลต่างของ x กับ 9 มากกว่า 0", "en": "The difference between x and 9 is greater than 0" },
+      "explanation": {
+        "th": "$x - 9$ คือผลต่างของ x กับ 9 (หรือ x ลดลง 9) และ $>$ คือมากกว่า 0",
+        "en": "$x - 9$ represents the difference between x and 9, and $>$ means greater than 0."
+      }
+    },
+    {
+      "id": 11,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กราฟเส้นจำนวนด้านล่างนี้ แทนคำตอบของอสมการในข้อใด?<br><br><svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>",
+        "en": "Which inequality does the number line below represent?<br><br><svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>2</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>3</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>4</text><circle cx='50' cy='15' r='4' fill='var(--accent)'/><path d='M50 15h40M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/></svg>"
+      },
+      "options": {
+        "th": ["$x < 3$", "$x > 3$", "$x \\le 3$", "$x \\ge 3$"],
+        "en": ["$x < 3$", "$x > 3$", "$x \\le 3$", "$x \\ge 3$"]
+      },
+      "answer": { "th": "$x \\ge 3$", "en": "$x \\ge 3$" },
+      "explanation": {
+        "th": "จุดทึบที่เลข 3 หมายถึง รวมเลข 3 (ใช้ $\\le$ หรือ $\\ge$) และลูกศรชี้ไปทางขวาคือค่าที่มากกว่า ดังนั้นตอบ $x \\ge 3$",
+        "en": "A closed circle at 3 means 3 is included (use $\\le$ or $\\ge$), and the arrow pointing right indicates greater values. Thus, it is $x \\ge 3$."
+      }
+    },
+    {
+      "id": 12,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กราฟเส้นจำนวนด้านล่างนี้ แทนคำตอบของอสมการในข้อใด?<br><br><svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><path d='M46 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/></svg>",
+        "en": "Which inequality does the number line below represent?<br><br><svg width='120' height='40' viewBox='0 0 100 35'><path d='M0 15h100' stroke='var(--text-color)'/><path d='M20 12v6M50 12v6M80 12v6' stroke='var(--text-color)'/><text x='20' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-3</text><text x='50' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-2</text><text x='80' y='30' fill='var(--text-color)' font-size='10' text-anchor='middle'>-1</text><path d='M46 15H10M10 10l-5 5 5 5z' fill='var(--accent)' stroke='var(--accent)'/><path d='M54 15h36M90 10l5 5-5 5z' fill='var(--accent)' stroke='var(--accent)'/><circle cx='50' cy='15' r='4' fill='var(--bg-color, white)' stroke='var(--accent)' stroke-width='2'/></svg>"
+      },
+      "options": {
+        "th": ["$x < -2$", "$x > -2$", "$x = -2$", "$x$ ≠ $-2$"],
+        "en": ["$x < -2$", "$x > -2$", "$x = -2$", "$x$ ≠ $-2$"]
+      },
+      "answer": { "th": "$x$ ≠ $-2$", "en": "$x$ ≠ $-2$" },
+      "explanation": {
+        "th": "จุดโปร่งที่เลข -2 หมายถึง ไม่รวมเลข -2 และลูกศรชี้ไปทั้งซ้ายและขวา หมายถึงเป็นจำนวนใดๆ ก็ได้ที่น้อยกว่าและมากกว่า -2 ดังนั้นจึงตรงกับเครื่องหมาย 'ไม่เท่ากับ' ($x$ ≠ $-2$)",
+        "en": "An open circle at -2 means -2 is excluded. Arrows pointing both left and right mean any value less than or greater than -2 is accepted. Thus, it corresponds to the 'not equal to' sign ($x$ ≠ $-2$)."
+      }
+    },
+    {
+      "id": 13,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "คำตอบของอสมการ $x \\le 7$ สามารถเขียนแทนด้วยช่วงของคำตอบในข้อใด?",
+        "en": "Which interval notation represents the solution to the inequality $x \\le 7$?"
+      },
+      "options": {
+        "th": ["$(-\\infty, 7]$", "$(-\\infty, 7)$", "$[7, \\infty)$", "$(7, \\infty)$"],
+        "en": ["$(-\\infty, 7]$", "$(-\\infty, 7)$", "$[7, \\infty)$", "$(7, \\infty)$"]
+      },
+      "answer": { "th": "$(-\\infty, 7]$", "en": "$(-\\infty, 7]$" },
+      "explanation": {
+        "th": "เครื่องหมาย $\\le$ หมายถึงค่าที่น้อยกว่าหรือเท่ากับ 7 ซึ่งครอบคลุมตั้งแต่ลบอนันต์จนถึง 7 (รวม 7 ด้วย) จึงใช้ $(-\\infty, 7]$",
+        "en": "The $\\le$ symbol means values less than or equal to 7, which covers from negative infinity up to 7 (inclusive). Thus, $(-\\infty, 7]$ is used."
+      }
+    },
+    {
+      "id": 14,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "คำตอบของอสมการ $x > -4$ สามารถเขียนแทนด้วยช่วงของคำตอบในข้อใด?",
+        "en": "Which interval notation represents the solution to the inequality $x > -4$?"
+      },
+      "options": {
+        "th": ["$[-4, \\infty)$", "$(-4, \\infty)$", "$(-\\infty, -4]$", "$(-\\infty, -4)$"],
+        "en": ["$[-4, \\infty)$", "$(-4, \\infty)$", "$(-\\infty, -4]$", "$(-\\infty, -4)$"]
+      },
+      "answer": { "th": "$(-4, \\infty)$", "en": "$(-4, \\infty)$" },
+      "explanation": {
+        "th": "มากกว่า -4 หมายถึงเปิดที่ -4 ไปจนถึงอนันต์ จึงใช้ช่วงเปิดทั้งคู่คือ $(-4, \\infty)$",
+        "en": "Greater than -4 means open at -4 up to infinity. Thus, both use open intervals: $(-4, \\infty)$."
+      }
+    },
+    {
+      "id": 15,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดคือหลักการที่สำคัญที่สุดในการแก้อสมการที่แตกต่างจากการแก้สมการ?",
+        "en": "What is the most important principle in solving inequalities that differs from solving equations?"
+      },
+      "options": {
+        "th": ["การย้ายข้างบวกลบต้องกลับเครื่องหมาย", "เมื่อคูณหรือหารด้วยจำนวนลบ ต้องกลับทิศทางของเครื่องหมายอสมการ", "อสมการจะมีคำตอบเพียงคำตอบเดียวเสมอ", "ไม่สามารถใช้เศษส่วนในการแก้อสมการได้"],
+        "en": ["Moving terms for addition/subtraction requires flipping the sign", "When multiplying or dividing by a negative number, the inequality sign must be flipped", "An inequality always has only one solution", "Fractions cannot be used in solving inequalities"]
+      },
+      "answer": { "th": "เมื่อคูณหรือหารด้วยจำนวนลบ ต้องกลับทิศทางของเครื่องหมายอสมการ", "en": "When multiplying or dividing by a negative number, the inequality sign must be flipped" },
+      "explanation": {
+        "th": "หลักการย้ายข้างอสมการเหมือนกับสมการเกือบทุกประการ ยกเว้นเมื่อนำจำนวนลบไปคูณหรือหารทั้งสองข้าง จะต้องกลับเครื่องหมายอสมการเสมอ",
+        "en": "The principles of solving inequalities are almost identical to equations, except when multiplying or dividing both sides by a negative number, you must always flip the inequality sign."
+      }
+    },
+    {
+      "id": 16,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $x - 8 > 12$",
+        "en": "Find the solution to the inequality $x - 8 > 12$"
+      },
+      "options": {
+        "th": ["$x > 4$", "$x < 4$", "$x > 20$", "$x < 20$"],
+        "en": ["$x > 4$", "$x < 4$", "$x > 20$", "$x < 20$"]
+      },
+      "answer": { "th": "$x > 20$", "en": "$x > 20$" },
+      "explanation": {
+        "th": "ย้าย $-8$ ไปอีกฝั่งเป็นการบวก จะได้ $x > 12 + 8$ ดังนั้น $x > 20$",
+        "en": "Move $-8$ to the other side as addition to get $x > 12 + 8$. Thus, $x > 20$."
+      }
+    },
+    {
+      "id": 17,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $y + 7 \\le 15$",
+        "en": "Find the solution to the inequality $y + 7 \\le 15$"
+      },
+      "options": {
+        "th": ["$y \\le 8$", "$y \\ge 8$", "$y \\le 22$", "$y \\ge 22$"],
+        "en": ["$y \\le 8$", "$y \\ge 8$", "$y \\le 22$", "$y \\ge 22$"]
+      },
+      "answer": { "th": "$y \\le 8$", "en": "$y \\le 8$" },
+      "explanation": {
+        "th": "ย้าย $+7$ ไปลบ จะได้ $y \\le 15 - 7$ ดังนั้น $y \\le 8$",
+        "en": "Move $+7$ to subtract to get $y \\le 15 - 7$. Thus, $y \\le 8$."
+      }
+    },
+    {
+      "id": 18,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $4a \\ge 24$",
+        "en": "Find the solution to the inequality $4a \\ge 24$"
+      },
+      "options": {
+        "th": ["$a \\ge 6$", "$a \\le 6$", "$a \\ge 20$", "$a \\le 20$"],
+        "en": ["$a \\ge 6$", "$a \\le 6$", "$a \\ge 20$", "$a \\le 20$"]
+      },
+      "answer": { "th": "$a \\ge 6$", "en": "$a \\ge 6$" },
+      "explanation": {
+        "th": "ย้าย 4 ที่คูณอยู่ไปหาร จะได้ $a \\ge \\frac{24}{4}$ ดังนั้น $a \\ge 6$",
+        "en": "Move the multiplied 4 to divide to get $a \\ge \\frac{24}{4}$. Thus, $a \\ge 6$."
+      }
+    },
+    {
+      "id": 19,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $\\frac{m}{5} < 3$",
+        "en": "Find the solution to the inequality $\\frac{m}{5} < 3$"
+      },
+      "options": {
+        "th": ["$m < \\frac{3}{5}$", "$m > \\frac{3}{5}$", "$m < 15$", "$m > 15$"],
+        "en": ["$m < \\frac{3}{5}$", "$m > \\frac{3}{5}$", "$m < 15$", "$m > 15$"]
+      },
+      "answer": { "th": "$m < 15$", "en": "$m < 15$" },
+      "explanation": {
+        "th": "ย้าย 5 ที่หารอยู่ไปคูณ จะได้ $m < 3 \\times 5$ ดังนั้น $m < 15$",
+        "en": "Move the divided 5 to multiply to get $m < 3 \\times 5$. Thus, $m < 15$."
+      }
+    },
+    {
+      "id": 20,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $-3x \\le 18$",
+        "en": "Find the solution to the inequality $-3x \\le 18$"
+      },
+      "options": {
+        "th": ["$x \\le 6$", "$x \\ge 6$", "$x \\le -6$", "$x \\ge -6$"],
+        "en": ["$x \\le 6$", "$x \\ge 6$", "$x \\le -6$", "$x \\ge -6$"]
+      },
+      "answer": { "th": "$x \\ge -6$", "en": "$x \\ge -6$" },
+      "explanation": {
+        "th": "ย้าย $-3$ ไปหาร **ต้องกลับเครื่องหมายอสมการ** จาก $\\le$ เป็น $\\ge$ จะได้ $x \\ge \\frac{18}{-3}$ ดังนั้น $x \\ge -6$",
+        "en": "Divide by $-3$. You **must flip the inequality sign** from $\\le$ to $\\ge$ to get $x \\ge \\frac{18}{-3}$. Thus, $x \\ge -6$."
+      }
+    },
+    {
+      "id": 21,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $2x - 5 > 9$",
+        "en": "Find the solution to the inequality $2x - 5 > 9$"
+      },
+      "options": {
+        "th": ["$x > 2$", "$x < 2$", "$x > 7$", "$x < 7$"],
+        "en": ["$x > 2$", "$x < 2$", "$x > 7$", "$x < 7$"]
+      },
+      "answer": { "th": "$x > 7$", "en": "$x > 7$" },
+      "explanation": {
+        "th": "ย้าย $-5$ ไปบวกก่อน ได้ $2x > 14$ จากนั้นย้าย 2 ไปหาร จะได้ $x > 7$",
+        "en": "Move $-5$ to add first to get $2x > 14$, then move 2 to divide to get $x > 7$."
+      }
+    },
+    {
+      "id": 22,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $3y + 4 < 19$",
+        "en": "Find the solution to the inequality $3y + 4 < 19$"
+      },
+      "options": {
+        "th": ["$y < 5$", "$y > 5$", "$y < 15$", "$y > 15$"],
+        "en": ["$y < 5$", "$y > 5$", "$y < 15$", "$y > 15$"]
+      },
+      "answer": { "th": "$y < 5$", "en": "$y < 5$" },
+      "explanation": {
+        "th": "ย้าย $+4$ ไปลบก่อน ได้ $3y < 15$ จากนั้นย้าย 3 ไปหาร จะได้ $y < 5$",
+        "en": "Move $+4$ to subtract first to get $3y < 15$, then move 3 to divide to get $y < 5$."
+      }
+    },
+    {
+      "id": 23,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $6 - x \\ge 2$",
+        "en": "Find the solution to the inequality $6 - x \\ge 2$"
+      },
+      "options": {
+        "th": ["$x \\ge 4$", "$x \\le 4$", "$x \\ge -4$", "$x \\le -4$"],
+        "en": ["$x \\ge 4$", "$x \\le 4$", "$x \\ge -4$", "$x \\le -4$"]
+      },
+      "answer": { "th": "$x \\le 4$", "en": "$x \\le 4$" },
+      "explanation": {
+        "th": "ย้าย 6 ไปลบ ได้ $-x \\ge -4$ จากนั้นนำ $-1$ ไปคูณตลอด (ต้องกลับเครื่องหมาย) จะได้ $x \\le 4$",
+        "en": "Move 6 to subtract to get $-x \\ge -4$. Then multiply by $-1$ throughout (flip the sign) to get $x \\le 4$."
+      }
+    },
+    {
+      "id": 24,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $\\frac{x}{2} - 1 \\le 4$",
+        "en": "Find the solution to the inequality $\\frac{x}{2} - 1 \\le 4$"
+      },
+      "options": {
+        "th": ["$x \\le 6$", "$x \\ge 6$", "$x \\le 10$", "$x \\ge 10$"],
+        "en": ["$x \\le 6$", "$x \\ge 6$", "$x \\le 10$", "$x \\ge 10$"]
+      },
+      "answer": { "th": "$x \\le 10$", "en": "$x \\le 10$" },
+      "explanation": {
+        "th": "ย้าย $-1$ ไปบวกก่อน ได้ $\\frac{x}{2} \\le 5$ จากนั้นย้าย 2 ไปคูณ จะได้ $x \\le 10$",
+        "en": "Move $-1$ to add first to get $\\frac{x}{2} \\le 5$, then move 2 to multiply to get $x \\le 10$."
+      }
+    },
+    {
+      "id": 25,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $5(x - 2) > 20$",
+        "en": "Find the solution to the inequality $5(x - 2) > 20$"
+      },
+      "options": {
+        "th": ["$x > 2$", "$x > 4$", "$x > 6$", "$x < 6$"],
+        "en": ["$x > 2$", "$x > 4$", "$x > 6$", "$x < 6$"]
+      },
+      "answer": { "th": "$x > 6$", "en": "$x > 6$" },
+      "explanation": {
+        "th": "ย้าย 5 ไปหารก่อน ได้ $x - 2 > 4$ จากนั้นย้าย $-2$ ไปบวก จะได้ $x > 6$",
+        "en": "Move 5 to divide first to get $x - 2 > 4$, then move $-2$ to add to get $x > 6$."
+      }
+    },
+    {
+      "id": 26,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $2(y + 3) \\le 14$",
+        "en": "Find the solution to the inequality $2(y + 3) \\le 14$"
+      },
+      "options": {
+        "th": ["$y \\le 4$", "$y \\ge 4$", "$y \\le 10$", "$y \\ge 10$"],
+        "en": ["$y \\le 4$", "$y \\ge 4$", "$y \\le 10$", "$y \\ge 10$"]
+      },
+      "answer": { "th": "$y \\le 4$", "en": "$y \\le 4$" },
+      "explanation": {
+        "th": "ย้าย 2 ไปหารก่อน ได้ $y + 3 \\le 7$ จากนั้นย้าย $+3$ ไปลบ จะได้ $y \\le 4$",
+        "en": "Move 2 to divide first to get $y + 3 \\le 7$, then move $+3$ to subtract to get $y \\le 4$."
+      }
+    },
+    {
+      "id": 27,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $\\frac{3x}{4}$ ≠ $9$",
+        "en": "Find the solution to the inequality $\\frac{3x}{4}$ ≠ $9$"
+      },
+      "options": {
+        "th": ["$x$ ≠ $3$", "$x$ ≠ $12$", "$x$ ≠ $27$", "$x$ ≠ $36$"],
+        "en": ["$x$ ≠ $3$", "$x$ ≠ $12$", "$x$ ≠ $27$", "$x$ ≠ $36$"]
+      },
+      "answer": { "th": "$x$ ≠ $12$", "en": "$x$ ≠ $12$" },
+      "explanation": {
+        "th": "ย้าย 4 ไปคูณก่อน ได้ $3x$ ≠ $36$ จากนั้นย้าย 3 ไปหาร จะได้ $x$ ≠ $12$",
+        "en": "Move 4 to multiply first to get $3x$ ≠ $36$, then move 3 to divide to get $x$ ≠ $12$."
+      }
+    },
+    {
+      "id": 28,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $-2x + 5 < -3$",
+        "en": "Find the solution to the inequality $-2x + 5 < -3$"
+      },
+      "options": {
+        "th": ["$x < 4$", "$x > 4$", "$x < -4$", "$x > -4$"],
+        "en": ["$x < 4$", "$x > 4$", "$x < -4$", "$x > -4$"]
+      },
+      "answer": { "th": "$x > 4$", "en": "$x > 4$" },
+      "explanation": {
+        "th": "ย้าย $+5$ ไปลบ ได้ $-2x < -8$ จากนั้นย้าย $-2$ ไปหาร (อย่าลืมกลับเครื่องหมาย!) จะได้ $x > 4$",
+        "en": "Move $+5$ to subtract to get $-2x < -8$. Then move $-2$ to divide (don't forget to flip the sign!) to get $x > 4$."
+      }
+    },
+    {
+      "id": 29,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $\\frac{m - 1}{3} \\ge 2$",
+        "en": "Find the solution to the inequality $\\frac{m - 1}{3} \\ge 2$"
+      },
+      "options": {
+        "th": ["$m \\ge 5$", "$m \\le 5$", "$m \\ge 7$", "$m \\le 7$"],
+        "en": ["$m \\ge 5$", "$m \\le 5$", "$m \\ge 7$", "$m \\le 7$"]
+      },
+      "answer": { "th": "$m \\ge 7$", "en": "$m \\ge 7$" },
+      "explanation": {
+        "th": "ย้าย 3 ไปคูณก่อน ได้ $m - 1 \\ge 6$ จากนั้นย้าย $-1$ ไปบวก จะได้ $m \\ge 7$",
+        "en": "Move 3 to multiply first to get $m - 1 \\ge 6$, then move $-1$ to add to get $m \\ge 7$."
+      }
+    },
+    {
+      "id": 30,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ม.3 เทอม 1 - บทที่ 1 อสมการเชิงเส้นตัวแปรเดียว",
+        "en": "Basic Mathematics M.3 Term 1 - Unit 1: Linear Inequalities with One Variable"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Number and Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาคำตอบของอสมการ $7 - 2x \\le 1$",
+        "en": "Find the solution to the inequality $7 - 2x \\le 1$"
+      },
+      "options": {
+        "th": ["$x \\le 3$", "$x \\ge 3$", "$x \\le -3$", "$x \\ge -3$"],
+        "en": ["$x \\le 3$", "$x \\ge 3$", "$x \\le -3$", "$x \\ge -3$"]
+      },
+      "answer": { "th": "$x \\ge 3$", "en": "$x \\ge 3$" },
+      "explanation": {
+        "th": "ย้าย 7 ไปลบ ได้ $-2x \\le -6$ ย้าย $-2$ ไปหารพร้อมกลับเครื่องหมาย จะได้ $x \\ge 3$",
+        "en": "Move 7 to subtract to get $-2x \\le -6$. Move $-2$ to divide and flip the sign to get $x \\ge 3$."
+      }
+    }
+  ]
+}
