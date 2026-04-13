@@ -98,7 +98,7 @@ function openExamWizard_Grade(subjKey) {
     content.innerHTML = html;
 }
 
-// Step 3 (ใหม่): เลือกบทเรียน (Unit) 
+// Step 3 (ใหม่): เลือกบทเรียน (Unit) พร้อมปุ่มหลากสี
 function openExamWizard_Unit(subjKey, gradeKey) {
     const content = document.getElementById('exam-wizard-content');
     const subject = NEW_EXAM_STRUCTURE[subjKey];
@@ -115,10 +115,20 @@ function openExamWizard_Unit(subjKey, gradeKey) {
         <h4 style="color:var(--secondary); margin-top:0; margin-bottom:15px;">${subject.title[lang]} > ${grade.title[lang]}</h4>
     `;
 
+    // 🎨 ธีมสีธาตุเวทมนตร์สำหรับกระดานเควส
+    let unitCount = 0; 
+    const colorThemes = [
+        { bg: 'rgba(174,87,255,0.1)', hover: 'rgba(174,87,255,0.25)', border: '#ae57ff' }, // 🔮 ม่วงเวทมนตร์
+        { bg: 'rgba(0,240,255,0.1)', hover: 'rgba(0,240,255,0.25)', border: '#00f0ff' }, // ❄️ ฟ้าสไลม์
+        { bg: 'rgba(0,255,136,0.1)', hover: 'rgba(0,255,136,0.25)', border: '#00ff88' }, // 🍃 เขียวฮีลลิ่ง
+        { bg: 'rgba(255,152,0,0.1)',  hover: 'rgba(255,152,0,0.25)', border: '#ff9800' }, // 🔥 ส้มเพลิง
+        { bg: 'rgba(255,0,127,0.1)',  hover: 'rgba(255,0,127,0.25)', border: '#ff007f' }  // 🌸 ชมพูซากุระ
+    ];
+
     for (let tKey in grade.terms) {
         const term = grade.terms[tKey];
         html += `<h3 style="color:var(--accent); background:rgba(0,0,0,0.05); padding:8px 12px; border-radius:8px; margin-top:15px; font-size:0.95rem;">📅 ${term.title[lang]}</h3>`;
-        html += `<div style="display:flex; flex-direction:column; gap:8px; margin-bottom: 20px;">`;
+        html += `<div style="display:flex; flex-direction:column; gap:10px; margin-bottom: 25px;">`;
         
         term.units.forEach(unit => {
             // เช็กก่อนว่าบทนี้มีกำหนดข้อสอบไว้บ้างไหม
@@ -129,20 +139,24 @@ function openExamWizard_Unit(subjKey, gradeKey) {
                 }
             }
 
+            const theme = colorThemes[unitCount % colorThemes.length]; // ดึงสีตามคิว
+            unitCount++;
+
             if (hasAnySets) {
                 html += `
                     <button onclick="openExamWizard_ScanUnit('${subjKey}', '${gradeKey}', '${tKey}', '${unit.id}')" 
-                        style="background:rgba(0,240,255,0.08); border:1px solid var(--secondary); color:var(--text-color); padding:12px 15px; border-radius:10px; font-size:0.9rem; text-align:left; cursor:pointer; transition:0.2s; line-height:1.4;" 
-                        onmouseover="this.style.background='rgba(0,240,255,0.2)'; this.style.borderColor='var(--primary)';" 
-                        onmouseout="this.style.background='rgba(0,240,255,0.08)'; this.style.borderColor='var(--secondary)';">
-                        ${unit.name[lang]}
+                        style="background:${theme.bg}; border:1px solid ${theme.border}; border-left: 6px solid ${theme.border}; color:var(--text-color); padding:14px 18px; border-radius:12px; font-size:0.95rem; text-align:left; cursor:pointer; transition:all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275); line-height:1.5; box-shadow: 0 4px 6px rgba(0,0,0,0.05); position:relative; overflow:hidden;" 
+                        onmouseover="this.style.background='${theme.hover}'; this.style.transform='translateX(8px)';" 
+                        onmouseout="this.style.background='${theme.bg}'; this.style.transform='translateX(0)';">
+                        <span style="font-weight:bold; text-shadow:0 1px 1px rgba(0,0,0,0.05); display:block;">${unit.name[lang]}</span>
                     </button>
                 `;
             } else {
                 html += `
                     <button disabled
-                        style="background:rgba(0,0,0,0.03); border:1px dashed rgba(0,0,0,0.1); color:var(--text-muted); padding:12px 15px; border-radius:10px; font-size:0.9rem; text-align:left; cursor:not-allowed; line-height:1.4;">
-                        ${unit.name[lang]} <span style="font-size:0.75rem; color:var(--danger); float:right;">(ยังไม่มีข้อสอบ)</span>
+                        style="background:rgba(0,0,0,0.03); border:1px dashed rgba(0,0,0,0.15); color:var(--text-muted); padding:14px 18px; border-radius:12px; font-size:0.9rem; text-align:left; cursor:not-allowed; line-height:1.5; opacity:0.8;">
+                        ${unit.name[lang]} 
+                        <span style="font-size:0.75rem; color:var(--danger); float:right; background:rgba(255,0,0,0.08); padding:3px 10px; border-radius:12px; font-weight:bold; margin-top:-2px;">🔒 ปลดล็อกเร็วๆ นี้</span>
                     </button>
                 `;
             }
@@ -283,7 +297,7 @@ function renderScanUnitResult(validExams, subjKey, gradeKey, tKey, unit) {
         if(ex.diffText.includes('ยาก')) color = 'var(--danger)';
         if(ex.diffText.includes('โหด')) color = '#ff007f';
 
-        // จัดชื่อเต็มยศสำหรับบันทึก
+        // จัดชื่อเต็มยศสำหรับบันทึก (วิชา > เทอม > บทเรียน > ชุด)
         const currentExamName = `${grade.title[lang]} ${ex.termTitle} ${ex.unitName} (${ex.diffText} ชุดที่ ${ex.setNum})`;
         
         // เช็กประวัติ
