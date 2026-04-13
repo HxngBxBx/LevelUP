@@ -1,0 +1,786 @@
+{
+  "metadata": {
+    "exam_title": {
+      "th": "คณิตศาสตร์ ม.4 เทอม 1 - บทที่ 1 เซต (ง่าย ชุดที่ 1)",
+      "en": "Math M.4 Term 1 - Unit 1: Sets (Easy Set 1)"
+    },
+    "total_questions": 30,
+    "difficulty_distribution": {
+      "description": {
+        "th": "คำแนะนำ: ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุด้านล่างนี้อย่างเคร่งครัด",
+        "en": "Guideline: When generating the exam, strictly ensure that the difficulty level of the questions matches the percentage distribution specified below."
+      },
+      "Easy": "100%",
+      "Medium": "0%",
+      "Hard": "0%",
+      "Extreme": "0%"
+    },
+    "dashboard_config": {
+      "theme": "modern_ai_bright",
+      "watermark_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "header_footer_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "active_recall_mode": true
+    },
+    "ai_prompt_guidelines": {
+      "description": "คำสั่งเฉพาะสำหรับ AI ในการสร้างข้อสอบ (Prompt Instructions)",
+      "rules": [
+        "1. ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุอย่างเคร่งครัด",
+        "2. สกิล (Skill): ให้คัดลอก 1 ใน 4 สกิลนี้ไปใส่ในตัวแปร 'skill' ของแต่ละข้อ: 'จำนวนและพีชคณิต', 'การวัดและเรขาคณิต', 'สถิติและความน่าจะเป็น', หรือ 'แคลคูลัส'",
+        "3. รูปภาพประกอบ (SVG): หากข้อสอบข้อไหนสามารถอธิบายด้วยภาพวาดได้ ให้ใช้ SVG code สร้างรูปภาพประกอบง่ายๆ สีสันสดใส แทรกไว้ในโจทย์หรือตัวเลือกด้วยเสมอ(ถ้าทำได้)",
+        "4. ภาษา (Language): ข้อมูลข้อสอบต้องรองรับ 2 ภาษา (th และ en) ทุกจุด ทั้งโจทย์ ตัวเลือก และเฉลย"
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดจัดว่าเป็น \"เซต\" ในทางคณิตศาสตร์ได้อย่างชัดเจน?",
+        "en": "Which of the following is clearly defined as a \"set\" in mathematics?"
+      },
+      "options": {
+        "th": ["เซตของคนสวย", "เซตของผลไม้ที่อร่อย", "เซตของสระในภาษาอังกฤษ", "เซตของคนเก่ง"],
+        "en": ["Set of beautiful people", "Set of delicious fruits", "Set of English vowels", "Set of smart people"]
+      },
+      "answer": { "th": "เซตของสระในภาษาอังกฤษ", "en": "Set of English vowels" },
+      "explanation": {
+        "th": "เซตในทางคณิตศาสตร์ต้องระบุได้แน่นอนว่าสิ่งใดเป็นสมาชิกหรือไม่เป็นสมาชิก ความสวย ความอร่อย หรือความเก่ง เป็นเรื่องของความรู้สึกส่วนบุคคล จึงไม่สามารถระบุเป็นเซตได้",
+        "en": "A set in mathematics must be clearly defined so we know exactly what its elements are. Beauty, taste, and smartness are subjective, so they cannot form a mathematical set."
+      }
+    },
+    {
+      "id": 2,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใด <b>ไม่สามารถ</b> ระบุเป็นเซตได้ชัดเจน?",
+        "en": "Which of the following <b>cannot</b> be clearly defined as a set?"
+      },
+      "options": {
+        "th": ["เซตของวันในหนึ่งสัปดาห์", "เซตของจำนวนเต็มบวก", "เซตของวิชาที่เรียนแล้วสนุกที่สุด", "เซตของพยัญชนะไทย"],
+        "en": ["Set of days in a week", "Set of positive integers", "Set of the most fun subjects to study", "Set of Thai consonants"]
+      },
+      "answer": { "th": "เซตของวิชาที่เรียนแล้วสนุกที่สุด", "en": "Set of the most fun subjects to study" },
+      "explanation": {
+        "th": "ความสนุกเป็นความคิดเห็นส่วนบุคคล แต่ละคนชอบไม่เหมือนกัน จึงตั้งเป็นเซตที่ชัดเจนไม่ได้ครับ",
+        "en": "Fun is subjective and varies from person to person, so it cannot be used to clearly define a set."
+      }
+    },
+    {
+      "id": 3,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนดให้ $A = \\{2, 4, 6, 8\\}$ ข้อความใดต่อไปนี้ถูกต้อง?",
+        "en": "Given $A = \\{2, 4, 6, 8\\}$, which of the following statements is true?"
+      },
+      "options": {
+        "th": ["$2 \\notin A$", "$4 \\in A$", "$5 \\in A$", "$10 \\in A$"],
+        "en": ["$2 \\notin A$", "$4 \\in A$", "$5 \\in A$", "$10 \\in A$"]
+      },
+      "answer": { "th": "$4 \\in A$", "en": "$4 \\in A$" },
+      "explanation": {
+        "th": "เลข 4 ปรากฏอยู่ในเซต A อย่างชัดเจน ดังนั้น 4 จึงเป็นสมาชิกของ A เขียนแทนด้วย $4 \\in A$",
+        "en": "The number 4 is clearly present in set A. Therefore, 4 is an element of A, denoted as $4 \\in A$."
+      }
+    },
+    {
+      "id": 4,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนดให้ $B = \\{1, 3, 5, 7, 9\\}$ ข้อใดกล่าว <b>ผิด</b>?",
+        "en": "Given $B = \\{1, 3, 5, 7, 9\\}$, which statement is <b>FALSE</b>?"
+      },
+      "options": {
+        "th": ["$1 \\in B$", "$7 \\in B$", "$2 \\in B$", "$9 \\in B$"],
+        "en": ["$1 \\in B$", "$7 \\in B$", "$2 \\in B$", "$9 \\in B$"]
+      },
+      "answer": { "th": "$2 \\in B$", "en": "$2 \\in B$" },
+      "explanation": {
+        "th": "เซต B มีแต่เลขคี่ ดังนั้นเลข 2 จึงไม่ได้อยู่ในเซต B ข้อความ $2 \\in B$ จึงผิด (ที่ถูกคือ $2 \\notin B$)",
+        "en": "Set B only contains odd numbers, so 2 is not in set B. The statement $2 \\in B$ is false (it should be $2 \\notin B$)."
+      }
+    },
+    {
+      "id": 5,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัญลักษณ์ $\\notin$ ในเรื่องเซต มีความหมายตรงกับข้อใด?",
+        "en": "What does the symbol $\\notin$ mean in set theory?"
+      },
+      "options": {
+        "th": ["เป็นสับเซต", "ไม่เป็นสมาชิก", "เป็นสมาชิก", "เป็นเซตว่าง"],
+        "en": ["Is a subset", "Is not an element of", "Is an element of", "Is an empty set"]
+      },
+      "answer": { "th": "ไม่เป็นสมาชิก", "en": "Is not an element of" },
+      "explanation": {
+        "th": "สัญลักษณ์ $\\in$ แปลว่า เป็นสมาชิก เมื่อมีขีดทับ $\\notin$ จึงแปลว่า ไม่เป็นสมาชิก ครับ",
+        "en": "The symbol $\\in$ means 'is an element of'. When crossed out as $\\notin$, it means 'is not an element of'."
+      }
+    },
+    {
+      "id": 6,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "การเขียนเซตแบบแจกแจงสมาชิกของ \"เซตของจำนวนเต็มบวกที่น้อยกว่า 4\" คือข้อใด?",
+        "en": "Which of the following is the roster notation for the \"set of positive integers less than 4\"?"
+      },
+      "options": {
+        "th": ["$\\{0, 1, 2, 3\\}$", "$\\{1, 2, 3\\}$", "$\\{1, 2, 3, 4\\}$", "$\\{0, 1, 2\\}$"],
+        "en": ["$\\{0, 1, 2, 3\\}$", "$\\{1, 2, 3\\}$", "$\\{1, 2, 3, 4\\}$", "$\\{0, 1, 2\\}$"]
+      },
+      "answer": { "th": "$\\{1, 2, 3\\}$", "en": "$\\{1, 2, 3\\}$" },
+      "explanation": {
+        "th": "จำนวนเต็มบวกเริ่มนับที่ 1 และต้องน้อยกว่า 4 (ไม่รวม 4) ดังนั้นจะได้แค่ 1, 2 และ 3",
+        "en": "Positive integers start at 1. Since they must be less than 4 (excluding 4), the elements are 1, 2, and 3."
+      }
+    },
+    {
+      "id": 7,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เซต $C = \\{x \\mid x \\text{ เป็นจำนวนเต็ม และ } -1 \\leq x < 2\\}$ เขียนแจกแจงสมาชิกได้ตามข้อใด?",
+        "en": "Set $C = \\{x \\mid x \\text{ is an integer and } -1 \\leq x < 2\\}$ can be written in roster notation as?"
+      },
+      "options": {
+        "th": ["$\\{-1, 0, 1\\}$", "$\\{-1, 0, 1, 2\\}$", "$\\{0, 1\\}$", "$\\{0, 1, 2\\}$"],
+        "en": ["$\\{-1, 0, 1\\}$", "$\\{-1, 0, 1, 2\\}$", "$\\{0, 1\\}$", "$\\{0, 1, 2\\}$"]
+      },
+      "answer": { "th": "$\\{-1, 0, 1\\}$", "en": "$\\{-1, 0, 1\\}$" },
+      "explanation": {
+        "th": "เงื่อนไขบอกว่าเอาตั้งแต่ -1 ไปจนถึงน้อยกว่า 2 (ไม่เอา 2) ดังนั้นจำนวนเต็มที่เข้าข่ายคือ -1, 0 และ 1",
+        "en": "The condition includes -1 up to less than 2 (excluding 2). The valid integers are -1, 0, and 1."
+      }
+    },
+    {
+      "id": 8,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดคือการเขียนเซต $D = \\{2, 4, 6, 8\\}$ แบบบอกเงื่อนไข?",
+        "en": "Which of the following is set $D = \\{2, 4, 6, 8\\}$ written in set-builder notation?"
+      },
+      "options": {
+        "th": ["$\\{x \\mid x \\text{ เป็นจำนวนคู่บวกที่น้อยกว่า } 10\\}$", "$\\{x \\mid x \\text{ เป็นจำนวนเต็ม}\\}$", "$\\{x \\mid x \\text{ เป็นจำนวนคี่บวก}\\}$", "$\\{x \\mid x \\text{ เป็นจำนวนคู่บวกที่น้อยกว่า } 8\\}$"],
+        "en": ["$\\{x \\mid x \\text{ is a positive even number less than } 10\\}$", "$\\{x \\mid x \\text{ is an integer}\\}$", "$\\{x \\mid x \\text{ is a positive odd number}\\}$", "$\\{x \\mid x \\text{ is a positive even number less than } 8\\}$"]
+      },
+      "answer": { "th": "$\\{x \\mid x \\text{ เป็นจำนวนคู่บวกที่น้อยกว่า } 10\\}$", "en": "$\\{x \\mid x \\text{ is a positive even number less than } 10\\}$" },
+      "explanation": {
+        "th": "2, 4, 6, 8 เป็นจำนวนคู่บวกทั้งหมด และเงื่อนไขที่ครอบคลุมพอดีคือ 'น้อยกว่า 10'",
+        "en": "2, 4, 6, and 8 are all positive even numbers. The exact condition that covers them is 'less than 10'."
+      }
+    },
+    {
+      "id": 9,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เซตในข้อใดจัดเป็น <b>เซตจำกัด (Finite Set)</b>?",
+        "en": "Which of the following is a <b>Finite Set</b>?"
+      },
+      "options": {
+        "th": ["เซตของจำนวนเต็ม", "เซตของจำนวนจริง", "เซตของวันในหนึ่งสัปดาห์", "เซตของจุดบนเส้นตรง"],
+        "en": ["Set of integers", "Set of real numbers", "Set of days in a week", "Set of points on a line"]
+      },
+      "answer": { "th": "เซตของวันในหนึ่งสัปดาห์", "en": "Set of days in a week" },
+      "explanation": {
+        "th": "เซตจำกัดคือเซตที่เราสามารถนับจำนวนสมาชิกได้ว่ามีกี่ตัว ซึ่งวันในสัปดาห์นับได้แน่นอนว่ามี 7 วัน",
+        "en": "A finite set is a set where we can count the exact number of elements. The days of the week can be counted exactly to 7."
+      }
+    },
+    {
+      "id": 10,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดคือ <b>เซตอนันต์ (Infinite Set)</b>?",
+        "en": "Which of the following is an <b>Infinite Set</b>?"
+      },
+      "options": {
+        "th": ["เซตของเดือนในหนึ่งปี", "เซตของจำนวนเต็มบวก", "เซตของดาวเคราะห์ในระบบสุริยะ", "เซตของนักเรียนในโรงเรียน"],
+        "en": ["Set of months in a year", "Set of positive integers", "Set of planets in the solar system", "Set of students in a school"]
+      },
+      "answer": { "th": "เซตของจำนวนเต็มบวก", "en": "Set of positive integers" },
+      "explanation": {
+        "th": "เซตอนันต์คือนับสมาชิกไม่ถ้วน จำนวนเต็มบวกมีตั้งแต่ 1, 2, 3... ไปเรื่อยๆ ไม่มีที่สิ้นสุด",
+        "en": "An infinite set has an uncountable number of elements. Positive integers go 1, 2, 3... infinitely."
+      }
+    },
+    {
+      "id": 11,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดเป็น <b>เซตว่าง (Empty Set)</b>?",
+        "en": "Which of the following is an <b>Empty Set</b>?"
+      },
+      "options": {
+        "th": ["$\\{0\\}$", "$\\{\\emptyset\\}$", "เซตของสุนัขที่บินได้", "เซตของจำนวนคู่ที่หารด้วย 2 ลงตัว"],
+        "en": ["$\\{0\\}$", "$\\{\\emptyset\\}$", "Set of dogs that can fly", "Set of even numbers divisible by 2"]
+      },
+      "answer": { "th": "เซตของสุนัขที่บินได้", "en": "Set of dogs that can fly" },
+      "explanation": {
+        "th": "เซตว่างคือเซตที่ไม่มีสมาชิกเลย เนื่องจากไม่มีสุนัขตัวไหนบินได้ (ในโลกความจริง) เซตนี้จึงไม่มีสมาชิก",
+        "en": "An empty set has no elements. Since no real dog can fly, this set contains nothing."
+      }
+    },
+    {
+      "id": 12,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนด $A = \\{1, 2, 3\\}$ เซตในข้อใด <b>เท่ากับ</b> เซต A?",
+        "en": "Given $A = \\{1, 2, 3\\}$, which set is <b>equal</b> to set A?"
+      },
+      "options": {
+        "th": ["$\\{3, 2, 1\\}$", "$\\{1, 2\\}$", "$\\{1, 2, 3, 4\\}$", "$\\{0, 1, 2, 3\\}$"],
+        "en": ["$\\{3, 2, 1\\}$", "$\\{1, 2\\}$", "$\\{1, 2, 3, 4\\}$", "$\\{0, 1, 2, 3\\}$"]
+      },
+      "answer": { "th": "$\\{3, 2, 1\\}$", "en": "$\\{3, 2, 1\\}$" },
+      "explanation": {
+        "th": "เซตที่เท่ากันคือเซตที่มีหน้าตาสมาชิกเหมือนกันเป๊ะๆ โดยลำดับก่อนหลังในการเขียนไม่มีความสำคัญครับ",
+        "en": "Equal sets must have the exact same elements. The order of elements does not matter in a set."
+      }
+    },
+    {
+      "id": 13,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนดให้ $A = \\{a, b, c\\}$ และ $B = \\{a, b, b, c, c\\}$ ข้อสรุปใดถูกต้อง?",
+        "en": "Given $A = \\{a, b, c\\}$ and $B = \\{a, b, b, c, c\\}$, what is the correct conclusion?"
+      },
+      "options": {
+        "th": ["เซต A เท่ากับเซต B", "เซต A ไม่เท่ากับเซต B", "เซต B มีสมาชิกมากกว่าเซต A", "เซต A เป็นเซตว่าง"],
+        "en": ["Set A equals Set B", "Set A does not equal Set B", "Set B has more elements than Set A", "Set A is an empty set"]
+      },
+      "answer": { "th": "เซต A เท่ากับเซต B", "en": "Set A equals Set B" },
+      "explanation": {
+        "th": "ในทางคณิตศาสตร์ สมาชิกที่เขียนซ้ำกันในเซตจะนับเป็นตัวเดียว ดังนั้น $B = \\{a, b, c\\}$ ซึ่งเท่ากับ A พอดี",
+        "en": "In set notation, duplicated elements are counted as one. Thus, $B = \\{a, b, c\\}$, which is exactly equal to A."
+      }
+    },
+    {
+      "id": 14,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถ้า $A = \\{1, 2\\}$ ข้อใด <b>ไม่ใช่</b> สับเซตของ A?",
+        "en": "If $A = \\{1, 2\\}$, which of the following is <b>NOT</b> a subset of A?"
+      },
+      "options": {
+        "th": ["$\\emptyset$", "$\\{1\\}$", "$\\{1, 2\\}$", "$\\{3\\}$"],
+        "en": ["$\\emptyset$", "$\\{1\\}$", "$\\{1, 2\\}$", "$\\{3\\}$"]
+      },
+      "answer": { "th": "$\\{3\\}$", "en": "$\\{3\\}$" },
+      "explanation": {
+        "th": "เลข 3 ไม่เคยอยู่ในเซต A เลย ดังนั้น $\\{3\\}$ จึงไม่มีทางเป็นสับเซตของ A ได้ครับ",
+        "en": "The number 3 is not an element of A. Therefore, $\\{3\\}$ can never be a subset of A."
+      }
+    },
+    {
+      "id": 15,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดกล่าวถูกต้องเกี่ยวกับสับเซต?",
+        "en": "Which statement is true about subsets?"
+      },
+      "options": {
+        "th": ["เซตว่างไม่เป็นสับเซตของเซตใดเลย", "เซตทุกเซตเป็นสับเซตของตัวเองเสมอ", "สับเซตแท้คือเซตที่เท่ากับเซตเดิม", "สมาชิกทุกตัวของเอกภพสัมพัทธ์ต้องอยู่ในสับเซต"],
+        "en": ["An empty set is a subset of nothing", "Every set is always a subset of itself", "A proper subset is equal to the original set", "Every element of the universal set is in a subset"]
+      },
+      "answer": { "th": "เซตทุกเซตเป็นสับเซตของตัวเองเสมอ", "en": "Every set is always a subset of itself" },
+      "explanation": {
+        "th": "กฎเหล็กของสับเซตคือ: 1) เซตว่างเป็นสับเซตของทุกเซต และ 2) เซตทุกเซตเป็นสับเซตของตัวมันเอง ($A \\subset A$)",
+        "en": "Golden rules of subsets: 1) The empty set is a subset of every set, and 2) Every set is a subset of itself ($A \\subset A$)."
+      }
+    },
+    {
+      "id": 16,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนด $A = \\{x, y\\}$ จำนวนสับเซตทั้งหมดของ A มีกี่เซต?",
+        "en": "Given $A = \\{x, y\\}$, how many total subsets does A have?"
+      },
+      "options": {
+        "th": ["2", "3", "4", "5"],
+        "en": ["2", "3", "4", "5"]
+      },
+      "answer": { "th": "4", "en": "4" },
+      "explanation": {
+        "th": "ใช้สูตร $2^n$ โดยที่ n คือจำนวนสมาชิก (มี x กับ y คือ 2 ตัว) จะได้ $2^2 = 4$ สับเซต (ได้แก่ $\\emptyset, \\{x\\}, \\{y\\}, \\{x,y\\}$)",
+        "en": "Using the formula $2^n$, where n is the number of elements (which is 2). $2^2 = 4$ subsets (which are $\\emptyset, \\{x\\}, \\{y\\}, \\{x,y\\}$)."
+      }
+    },
+    {
+      "id": 17,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เพาเวอร์เซตของเซตว่าง หรือ $P(\\emptyset)$ คือข้อใด?",
+        "en": "What is the power set of the empty set, or $P(\\emptyset)$?"
+      },
+      "options": {
+        "th": ["$\\emptyset$", "$\\{\\emptyset\\}$", "$0$", "$\\{0\\}$"],
+        "en": ["$\\emptyset$", "$\\{\\emptyset\\}$", "$0$", "$\\{0\\}$"]
+      },
+      "answer": { "th": "$\\{\\emptyset\\}$", "en": "$\\{\\emptyset\\}$" },
+      "explanation": {
+        "th": "เพาเวอร์เซตคือการเอาสับเซตทั้งหมดมาใส่ปีกกาครอบ สับเซตของเซตว่างมีแค่ตัวเดียวคือ $\\emptyset$ ดังนั้น $P(\\emptyset)$ จึงต้องเท่ากับ $\\{\\emptyset\\}$",
+        "en": "A power set wraps all subsets in braces. The only subset of the empty set is $\\emptyset$. Thus, $P(\\emptyset) = \\{\\emptyset\\}$."
+      }
+    },
+    {
+      "id": 18,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถ้า $n(A) = 4$ แล้ว เพาเวอร์เซตของ A จะมีสมาชิกกี่ตัว?",
+        "en": "If $n(A) = 4$, how many elements are there in the power set of A?"
+      },
+      "options": {
+        "th": ["4", "8", "16", "32"],
+        "en": ["4", "8", "16", "32"]
+      },
+      "answer": { "th": "16", "en": "16" },
+      "explanation": {
+        "th": "จำนวนสมาชิกของเพาเวอร์เซต จะเท่ากับ จำนวนสับเซตทั้งหมดพอดี ใช้สูตร $2^n$ จะได้ $2^4 = 16$ ตัว",
+        "en": "The number of elements in a power set equals the total number of subsets. Using the formula $2^n$, we get $2^4 = 16$ elements."
+      }
+    },
+    {
+      "id": 19,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ในแผนภาพเวนน์-ออยเลอร์ เอกภพสัมพัทธ์ $U$ นิยมวาดแทนด้วยรูปเรขาคณิตใด?",
+        "en": "In a Venn-Euler diagram, the universal set $U$ is typically represented by which geometric shape?"
+      },
+      "options": {
+        "th": ["วงกลม", "สามเหลี่ยม", "สี่เหลี่ยมผืนผ้า", "วงรี"],
+        "en": ["Circle", "Triangle", "Rectangle", "Ellipse"]
+      },
+      "answer": { "th": "สี่เหลี่ยมผืนผ้า", "en": "Rectangle" },
+      "explanation": {
+        "th": "เพื่อตีกรอบขอบเขตทั้งหมดของสิ่งที่เราสนใจ เราจะวาดสี่เหลี่ยมผืนผ้าแทน $U$ แล้ววาดวงกลมเซตต่างๆ ไว้ข้างใน",
+        "en": "To define the entire boundary of interest, we draw a rectangle to represent $U$, and draw circles inside it for the subsets."
+      }
+    },
+    {
+      "id": 20,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "พื้นที่ทั้งหมดที่อยู่ในวงกลม A และ วงกลม B รวมกัน ในแผนภาพเวนน์-ออยเลอร์ ตรงกับการดำเนินการใด?",
+        "en": "The total area covering both circle A and circle B combined in a Venn diagram corresponds to which operation?"
+      },
+      "options": {
+        "th": ["$A \\cap B$", "$A \\cup B$", "$A - B$", "$A'$"],
+        "en": ["$A \\cap B$", "$A \\cup B$", "$A - B$", "$A'$"]
+      },
+      "answer": { "th": "$A \\cup B$", "en": "$A \\cup B$" },
+      "explanation": {
+        "th": "การแรเงารวมพื้นที่ทั้งหมดของวงกลมทั้งคู่ คือการเอาสมาชิกทั้งหมดมารวมกัน ตรงกับความหมายของ ยูเนียน ($\\cup$)",
+        "en": "Shading the entire area of both circles means combining all elements, which is the definition of Union ($\\cup$)."
+      }
+    },
+    {
+      "id": 21,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "พื้นที่ที่อยู่นอกวงกลม A ทั้งหมด แต่ยังอยู่ในกรอบสี่เหลี่ยม $U$ ตรงกับข้อใด?",
+        "en": "The area completely outside circle A but still within the rectangle $U$ corresponds to which of the following?"
+      },
+      "options": {
+        "th": ["$A \\cup U$", "$U - A$ หรือ $A'$", "$A \\cap U$", "$A - U$"],
+        "en": ["$A \\cup U$", "$U - A$ or $A'$", "$A \\cap U$", "$A - U$"]
+      },
+      "answer": { "th": "$U - A$ หรือ $A'$", "en": "$U - A$ or $A'$" },
+      "explanation": {
+        "th": "การเอาพื้นที่ข้างนอก A ทั้งหมด หมายถึง คอมพลีเมนต์ของ A (คือ $A'$) ซึ่งมีค่าเท่ากับ $U - A$ นั่นเอง",
+        "en": "Taking the entire area outside A refers to the complement of A ($A'$), which is mathematically equivalent to $U - A$."
+      }
+    },
+    {
+      "id": 22,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนด $A = \\{1, 3, 5\\}$ และ $B = \\{2, 4, 6\\}$ ข้อใดคือ $A \\cap B$?",
+        "en": "Given $A = \\{1, 3, 5\\}$ and $B = \\{2, 4, 6\\}$, what is $A \\cap B$?"
+      },
+      "options": {
+        "th": ["$\\{1, 2, 3, 4, 5, 6\\}$", "$\\emptyset$", "$\\{0\\}$", "$\\{1, 3, 5\\}$"],
+        "en": ["$\\{1, 2, 3, 4, 5, 6\\}$", "$\\emptyset$", "$\\{0\\}$", "$\\{1, 3, 5\\}$"]
+      },
+      "answer": { "th": "$\\emptyset$", "en": "$\\emptyset$" },
+      "explanation": {
+        "th": "อินเตอร์เซกชัน ($\\cap$) คือการหาตัวซ้ำ แต่เซต A มีแต่เลขคี่ เซต B มีแต่เลขคู่ ไม่มีอะไรซ้ำกันเลย จึงตอบเซตว่าง",
+        "en": "Intersection ($\\cap$) finds common elements. Set A has only odd numbers, and B has only evens. Since there's no overlap, the answer is the empty set."
+      }
+    },
+    {
+      "id": 23,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนด $A = \\{a, b, c\\}$ และ $B = \\{c, d, e\\}$ ข้อใดคือ $A \\cup B$?",
+        "en": "Given $A = \\{a, b, c\\}$ and $B = \\{c, d, e\\}$, what is $A \\cup B$?"
+      },
+      "options": {
+        "th": ["$\\{c\\}$", "$\\{a, b, d, e\\}$", "$\\{a, b, c, d, e\\}$", "$\\emptyset$"],
+        "en": ["$\\{c\\}$", "$\\{a, b, d, e\\}$", "$\\{a, b, c, d, e\\}$", "$\\emptyset$"]
+      },
+      "answer": { "th": "$\\{a, b, c, d, e\\}$", "en": "$\\{a, b, c, d, e\\}$" },
+      "explanation": {
+        "th": "ยูเนียน ($\\cup$) คือเอาสมาชิกของทั้ง 2 แก๊งมารวมกัน ตัวที่ซ้ำกัน (เช่น c) ให้เขียนแค่รอบเดียว",
+        "en": "Union ($\\cup$) means combining elements from both sets. The common element (c) is written only once."
+      }
+    },
+    {
+      "id": 24,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนด $U = \\{1, 2, 3, 4, 5\\}$ และ $A = \\{1, 2, 3\\}$ ข้อใดคือ $A'$?",
+        "en": "Given $U = \\{1, 2, 3, 4, 5\\}$ and $A = \\{1, 2, 3\\}$, what is $A'$?"
+      },
+      "options": {
+        "th": ["$\\{1, 2\\}$", "$\\{4, 5\\}$", "$\\{3, 4, 5\\}$", "$\\{1, 2, 3, 4, 5\\}$"],
+        "en": ["$\\{1, 2\\}$", "$\\{4, 5\\}$", "$\\{3, 4, 5\\}$", "$\\{1, 2, 3, 4, 5\\}$"]
+      },
+      "answer": { "th": "$\\{4, 5\\}$", "en": "$\\{4, 5\\}$" },
+      "explanation": {
+        "th": "$A'$ (คอมพลีเมนต์ของ A) หมายถึง สิ่งที่อยู่ใน U แต่ไม่เอาพวกที่อยู่ใน A เลยเหลือแค่ 4 กับ 5",
+        "en": "$A'$ (Complement of A) means elements in U that are not in A. Therefore, only 4 and 5 remain."
+      }
+    },
+    {
+      "id": 25,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนด $A = \\{1, 2, 3, 4\\}$ และ $B = \\{3, 4, 5, 6\\}$ ข้อใดคือ $A - B$?",
+        "en": "Given $A = \\{1, 2, 3, 4\\}$ and $B = \\{3, 4, 5, 6\\}$, what is $A - B$?"
+      },
+      "options": {
+        "th": ["$\\{1, 2\\}$", "$\\{5, 6\\}$", "$\\{3, 4\\}$", "$\\{1, 2, 5, 6\\}$"],
+        "en": ["$\\{1, 2\\}$", "$\\{5, 6\\}$", "$\\{3, 4\\}$", "$\\{1, 2, 5, 6\\}$"]
+      },
+      "answer": { "th": "$\\{1, 2\\}$", "en": "$\\{1, 2\\}$" },
+      "explanation": {
+        "th": "ผลต่าง $A - B$ หมายถึง ตั้งต้นด้วยเซต A แล้วหักตัวที่ซ้ำกับ B ทิ้งไป (ลบเลข 3 กับ 4 ออก) เลยเหลือแค่ 1 กับ 2",
+        "en": "The difference $A - B$ starts with elements in A and removes any that overlap with B (removing 3 and 4), leaving only 1 and 2."
+      }
+    },
+    {
+      "id": 26,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ความหมายของ $B - A$ คืออะไร?",
+        "en": "What does $B - A$ mean?"
+      },
+      "options": {
+        "th": ["สมาชิกที่อยู่ใน A และ B", "สมาชิกที่อยู่ใน A แต่ไม่อยู่ใน B", "สมาชิกที่อยู่ใน B แต่ไม่อยู่ใน A", "สมาชิกที่ไม่อยู่ทั้งใน A และ B"],
+        "en": ["Elements in both A and B", "Elements in A but not in B", "Elements in B but not in A", "Elements neither in A nor in B"]
+      },
+      "answer": { "th": "สมาชิกที่อยู่ใน B แต่ไม่อยู่ใน A", "en": "Elements in B but not in A" },
+      "explanation": {
+        "th": "ตัวไหนตั้งต้น เอาตัวนั้นเป็นหลัก $B - A$ แปลว่า เอาสมาชิกที่เป็นของ B แท้ๆ โดยตัดส่วนที่ไปเกี่ยวพันกับ A ออกให้หมด",
+        "en": "The first set is the primary set. $B - A$ means taking the elements that belong purely to B, discarding anything shared with A."
+      }
+    },
+    {
+      "id": 27,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนด $n(A) = 10$, $n(B) = 8$ และ $n(A \\cap B) = 3$ จงหา $n(A \\cup B)$",
+        "en": "Given $n(A) = 10$, $n(B) = 8$, and $n(A \\cap B) = 3$, find $n(A \\cup B)$"
+      },
+      "options": {
+        "th": ["15", "18", "21", "11"],
+        "en": ["15", "18", "21", "11"]
+      },
+      "answer": { "th": "15", "en": "15" },
+      "explanation": {
+        "th": "ใช้สูตรสุดฮิต: $n(A \\cup B) = n(A) + n(B) - n(A \\cap B)$ จะได้ $10 + 8 - 3 = 15$",
+        "en": "Using the standard formula: $n(A \\cup B) = n(A) + n(B) - n(A \\cap B)$, we get $10 + 8 - 3 = 15$."
+      }
+    },
+    {
+      "id": 28,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ในห้องเรียนมีนักเรียน 30 คน ชอบกินไก่ทอด 20 คน ชอบกินพิซซ่า 15 คน และชอบทั้งสองอย่าง 5 คน มีนักเรียนกี่คนที่ <b>ไม่ชอบ</b> ทั้งสองอย่างเลย?",
+        "en": "In a class of 30 students, 20 like fried chicken, 15 like pizza, and 5 like both. How many students like <b>neither</b>?"
+      },
+      "options": {
+        "th": ["0 คน", "5 คน", "10 คน", "15 คน"],
+        "en": ["0 students", "5 students", "10 students", "15 students"]
+      },
+      "answer": { "th": "0 คน", "en": "0 students" },
+      "explanation": {
+        "th": "หาคนชอบอย่างน้อย 1 อย่างก่อน: $20 + 15 - 5 = 30$ คน แปลว่าทุกคนในห้อง 30 คนมีของที่ชอบกินหมดเลย จึงไม่มีคนที่ไม่ชอบเลย (ตอบ 0)",
+        "en": "First, find those who like at least one: $20 + 15 - 5 = 30$ students. This means all 30 students in the class like something. Thus, 0 students like neither."
+      }
+    },
+    {
+      "id": 29,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดคือ <b>สมบัติการสลับที่</b> ของการยูเนียน?",
+        "en": "Which of the following is the <b>commutative property</b> of union?"
+      },
+      "options": {
+        "th": ["$A \\cup B = B \\cup A$", "$A \\cap B = B \\cap A$", "$A \\cup (B \\cup C) = (A \\cup B) \\cup C$", "$A - B = B - A$"],
+        "en": ["$A \\cup B = B \\cup A$", "$A \\cap B = B \\cap A$", "$A \\cup (B \\cup C) = (A \\cup B) \\cup C$", "$A - B = B - A$"]
+      },
+      "answer": { "th": "$A \\cup B = B \\cup A$", "en": "$A \\cup B = B \\cup A$" },
+      "explanation": {
+        "th": "การยูเนียนสามารถสลับหน้าหลังได้ ผลลัพธ์เท่าเดิมเสมอ เหมือนกับการบวกเลขครับ ($1+2 = 2+1$)",
+        "en": "Union operations can be swapped back and forth with the same result, just like adding numbers ($1+2 = 2+1$)."
+      }
+    },
+    {
+      "id": 30,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "$(A')'$ หรือ คอมพลีเมนต์ของคอมพลีเมนต์ของเซต A มีค่าเท่ากับข้อใด?",
+        "en": "What is $(A')'$, or the complement of the complement of set A, equal to?"
+      },
+      "options": {
+        "th": ["$U$", "$\\emptyset$", "$A$", "$A'$"],
+        "en": ["$U$", "$\\emptyset$", "$A$", "$A'$"]
+      },
+      "answer": { "th": "$A$", "en": "$A$" },
+      "explanation": {
+        "th": "เหมือนกับการปฏิเสธซ้อนปฏิเสธครับ \"สิ่งที่ไม่ใช่ (สิ่งที่ไม่ใช่ A)\" มันจะเด้งกลับมาเป็น A ตัวเดิมพอดี",
+        "en": "It's like a double negative. 'The opposite of (the opposite of A)' flips it right back to the original set A."
+      }
+    }
+  ]
+}

@@ -1,0 +1,786 @@
+{
+  "metadata": {
+    "exam_title": {
+      "th": "คณิตศาสตร์ ม.4 เทอม 1 - บทที่ 1 เซต (ง่าย ชุดที่ 5)",
+      "en": "Math M.4 Term 1 - Unit 1: Sets (Easy Set 5)"
+    },
+    "total_questions": 30,
+    "difficulty_distribution": {
+      "description": {
+        "th": "คำแนะนำ: ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุด้านล่างนี้อย่างเคร่งครัด",
+        "en": "Guideline: When generating the exam, strictly ensure that the difficulty level of the questions matches the percentage distribution specified below."
+      },
+      "Easy": "100%",
+      "Medium": "0%",
+      "Hard": "0%",
+      "Extreme": "0%"
+    },
+    "dashboard_config": {
+      "theme": "modern_ai_bright",
+      "watermark_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "header_footer_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "active_recall_mode": true
+    },
+    "ai_prompt_guidelines": {
+      "description": "คำสั่งเฉพาะสำหรับ AI ในการสร้างข้อสอบ (Prompt Instructions)",
+      "rules": [
+        "1. ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุอย่างเคร่งครัด",
+        "2. สกิล (Skill): ให้คัดลอก 1 ใน 4 สกิลนี้ไปใส่ในตัวแปร 'skill' ของแต่ละข้อ: 'จำนวนและพีชคณิต', 'การวัดและเรขาคณิต', 'สถิติและความน่าจะเป็น', หรือ 'แคลคูลัส'",
+        "3. รูปภาพประกอบ (SVG): หากข้อสอบข้อไหนสามารถอธิบายด้วยภาพวาดได้ ให้ใช้ SVG code สร้างรูปภาพประกอบง่ายๆ สีสันสดใส แทรกไว้ในโจทย์หรือตัวเลือกด้วยเสมอ(ถ้าทำได้)",
+        "4. ภาษา (Language): ข้อมูลข้อสอบต้องรองรับ 2 ภาษา (th และ en) ทุกจุด ทั้งโจทย์ ตัวเลือก และเฉลย"
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดเป็นตัวอย่างของการกำหนด <b>เซต</b> ที่ถูกต้องตามหลักคณิตศาสตร์?",
+        "en": "Which of the following is a correctly defined <b>set</b> according to mathematical principles?"
+      },
+      "options": {
+        "th": ["เซตของอาหารที่เผ็ดที่สุด", "เซตของชื่อวันในหนึ่งสัปดาห์", "เซตของเพื่อนที่นิสัยดี", "เซตของเสื้อผ้าที่ใส่สบาย"],
+        "en": ["Set of the spiciest foods", "Set of days in a week", "Set of friends with good personalities", "Set of comfortable clothes"]
+      },
+      "answer": { "th": "เซตของชื่อวันในหนึ่งสัปดาห์", "en": "Set of days in a week" },
+      "explanation": {
+        "th": "ชื่อวันในสัปดาห์มีเกณฑ์ที่ชัดเจน สามารถระบุสมาชิก (จันทร์-อาทิตย์) ได้แน่นอน ส่วนความเผ็ด นิสัย และความสบาย เป็นความคิดเห็นส่วนบุคคลครับ",
+        "en": "The days of the week have clear criteria and can be definitively listed. Spiciness, personality, and comfort are subjective opinions."
+      }
+    },
+    {
+      "id": 2,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใด <b>ไม่สามารถ</b> นำมาเขียนเป็นเซตได้?",
+        "en": "Which of the following <b>cannot</b> be written as a set?"
+      },
+      "options": {
+        "th": ["เซตของจำนวนเต็มบวก", "เซตของสระในภาษาอังกฤษ", "เซตของดอกไม้ที่มีกลิ่นหอม", "เซตของทวีปบนโลก"],
+        "en": ["Set of positive integers", "Set of English vowels", "Set of fragrant flowers", "Set of continents on Earth"]
+      },
+      "answer": { "th": "เซตของดอกไม้ที่มีกลิ่นหอม", "en": "Set of fragrant flowers" },
+      "explanation": {
+        "th": "ความหอมของดอกไม้เป็นความรู้สึก แต่ละคนรับรู้ไม่เหมือนกัน จึงไม่มีขอบเขตที่ชัดเจนในการระบุสมาชิก",
+        "en": "The fragrance of flowers is subjective and perceived differently by people, meaning it lacks a clear boundary for membership."
+      }
+    },
+    {
+      "id": 3,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนดให้ $A = \\{-2, 0, 2, 4\\}$ ข้อใดถูกต้อง?",
+        "en": "Given $A = \\{-2, 0, 2, 4\\}$, which of the following is correct?"
+      },
+      "options": {
+        "th": ["$-2 \\notin A$", "$0 \\in A$", "$1 \\in A$", "$4 \\notin A$"],
+        "en": ["$-2 \\notin A$", "$0 \\in A$", "$1 \\in A$", "$4 \\notin A$"]
+      },
+      "answer": { "th": "$0 \\in A$", "en": "$0 \\in A$" },
+      "explanation": {
+        "th": "เลข 0 เป็นหนึ่งในสมาชิกที่อยู่ในเซต A อย่างชัดเจน จึงสามารถเขียนว่า $0 \\in A$ ได้ถูกต้อง",
+        "en": "The number 0 is clearly one of the elements inside set A, making $0 \\in A$ the correct statement."
+      }
+    },
+    {
+      "id": 4,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนด $B = \\{x, y, z\\}$ สัญลักษณ์ $w \\notin B$ มีความหมายว่าอย่างไร?",
+        "en": "Given $B = \\{x, y, z\\}$, what does the symbol $w \\notin B$ mean?"
+      },
+      "options": {
+        "th": ["w เป็นสับเซตของ B", "w เป็นตัวแปรของ B", "w เป็นสมาชิกของ B", "w ไม่เป็นสมาชิกของ B"],
+        "en": ["w is a subset of B", "w is a variable of B", "w is an element of B", "w is not an element of B"]
+      },
+      "answer": { "th": "w ไม่เป็นสมาชิกของ B", "en": "w is not an element of B" },
+      "explanation": {
+        "th": "สัญลักษณ์ $\\notin$ หมายความว่า \"ไม่เป็นสมาชิกของ\" ซึ่งสอดคล้องกับความจริงที่ว่า w ไม่มีอยู่ในเซต B",
+        "en": "The symbol $\\notin$ means 'not an element of', which aligns with the fact that w is nowhere to be found in set B."
+      }
+    },
+    {
+      "id": 5,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "การเขียน <b>เซตของสีของธงชาติไทย</b> แบบแจกแจงสมาชิกคือข้อใด?",
+        "en": "What is the roster notation for the <b>set of colors in the Thai national flag</b>?"
+      },
+      "options": {
+        "th": ["$\\{\\text{แดง, ขาว, น้ำเงิน}\\}$", "$\\{\\text{แดง, ขาว, น้ำเงิน, เหลือง}\\}$", "$\\{\\text{แดง, น้ำเงิน}\\}$", "$\\{\\text{ขาว, น้ำเงิน}\\}$"],
+        "en": ["$\\{\\text{Red, White, Blue}\\}$", "$\\{\\text{Red, White, Blue, Yellow}\\}$", "$\\{\\text{Red, Blue}\\}$", "$\\{\\text{White, Blue}\\}$"]
+      },
+      "answer": { "th": "$\\{\\text{แดง, ขาว, น้ำเงิน}\\}$", "en": "$\\{\\text{Red, White, Blue}\\}$" },
+      "explanation": {
+        "th": "ธงชาติไทย (ธงไตรรงค์) มี 3 สี ได้แก่ สีแดง สีขาว และสีน้ำเงิน",
+        "en": "The Thai national flag (Trairong) consists of 3 colors: Red, White, and Blue."
+      }
+    },
+    {
+      "id": 6,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เซต $A = \\{-1, -2, -3, ...\\}$ เขียนแบบบอกเงื่อนไขได้ตามข้อใด?",
+        "en": "How can set $A = \\{-1, -2, -3, ...\\}$ be written in set-builder notation?"
+      },
+      "options": {
+        "th": ["$\\{x \\mid x \\text{ เป็นจำนวนเต็ม}\\}$", "$\\{x \\mid x \\text{ เป็นจำนวนเต็มลบ}\\}$", "$\\{x \\mid x \\text{ เป็นจำนวนเต็มบวก}\\}$", "$\\{x \\mid x \\text{ เป็นจำนวนจริง}\\}$"],
+        "en": ["$\\{x \\mid x \\text{ is an integer}\\}$", "$\\{x \\mid x \\text{ is a negative integer}\\}$", "$\\{x \\mid x \\text{ is a positive integer}\\}$", "$\\{x \\mid x \\text{ is a real number}\\}$"]
+      },
+      "answer": { "th": "$\\{x \\mid x \\text{ เป็นจำนวนเต็มลบ}\\}$", "en": "$\\{x \\mid x \\text{ is a negative integer}\\}$" },
+      "explanation": {
+        "th": "สมาชิกในเซตคือจำนวนเต็มที่มีเครื่องหมายลบทั้งหมด และดำเนินต่อไปเรื่อยๆ ไม่มีที่สิ้นสุด",
+        "en": "The elements in the set are all integers with a negative sign, continuing infinitely."
+      }
+    },
+    {
+      "id": 7,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดต่อไปนี้จัดเป็น <b>เซตจำกัด (Finite Set)</b>?",
+        "en": "Which of the following is classified as a <b>Finite Set</b>?"
+      },
+      "options": {
+        "th": ["เซตของเส้นผมบนศีรษะของมนุษย์ 1 คน", "เซตของจำนวนคี่บวก", "เซตของจำนวนจริงระหว่าง 1 ถึง 2", "เซตของจุดบนส่วนของเส้นตรง 1 เส้น"],
+        "en": ["Set of hairs on a single human's head", "Set of positive odd numbers", "Set of real numbers between 1 and 2", "Set of points on a line segment"]
+      },
+      "answer": { "th": "เซตของเส้นผมบนศีรษะของมนุษย์ 1 คน", "en": "Set of hairs on a single human's head" },
+      "explanation": {
+        "th": "ถึงแม้เส้นผมจะเยอะมาก แต่ในทางคณิตศาสตร์ถือว่าถ้ามีเวลามากพอก็สามารถนับจำนวนได้แน่ชัด (ไม่ใช่อนันต์) จึงเป็นเซตจำกัด",
+        "en": "Although there are many hairs, mathematically, if given enough time, the exact number can be counted (it is not infinite). Thus, it's a finite set."
+      }
+    },
+    {
+      "id": 8,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดเป็น <b>เซตอนันต์ (Infinite Set)</b>?",
+        "en": "Which of the following is an <b>Infinite Set</b>?"
+      },
+      "options": {
+        "th": ["เซตของเม็ดทรายในขวดโหล", "เซตของจำนวนเต็มที่มากกว่า 100", "เซตของนักเรียนในโรงเรียน", "เซตของดาวเคราะห์ในระบบสุริยะ"],
+        "en": ["Set of sand grains in a jar", "Set of integers greater than 100", "Set of students in a school", "Set of planets in the solar system"]
+      },
+      "answer": { "th": "เซตของจำนวนเต็มที่มากกว่า 100", "en": "Set of integers greater than 100" },
+      "explanation": {
+        "th": "จำนวนเต็มที่มากกว่า 100 (เช่น 101, 102, 103...) สามารถเพิ่มขึ้นไปได้เรื่อยๆ ไม่มีที่สิ้นสุด จึงเป็นเซตอนันต์",
+        "en": "Integers greater than 100 (e.g., 101, 102, 103...) continue endlessly without bound, making it an infinite set."
+      }
+    },
+    {
+      "id": 9,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เซตในข้อใด <b>ไม่เป็น</b> เซตว่าง?",
+        "en": "Which of the following sets is <b>NOT</b> an empty set?"
+      },
+      "options": {
+        "th": ["เซตของจำนวนเต็มที่น้อยกว่าศูนย์ แต่มากกว่าหนึ่ง", "เซตของเดือนที่มี 32 วัน", "เซตของจำนวนเต็มบวกที่น้อยกว่า 1", "$\\{0\\}$"],
+        "en": ["Set of integers less than zero but greater than one", "Set of months with 32 days", "Set of positive integers less than 1", "$\\{0\\}$"]
+      },
+      "answer": { "th": "$\\{0\\}$", "en": "$\\{0\\}$" },
+      "explanation": {
+        "th": "เซต $\\{0\\}$ มีสมาชิก 1 ตัว คือเลข 0 ดังนั้นจึงไม่ใช่เซตว่าง (เซตว่างต้องไม่มีสมาชิกเลย)",
+        "en": "The set $\\{0\\}$ contains one element, which is the number 0. Therefore, it is not an empty set (an empty set must contain nothing)."
+      }
+    },
+    {
+      "id": 10,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนดให้ $A = \\{1, 2, 3\\}$ ข้อใดต่อไปนี้ <b>เท่ากับ</b> เซต A?",
+        "en": "Given $A = \\{1, 2, 3\\}$, which of the following is <b>equal</b> to set A?"
+      },
+      "options": {
+        "th": ["$\\{1, 2\\}$", "$\\{1, 2, 3, 4\\}$", "$\\{3, 2, 1\\}$", "$\\{0, 1, 2, 3\\}$"],
+        "en": ["$\\{1, 2\\}$", "$\\{1, 2, 3, 4\\}$", "$\\{3, 2, 1\\}$", "$\\{0, 1, 2, 3\\}$"]
+      },
+      "answer": { "th": "$\\{3, 2, 1\\}$", "en": "$\\{3, 2, 1\\}$" },
+      "explanation": {
+        "th": "เซตที่เท่ากันต้องมีสมาชิกหน้าตาเหมือนกันเป๊ะๆ โดยที่ลำดับการเขียนก่อนหลังไม่มีความสำคัญครับ",
+        "en": "Equal sets must contain exactly the same elements. The order in which the elements are written does not matter."
+      }
+    },
+    {
+      "id": 11,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถ้า $B = \\{a, b, a, c, b\\}$ เมื่อเขียนเซต B ให้ถูกต้องตามหลักคณิตศาสตร์ จะได้ผลลัพธ์ตรงกับข้อใด?",
+        "en": "If $B = \\{a, b, a, c, b\\}$, which option correctly represents set B mathematically?"
+      },
+      "options": {
+        "th": ["$\\{a, a, b, b, c\\}$", "$\\{a, b, c\\}$", "$\\{a, b\\}$", "$\\{c\\}$"],
+        "en": ["$\\{a, a, b, b, c\\}$", "$\\{a, b, c\\}$", "$\\{a, b\\}$", "$\\{c\\}$"]
+      },
+      "answer": { "th": "$\\{a, b, c\\}$", "en": "$\\{a, b, c\\}$" },
+      "explanation": {
+        "th": "ในทางคณิตศาสตร์ สมาชิกที่ซ้ำกันจะถูกนับเป็นตัวเดียวเท่านั้น ดังนั้นตัวที่ซ้ำจะถูกยุบรวมเหลือแค่ $\\{a, b, c\\}$",
+        "en": "In mathematics, duplicated elements are counted only once. Therefore, the repetitions are collapsed, leaving just $\\{a, b, c\\}$."
+      }
+    },
+    {
+      "id": 12,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนดให้ $A = \\{x, y\\}$ ข้อใดคือ <b>สับเซตทั้งหมด</b> ของ A?",
+        "en": "Given $A = \\{x, y\\}$, what are <b>all the subsets</b> of A?"
+      },
+      "options": {
+        "th": ["$\\{x\\}, \\{y\\}$", "$\\emptyset, \\{x\\}, \\{y\\}$", "$\\{x\\}, \\{y\\}, \\{x, y\\}$", "$\\emptyset, \\{x\\}, \\{y\\}, \\{x, y\\}$"],
+        "en": ["$\\{x\\}, \\{y\\}$", "$\\emptyset, \\{x\\}, \\{y\\}$", "$\\{x\\}, \\{y\\}, \\{x, y\\}$", "$\\emptyset, \\{x\\}, \\{y\\}, \\{x, y\\}$"]
+      },
+      "answer": { "th": "$\\emptyset, \\{x\\}, \\{y\\}, \\{x, y\\}$", "en": "$\\emptyset, \\{x\\}, \\{y\\}, \\{x, y\\}$" },
+      "explanation": {
+        "th": "สับเซตทั้งหมดต้องประกอบด้วย เซตว่าง (เป็นสับเซตของทุกเซต), เซตที่มีสมาชิก 1 ตัว และเซตตัวมันเอง",
+        "en": "All subsets must include the empty set (a subset of every set), sets with 1 element, and the set itself."
+      }
+    },
+    {
+      "id": 13,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถ้าเซต C มีจำนวนสมาชิก 5 ตัว เซต C จะมีสับเซตทั้งหมดกี่สับเซต?",
+        "en": "If set C has 5 elements, how many total subsets does set C have?"
+      },
+      "options": {
+        "th": ["10", "16", "25", "32"],
+        "en": ["10", "16", "25", "32"]
+      },
+      "answer": { "th": "32", "en": "32" },
+      "explanation": {
+        "th": "เราสามารถหาจำนวนสับเซตทั้งหมดได้จากสูตร $2^n$ เมื่อแทนค่า n = 5 จะได้ $2^5 = 32$ สับเซต",
+        "en": "We can find the total number of subsets using the formula $2^n$. Substituting n = 5 yields $2^5 = 32$ subsets."
+      }
+    },
+    {
+      "id": 14,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดกล่าว <b>ไม่ถูกต้อง</b> เกี่ยวกับสับเซต?",
+        "en": "Which statement is <b>incorrect</b> regarding subsets?"
+      },
+      "options": {
+        "th": ["เซตว่างเป็นสับเซตของทุกเซต", "เซตทุกเซตเป็นสับเซตของตัวเอง", "เซตที่มีสมาชิก 0 ตัว จะไม่มีสับเซตเลย", "สับเซตแท้ของ A คือสับเซตที่ไม่เท่ากับ A"],
+        "en": ["The empty set is a subset of every set", "Every set is a subset of itself", "A set with 0 elements has no subsets", "A proper subset of A is a subset not equal to A"]
+      },
+      "answer": { "th": "เซตที่มีสมาชิก 0 ตัว จะไม่มีสับเซตเลย", "en": "A set with 0 elements has no subsets" },
+      "explanation": {
+        "th": "เซตที่มีสมาชิก 0 ตัว คือเซตว่าง ซึ่งเซตว่างก็มีสับเซต 1 ตัว คือตัวมันเอง ($\\emptyset \\subset \\emptyset$)",
+        "en": "A set with 0 elements is the empty set. The empty set still has 1 subset, which is itself ($\\emptyset \\subset \\emptyset$)."
+      }
+    },
+    {
+      "id": 15,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนดให้ $A = \\{7\\}$ ข้อใดคือเพาเวอร์เซตของ A หรือ $P(A)$?",
+        "en": "Given $A = \\{7\\}$, what is the power set of A, or $P(A)$?"
+      },
+      "options": {
+        "th": ["$\\{7\\}$", "$\\{\\emptyset, 7\\}$", "$\\{\\emptyset, \\{7\\}\\}$", "$\\emptyset$"],
+        "en": ["$\\{7\\}$", "$\\{\\emptyset, 7\\}$", "$\\{\\emptyset, \\{7\\}\\}$", "$\\emptyset$"]
+      },
+      "answer": { "th": "$\\{\\emptyset, \\{7\\}\\}$", "en": "$\\{\\emptyset, \\{7\\}\\}$" },
+      "explanation": {
+        "th": "เพาเวอร์เซตคือเซตของสับเซตทั้งหมด สับเซตของ A มี 2 ตัวคือ $\\emptyset$ และ $\\{7\\}$ นำมาใส่ปีกกาครอบอีกชั้น จะได้ $\\{\\emptyset, \\{7\\}\\}$",
+        "en": "The power set is the set of all subsets. The subsets of A are $\\emptyset$ and $\\{7\\}$. Putting them inside curly braces yields $\\{\\emptyset, \\{7\\}\\}$."
+      }
+    },
+    {
+      "id": 16,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถ้า $P(A)$ มีจำนวนสมาชิก 16 ตัว แล้วเซต A จะมีจำนวนสมาชิกกี่ตัว?",
+        "en": "If $P(A)$ has 16 elements, how many elements does set A have?"
+      },
+      "options": {
+        "th": ["2", "4", "8", "16"],
+        "en": ["2", "4", "8", "16"]
+      },
+      "answer": { "th": "4", "en": "4" },
+      "explanation": {
+        "th": "จำนวนสมาชิกของเพาเวอร์เซต $n(P(A)) = 2^n$ เรารู้ว่า $2^4 = 16$ ดังนั้นเซต A จึงมีสมาชิก 4 ตัว",
+        "en": "The number of elements in a power set is $n(P(A)) = 2^n$. We know $2^4 = 16$, so set A has 4 elements."
+      }
+    },
+    {
+      "id": 17,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จากแผนภาพเวนน์-ออยเลอร์ด้านล่าง บ่งบอกถึงความสัมพันธ์ใดระหว่างเซต A และเซต B?<br><br><div style='text-align:center;'><svg viewBox='0 0 200 120' width='200'><rect x='5' y='5' width='190' height='110' fill='none' stroke='#333' stroke-width='2'/><text x='10' y='20' font-size='14'>U</text><circle cx='60' cy='60' r='35' fill='#ff9ff3' opacity='0.7'/><circle cx='140' cy='60' r='35' fill='#48dbfb' opacity='0.7'/><circle cx='60' cy='60' r='35' fill='none' stroke='#333' stroke-width='2'/><circle cx='140' cy='60' r='35' fill='none' stroke='#333' stroke-width='2'/><text x='55' y='65' font-size='16' font-weight='bold'>A</text><text x='135' y='65' font-size='16' font-weight='bold'>B</text></svg></div>",
+        "en": "From the Venn-Euler diagram below, what is the relationship between set A and set B?<br><br><div style='text-align:center;'><svg viewBox='0 0 200 120' width='200'><rect x='5' y='5' width='190' height='110' fill='none' stroke='#333' stroke-width='2'/><text x='10' y='20' font-size='14'>U</text><circle cx='60' cy='60' r='35' fill='#ff9ff3' opacity='0.7'/><circle cx='140' cy='60' r='35' fill='#48dbfb' opacity='0.7'/><circle cx='60' cy='60' r='35' fill='none' stroke='#333' stroke-width='2'/><circle cx='140' cy='60' r='35' fill='none' stroke='#333' stroke-width='2'/><text x='55' y='65' font-size='16' font-weight='bold'>A</text><text x='135' y='65' font-size='16' font-weight='bold'>B</text></svg></div>"
+      },
+      "options": {
+        "th": ["$A \subset B$", "$B \subset A$", "$A \cap B = \emptyset$ (ไม่มีสมาชิกร่วมกัน)", "$A = B$"],
+        "en": ["$A \subset B$", "$B \subset A$", "$A \cap B = \emptyset$ (Disjoint sets)", "$A = B$"]
+      },
+      "answer": { "th": "$A \\cap B = \\emptyset$ (ไม่มีสมาชิกร่วมกัน)", "en": "$A \\cap B = \\emptyset$ (Disjoint sets)" },
+      "explanation": {
+        "th": "วงกลมสองวงแยกออกจากกันโดยสิ้นเชิง หมายความว่าทั้งสองเซตไม่มีสมาชิกร่วมกันเลย เรียกว่าเซตไม่มีส่วนร่วม (Disjoint Sets)",
+        "en": "The two circles are completely separated, meaning the two sets share no elements. They are called Disjoint Sets."
+      }
+    },
+    {
+      "id": 18,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จากแผนภาพเวนน์-ออยเลอร์ ข้อใดกล่าวถูกต้องที่สุด?<br><br><div style='text-align:center;'><svg viewBox='0 0 200 120' width='200'><rect x='5' y='5' width='190' height='110' fill='none' stroke='#333' stroke-width='2'/><text x='10' y='20' font-size='14'>U</text><circle cx='100' cy='60' r='45' fill='#1dd1a1' opacity='0.4'/><circle cx='100' cy='60' r='45' fill='none' stroke='#333' stroke-width='2'/><circle cx='100' cy='60' r='20' fill='#ff6b6b' opacity='0.8'/><circle cx='100' cy='60' r='20' fill='none' stroke='#333' stroke-width='2'/><text x='94' y='65' font-size='14' font-weight='bold'>A</text><text x='120' y='40' font-size='16' font-weight='bold'>B</text></svg></div>",
+        "en": "From the Venn-Euler diagram, which statement is the most accurate?<br><br><div style='text-align:center;'><svg viewBox='0 0 200 120' width='200'><rect x='5' y='5' width='190' height='110' fill='none' stroke='#333' stroke-width='2'/><text x='10' y='20' font-size='14'>U</text><circle cx='100' cy='60' r='45' fill='#1dd1a1' opacity='0.4'/><circle cx='100' cy='60' r='45' fill='none' stroke='#333' stroke-width='2'/><circle cx='100' cy='60' r='20' fill='#ff6b6b' opacity='0.8'/><circle cx='100' cy='60' r='20' fill='none' stroke='#333' stroke-width='2'/><text x='94' y='65' font-size='14' font-weight='bold'>A</text><text x='120' y='40' font-size='16' font-weight='bold'>B</text></svg></div>"
+      },
+      "options": {
+        "th": ["A เป็นสับเซตของ B ($A \\subset B$)", "B เป็นสับเซตของ A ($B \\subset A$)", "A และ B ไม่มีสมาชิกร่วมกัน", "$A \\cup B = U$"],
+        "en": ["A is a subset of B ($A \\subset B$)", "B is a subset of A ($B \\subset A$)", "A and B have no common elements", "$A \\cup B = U$"]
+      },
+      "answer": { "th": "A เป็นสับเซตของ B ($A \\subset B$)", "en": "A is a subset of B ($A \\subset B$)" },
+      "explanation": {
+        "th": "วงกลม A ถูกวาดอยู่ข้างในวงกลม B ทั้งหมด แสดงว่าสมาชิกทุกตัวของ A ล้วนเป็นสมาชิกของ B ด้วย",
+        "en": "Circle A is drawn completely inside circle B, indicating that every element of A is also an element of B."
+      }
+    },
+    {
+      "id": 19,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "บริเวณที่แรเงาสีส้มในแผนภาพเวนน์-ออยเลอร์ ตรงกับการดำเนินการในข้อใด?<br><br><div style='text-align:center;'><svg viewBox='0 0 200 120' width='200'><defs><mask id='m_q19'><rect width='200' height='120' fill='white'/><circle cx='70' cy='60' r='40' fill='black'/></mask></defs><rect x='5' y='5' width='190' height='110' fill='none' stroke='#333' stroke-width='2'/><text x='10' y='20' font-size='14'>U</text><circle cx='130' cy='60' r='40' fill='#e17055' mask='url(#m_q19)'/><circle cx='70' cy='60' r='40' fill='none' stroke='#333' stroke-width='2'/><circle cx='130' cy='60' r='40' fill='none' stroke='#333' stroke-width='2'/><text x='40' y='65' font-size='16' font-weight='bold'>A</text><text x='150' y='65' font-size='16' font-weight='bold'>B</text></svg></div>",
+        "en": "The orange shaded area in the Venn-Euler diagram corresponds to which operation?<br><br><div style='text-align:center;'><svg viewBox='0 0 200 120' width='200'><defs><mask id='m_q19e'><rect width='200' height='120' fill='white'/><circle cx='70' cy='60' r='40' fill='black'/></mask></defs><rect x='5' y='5' width='190' height='110' fill='none' stroke='#333' stroke-width='2'/><text x='10' y='20' font-size='14'>U</text><circle cx='130' cy='60' r='40' fill='#e17055' mask='url(#m_q19e)'/><circle cx='70' cy='60' r='40' fill='none' stroke='#333' stroke-width='2'/><circle cx='130' cy='60' r='40' fill='none' stroke='#333' stroke-width='2'/><text x='40' y='65' font-size='16' font-weight='bold'>A</text><text x='150' y='65' font-size='16' font-weight='bold'>B</text></svg></div>"
+      },
+      "options": {
+        "th": ["$A - B$", "$B - A$", "$A \\cup B$", "$A \\cap B$"],
+        "en": ["$A - B$", "$B - A$", "$A \\cup B$", "$A \\cap B$"]
+      },
+      "answer": { "th": "$B - A$", "en": "$B - A$" },
+      "explanation": {
+        "th": "พื้นที่นี้คือส่วนที่เป็นของ B แท้ๆ โดยโดนหักส่วนที่ไปซ้อนกับวงกลม A ออกไป จึงมีความหมายตรงกับ $B - A$ (เอา B ไม่เอา A)",
+        "en": "This area belongs purely to B, with the portion overlapping circle A removed. It corresponds to $B - A$ (elements in B but not in A)."
+      }
+    },
+    {
+      "id": 20,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จากภาพแผนภาพเวนน์-ออยเลอร์ พื้นที่สีเทาที่แรเงาอยู่ <b>ด้านนอกวงกลมทั้งสอง</b> หมายถึงข้อใด?<br><br><div style='text-align:center;'><svg viewBox='0 0 200 120' width='200'><defs><mask id='m_q20'><rect width='200' height='120' fill='white'/><circle cx='70' cy='60' r='40' fill='black'/><circle cx='130' cy='60' r='40' fill='black'/></mask></defs><rect x='5' y='5' width='190' height='110' fill='#b2bec3' mask='url(#m_q20)' stroke='#333' stroke-width='2'/><circle cx='70' cy='60' r='40' fill='none' stroke='#333' stroke-width='2'/><circle cx='130' cy='60' r='40' fill='none' stroke='#333' stroke-width='2'/><text x='10' y='20' font-size='14'>U</text><text x='65' y='65' font-size='16' font-weight='bold'>A</text><text x='125' y='65' font-size='16' font-weight='bold'>B</text></svg></div>",
+        "en": "From the Venn-Euler diagram, what does the grey shaded area <b>outside both circles</b> represent?<br><br><div style='text-align:center;'><svg viewBox='0 0 200 120' width='200'><defs><mask id='m_q20e'><rect width='200' height='120' fill='white'/><circle cx='70' cy='60' r='40' fill='black'/><circle cx='130' cy='60' r='40' fill='black'/></mask></defs><rect x='5' y='5' width='190' height='110' fill='#b2bec3' mask='url(#m_q20e)' stroke='#333' stroke-width='2'/><circle cx='70' cy='60' r='40' fill='none' stroke='#333' stroke-width='2'/><circle cx='130' cy='60' r='40' fill='none' stroke='#333' stroke-width='2'/><text x='10' y='20' font-size='14'>U</text><text x='65' y='65' font-size='16' font-weight='bold'>A</text><text x='125' y='65' font-size='16' font-weight='bold'>B</text></svg></div>"
+      },
+      "options": {
+        "th": ["$(A \\cup B)'$", "$(A \\cap B)'$", "$A' \\cup B'$", "$\\emptyset$"],
+        "en": ["$(A \\cup B)'$", "$(A \\cap B)'$", "$A' \\cup B'$", "$\\emptyset$"]
+      },
+      "answer": { "th": "$(A \\cup B)'$", "en": "$(A \\cup B)'$" },
+      "explanation": {
+        "th": "$A \\cup B$ คือพื้นที่วงกลมสองวงรวมกัน เมื่อใส่คอมพลีเมนต์เข้าไป $(A \\cup B)'$ จึงแปลว่า \"ไม่เอาวงกลมเลย เอาแต่พื้นที่ด้านนอกทั้งหมด\"",
+        "en": "$A \\cup B$ is the area of both circles combined. Adding a complement $(A \\cup B)'$ means 'excluding the circles completely and taking everything outside'."
+      }
+    },
+    {
+      "id": 21,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนด $X = \\{10, 20\\}$ และ $Y = \\{30\\}$ ผลลัพธ์ของการยูเนียน ($X \\cup Y$) คือข้อใด?",
+        "en": "Given $X = \\{10, 20\\}$ and $Y = \\{30\\}$, what is the result of the union ($X \\cup Y$)?"
+      },
+      "options": {
+        "th": ["$\\{10, 20, 30\\}$", "$\\emptyset$", "$\\{10, 20\\}$", "$\\{30\\}$"],
+        "en": ["$\\{10, 20, 30\\}$", "$\\emptyset$", "$\\{10, 20\\}$", "$\\{30\\}$"]
+      },
+      "answer": { "th": "$\\{10, 20, 30\\}$", "en": "$\\{10, 20, 30\\}$" },
+      "explanation": {
+        "th": "การยูเนียนคือการนำสมาชิกของทั้งสองเซตมาเทรวมกันในเซตเดียว",
+        "en": "Union means pouring the elements of both sets together into a single set."
+      }
+    },
+    {
+      "id": 22,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กำหนด $A = \\{x, y, z\\}$ และ $B = \\{a, b, c\\}$ ผลลัพธ์ของอินเตอร์เซกชัน ($A \\cap B$) ตรงกับข้อใด?",
+        "en": "Given $A = \\{x, y, z\\}$ and $B = \\{a, b, c\\}$, what is the result of the intersection ($A \\cap B$)?"
+      },
+      "options": {
+        "th": ["$\\{x, y, z, a, b, c\\}$", "$\\emptyset$", "$\\{a, b, c\\}$", "$\\{x, y, z\\}$"],
+        "en": ["$\\{x, y, z, a, b, c\\}$", "$\\emptyset$", "$\\{a, b, c\\}$", "$\\{x, y, z\\}$"]
+      },
+      "answer": { "th": "$\\emptyset$", "en": "$\\emptyset$" },
+      "explanation": {
+        "th": "อินเตอร์เซกชันคือการหาตัวซ้ำ เนื่องจากเซต A และเซต B ไม่มีตัวอักษรใดซ้ำกันเลย ผลลัพธ์จึงว่างเปล่า (เซตว่าง)",
+        "en": "Intersection looks for overlapping elements. Since set A and set B share no common letters, the result is empty."
+      }
+    },
+    {
+      "id": 23,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ผลต่างระหว่างเซต $A - B$ มีความหมายตรงกับข้อใด?",
+        "en": "What does the difference between sets $A - B$ mean?"
+      },
+      "options": {
+        "th": ["สมาชิกที่อยู่ใน A และอยู่ใน B ด้วย", "สมาชิกที่อยู่ใน A แต่ต้องไม่อยู่ใน B", "สมาชิกที่อยู่ใน B แต่ไม่อยู่ใน A", "สมาชิกทั้งหมดของ A และ B รวมกัน"],
+        "en": ["Elements in A and also in B", "Elements in A but must not be in B", "Elements in B but not in A", "All elements of A and B combined"]
+      },
+      "answer": { "th": "สมาชิกที่อยู่ใน A แต่ต้องไม่อยู่ใน B", "en": "Elements in A but must not be in B" },
+      "explanation": {
+        "th": "เครื่องหมายลบหมายถึงการหักออก $A - B$ คือตั้งต้นที่ A แล้วหักตัวไหนก็ตามที่ไปโผล่ใน B ทิ้งไป",
+        "en": "The minus sign means removal. $A - B$ starts with A and removes any element that also appears in B."
+      }
+    },
+    {
+      "id": 24,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เอกภพสัมพัทธ์ $U = \\{1, 2, 3, 4, 5\\}$ ถ้า $A = \\{2, 3\\}$ คอมพลีเมนต์ของ A คือเซตในข้อใด?",
+        "en": "Universal set $U = \\{1, 2, 3, 4, 5\\}$. If $A = \\{2, 3\\}$, what is the complement of A?"
+      },
+      "options": {
+        "th": ["$\\{1, 4, 5\\}$", "$\\{2, 3\\}$", "$\\{1, 2, 3, 4, 5\\}$", "$\\emptyset$"],
+        "en": ["$\\{1, 4, 5\\}$", "$\\{2, 3\\}$", "$\\{1, 2, 3, 4, 5\\}$", "$\\emptyset$"]
+      },
+      "answer": { "th": "$\\{1, 4, 5\\}$", "en": "$\\{1, 4, 5\\}$" },
+      "explanation": {
+        "th": "คอมพลีเมนต์ ($A'$) คือการเอาทุกตัวที่อยู่ใน U แต่ไม่เอา 2 กับ 3 ดังนั้นจึงเหลือ 1, 4 และ 5",
+        "en": "The complement ($A'$) takes every element in U except 2 and 3. Therefore, 1, 4, and 5 remain."
+      }
+    },
+    {
+      "id": 25,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ในการหาจำนวนสมาชิกของสองเซตที่ยูเนียนกัน สูตรที่สมบูรณ์คือ $n(A \\cup B) = n(A) + n(B) - ?$ เครื่องหมาย $?$ คืออะไร?",
+        "en": "To find the number of elements of the union of two sets, the complete formula is $n(A \\cup B) = n(A) + n(B) - ?$. What is the $?$ symbol?"
+      },
+      "options": {
+        "th": ["$n(A - B)$", "$n(A \\cap B)$", "$n(U)$", "$n(A')$"],
+        "en": ["$n(A - B)$", "$n(A \\cap B)$", "$n(U)$", "$n(A')$"]
+      },
+      "answer": { "th": "$n(A \\cap B)$", "en": "$n(A \\cap B)$" },
+      "explanation": {
+        "th": "เมื่อเอาจำนวนสมาชิกของ A และ B มาบวกกัน พื้นที่ตรงกลางจะถูกนับซ้ำ 2 รอบ เราจึงต้องลบตัวซ้ำ $n(A \\cap B)$ ออก 1 ครั้งเสมอ",
+        "en": "When adding the elements of A and B, the overlapping middle area is counted twice. We must subtract the overlap $n(A \\cap B)$ once."
+      }
+    },
+    {
+      "id": 26,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "นักเรียนกลุ่มหนึ่งมี 50 คน ชอบกินหมูทะ 30 คน ชอบกินชาบู 25 คน และชอบทั้งคู่ 10 คน มีนักเรียนกี่คนที่ชอบอย่างน้อย 1 อย่าง?",
+        "en": "A group has 50 students. 30 like BBQ, 25 like Shabu, and 10 like both. How many students like at least one of these?"
+      },
+      "options": {
+        "th": ["35 คน", "40 คน", "45 คน", "55 คน"],
+        "en": ["35 students", "40 students", "45 students", "55 students"]
+      },
+      "answer": { "th": "45 คน", "en": "45 students" },
+      "explanation": {
+        "th": "การชอบอย่างน้อย 1 อย่าง คือการหายูเนียน: $30 + 25 - 10 = 45$ คน",
+        "en": "Liking at least one is finding the union: $30 + 25 - 10 = 45$ students."
+      }
+    },
+    {
+      "id": 27,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ผลลัพธ์ของ $A \\cup U$ (เมื่อ $U$ คือเอกภพสัมพัทธ์) มีค่าตรงกับข้อใด?",
+        "en": "What is the result of $A \\cup U$ (where $U$ is the universal set)?"
+      },
+      "options": {
+        "th": ["$A$", "$U$", "$\\emptyset$", "$A'$"],
+        "en": ["$A$", "$U$", "$\\emptyset$", "$A'$"]
+      },
+      "answer": { "th": "$U$", "en": "$U$" },
+      "explanation": {
+        "th": "การเอาเซต A ไปรวมกับของทุกสิ่งทุกอย่างในขอบเขต (U) ก็ย่อมได้ของทุกสิ่งทุกอย่าง (U) กลับมาเหมือนเดิม",
+        "en": "Combining set A with absolutely everything in the boundary (U) naturally results in absolutely everything (U) back."
+      }
+    },
+    {
+      "id": 28,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ผลลัพธ์ของ $A \\cap A'$ (เซต A อินเตอร์เซกชันกับคอมพลีเมนต์ของ A) ตรงกับข้อใด?",
+        "en": "What is the result of $A \\cap A'$ (Set A intersection the complement of A)?"
+      },
+      "options": {
+        "th": ["$U$", "$\\emptyset$", "$A$", "$A'$"],
+        "en": ["$U$", "$\\emptyset$", "$A$", "$A'$"]
+      },
+      "answer": { "th": "$\\emptyset$", "en": "$\\emptyset$" },
+      "explanation": {
+        "th": "การหาตัวซ้ำระหว่าง 'สิ่งที่เป็น A' กับ 'สิ่งที่ไม่ใช่ A' ย่อมไม่มีทางมีตัวซ้ำกันได้เลย ผลลัพธ์จึงเป็นความว่างเปล่า",
+        "en": "Finding an overlap between 'what is A' and 'what is not A' is impossible. The result is emptiness."
+      }
+    },
+    {
+      "id": 29,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กฏของเดอมอร์แกน (De Morgan's Laws) กล่าวว่า $(A \\cup B)'$ จะมีค่าเท่ากับข้อใด?",
+        "en": "De Morgan's Laws state that $(A \\cup B)'$ is equal to which of the following?"
+      },
+      "options": {
+        "th": ["$A' \\cap B'$", "$A' \\cup B'$", "$A \\cap B$", "$A \\cup B$"],
+        "en": ["$A' \\cap B'$", "$A' \\cup B'$", "$A \\cap B$", "$A \\cup B$"]
+      },
+      "answer": { "th": "$A' \\cap B'$", "en": "$A' \\cap B'$" },
+      "explanation": {
+        "th": "เมื่อกระจายคอมพลีเมนต์ (ขีดด้านบน) เข้าไปในวงเล็บ เครื่องหมายยูเนียน ($\\cup$) จะกลับหัวกลายเป็นอินเตอร์เซกชัน ($\\cap$)",
+        "en": "When distributing the complement (') into the parenthesis, the union sign ($\\cup$) flips upside down into an intersection sign ($\\cap$)."
+      }
+    },
+    {
+      "id": 30,
+      "topic": {
+        "th": "ม.4 เทอม 1 - บทที่ 1 เซต",
+        "en": "M.4 Term 1 - Unit 1: Sets"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "การที่เซต $A \\cap B = B \\cap A$ เราเรียกคุณสมบัตินี้ว่าอะไร?",
+        "en": "The property that $A \\cap B = B \\cap A$ is known as what?"
+      },
+      "options": {
+        "th": ["สมบัติการสลับที่", "สมบัติการเปลี่ยนหมู่", "สมบัติการแจกแจง", "สมบัติเอกลักษณ์"],
+        "en": ["Commutative property", "Associative property", "Distributive property", "Identity property"]
+      },
+      "answer": { "th": "สมบัติการสลับที่", "en": "Commutative property" },
+      "explanation": {
+        "th": "การสลับตำแหน่งหน้า-หลังของการอินเตอร์เซกชันแล้วได้ผลลัพธ์เท่าเดิม คือสมบัติการสลับที่ (Commutative Property) เหมือนกับ $1+2 = 2+1$",
+        "en": "Swapping the front and back positions of the intersection yielding the same result is the Commutative Property, just like $1+2 = 2+1$."
+      }
+    }
+  ]
+}

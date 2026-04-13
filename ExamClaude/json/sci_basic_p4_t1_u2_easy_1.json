@@ -1,0 +1,786 @@
+{
+  "metadata": {
+    "exam_title": {
+      "th": "วิทยาศาสตร์ ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว (ง่าย ชุดที่ 1)",
+      "en": "Science P.4 Term 1 - Unit 2 Chapter 1: Living Things Around Us (Easy Set 1)"
+    },
+    "total_questions": 30,
+    "difficulty_distribution": {
+      "description": {
+        "th": "คำแนะนำ: ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุด้านล่างนี้อย่างเคร่งครัด",
+        "en": "Guideline: When generating the exam, strictly ensure that the difficulty level of the questions matches the percentage distribution specified below."
+      },
+      "Easy": "100%",
+      "Medium": "0%",
+      "Hard": "0%",
+      "Extreme": "0%"
+    },
+    "dashboard_config": {
+      "theme": "modern_ai_bright",
+      "watermark_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "header_footer_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "active_recall_mode": true
+    },
+    "ai_prompt_guidelines": {
+      "description": "คำสั่งเฉพาะสำหรับ AI ในการสร้างข้อสอบ (Prompt Instructions)",
+      "rules": [
+        "1. ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุอย่างเคร่งครัด",
+        "2. สกิล (Skill): ให้คัดลอก 1 ใน 4 สกิลนี้ไปใส่ในตัวแปร 'skill' ของแต่ละข้อ: 'วิทยาศาสตร์ชีวภาพ', 'วิทยาศาสตร์กายภาพ', 'วิทยาศาสตร์โลกและอวกาศ', หรือ 'เทคโนโลยี'",
+        "3. รูปภาพประกอบ (SVG): หากข้อสอบข้อไหนสามารถอธิบายด้วยภาพวาดได้ ให้ใช้ SVG code สร้างรูปภาพประกอบง่ายๆ สีสันสดใส แทรกไว้ในโจทย์หรือตัวเลือกด้วยเสมอ(ถ้าทำได้)",
+        "4. ภาษา (Language): ข้อมูลข้อสอบต้องรองรับ 2 ภาษา (th และ en) ทุกจุด ทั้งโจทย์ ตัวเลือก และเฉลย"
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กลุ่มของสิ่งมีชีวิตแบ่งออกเป็นกี่กลุ่มใหญ่ๆ ตามลักษณะการดำรงชีวิต?",
+        "en": "How many main groups are living things divided into based on their characteristics?"
+      },
+      "options": {
+        "th": ["2 กลุ่ม", "3 กลุ่ม", "4 กลุ่ม", "5 กลุ่ม"],
+        "en": ["2 groups", "3 groups", "4 groups", "5 groups"]
+      },
+      "answer": { "th": "3 กลุ่ม", "en": "3 groups" },
+      "explanation": {
+        "th": "สิ่งมีชีวิตแบ่งเป็น 3 กลุ่มใหญ่ คือ 1. กลุ่มพืช 2. กลุ่มสัตว์ และ 3. กลุ่มที่ไม่ใช่พืชและสัตว์",
+        "en": "Living things are divided into 3 main groups: 1. Plants 2. Animals 3. Non-plants and non-animals."
+      }
+    },
+    {
+      "id": 2,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สิ่งมีชีวิตกลุ่มพืชมีลักษณะพิเศษที่สำคัญที่สุดคือข้อใด?",
+        "en": "What is the most important characteristic of the plant group?"
+      },
+      "options": {
+        "th": ["เคลื่อนที่ได้รวดเร็ว", "สร้างอาหารเองได้", "ออกลูกเป็นไข่", "ย่อยสลายซากสิ่งมีชีวิต"],
+        "en": ["Can move quickly", "Can make their own food", "Lay eggs", "Decompose dead organisms"]
+      },
+      "answer": { "th": "สร้างอาหารเองได้", "en": "Can make their own food" },
+      "explanation": {
+        "th": "พืชมีสารสีเขียวที่เรียกว่า คลอโรฟิลล์ จึงสามารถสร้างอาหารเองได้ผ่านกระบวนการสังเคราะห์ด้วยแสง",
+        "en": "Plants have a green pigment called chlorophyll, enabling them to make their own food through photosynthesis."
+      }
+    },
+    {
+      "id": 3,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดคือลักษณะสำคัญของสิ่งมีชีวิตกลุ่มสัตว์?",
+        "en": "What is an important characteristic of the animal group?"
+      },
+      "options": {
+        "th": ["สร้างอาหารเองได้และเคลื่อนที่ได้", "สร้างอาหารเองได้แต่เคลื่อนที่ไม่ได้", "สร้างอาหารเองไม่ได้แต่เคลื่อนที่ได้", "สร้างอาหารเองไม่ได้และเคลื่อนที่ไม่ได้"],
+        "en": ["Can make food and can move", "Can make food but cannot move", "Cannot make food but can move", "Cannot make food and cannot move"]
+      },
+      "answer": { "th": "สร้างอาหารเองไม่ได้แต่เคลื่อนที่ได้", "en": "Cannot make food but can move" },
+      "explanation": {
+        "th": "สัตว์ไม่มีคลอโรฟิลล์จึงสร้างอาหารเองไม่ได้ ต้องกินสิ่งมีชีวิตอื่นเป็นอาหาร และสามารถเคลื่อนที่ไปมาได้ด้วยตนเอง",
+        "en": "Animals lack chlorophyll so they cannot make their own food. They must eat other organisms and can move around."
+      }
+    },
+    {
+      "id": 4,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สิ่งมีชีวิตในข้อใดจัดอยู่ในกลุ่มที่ไม่ใช่พืชและไม่ใช่สัตว์?",
+        "en": "Which of the following organisms belong to the non-plant and non-animal group?"
+      },
+      "options": {
+        "th": ["ดอกมะลิและต้นมะม่วง", "สุนัขและแมว", "เห็ดและรา", "นกและปลา"],
+        "en": ["Jasmine and Mango tree", "Dog and Cat", "Mushroom and Fungi", "Bird and Fish"]
+      },
+      "answer": { "th": "เห็ดและรา", "en": "Mushroom and Fungi" },
+      "explanation": {
+        "th": "เห็ดและรา ไม่สามารถสร้างอาหารเองได้เหมือนพืช และเคลื่อนที่ไม่ได้เหมือนสัตว์ ทำหน้าที่เป็นผู้ย่อยสลาย",
+        "en": "Mushrooms and fungi cannot make food like plants and cannot move like animals. They act as decomposers."
+      }
+    },
+    {
+      "id": 5,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เราใช้เกณฑ์ใดเป็นหลักในการจำแนกสิ่งมีชีวิตออกเป็นกลุ่มพืชและกลุ่มสัตว์?",
+        "en": "What is the main criterion used to classify living things into plant and animal groups?"
+      },
+      "options": {
+        "th": ["การหายใจและการเจริญเติบโต", "การสร้างอาหารและการเคลื่อนที่", "การสืบพันธุ์และการขับถ่าย", "การตอบสนองต่อสิ่งเร้า"],
+        "en": ["Respiration and growth", "Making food and movement", "Reproduction and excretion", "Response to stimuli"]
+      },
+      "answer": { "th": "การสร้างอาหารและการเคลื่อนที่", "en": "Making food and movement" },
+      "explanation": {
+        "th": "พืชสร้างอาหารได้แต่เคลื่อนที่ไม่ได้ ส่วนสัตว์สร้างอาหารไม่ได้แต่เคลื่อนที่ได้",
+        "en": "Plants can make food but cannot move, while animals cannot make food but can move."
+      }
+    },
+    {
+      "id": 6,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดคือพืชดอกทั้งหมด?",
+        "en": "Which option contains only flowering plants?"
+      },
+      "options": {
+        "th": ["เฟิร์น มอส", "ดอกกุหลาบ ทานตะวัน", "สาหร่าย ปรง", "เห็ด รา"],
+        "en": ["Fern, Moss", "Rose, Sunflower", "Algae, Cycad", "Mushroom, Fungi"]
+      },
+      "answer": { "th": "ดอกกุหลาบ ทานตะวัน", "en": "Rose, Sunflower" },
+      "explanation": {
+        "th": "กุหลาบและทานตะวันเป็นพืชที่มีดอกสำหรับใช้ในการสืบพันธุ์ เฟิร์นและมอสเป็นพืชไร้ดอก ส่วนเห็ดราไม่ใช่พืช",
+        "en": "Roses and sunflowers have flowers for reproduction. Ferns and mosses are non-flowering, and mushrooms are not plants."
+      }
+    },
+    {
+      "id": 7,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดเป็นสัตว์มีกระดูกสันหลัง?",
+        "en": "Which of the following is a vertebrate?"
+      },
+      "options": {
+        "th": ["ไส้เดือนดิน", "หมึกทะเล", "แมงกะพรุน", "ปลาทู"],
+        "en": ["Earthworm", "Squid", "Jellyfish", "Mackerel (Fish)"]
+      },
+      "answer": { "th": "ปลาทู", "en": "Mackerel (Fish)" },
+      "explanation": {
+        "th": "ปลาทูเป็นสัตว์น้ำที่มีกระดูกสันหลัง ส่วนไส้เดือน หมึก และแมงกะพรุน จัดอยู่ในกลุ่มสัตว์ไม่มีกระดูกสันหลัง",
+        "en": "Mackerel is a vertebrate (fish), while earthworms, squids, and jellyfish are invertebrates."
+      }
+    },
+    {
+      "id": 8,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์ในข้อใดออกลูกเป็นตัว?",
+        "en": "Which of the following animals gives birth to live young?"
+      },
+      "options": {
+        "th": ["ไก่", "จระเข้", "สุนัข", "กบ"],
+        "en": ["Chicken", "Crocodile", "Dog", "Frog"]
+      },
+      "answer": { "th": "สุนัข", "en": "Dog" },
+      "explanation": {
+        "th": "สุนัขเป็นสัตว์เลี้ยงลูกด้วยน้ำนม ซึ่งส่วนใหญ่จะตั้งท้องและออกลูกเป็นตัว (ยกเว้นตุ่นปากเป็ด)",
+        "en": "Dogs are mammals, most of which give birth to live young (except for the platypus)."
+      }
+    },
+    {
+      "id": 9,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "รากของพืชทำหน้าที่คล้ายกับสิ่งใดมากที่สุด?",
+        "en": "Which of the following is most similar to the function of a plant's root?"
+      },
+      "options": {
+        "th": ["ท่อประปาดูดน้ำ", "ห้องครัวทำอาหาร", "เสาอากาศรับสัญญาณ", "พัดลมระบายอากาศ"],
+        "en": ["Water pump/pipe", "Kitchen making food", "Antenna receiving signal", "Exhaust fan"]
+      },
+      "answer": { "th": "ท่อประปาดูดน้ำ", "en": "Water pump/pipe" },
+      "explanation": {
+        "th": "รากมีหน้าที่ดูดซึมน้ำและแร่ธาตุจากดินเพื่อส่งไปยังส่วนต่างๆ ของพืช คล้ายกับการสูบน้ำของท่อประปา",
+        "en": "Roots absorb water and minerals from the soil to send to other plant parts, similar to a water pipe."
+      }
+    },
+    {
+      "id": 10,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "คลอโรฟิลล์ (Chlorophyll) ในใบพืชมีหน้าที่อะไร?",
+        "en": "What is the function of chlorophyll in plant leaves?"
+      },
+      "options": {
+        "th": ["ล่อแมลงให้มาผสมเกสร", "หายใจเอาแก๊สออกซิเจนเข้ามา", "ช่วยคายน้ำลดความร้อน", "รับแสงเพื่อใช้สร้างอาหาร"],
+        "en": ["Attract insects for pollination", "Inhale oxygen", "Transpire to reduce heat", "Absorb light to make food"]
+      },
+      "answer": { "th": "รับแสงเพื่อใช้สร้างอาหาร", "en": "Absorb light to make food" },
+      "explanation": {
+        "th": "คลอโรฟิลล์เป็นสารสีเขียวในพืช ที่ทำหน้าที่ดูดกลืนพลังงานแสงแดดมาใช้ในกระบวนการสังเคราะห์ด้วยแสง",
+        "en": "Chlorophyll is a green pigment that absorbs sunlight energy for use in photosynthesis."
+      }
+    },
+    {
+      "id": 11,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์เลื้อยคลานในข้อใดมีกระดองแข็งหุ้มลำตัว?",
+        "en": "Which reptile has a hard shell covering its body?"
+      },
+      "options": {
+        "th": ["งู", "เต่า", "จระเข้", "กิ้งก่า"],
+        "en": ["Snake", "Turtle", "Crocodile", "Lizard"]
+      },
+      "answer": { "th": "เต่า", "en": "Turtle" },
+      "explanation": {
+        "th": "เต่าเป็นสัตว์เลื้อยคลานที่มีวิวัฒนาการสร้างกระดองแข็งหุ้มลำตัวเพื่อป้องกันอันตราย",
+        "en": "Turtles are reptiles that have evolved a hard shell around their bodies for protection."
+      }
+    },
+    {
+      "id": 12,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์ครึ่งน้ำครึ่งบก หายใจด้วยอวัยวะใดเมื่อตอนเป็นตัวอ่อนอาศัยอยู่ในน้ำ?",
+        "en": "What organ do amphibians use to breathe when they are aquatic larvae?"
+      },
+      "options": {
+        "th": ["ปอด", "ผิวหนัง", "เหงือก", "จมูก"],
+        "en": ["Lungs", "Skin", "Gills", "Nose"]
+      },
+      "answer": { "th": "เหงือก", "en": "Gills" },
+      "explanation": {
+        "th": "ตัวอ่อนของสัตว์ครึ่งน้ำครึ่งบก (เช่น ลูกอ๊อด) จะอาศัยอยู่ในน้ำและหายใจด้วยเหงือกเหมือนปลา เมื่อโตเต็มวัยจึงเปลี่ยนไปใช้ปอดและผิวหนัง",
+        "en": "Amphibian larvae (like tadpoles) live in water and breathe using gills. Adults use lungs and skin."
+      }
+    },
+    {
+      "id": 13,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดจัดเป็น 'สัตว์เลี้ยงลูกด้วยน้ำนม' ที่อาศัยอยู่ในน้ำ?",
+        "en": "Which of the following is an aquatic 'mammal'?"
+      },
+      "options": {
+        "th": ["ปลาฉลาม", "วาฬ", "ม้าน้ำ", "ปลากระเบน"],
+        "en": ["Shark", "Whale", "Seahorse", "Stingray"]
+      },
+      "answer": { "th": "วาฬ", "en": "Whale" },
+      "explanation": {
+        "th": "วาฬ โลมา และพะยูน เป็นสัตว์เลี้ยงลูกด้วยน้ำนมที่อาศัยอยู่ในน้ำ ไม่ได้จัดอยู่ในกลุ่มปลา",
+        "en": "Whales, dolphins, and dugongs are mammals that live in the water. They are not classified as fish."
+      }
+    },
+    {
+      "id": 14,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ส่วนประกอบใดของพืชที่ทำหน้าที่ล่อแมลงให้มาช่วยผสมเกสร?",
+        "en": "Which part of a plant attracts insects to help with pollination?"
+      },
+      "options": {
+        "th": ["ราก", "ลำต้น", "ใบ", "กลีบดอก"],
+        "en": ["Roots", "Stem", "Leaves", "Petals"]
+      },
+      "answer": { "th": "กลีบดอก", "en": "Petals" },
+      "explanation": {
+        "th": "กลีบดอกมักมีสีสันสวยงามและอาจมีกลิ่นหอม เพื่อดึงดูดแมลงให้บินมาตอมและช่วยผสมเกสร",
+        "en": "Petals are usually brightly colored and fragrant to attract insects to help pollinate the flower."
+      }
+    },
+    {
+      "id": 15,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สิ่งมีชีวิตขนาดเล็กมากๆ ที่มองด้วยตาเปล่าไม่เห็น ต้องใช้กล้องจุลทรรศน์ส่องดู เรียกว่าอะไร?",
+        "en": "Very small living things that cannot be seen with the naked eye and require a microscope are called what?"
+      },
+      "options": {
+        "th": ["จุลินทรีย์", "เห็ดรา", "พืชไร้ดอก", "สัตว์ไม่มีกระดูกสันหลัง"],
+        "en": ["Microorganisms", "Mushroom/Fungi", "Non-flowering plants", "Invertebrates"]
+      },
+      "answer": { "th": "จุลินทรีย์", "en": "Microorganisms" },
+      "explanation": {
+        "th": "จุลินทรีย์ (Microorganism) เป็นสิ่งมีชีวิตขนาดเล็กจิ๋ว เช่น แบคทีเรีย ไวรัส ยีสต์ บางชนิดมีประโยชน์ บางชนิดก่อโรค",
+        "en": "Microorganisms are tiny living things like bacteria, viruses, and yeast. Some are helpful, some cause disease."
+      }
+    },
+    {
+      "id": 16,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์ในข้อใดมี 6 ขา และจัดอยู่ในกลุ่มแมลง?",
+        "en": "Which animal has 6 legs and is classified as an insect?"
+      },
+      "options": {
+        "th": ["แมงมุม", "ตะขาบ", "กุ้ง", "ผีเสื้อ"],
+        "en": ["Spider", "Centipede", "Shrimp", "Butterfly"]
+      },
+      "answer": { "th": "ผีเสื้อ", "en": "Butterfly" },
+      "explanation": {
+        "th": "ผีเสื้อเป็นแมลง มี 6 ขา ส่วนแมงมุมมี 8 ขา (กลุ่มแมง) ตะขาบมีหลายขา และกุ้งมี 10 ขา",
+        "en": "A butterfly is an insect with 6 legs. A spider has 8 legs, a centipede has many, and a shrimp has 10."
+      }
+    },
+    {
+      "id": 17,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดเป็นสัตว์ที่ไม่มีกระดูกสันหลังทั้งหมด?",
+        "en": "Which option contains ONLY invertebrates?"
+      },
+      "options": {
+        "th": ["ปู กุ้ง หอย", "ปลา กบ นก", "เต่า งู จระเข้", "แมว ช้าง ม้า"],
+        "en": ["Crab, Shrimp, Snail", "Fish, Frog, Bird", "Turtle, Snake, Crocodile", "Cat, Elephant, Horse"]
+      },
+      "answer": { "th": "ปู กุ้ง หอย", "en": "Crab, Shrimp, Snail" },
+      "explanation": {
+        "th": "ปู กุ้ง และหอย ไม่มีโครงร่างแข็งหรือกระดูกสันหลังอยู่ภายในลำตัว จึงจัดเป็นสัตว์ไม่มีกระดูกสันหลัง",
+        "en": "Crabs, shrimp, and snails do not have an internal backbone or hard skeleton, so they are invertebrates."
+      }
+    },
+    {
+      "id": 18,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "แบคทีเรีย เป็นสิ่งมีชีวิตที่จัดอยู่ในกลุ่มใด?",
+        "en": "Bacteria are classified into which group of living things?"
+      },
+      "options": {
+        "th": ["กลุ่มพืช", "กลุ่มสัตว์", "กลุ่มที่ไม่ใช่พืชและสัตว์", "กลุ่มพืชดอก"],
+        "en": ["Plant group", "Animal group", "Non-plant and non-animal group", "Flowering plant group"]
+      },
+      "answer": { "th": "กลุ่มที่ไม่ใช่พืชและสัตว์", "en": "Non-plant and non-animal group" },
+      "explanation": {
+        "th": "แบคทีเรียเป็นจุลินทรีย์เซลล์เดียว จัดอยู่ในกลุ่มที่ไม่ใช่พืชและสัตว์",
+        "en": "Bacteria are single-celled microorganisms classified in the non-plant and non-animal group."
+      }
+    },
+    {
+      "id": 19,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์ปีกชนิดใดที่ไม่สามารถบินได้ แต่ว่ายน้ำได้เก่งมาก?",
+        "en": "Which bird cannot fly but is an excellent swimmer?"
+      },
+      "options": {
+        "th": ["นกกระจอกเทศ", "นกเพนกวิน", "นกแก้ว", "นกพิราบ"],
+        "en": ["Ostrich", "Penguin", "Parrot", "Pigeon"]
+      },
+      "answer": { "th": "นกเพนกวิน", "en": "Penguin" },
+      "explanation": {
+        "th": "นกเพนกวินเป็นสัตว์ปีกที่มีปีกพัฒนาไปเป็นครีบ (Flipper) เพื่อใช้ในการว่ายน้ำและหาอาหารในทะเล จึงบินไม่ได้",
+        "en": "Penguins are birds whose wings have evolved into flippers for swimming and finding food in the sea, so they cannot fly."
+      }
+    },
+    {
+      "id": 20,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "พืชชนิดใดจัดเป็นพืชไร้ดอก?",
+        "en": "Which of the following is a non-flowering plant?"
+      },
+      "options": {
+        "th": ["บัว", "กล้วยไม้", "เฟิร์น", "ชบา"],
+        "en": ["Lotus", "Orchid", "Fern", "Hibiscus"]
+      },
+      "answer": { "th": "เฟิร์น", "en": "Fern" },
+      "explanation": {
+        "th": "เฟิร์นและมอส เป็นพืชที่ไม่มีดอกตลอดการดำรงชีวิต อาศัยการสืบพันธุ์โดยการสร้างสปอร์",
+        "en": "Ferns and mosses never produce flowers throughout their lives. They reproduce by producing spores."
+      }
+    },
+    {
+      "id": 21,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ยีสต์ (Yeast) เป็นจุลินทรีย์ที่นิยมนำมาใช้ประโยชน์ในด้านใดมากที่สุด?",
+        "en": "Yeast is a microorganism most commonly used for what purpose?"
+      },
+      "options": {
+        "th": ["ทำปุ๋ยหมัก", "ทำขนมปัง", "ทำยารักษาโรค", "ทำกระดาษ"],
+        "en": ["Making compost", "Baking bread", "Making medicine", "Making paper"]
+      },
+      "answer": { "th": "ทำขนมปัง", "en": "Baking bread" },
+      "explanation": {
+        "th": "ยีสต์จัดเป็นจุลินทรีย์กลุ่มเห็ดรา มักนำมาใช้หมักแป้งเพื่อทำให้ขนมปังฟูนุ่มน่ารับประทาน",
+        "en": "Yeast is a microorganism in the fungi group, commonly used to ferment dough to make bread fluffy."
+      }
+    },
+    {
+      "id": 22,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์ชนิดใดที่มีผิวหนังเปียกชื้นตลอดเวลา และไม่มีเกล็ด?",
+        "en": "Which animal has moist skin all the time and no scales?"
+      },
+      "options": {
+        "th": ["งู", "จระเข้", "กบ", "เต่า"],
+        "en": ["Snake", "Crocodile", "Frog", "Turtle"]
+      },
+      "answer": { "th": "กบ", "en": "Frog" },
+      "explanation": {
+        "th": "กบเป็นสัตว์สะเทินน้ำสะเทินบก (ครึ่งน้ำครึ่งบก) มีผิวหนังบางและเปียกชื้นเพื่อช่วยในการแลกเปลี่ยนแก๊ส (หายใจ)",
+        "en": "Frogs are amphibians. They have thin, moist skin to help with gas exchange (breathing)."
+      }
+    },
+    {
+      "id": 23,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์จำพวกปลา มีโครงสร้างใดที่ช่วยในการว่ายน้ำและทรงตัว?",
+        "en": "What structure helps fish swim and maintain balance?"
+      },
+      "options": {
+        "th": ["ปอด", "ครีบ", "ขา", "ขน"],
+        "en": ["Lungs", "Fins", "Legs", "Feathers"]
+      },
+      "answer": { "th": "ครีบ", "en": "Fins" },
+      "explanation": {
+        "th": "ปลาใช้ครีบ (เช่น ครีบหาง ครีบอก) ในการว่ายน้ำ พยุงตัว และกำหนดทิศทางในน้ำ",
+        "en": "Fish use fins (like tail and pectoral fins) to swim, balance, and steer in the water."
+      }
+    },
+    {
+      "id": 24,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ก้านใบและเส้นใบของพืช ทำหน้าที่เปรียบได้กับสิ่งใดของร่างกายมนุษย์?",
+        "en": "The petiole and leaf veins of a plant function most similarly to what in the human body?"
+      },
+      "options": {
+        "th": ["กระดูก", "เส้นเลือด", "สมอง", "ปอด"],
+        "en": ["Bones", "Blood vessels", "Brain", "Lungs"]
+      },
+      "answer": { "th": "เส้นเลือด", "en": "Blood vessels" },
+      "explanation": {
+        "th": "เส้นใบทำหน้าที่เป็นท่อลำเลียงน้ำและอาหาร คล้ายกับเส้นเลือดที่ลำเลียงเลือดและสารอาหารไปทั่วร่างกาย",
+        "en": "Leaf veins act as tubes to transport water and food, similar to how blood vessels transport blood throughout the body."
+      }
+    },
+    {
+      "id": 25,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สิ่งมีชีวิตในข้อใดจัดเป็น 'ผู้ย่อยสลาย' ในธรรมชาติ?",
+        "en": "Which of the following organisms is classified as a 'decomposer' in nature?"
+      },
+      "options": {
+        "th": ["หญ้า", "เสือ", "เห็ด", "กระต่าย"],
+        "en": ["Grass", "Tiger", "Mushroom", "Rabbit"]
+      },
+      "answer": { "th": "เห็ด", "en": "Mushroom" },
+      "explanation": {
+        "th": "เห็ดและราทำหน้าที่ย่อยสลายซากพืชและซากสัตว์ที่ตายแล้ว ให้กลายเป็นแร่ธาตุกลับคืนสู่ดิน",
+        "en": "Mushrooms and fungi decompose dead plants and animals, turning them into minerals that return to the soil."
+      }
+    },
+    {
+      "id": 26,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สิ่งมีชีวิตในข้อใดสืบพันธุ์ด้วยการสร้างสปอร์ (Spore)?",
+        "en": "Which organism reproduces by producing spores?"
+      },
+      "options": {
+        "th": ["มะม่วง", "รา", "สุนัข", "ปลา"],
+        "en": ["Mango", "Mold", "Dog", "Fish"]
+      },
+      "answer": { "th": "รา", "en": "Mold" },
+      "explanation": {
+        "th": "รา เห็ด และพืชไร้ดอกบางชนิด (เช่น เฟิร์น) ไม่มีดอก จึงสืบพันธุ์โดยการสร้างละอองเล็กๆ ที่เรียกว่า สปอร์",
+        "en": "Mold, mushrooms, and some non-flowering plants (like ferns) have no flowers and reproduce via tiny particles called spores."
+      }
+    },
+    {
+      "id": 27,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์ไม่มีกระดูกสันหลังในข้อใด มีลักษณะลำตัวยาวและเป็นปล้อง?",
+        "en": "Which invertebrate has a long, segmented body?"
+      },
+      "options": {
+        "th": ["แมงกะพรุน", "ฟองน้ำ", "ไส้เดือนดิน", "ดาวทะเล"],
+        "en": ["Jellyfish", "Sponge", "Earthworm", "Starfish"]
+      },
+      "answer": { "th": "ไส้เดือนดิน", "en": "Earthworm" },
+      "explanation": {
+        "th": "ไส้เดือนดินจัดเป็นสัตว์ไม่มีกระดูกสันหลังจำพวกหนอนตัวกลมที่มีลำตัวเป็นปล้องๆ ชัดเจน ช่วยพรวนดินให้ร่วนซุย",
+        "en": "Earthworms are segmented invertebrates (annelids) with clearly divided body segments. They help aerate the soil."
+      }
+    },
+    {
+      "id": 28,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ใบพืชสีเขียว เปรียบเสมือนสิ่งใดสำหรับพืช?",
+        "en": "What does a green plant leaf act like for the plant?"
+      },
+      "options": {
+        "th": ["โรงงานผลิตอาหาร", "ท่อน้ำทิ้ง", "เครื่องสูบน้ำ", "เกราะป้องกัน"],
+        "en": ["Food factory", "Drain pipe", "Water pump", "Armor"]
+      },
+      "answer": { "th": "โรงงานผลิตอาหาร", "en": "Food factory" },
+      "explanation": {
+        "th": "ใบพืชเป็นบริเวณที่มีคลอโรฟิลล์มากที่สุด จึงเป็นแหล่งหลักในการสังเคราะห์ด้วยแสงเพื่อสร้างอาหารให้พืช",
+        "en": "Leaves contain the most chlorophyll, making them the main site for photosynthesis to produce food for the plant."
+      }
+    },
+    {
+      "id": 29,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถ้านักเรียนพบสิ่งมีชีวิตชนิดหนึ่ง กำลังกินใบไม้ และสามารถเดินไปมาได้ สิ่งมีชีวิตนี้จัดอยู่ในกลุ่มใด?",
+        "en": "If you find an organism eating leaves and walking around, which group does it belong to?"
+      },
+      "options": {
+        "th": ["กลุ่มพืช", "กลุ่มสัตว์", "กลุ่มรา", "กลุ่มจุลินทรีย์"],
+        "en": ["Plant group", "Animal group", "Fungi group", "Microorganism group"]
+      },
+      "answer": { "th": "กลุ่มสัตว์", "en": "Animal group" },
+      "explanation": {
+        "th": "การเคลื่อนที่ได้ด้วยตัวเองและการกินสิ่งมีชีวิตอื่นเป็นอาหาร เป็นลักษณะเด่นของสิ่งมีชีวิตกลุ่มสัตว์",
+        "en": "The ability to move independently and eat other organisms are the defining characteristics of the animal group."
+      }
+    },
+    {
+      "id": 30,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "พืชและสัตว์ แตกต่างกันอย่างชัดเจนที่สุดในเรื่องใด?",
+        "en": "What is the most obvious difference between plants and animals?"
+      },
+      "options": {
+        "th": ["การสืบพันธุ์", "การหายใจ", "การสร้างอาหาร", "การเจริญเติบโต"],
+        "en": ["Reproduction", "Respiration", "Making food", "Growth"]
+      },
+      "answer": { "th": "การสร้างอาหาร", "en": "Making food" },
+      "explanation": {
+        "th": "ความแตกต่างที่สำคัญที่สุดคือ พืชสามารถสร้างอาหารเองได้ (ออโตโทรฟ) แต่สัตว์สร้างอาหารเองไม่ได้ ต้องกินสิ่งมีชีวิตอื่น",
+        "en": "The most important difference is that plants can make their own food (autotrophs), while animals cannot and must consume others."
+      }
+    }
+  ]
+}
