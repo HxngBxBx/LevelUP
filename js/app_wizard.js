@@ -292,16 +292,13 @@ function gachaAddToInventory(userId, item, qty = 1) {
     if (role === 'guest') {
         let gInfo = JSON.parse(sessionStorage.getItem('kruHengGuestInfo') || '{}');
         if (!gInfo.inventory) gInfo.inventory = {};
-        // เช็คว่าไอเทมถูก pass มาเป็น string(id) หรือ object
-        const itemId = typeof item === 'string' ? item : item.id;
-        gInfo.inventory[itemId] = (gInfo.inventory[itemId] || 0) + qty;
+        gInfo.inventory[item.id] = (gInfo.inventory[item.id] || 0) + qty;
         sessionStorage.setItem('kruHengGuestInfo', JSON.stringify(gInfo));
     } else {
         const dbStudent = JSON.parse(localStorage.getItem('kruHengStudentDB') || '{}') || defaultStudentDB;
         if (!dbStudent[userId]) return;
         if (!dbStudent[userId].inventory) dbStudent[userId].inventory = {};
-        const itemId = typeof item === 'string' ? item : item.id;
-        dbStudent[userId].inventory[itemId] = (dbStudent[userId].inventory[itemId] || 0) + qty;
+        dbStudent[userId].inventory[item.id] = (dbStudent[userId].inventory[item.id] || 0) + qty;
         localStorage.setItem('kruHengStudentDB', JSON.stringify(dbStudent));
     }
 }
@@ -313,13 +310,33 @@ function gachaAddToInventory(userId, item, qty = 1) {
  */
 function gachaGetInventory(userId) {
     const role = sessionStorage.getItem('kruHengRole');
+    let dbInv = {};
+    
     if (role === 'guest') {
         const gInfo = JSON.parse(sessionStorage.getItem('kruHengGuestInfo') || '{}');
-        return gInfo.inventory || {};
+        dbInv = gInfo.inventory || {};
     } else {
-        const dbStudent = JSON.parse(localStorage.getItem('kruHengStudentDB') || '{}') || defaultStudentDB;
-        return (dbStudent[userId] && dbStudent[userId].inventory) ? dbStudent[userId].inventory : {};
+        const dbStudent = JSON.parse(localStorage.getItem('kruHengStudentDB') || '{}') || (typeof defaultStudentDB !== 'undefined' ? defaultStudentDB : {});
+        dbInv = (dbStudent[userId] && dbStudent[userId].inventory) ? dbStudent[userId].inventory : {};
     }
+
+    // 🛠️ FIX: ระบบตัดสต๊อคเสมือนแบบทันทีที่ศูนย์กลาง (Centralized Virtual Stock)
+    // ทำให้เวลา UI ดึงไปแสดงผล ไอเทมที่ถูกเอาไปใส่ช่อง Booster หรือ Loadout จะหายวับไปทันที!
+    const virtualInv = { ...dbInv };
+    
+    if (window.currentLoadout && window.currentLoadout.length > 0) {
+        window.currentLoadout.forEach(id => {
+            if (virtualInv[id] && virtualInv[id] > 0) virtualInv[id]--;
+        });
+    }
+    
+    if (window.gachaBoosters && window.gachaBoosters.length > 0) {
+        window.gachaBoosters.forEach(b => {
+            if (virtualInv[b.itemId] && virtualInv[b.itemId] > 0) virtualInv[b.itemId]--;
+        });
+    }
+
+    return virtualInv;
 }
 
 /**
@@ -432,10 +449,10 @@ function getGachaItemById(itemId) {
  * @returns {Array} [{ item, quantity }, ...]
  */
 function gachaGetInventorySummary(userId) {
-    const inv = gachaGetInventory(userId);
+    const inv = gachaGetInventory(userId); // ได้รับ Virtual Stock ที่ถูกหักออกไปแล้ว!
     return Object.keys(inv)
         .map(id => ({ item: getGachaItemById(id), quantity: inv[id] }))
-        .filter(e => e.item && e.quantity > 0)
+        .filter(e => e.item && e.quantity > 0) // ซ่อนไอเทมที่เหลือ 0 ทันที ทำให้กดเบิ้ลไม่ได้แน่นอน
         .sort((a, b) => {
             const order = ["godlike", "mythic", "epic", "rare", "common"];
             return order.indexOf(a.item.rarity) - order.indexOf(b.item.rarity);
@@ -473,38 +490,24 @@ function gachaEquipItem(userId, itemId) {
         }
     }
 
+    // gachaGetInventory หักลบเสร็จสรรพแล้วจากศูนย์กลาง
     const inv = gachaGetInventory(userId);
     
-    // [แก้ไขปัญหาบัค: คอมเมนต์โค้ดเดิมทิ้ง เปลี่ยนเป็นตัดสต๊อกทันที]
-    // const equipped = window.currentLoadout.filter(id => id === itemId).length;
-    // const available = (inv[itemId] || 0) - equipped;
-    const available = inv[itemId] || 0; // ยึดจำนวนจริงจากระบบเพราะเราหักออกทันทีแล้ว
+    // คำนวณแบบ Virtual Stock ตัดสต๊อคเสมือน ป้องกันการเอา 1 ชิ้นไปใส่ 2 ที่ (Loadout และ Booster) พร้อมกัน
+    // (หมายเหตุ: ย้ายตรรกะการหักลบไปตัดสต๊อคทันทีที่ศูนย์กลาง gachaGetInventory แล้ว จึงเหลือแค่เช็คยอดตรงๆ ได้เลย)
+    const available = inv[itemId] || 0;
     
     if (available <= 0) {
-        return { success: false, message: "ไอเทมไม่พอ!" };
+        return { success: false, message: "ไอเทมไม่พอ! (อาจถูกใช้งานในช่อง Booster อยู่)" };
     }
     
     window.currentLoadout.push(itemId);
-    
-    // 🟢 [แก้ไขปัญหาบัค] หักสต๊อกไอเทมทันทีที่สวมใส่ เพื่อไม่ให้ปั๊มไอเทมไปใส่ช่องบูสเตอร์พร้อมกันได้
-    gachaUseItem(userId, itemId); 
-
     return { success: true };
 }
 
-// 🟢 [แก้ไขปัญหาบัค] เพิ่มพารามิเตอร์ userId เข้ามา เพื่อให้สามารถคืนสต๊อกกลับคืนได้อย่างถูกต้อง
-function gachaUnequipItem(slot, userId) {
+function gachaUnequipItem(slot) {
     if (!window.currentLoadout) return;
-    
-    const itemId = window.currentLoadout[slot]; // เก็บ id ไว้ก่อนลบออกจากอาร์เรย์
     window.currentLoadout.splice(slot, 1);
-    
-    // 🟢 [แก้ไขปัญหาบัค] คืนสต๊อกทันทีเมื่อถอดออกจาก Loadout
-    if (itemId && userId) {
-        gachaAddToInventory(userId, itemId, 1);
-    } else if (itemId && !userId) {
-        console.warn("⚠️ [gachaUnequipItem] ขาดพารามิเตอร์ userId! สต๊อกไอเทมไม่ได้ถูกคืนเข้าตัว");
-    }
 }
 
 /**
@@ -541,13 +544,9 @@ function gachaGetPassiveMultipliers() {
  */
 function gachaDeductLoadout(userId, loadout) {
     if (!userId || !loadout || loadout.length === 0) return;
-    
-    // [แก้ไขปัญหาบัค: คอมเมนต์โค้ดเดิมทิ้ง เพราะเปลี่ยนไปหักตั้งแต่ตอนกด Equip ทันทีแล้ว]
-    // loadout.forEach(itemId => {
-    //     gachaUseItem(userId, itemId);
-    // });
-    
-    console.log("✅ [gachaDeductLoadout] ไอเทมถูกตัดสต๊อกไปแล้วตั้งแต่ตอนใส่เข้ากระเป๋า (Immediate Deduction)");
+    loadout.forEach(itemId => {
+        gachaUseItem(userId, itemId);
+    });
 }
 
 /**
@@ -595,38 +594,26 @@ function gachaAddBooster(userId, itemId) {
     if (!item || !['common', 'rare'].includes(item.rarity)) {
         return { success: false, message: 'ใช้เป็นบูสเตอร์ได้เฉพาะ Common และ Rare เท่านั้น' };
     }
+    
+    // gachaGetInventory หักลบเสร็จสรรพแล้วจากศูนย์กลาง
     const inv = gachaGetInventory(userId);
     
-    // [แก้ไขปัญหาบัค: คอมเมนต์โค้ดเดิมทิ้ง เปลี่ยนเป็นตัดสต๊อกทันที]
-    // const usedAsBooster = window.gachaBoosters.filter(b => b.itemId === itemId).length;
-    // if ((inv[itemId] || 0) - usedAsBooster <= 0) { ... }
-    const available = inv[itemId] || 0; // ยึดจำนวนจริงจากระบบเพราะหักทันที
+    // คำนวณแบบ Virtual Stock ตัดสต๊อคเสมือน ป้องกันการเอา 1 ชิ้นไปใส่ 2 ที่ (Booster และ Loadout) พร้อมกัน
+    // (หมายเหตุ: ย้ายการคำนวณหักลบไปตัดสต๊อคทันทีที่ศูนย์กลาง gachaGetInventory แล้ว)
+    const available = inv[itemId] || 0;
     
     if (available <= 0) {
-        return { success: false, message: 'ไอเทมไม่พอ!' };
+        return { success: false, message: 'ไอเทมไม่พอ! (อาจถูกพกเข้าห้องสอบอยู่)' };
     }
+    
     const bonus = item.rarity === 'common' ? 2 : 3;
     window.gachaBoosters.push({ itemId, bonus, rarity: item.rarity });
-    
-    // 🟢 [แก้ไขปัญหาบัค] หักสต๊อกไอเทมทันทีที่ใส่เข้าช่องบูสเตอร์
-    gachaUseItem(userId, itemId);
-    
     return { success: true, bonus };
 }
 
-// 🟢 [แก้ไขปัญหาบัค] เพิ่มพารามิเตอร์ userId เข้ามา เพื่อให้สามารถคืนสต๊อกกลับคืนได้อย่างถูกต้อง
-function gachaRemoveBooster(index, userId) {
+function gachaRemoveBooster(index) {
     if (!window.gachaBoosters) return;
-    
-    const booster = window.gachaBoosters[index]; // เก็บข้อมูลก่อนลบ
     window.gachaBoosters.splice(index, 1);
-    
-    // 🟢 [แก้ไขปัญหาบัค] คืนสต๊อกทันทีเมื่อถอดออกจาก Booster
-    if (booster && userId) {
-        gachaAddToInventory(userId, booster.itemId, 1);
-    } else if (booster && !userId) {
-        console.warn("⚠️ [gachaRemoveBooster] ขาดพารามิเตอร์ userId! สต๊อกไอเทมไม่ได้ถูกคืนเข้าตัว");
-    }
 }
 
 /**
@@ -668,11 +655,7 @@ function gachaGetBoostedWeights() {
  */
 function gachaDeductBoosters(userId) {
     if (!window.gachaBoosters || window.gachaBoosters.length === 0) return;
-    
-    // [แก้ไขปัญหาบัค: คอมเมนต์โค้ดเดิมทิ้ง เพราะเปลี่ยนไปหักตั้งแต่ตอนกดใส่บูสเตอร์ทันทีแล้ว]
-    // window.gachaBoosters.forEach(b => gachaUseItem(userId, b.itemId));
-    
-    // เคลียร์ค่า Array ทิ้งอย่างเดียว ไม่ต้องหักสต๊อกซ้ำ
+    window.gachaBoosters.forEach(b => gachaUseItem(userId, b.itemId));
     window.gachaBoosters = [];
 }
 
