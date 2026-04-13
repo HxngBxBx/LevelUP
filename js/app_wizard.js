@@ -23,7 +23,7 @@ function createWizardOverlay() {
             if (e.target === wizardOverlay) wizardOverlay.style.display = 'none';
         });
 
-        // แอนิเมชันสำหรับตอนโหลดสแกน
+        // แอนิเมชันสำหรับตอนโหลดสแกนและป้าย NEW
         if(!document.getElementById('kruheng-anim-style')) {
             const style = document.createElement('style');
             style.id = 'kruheng-anim-style';
@@ -98,7 +98,7 @@ function openExamWizard_Grade(subjKey) {
     content.innerHTML = html;
 }
 
-// Step 3 (ใหม่): เลือกบทเรียน (Unit) พร้อมปุ่มหลากสี
+// Step 3: เลือกบทเรียน (Unit) พร้อมปุ่มหลากสี
 function openExamWizard_Unit(subjKey, gradeKey) {
     const content = document.getElementById('exam-wizard-content');
     const subject = NEW_EXAM_STRUCTURE[subjKey];
@@ -310,11 +310,12 @@ function renderScanUnitResult(validExams, subjKey, gradeKey, tKey, unit) {
         let opacity = isNew ? '1' : '0.85';   
         let saturate = isNew ? '1' : '0.7';   
         
+        // 🛠️ แก้ไขบั๊กแอนิเมชันกวนตำแหน่ง: ใช้ div ล่องหนเป็น Wrapper คุมให้อยู่ตรงกลางเป๊ะๆ
         let badgeHtml = '';
         if (isPerfect) {
-            badgeHtml = `<span style="position:absolute; top:50%; right:15px; transform:translateY(-50%); background:linear-gradient(45deg, #ffd700, #ff8c00); color:#000; font-size:0.75rem; padding:4px 10px; border-radius:12px; font-weight:900; box-shadow:0 2px 5px rgba(0,0,0,0.3); border: 2px solid #fff; z-index:2;">🏆 100%</span>`;
+            badgeHtml = `<div style="position:absolute; top:0; bottom:0; right:15px; display:flex; align-items:center; z-index:2; pointer-events:none;"><span style="background:linear-gradient(45deg, #ffd700, #ff8c00); color:#000; font-size:0.75rem; padding:4px 10px; border-radius:12px; font-weight:900; box-shadow:0 2px 5px rgba(0,0,0,0.3); border: 2px solid #fff; line-height:1; display:block;">🏆 100%</span></div>`;
         } else if (isNew) {
-            badgeHtml = `<span style="position:absolute; top:50%; right:15px; transform:translateY(-50%); background:var(--danger); color:white; font-size:0.75rem; padding:4px 10px; border-radius:12px; font-weight:900; box-shadow:0 2px 5px rgba(0,0,0,0.3); animation: kruheng-pulse 1s infinite alternate; border: 2px solid #fff; z-index:2;">🔥 NEW</span>`;
+            badgeHtml = `<div style="position:absolute; top:0; bottom:0; right:15px; display:flex; align-items:center; z-index:2; pointer-events:none;"><span style="background:var(--danger); color:white; font-size:0.75rem; padding:4px 10px; border-radius:12px; font-weight:900; box-shadow:0 2px 5px rgba(0,0,0,0.3); animation: kruheng-pulse 1s infinite alternate; border: 2px solid #fff; line-height:1; display:block;">🔥 NEW</span></div>`;
         }
 
         html += `
@@ -331,6 +332,110 @@ function renderScanUnitResult(validExams, subjKey, gradeKey, tKey, unit) {
     });
     
     html += `</div>`;
+    content.innerHTML = html;
+}
+
+// 🛑 ฟังก์ชันเสริม: เผื่อต้องแสดงผลลัพธ์หน้าจอรวม (อัปเดตกล่อง Wrapper ให้ปลอดภัยเหมือนกัน)
+function renderScanResult(validExams, subjKey, gradeKey, subject, grade) {
+    const content = document.getElementById('exam-wizard-content');
+    
+    const role = sessionStorage.getItem('kruHengRole');
+    const currentUser = sessionStorage.getItem('kruHengCurrentUser');
+    const dbStudent = JSON.parse(localStorage.getItem('kruHengStudentDB')) || {};
+    const userNick = (role === 'guest') ? (currentUser ? currentUser.replace('Guest_', '') : 'Unknown') : (currentUser && dbStudent[currentUser] ? dbStudent[currentUser].nick : currentUser);
+    
+    const history = (role === 'guest') ? JSON.parse(sessionStorage.getItem('kruHengTempGuestHistory') || '[]') : JSON.parse(localStorage.getItem('kruHengHistory') || '[]');
+    const userHistory = history.filter(h => h.name === userNick);
+
+    if (validExams.length === 0) {
+        content.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px dashed var(--secondary); padding-bottom:15px; margin-bottom:20px;">
+                <h2 style="margin:0; color:var(--text-color);">🎓 ${grade.title[lang]}</h2>
+                <div style="display:flex; gap:10px;">
+                    <button onclick="openExamWizard_Grade('${subjKey}')" style="background:var(--primary); color:white; border:none; padding:6px 12px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:0.85rem;">⬅️ ${lang==='th'?'กลับ':'Back'}</button>
+                    <button onclick="document.getElementById('exam-wizard-overlay').style.display='none'" style="background:var(--danger); color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-weight:bold; font-size:1rem; flex-shrink:0;">✕</button>
+                </div>
+            </div>
+            <div style="text-align:center; padding:25px 10px;">
+                <div style="font-size: 3.5rem; margin-bottom: 10px;">🚧</div>
+                <h2 style="color: var(--danger); margin-bottom: 10px; font-weight: 900;">${lang === 'th' ? 'เนื้อหากำลังอัปเดต' : 'Updating...'}</h2>
+                <p style="color: var(--text-color); line-height: 1.6; font-size: 0.95rem;">
+                    ${lang === 'th' ? 'ยังไม่มีข้อสอบในระดับชั้นนี้ครับ<br>ครูเฮงกำลังเร่งจัดทำอยู่นะ อดใจรออีกนิดนึงน้า! ✌️' : 'No exams available for this grade yet.<br>Please check back soon! ✌️'}
+                </p>
+            </div>
+        `;
+        return;
+    }
+
+    let grouped = {};
+    validExams.forEach(ex => {
+        if(!grouped[ex.termTitle]) grouped[ex.termTitle] = {};
+        if(!grouped[ex.termTitle][ex.unitName]) grouped[ex.termTitle][ex.unitName] = [];
+        grouped[ex.termTitle][ex.unitName].push(ex);
+    });
+
+    let html = `
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px dashed var(--secondary); padding-bottom:15px; margin-bottom:20px; position:sticky; top:0; background:var(--card-bg); z-index:10;">
+            <h2 style="margin:0; color:var(--text-color);">✅ ${lang==='th'?'ข้อสอบที่พร้อมทำ':'Available Exams'}</h2>
+            <div style="display:flex; gap:10px;">
+                <button onclick="openExamWizard_Grade('${subjKey}')" style="background:var(--primary); color:white; border:none; padding:6px 12px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:0.85rem;">⬅️ ${lang==='th'?'กลับ':'Back'}</button>
+                <button onclick="document.getElementById('exam-wizard-overlay').style.display='none'" style="background:var(--danger); color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-weight:bold; font-size:1rem; flex-shrink:0;">✕</button>
+            </div>
+        </div>
+        <div style="margin-bottom: 12px; font-size: 0.85rem; color: var(--success); font-weight: bold; text-align:center; background: rgba(0,255,136,0.1); padding: 9px 12px; border-radius: 10px; border: 1px dashed var(--success);">
+            🎉 ${lang==='th'?`พบข้อสอบทั้งหมด ${validExams.length} ชุด กดเพื่อเล่นได้เลย!`: `Found ${validExams.length} exam sets ready to play!`}
+        </div>
+    `;
+
+    for(let term in grouped) {
+        html += `<h3 style="color:var(--secondary); background:rgba(0,0,0,0.05); padding:10px; border-radius:8px; margin-top:20px;">📅 ${term}</h3>`;
+        for(let unit in grouped[term]) {
+            html += `<div style="margin-bottom:15px; border:1px solid rgba(0,0,0,0.1); padding:15px; border-radius:12px;">
+                <h4 style="margin-top:0; color:var(--text-color); margin-bottom:12px; line-height: 1.4;">📄 ${unit}</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            `;
+            
+            grouped[term][unit].forEach(ex => {
+                let color = 'var(--primary)';
+                if(ex.diffText.includes('ง่าย')) color = 'var(--success)';
+                if(ex.diffText.includes('กลาง')) color = '#ff9800';
+                if(ex.diffText.includes('ยาก')) color = 'var(--danger)';
+                if(ex.diffText.includes('โหด')) color = '#ff007f';
+
+                const shortExamName = `${ex.unitName} (${ex.diffText} ชุดที่ ${ex.setNum})`;
+                const currentExamName = `${grade.title[lang]} ${ex.termTitle} ${ex.unitName} (${ex.diffText} ชุดที่ ${ex.setNum})`;
+                const pastAttempts = userHistory.filter(h => h.title && (h.title === currentExamName || h.title === shortExamName || h.title.includes(shortExamName)));
+                
+                let isNew = pastAttempts.length === 0; 
+                let isPerfect = pastAttempts.some(h => h.correct === h.total && h.total > 0); 
+
+                let opacity = isNew ? '1' : '0.85';   
+                let saturate = isNew ? '1' : '0.7';   
+                
+                // 🛠️ แก้ไขบั๊กแอนิเมชันกวนตำแหน่ง: ใช้ div ล่องหนเป็น Wrapper มุมขวาบน
+                let badgeHtml = '';
+                if (isPerfect) {
+                    badgeHtml = `<div style="position:absolute; top:-8px; right:-8px; z-index:2; pointer-events:none;"><span style="display:block; background:linear-gradient(45deg, #ffd700, #ff8c00); color:#000; font-size:0.65rem; padding:3px 8px; border-radius:10px; font-weight:900; box-shadow:0 2px 5px rgba(0,0,0,0.3); border: 1px solid #fff;">🏆 100%</span></div>`;
+                } else if (isNew) {
+                    badgeHtml = `<div style="position:absolute; top:-8px; right:-8px; z-index:2; pointer-events:none;"><span style="display:block; background:var(--danger); color:white; font-size:0.65rem; padding:3px 8px; border-radius:10px; font-weight:900; box-shadow:0 2px 5px rgba(0,0,0,0.3); animation: kruheng-pulse 1s infinite alternate; border: 1px solid #fff;">🔥 NEW</span></div>`;
+                }
+
+                html += `
+                    <div style="position:relative; display:inline-block; margin-top:8px; margin-right:5px;">
+                        <button onclick="quickPlayExam('${ex.fileName}', '${currentExamName}', this)" 
+                            style="background:${color}; color:white; border:none; padding:10px 15px; border-radius:8px; font-weight:bold; cursor:pointer; font-size:0.9rem; transition:0.2s; box-shadow:0 3px 6px rgba(0,0,0,0.15); opacity:${opacity}; filter:saturate(${saturate}); width:100%; position:relative; z-index:1;" 
+                            onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='1'; this.style.filter='saturate(1)';" 
+                            onmouseout="this.style.transform='scale(1)'; this.style.opacity='${opacity}'; this.style.filter='saturate(${saturate})';">
+                            ${ex.diffText} ชุดที่ ${ex.setNum}
+                        </button>
+                        ${badgeHtml}
+                    </div>
+                `;
+            });
+            html += `</div></div>`;
+        }
+    }
+
     content.innerHTML = html;
 }
 
