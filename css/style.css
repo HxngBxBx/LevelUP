@@ -1,0 +1,829 @@
+/* ==========================================================================
+   🎨 [START] MAIN STYLESHEET
+   แฟ้ม: style.css
+   หน้าที่: จัดการความสวยงาม ธีม โหมดมืด/สว่าง และแอนิเมชันทั้งหมดของระบบ
+   ผู้สร้าง: ครูเฮง (Level UP by HxngBxBx)
+   ========================================================================== */
+
+/* =========================================
+   1. VARIABLES & THEMES (โหมดสว่าง / โหมดมืด)
+   ========================================= */
+:root {
+    --bg-color: #f4f7ff;
+    --text-color: #1a1a2e;
+    --text-muted: #666666; /* สีเทาสำหรับข้อความรอง (โหมดสว่าง) */
+    --card-bg: #ffffff;
+    --primary: #ff007f;
+    --secondary: #0099cc;  /* ฟ้าเข้มขึ้น ให้อ่านชัดบนพื้นขาว */
+    --accent: #7000ff;     /* ม่วงเข้ม ให้อ่านชัดบนพื้นขาว */
+    --success: #00b359;    /* เขียวเข้มขึ้น ให้อ่านชัดบนพื้นขาว */
+    --danger: #ff0055;
+    --border-radius: 20px;
+    --glow: 0 0 20px rgba(0, 153, 204, 0.4);
+}
+
+[data-theme="dark"] {
+    --bg-color: #0a0a12;
+    --text-color: #e0e0e0;
+    --text-muted: #a0a0b0; /* สีเทาสว่างสำหรับข้อความรอง (โหมดมืด) */
+    --card-bg: #161625;
+    --primary: #ff007f;
+    --secondary: #00f0ff;  /* ฟ้านีออนสว่าง (โหมดมืด) */
+    --accent: #ae57ff;     /* ม่วงสว่างขึ้น ให้อ่านชัดบนพื้นดำ */
+    --success: #00ff88;    /* เขียวนีออนสว่าง (โหมดมืด) */
+    --glow: 0 0 25px rgba(255, 0, 127, 0.5);
+}
+
+/* =========================================
+   2. BASE STYLES
+   ========================================= */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Sarabun', sans-serif;
+    transition: 0.3s;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+/* =========================================
+   3. ANIMATIONS & KEYFRAMES
+   ========================================= */
+@keyframes typing { from { max-height: 0; opacity: 0; } to { max-height: 1000px; opacity: 1; } }
+@keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--primary); } }
+@keyframes barPulse { from { border-color: var(--secondary); } to { border-color: var(--primary); box-shadow: 0 0 30px rgba(255, 0, 127, 0.3); } }
+@keyframes fireGlow { from { box-shadow: 0 0 10px rgba(255, 59, 0, 0.6), 0 0 20px rgba(255, 0, 68, 0.4); transform: scale(1); } to { box-shadow: 0 0 15px rgba(255, 140, 0, 1), 0 0 30px rgba(255, 59, 0, 0.8); transform: scale(1.05); } }
+@keyframes shineBG { to { background-position: 300% center; } }
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-15px); }
+    40%, 80% { transform: translateX(15px); }
+}
+@keyframes popGlow {
+    0% { transform: scale(1); box-shadow: 0 0 0px var(--success); }
+    50% { transform: scale(1.05); box-shadow: 0 0 40px var(--success); border-color: var(--success); }
+    100% { transform: scale(1); box-shadow: 0 0 10px var(--success); }
+}
+@keyframes dropDownMenu { from { opacity: 0; transform: translateY(-15px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes dropDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes flowBG { from { background-position: 0% 0%; } to { background-position: 100% 0%; } }
+@keyframes floatAnim { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes popMenuMobile { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+@keyframes popIn { from { opacity: 0; transform: scale(0.82) translateY(20px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+@keyframes monarchs-aura {
+    0%   { background-position: 0% 50%;   box-shadow: 0 0 10px #ff007f, 0 0 20px #7000ff; }
+    25%  { background-position: 50% 0%;   box-shadow: 0 0 12px #ff9800, 0 0 22px #ff007f; }
+    50%  { background-position: 100% 50%; box-shadow: 0 0 14px #00f0ff, 0 0 26px #7000ff; }
+    75%  { background-position: 50% 100%; box-shadow: 0 0 12px #ffd700, 0 0 22px #00c853; }
+    100% { background-position: 0% 50%;   box-shadow: 0 0 10px #ff007f, 0 0 20px #7000ff; }
+}
+.rank-monarchs {
+    background: linear-gradient(270deg, #ff007f, #ff9800, #ffd700, #00f0ff, #7000ff, #ff007f);
+    background-size: 400% 400%;
+    animation: monarchs-aura 2.5s ease infinite;
+    color: #fff !important;
+    font-weight: 900;
+    text-shadow: 0 0 6px rgba(0,0,0,0.6);
+    border: none !important;
+}
+@keyframes monarchs-card-glow {
+    0%, 100% { box-shadow: 0 0 12px #ff007f, 0 0 25px rgba(112,0,255,0.4); border-color: #ff007f; }
+    33%       { box-shadow: 0 0 12px #ffd700, 0 0 25px rgba(255,215,0,0.4);  border-color: #ffd700; }
+    66%       { box-shadow: 0 0 12px #00f0ff, 0 0 25px rgba(0,240,255,0.4);  border-color: #00f0ff; }
+}
+
+/* ── Quest Briefing Popup ── */
+#qb-panel {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 240, 255, 0.25);
+}
+#qb-detail-box {
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09);
+}
+[data-theme="dark"] #qb-detail-box {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.qb-row {
+    display: flex; align-items: center; gap: 7px;
+    font-size: 0.92rem; padding: 6px 0;
+    border-bottom: 1px dashed rgba(128,128,128,0.2);
+}
+.qb-row:last-child { border-bottom: none; }
+.qb-row b { flex-shrink: 0; }
+@media (max-width: 480px) {
+    #qb-panel { padding: 16px 14px 14px !important; }
+    .qb-row { font-size: 0.82rem; }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes dropDownMenuCenter { from { opacity: 0; transform: translate(-50%, -10px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
+/* =========================================
+   4. UTILITY CLASSES
+   ========================================= */
+.typing-effect {
+    overflow: hidden;
+    white-space: pre-wrap;
+    border-right: 2px solid var(--primary);
+    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+}
+.shake-anim { animation: shake 0.5s ease-in-out; }
+.pop-anim { animation: popGlow 0.6s ease-out forwards; z-index: 10; position: relative; }
+
+/* =========================================
+   5. LOGIN & AUTH COMPONENTS
+   ========================================= */
+.login-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(10, 10, 18, 0.4); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+    z-index: 99999; display: flex; justify-content: center; align-items: center;
+    transition: opacity 0.5s ease; overflow-y: auto; padding: 20px;
+}
+
+.login-box {
+    width: 90%; max-width: 450px; text-align: center;
+    position: relative; animation: popGlow 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    background: rgba(255, 255, 255, 0.7); border-radius: var(--border-radius);
+    padding: 30px 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border: 2px solid rgba(255,255,255,0.8);
+    margin: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    transform: translateZ(0); backface-visibility: hidden;
+}
+
+[data-theme="dark"] .login-box {
+    background: rgba(20, 20, 35, 0.8); border-color: rgba(0,240,255,0.3);
+}
+
+.login-input, .login-select {
+    width: 100%; padding: 12px 15px; margin-bottom: 15px;
+    border-radius: 12px; border: 2px solid var(--secondary);
+    background: var(--bg-color); color: var(--text-color);
+    font-size: 1rem; text-align: center; outline: none; transition: 0.3s;
+}
+.login-input:focus, .login-select:focus { border-color: var(--primary); box-shadow: var(--glow); }
+
+.login-tab-container {
+    display: flex; margin-bottom: 20px; background: rgba(0,0,0,0.05); 
+    border-radius: 15px; overflow: hidden; border: 1px solid rgba(128,128,128,0.2);
+}
+.login-tab { flex: 1; padding: 10px; cursor: pointer; font-weight: bold; color: var(--text-color); opacity: 0.6; transition: 0.3s; }
+.login-tab.active { background: var(--secondary); color: #000; opacity: 1; }
+
+.access-stu-cb-label {
+    background: rgba(0,0,0,0.03); padding: 8px; border-radius: 8px; 
+    display:flex; align-items:center; gap:8px; cursor:pointer; font-size: 0.9rem;
+    border: 1px solid transparent; transition: 0.2s;
+}
+.access-stu-cb-label:hover { border-color: var(--secondary); background: rgba(0,240,255,0.05); }
+[data-theme="dark"] .access-stu-cb-label { background: rgba(255,255,255,0.05); }
+
+/* =========================================
+   6. MAIN LAYOUT & NAVIGATION (Action Bar)
+   ========================================= */
+/* ผสานโค้ด Action Bar ปกติ กับ Override V3 (แถบเมนูลอยแบบ Shopee) */
+.action-bar {
+    width: 95%; max-width: 1200px;
+    padding: 10px 25px; border-radius: 50px; 
+    border: 2px solid var(--secondary); 
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    margin-bottom: 20px;
+    animation: barPulse 3s infinite alternate;
+    
+    /* V3 Override: บังคับให้แถบเมนูลอยติดขอบบน (Sticky) ตลอดเวลา */
+    position: sticky !important;
+    top: 10px !important;
+    z-index: 9000 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+}
+
+[data-theme="dark"] .action-bar {
+    background: rgba(22, 22, 37, 0.95) !important;
+    box-shadow: 0 4px 20px rgba(0, 240, 255, 0.1) !important;
+}
+
+/* 🟢 บังคับซ่อนแถบเมนู (Action Bar) ตอนเข้าสู่หน้าทำข้อสอบ */
+#main-action-bar[style*="none"] { display: none !important; }
+
+.brand { display: flex; align-items: center; flex-wrap: wrap; gap: 15px; font-weight: 800; font-size: 1.2rem; }
+.brand-text { background: linear-gradient(45deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.controls { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; justify-content: flex-end;}
+
+/* settings panel ลอยใต้ navbar */
+/* Settings panel ลอยใต้ navbar — override ทุก style จาก .glass-panel */
+#settings-panel.floating-settings {
+    position: fixed !important;
+    top: auto !important;       /* top ถูก set ผ่าน JS */
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    z-index: 8999 !important;
+    width: min(94vw, 860px) !important;
+    max-height: 78vh !important;
+    overflow-y: auto !important;
+    padding: 20px 18px !important;
+    font-size: 0.82rem;
+}
+#settings-panel.floating-settings .settings-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+#settings-panel.floating-settings .setting-item label {
+    font-size: 0.75rem;
+}
+#settings-panel.floating-settings .setting-item select,
+#settings-panel.floating-settings .setting-item input[type="number"] {
+    padding: 6px 8px;
+    font-size: 0.78rem;
+}
+@media (max-width: 700px) {
+    #settings-panel.floating-settings .settings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 440px) {
+    #settings-panel.floating-settings .settings-grid {
+        grid-template-columns: 1fr;
+    }
+    #settings-panel.floating-settings {
+        width: 97vw !important;
+        padding: 14px 10px !important;
+    }
+}
+
+/* ปุ่มใน navbar เล็กลงบน mobile */
+@media (max-width: 640px) {
+    .action-bar .controls .btn {
+        padding: 5px 9px !important;
+        font-size: 0.72rem !important;
+        gap: 4px !important;
+    }
+    .controls { gap: 4px; }
+    .brand-text { font-size: 0.9rem; }
+}
+
+/* =========================================
+   7. BUTTONS & FORMS
+   ========================================= */
+.btn { 
+    border: none; padding: 8px 18px; border-radius: 30px; cursor: pointer; 
+    font-weight: bold; color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; 
+}
+.btn:disabled { opacity: 0.6; cursor: not-allowed; filter: grayscale(50%); } 
+.btn-main { background: linear-gradient(45deg, var(--primary), var(--accent)); box-shadow: var(--glow); }
+.btn-util { background: var(--card-bg); color: var(--text-color); border: 2px solid var(--secondary); }
+.btn-red { background: var(--danger); }
+.btn-orange { background: #ff9800; }
+.btn-green { background: #00c853; } 
+
+.edit-input {
+    width: 100%; padding: 8px; border-radius: 8px; border: 1px solid var(--secondary);
+    background: var(--bg-color); color: var(--text-color); font-size: 0.9rem;
+    text-align: center; outline: none; transition: 0.3s;
+}
+.edit-input:focus { border-color: var(--primary); box-shadow: 0 0 5px var(--secondary); }
+
+/* =========================================
+   8. COMPONENTS (Panels, Grids, Modals)
+   ========================================= */
+.full-panel { 
+    width: 100%; max-width: 1200px; background: var(--card-bg); padding: 40px; 
+    border-radius: var(--border-radius); text-align: center; margin-bottom: 20px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+}
+
+.settings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: left; margin-bottom: 25px; }
+.setting-item { display: flex; flex-direction: column; gap: 5px; }
+.setting-item label { font-weight: bold; font-size: 0.85rem; color: var(--accent); }
+.setting-item select, .setting-item input { padding: 10px; border-radius: 10px; border: 2px solid #ddd; background: var(--bg-color); color: var(--text-color); }
+select:disabled { background-color: rgba(0,0,0,0.05); cursor: not-allowed; opacity: 0.7; }
+
+.exam-grid-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 20px; width: 100%; }
+@media (max-width: 900px) { .exam-grid-3col { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .exam-grid-3col { grid-template-columns: 1fr; } }
+
+.glass-panel {
+    position: absolute; top: 20px; left: 5%; width: 90%; z-index: 500;
+    background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--border-radius); border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 35px 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    animation: dropDown 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    transform: translateZ(0); backface-visibility: hidden;
+}
+[data-theme="dark"] .glass-panel {
+    background: rgba(20, 20, 35, 0.98); /* อิงจากส่วนที่ override ไว้ */
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.pause-overlay { 
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+    background: rgba(0,0,0,0.9); backdrop-filter: blur(15px); display: none; 
+    justify-content: center; align-items: center; color: white; font-size: 5rem; 
+    z-index: 100; border-radius: 20px; cursor: pointer; font-weight: bold; 
+}
+
+/* =========================================
+   9. BADGES & CHIPS (ป้ายต่างๆ)
+   ========================================= */
+.diff-badge, .skill-badge {
+    padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 0.9rem; 
+    display: inline-flex; align-items: center; justify-content: center;
+    flex-shrink: 0; /* 🟢 สั่งห้ามเบราว์เซอร์บีบกล่องให้เล็กกว่าตัวหนังสือ */
+    white-space: nowrap; /* 🟢 บังคับให้อยู่บรรทัดเดียว */
+}
+.diff-badge { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.skill-badge {
+    background: rgba(0, 240, 255, 0.1); color: var(--secondary); 
+    border: 1px solid var(--secondary); box-shadow: inset 0 0 10px rgba(0, 240, 255, 0.05);
+}
+[data-theme="dark"] .skill-badge { background: rgba(0, 240, 255, 0.2); }
+
+.diff-easy { background: var(--success); color: #000; }
+.diff-medium { background: #ff9800; color: #fff; }
+.diff-hard { background: var(--danger); color: #fff; }
+.diff-extreme {
+    background: linear-gradient(90deg, #ff3b00, #ff8c00, #ff0044, #ff3b00); background-size: 300% auto; color: #ffffff;
+    font-size: 1rem; text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8); border: 2px solid #ffcc00; box-shadow: 0 0 10px #ff3b00;
+    animation: fireGlow 1s infinite alternate, shineBG 3s linear infinite; letter-spacing: 0.5px;
+}
+
+.achievement-badge { 
+    display: inline-block; width: 40px; height: 40px; background: #eee; border-radius: 50%; 
+    text-align: center; line-height: 40px; font-size: 1.2rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer; 
+}
+.achievement-badge.unlocked { filter: grayscale(0%); background: gold; box-shadow: 0 0 10px gold; animation: popGlow 2s infinite; }
+
+.coin-badge {
+    background: rgba(255, 215, 0, 0.15); color: #ff9800; padding: 2px 10px; border-radius: 12px;
+    font-weight: 900; display: inline-flex; align-items: center; gap: 5px; margin-left: 0; border: 1px solid rgba(255, 215, 0, 0.3);
+}
+.coin-icon { width: 1.2em; height: 1.2em; vertical-align: middle; margin-right: 4px; }
+
+.reward-preview-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; justify-content: flex-start; align-items: center; }
+.reward-chip { padding: 4px 10px; border-radius: 8px; font-size: 0.85rem; font-weight: bold; display: inline-flex; align-items: center; white-space: nowrap; }
+.reward-chip.plus { background: rgba(0, 200, 83, 0.1); border: 1px solid var(--success); color: var(--success); }
+.reward-chip.minus { background: rgba(255, 82, 82, 0.1); border: 1px solid var(--danger); color: var(--danger); }
+.reward-chip.bonus { background: rgba(255, 215, 0, 0.1); border: 1px solid #ffd700; color: #b8860b; }
+
+/* =========================================
+   10. PROFILE MENU & DROPDOWNS
+   ========================================= */
+.profile-badge {
+    display: flex; align-items: center; gap: 10px; 
+    background: rgba(112, 0, 255, 0.05); border: 1px solid var(--secondary); 
+    padding: 5px 15px; border-radius: 30px; box-shadow: inset 0 0 10px rgba(0,240,255,0.1);
+}
+
+.profile-chip {
+    display: flex; align-items: center; gap: 8px; cursor: pointer;
+    background: var(--card-bg); border: 2px solid var(--secondary); color: var(--text-color); 
+    padding: 4px 15px 4px 4px; border-radius: 50px; font-weight: bold; font-size: 0.78rem; transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,240,255,0.1);
+}
+.profile-chip:hover { border-color: var(--primary); box-shadow: var(--glow); transform: translateY(-2px); }
+.profile-chip .avatar {
+    background: linear-gradient(45deg, var(--primary), var(--accent)); color: white; border-radius: 50%; 
+    width: 32px; height: 32px; display: flex; justify-content: center; align-items: center; 
+    font-size: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.profile-menu {
+    position: absolute; top: calc(100% + 15px); right: 0;
+    background: var(--card-bg); border: 2px solid var(--secondary);
+    border-radius: 15px; padding: 20px; width: 350px; z-index: 2000;
+    display: none; flex-direction: column; gap: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2); text-align: left;
+    animation: dropDownMenu 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+[data-theme="dark"] .profile-menu { box-shadow: 0 15px 35px rgba(0, 240, 255, 0.2); background: rgba(20, 20, 35, 0.98); }
+.profile-menu.show { display: flex; }
+.profile-menu::before {
+    content: ''; position: absolute; top: -10px; right: 25px;
+    border-width: 0 10px 10px 10px; border-style: solid;
+    border-color: transparent transparent var(--secondary) transparent;
+}
+
+.profile-close-btn {
+    position: absolute; top: 12px; right: 12px; background: var(--danger); color: white;
+    border: none; border-radius: 50%; width: 26px; height: 26px;
+    display: flex; justify-content: center; align-items: center; cursor: pointer;
+    font-size: 0.8rem; z-index: 100; transition: 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.profile-close-btn:hover { transform: scale(1.15); box-shadow: 0 4px 8px rgba(255,0,85,0.4); }
+
+.name-autocomplete-wrapper { position: relative; width: 350px; display: none; }
+.name-dropdown { 
+    position: absolute; top: 100%; left: 0; right: 0; background: var(--card-bg); border: 2px solid var(--secondary); 
+    border-top: none; border-radius: 0 0 15px 15px; max-height: 200px; overflow-y: auto; z-index: 1000; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: none; text-align: left;
+}
+.name-item { padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0,0,0,0.05); color: var(--text-color);}
+.name-item:hover { background: rgba(0, 240, 255, 0.1); }
+.name-item .delete-btn { color: var(--danger); font-size: 1.2rem; cursor: pointer; border: none; background: none; padding: 0 5px; opacity: 0.6; }
+.name-item .delete-btn:hover { opacity: 1; transform: scale(1.2); }
+
+/* =========================================
+   11. ACCORDIONS & LISTS (คลังข้อสอบ/ตะกร้า)
+   ========================================= */
+.exam-accordion {
+    background: var(--card-bg); border: 2px solid var(--secondary); border-radius: 15px; margin-bottom: 10px; 
+    overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s;
+}
+.exam-accordion-header {
+    padding: 15px 20px; font-weight: bold; font-size: 1.1rem; color: var(--accent); cursor: pointer; 
+    display: flex; justify-content: space-between; align-items: center; background: rgba(0,240,255,0.05);
+}
+.exam-accordion-header:hover { background: rgba(0,240,255,0.1); }
+.exam-accordion-content {
+    padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s cubic-bezier(0, 1, 0, 1);
+    background: var(--bg-color); opacity: 0;
+}
+.exam-accordion.active > .exam-accordion-content {
+    padding: 20px; max-height: 25000px !important; opacity: 1; transition: all 0.4s ease-in-out;
+    padding-bottom: 25px !important;
+}
+.exam-accordion.active > .exam-accordion-header { border-bottom: 1px solid var(--secondary); }
+.exam-accordion.active > .exam-accordion-header span.icon { transform: rotate(180deg); }
+
+.chapter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
+.term-col { width: 100% !important; min-width: 0 !important; box-sizing: border-box !important; }
+.chapter-btn {
+    background: var(--card-bg); border: 1px solid rgba(128,128,128,0.2); padding: 10px 15px; border-radius: 10px; 
+    text-align: left; cursor: pointer; transition: 0.2s; font-size: 0.95rem; color: var(--text-color); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02); margin-bottom: 8px; display: block; width: 100% !important; 
+    max-width: 100% !important; box-sizing: border-box !important; white-space: normal !important;
+}
+.chapter-btn:hover { border-color: var(--primary); box-shadow: 0 4px 10px rgba(255,0,127,0.1); transform: translateX(5px); }
+.chapter-btn div { white-space: normal !important; word-wrap: break-word !important; max-width: 100% !important; line-height: 1.4 !important; }
+
+/* Table ทั่วไป */
+/* ซ่อนช่องชื่อนักเรียนและปุ่ม Reset — ค่าในฟิลด์ยังคงอยู่ ไม่กระทบการทำงาน */
+#name-wrapper { display: none !important; }
+
+.file-list-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9rem; }
+.file-list-table th { background: var(--accent); color: white; padding: 10px; }
+.file-list-table td { padding: 10px; border-bottom: 1px solid #eee; }
+
+/* =========================================
+   12. QUIZ / EXAM AREA
+   ========================================= */
+.quiz-area { width: 100%; display: none; }
+.q-text { font-size: 2.2rem; margin: 30px 0; line-height: 1.4; text-align: left; }
+.options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.opt-card { background: rgba(112, 0, 255, 0.03); border: 2px solid var(--accent); padding: 25px; border-radius: 15px; cursor: pointer; font-size: 1.4rem; text-align: left; color: var(--text-color); }
+.opt-card.correct { background: var(--success) !important; color: #000; font-weight: bold; border-color: #00c853; }
+.opt-card.wrong { background: var(--danger) !important; color: #fff; border-color: #d50000; }
+
+.quest-box { 
+    display: flex; justify-content: space-between; align-items: center; gap: 15px; width: 100%; box-sizing: border-box;
+    background: rgba(112,0,255,0.05); border: 2px dashed var(--accent); padding: 15px; border-radius: 15px; margin-top: 15px; 
+}
+.exam-info-group { flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 12px; min-width: 0; }
+.exam-title-text { font-weight: bold; font-size: 1.1rem; color: var(--text-color); line-height: 1.4; white-space: normal; word-wrap: break-word; }
+.exam-badge-group { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-start; }
+.exam-action-group { display: flex; gap: 10px; flex-shrink: 0; justify-content: flex-end; }
+
+.quiz-header-container { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; width: 100%; margin-bottom: 20px; }
+
+/* Quiz Status Bar — Grid Layout (v6) */
+.quiz-status-bar { margin-bottom: 8px !important; }
+.qsb-topic-row { margin-bottom: 8px; }
+.qsb-topic-badge {
+    display: block; background: var(--accent) !important; color: white !important;
+    padding: 6px 18px; border-radius: 50px; font-weight: bold; font-size: 0.88rem;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; width: 100%; box-sizing: border-box;
+}
+.qsb-grid {
+    display: grid !important;
+    grid-template-columns: minmax(110px, auto) 1fr minmax(90px, auto);
+    grid-template-rows: repeat(3, auto) auto;
+    align-items: center; column-gap: 8px; row-gap: 5px;
+}
+/* Timer: คอลัมกลาง span แถว 1-3 */
+.qsb-timer-cell { grid-column: 2 !important; grid-row: 1 / 4 !important; display: flex; align-items: center; justify-content: center; }
+.timer-mega { font-size: 4rem; font-weight: 900; color: var(--secondary); text-shadow: 0 0 15px var(--secondary); font-family: 'Courier New', monospace; }
+
+/* แถว 1-3: ซ้าย/ขวา */
+.qsb-lc1 { grid-column: 1 !important; grid-row: 1 !important; justify-self: start; }
+.qsb-lc2 { grid-column: 1 !important; grid-row: 2 !important; justify-self: start; }
+.qsb-lc3 { grid-column: 1 !important; grid-row: 3 !important; justify-self: start; }
+.qsb-rc1 { grid-column: 3 !important; grid-row: 1 !important; text-align: right; }
+/* rc2: flex column — EXP/ข้อ บน, ถูก ล่าง */
+.qsb-rc2 { grid-column: 3 !important; grid-row: 2 !important; display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
+.qsb-rc3 { grid-column: 3 !important; grid-row: 3 !important; text-align: right; }
+.qsb-rc span { font-size: 0.85rem; font-weight: bold; white-space: nowrap; }
+
+/* แถว 4: Buff/Debuff bar เต็มความกว้าง */
+.qsb-buff-row {
+    grid-column: 1 / 4 !important; grid-row: 4 !important;
+    display: flex; flex-wrap: wrap; gap: 5px; align-items: center;
+    min-height: 26px; padding: 3px 0;
+}
+/* buff chip wrapper - fade when inactive */
+.buff-chip { transition: opacity 0.35s ease; }
+.buff-chip.chip-inactive { opacity: 0.28; filter: grayscale(60%); }
+/* chip สำหรับ gap debuff และ item bonus */
+.reward-chip.gap   { background: rgba(255,82,82,0.12); border: 1px solid var(--danger); color: var(--danger); }
+.reward-chip.item-exp  { background: rgba(0,240,255,0.12); border: 1px solid #00f0ff; color: #00c8ef; }
+.reward-chip.item-coin { background: rgba(0,200,83,0.12); border: 1px solid var(--success); color: var(--success); }
+
+.quiz-action-row { display: flex; gap: 10px; margin-bottom: 8px; }
+.quiz-action-row .btn { flex: 1; text-align: center; justify-content: center; }
+
+#quiz-loadout-bar-wrapper { margin-bottom: 8px; }
+#quiz-loadout-bar-wrapper #quiz-loadout-bar, #quiz-loadout-bar {
+    flex-wrap: nowrap !important; overflow-x: auto; overflow-y: hidden;
+    scrollbar-width: thin; -webkit-overflow-scrolling: touch;
+}
+#ans-card { margin-top: 20px !important; padding: 20px !important; }
+
+/* Summary View */
+.summary-view { display: none; width: 100%; background: var(--card-bg); padding: 40px; border-radius: var(--border-radius); border: 3px solid var(--accent); }
+.analysis-table, .error-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.analysis-table th, .analysis-table td, .error-table th, .error-table td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+.error-table th { background: var(--danger); color: white; }
+
+/* =========================================
+   13. SYSTEM LOGS & HISTORY
+   ========================================= */
+#history-box, #log-box, #suspended-box { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* System Logs */
+#log-box {
+    max-height: 400px !important; overflow-y: auto !important;
+    background: rgba(0, 0, 0, 0.02); border: 2px solid rgba(128, 128, 128, 0.2);
+    border-radius: 15px; padding: 15px !important; margin-top: 15px;
+}
+[data-theme="dark"] #log-box { background: rgba(255, 255, 255, 0.02); border-color: rgba(0, 240, 255, 0.2); }
+#log-box::-webkit-scrollbar { width: 8px; }
+#log-box::-webkit-scrollbar-track { background: transparent; }
+#log-box::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 10px; }
+#log-box table { width: 100%; border-collapse: collapse; display: block; }
+#log-box thead { display: none; }
+#log-box tbody { display: flex; flex-direction: column; gap: 15px; width: 100%; }
+#log-box tr { display: block; border: 1px solid var(--secondary); border-radius: 15px; padding: 15px; background: var(--card-bg); box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
+#log-box tr:hover { transform: translateX(8px); border-color: var(--primary); box-shadow: -5px 5px 15px rgba(255, 0, 127, 0.15); }
+#log-box td { display: flex; justify-content: space-between; align-items: center; text-align: right; border: none !important; padding: 8px 5px !important; }
+#log-box td::before { content: attr(data-label); font-weight: bold; color: var(--primary); text-align: left; flex: 1; font-size: 0.9rem; }
+#log-box td:last-child { border-top: 1px dashed rgba(128,128,128,0.3) !important; margin-top: 10px; padding-top: 12px !important; justify-content: center; }
+
+/* History Box */
+#history-box { margin-bottom: 20px; }
+#history-box .analysis-table { width: 100%; min-width: 500px; table-layout: auto; }
+#history-box .analysis-table th, #history-box .analysis-table td {
+    white-space: normal !important; word-break: break-word !important;
+    font-size: 0.85rem; padding: 8px 5px !important; vertical-align: middle;
+}
+#history-pagination { display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 15px; padding-top: 15px; width: 100%; }
+#history-pagination .btn { border-radius: 20px; padding: 6px 15px !important; font-size: 0.85rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+#history-pagination span { font-weight: bold; color: var(--accent); background: var(--bg-color); padding: 5px 15px; border-radius: 20px; border: 1px solid var(--secondary); }
+
+/* =========================================
+   14. FOOTERS & FLOATING BARS
+   ========================================= */
+.fancy-footer {
+    position: fixed; bottom: 0; left: 0; width: 100%;
+    background: linear-gradient(90deg, #ff007f, #7000ff, #00f0ff, #ff007f); background-size: 300% 100%;
+    animation: flowBG 5s linear infinite; padding: 12px; color: white; text-align: center;
+    font-weight: 800; font-size: 1.1rem; z-index: 2000;
+    box-shadow: 0 -5px 25px rgba(112, 0, 255, 0.5); text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.sticky-action-bar {
+    display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;
+    position: sticky; bottom: 65px; background: var(--card-bg); padding: 15px;
+    border-radius: 20px; box-shadow: 0 -10px 30px rgba(0,0,0,0.15); z-index: 1000;
+    border: 2px solid var(--secondary); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+[data-theme="dark"] .sticky-action-bar { box-shadow: 0 -10px 30px rgba(0, 240, 255, 0.15); background: rgba(22, 22, 37, 0.95); }
+
+.modal-sticky-footer {
+    position: sticky; bottom: -1px; background: var(--card-bg); padding: 15px;
+    margin: 20px -20px -20px -20px; border-top: 2px dashed var(--secondary);
+    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.15); border-bottom-left-radius: inherit; border-bottom-right-radius: inherit;
+    z-index: 100; display: flex; justify-content: center;
+}
+[data-theme="dark"] .modal-sticky-footer { background: #1a1a2e; box-shadow: 0 -10px 25px rgba(0, 240, 255, 0.15); }
+
+/* =========================================
+   15. PRINT STYLES (สำหรับปริ้นทบทวน)
+   ========================================= */
+.print-area { display: none; }
+@media print {
+    html, body { margin: 0 !important; padding: 0 !important; background: white !important; }
+    .no-print, .fancy-footer, .action-bar, .full-panel { display: none !important; }
+    .print-area { display: block !important; color: black !important; background: white !important; }
+    .watermark { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-35deg); font-size: 4rem; font-weight: 900; color: rgba(0,0,0,0.1); text-align: center; line-height: 1.2; white-space: nowrap; z-index: 9999; pointer-events: none; }
+    .p-footer { position: fixed; bottom: 0; width: 100%; text-align: center; font-size: 9pt; color: var(--text-color); border-top: 1px solid #eee; padding: 5px; font-weight: bold; }
+    .print-item { page-break-inside: avoid; border-bottom: 1px dashed #ccc; padding: 20px 0; }
+    .ans-label { color: var(--text-color); font-weight: bold; margin-top: 10px; display: block; border-left: 3px solid #000; padding-left: 10px; }
+}
+
+/* =========================================
+   16. MOBILE RESPONSIVE OVERRIDES 
+   ========================================= */
+/* Tablet & Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Quest / Exam Boxes */
+    .quest-box { flex-direction: column; align-items: flex-start; padding: 15px; }
+    .exam-info-group, .exam-action-group { width: 100%; }
+    .exam-title-text { font-size: 1rem; }
+    .exam-action-group { justify-content: space-between; margin-top: 5px; }
+    .exam-action-group button { flex: 1; padding: 12px 5px; font-size: 0.95rem; margin: 0 !important; display: flex; justify-content: center; align-items: center; }
+
+    .quiz-header-container { flex-direction: column; align-items: stretch; gap: 20px !important; }
+    .exam-info-group { align-items: center; text-align: center; }
+    .exam-badge-group { justify-content: center; }
+
+    /* Accordion Fixes */
+    .chapter-grid { display: flex !important; flex-direction: column !important; }
+    .exam-accordion.active > .exam-accordion-content { padding: 15px 10px !important; }
+
+    /* System Logs Overrides */
+    #log-box tr { padding: 10px !important; }
+    #log-box td { font-size: 0.75rem !important; padding: 5px 2px !important; }
+    #log-box td::before { font-size: 0.75rem !important; }
+    #log-box td:last-child { padding-top: 8px !important; margin-top: 5px !important; }
+
+    /* History Box Overrides (แก้บั๊กตกขอบ 100% & แปลงเป็นรูปแบบการ์ด) */
+    #history-box { overflow-x: hidden !important; padding: 10px 5px !important; width: 100% !important; max-width: 100vw !important; box-sizing: border-box !important; }
+    #history-box table, #history-box thead, #history-box tbody, #history-box th, #history-box td, #history-box tr { display: block !important; width: 100% !important; min-width: 0 !important; max-width: 100% !important; box-sizing: border-box !important; margin: 0 !important; }
+    #history-box thead { display: none !important; }
+    #history-box tr { background: var(--card-bg, #ffffff) !important; border: 1px solid rgba(0, 240, 255, 0.4) !important; border-radius: 12px !important; margin-bottom: 12px !important; padding: 12px 10px !important; box-shadow: 0 4px 8px rgba(0,0,0,0.05) !important; position: relative !important; overflow: hidden !important; }
+    #history-box td { display: flex !important; justify-content: flex-start !important; align-items: flex-start !important; border-bottom: none !important; padding: 4px 0 !important; font-size: 0.85rem !important; text-align: left !important; }
+    #history-box td::before { content: attr(data-label) ": "; font-weight: bold !important; color: var(--secondary, #7000ff) !important; min-width: 75px !important; margin-right: 5px !important; flex-shrink: 0 !important; }
+    #history-box td span { white-space: normal !important; word-wrap: break-word !important; word-break: break-word !important; line-height: 1.4 !important; max-width: 100% !important; }
+    #history-box td:last-child { display: flex !important; justify-content: flex-start !important; align-items: center !important; width: 100% !important; box-sizing: border-box !important; margin-top: 10px !important; padding: 12px 0 5px 0 !important; border-top: 1px dashed rgba(128,128,128,0.3) !important; visibility: visible !important; opacity: 1 !important; }
+    #history-box td:last-child::before { display: none !important; }
+    #history-box td:last-child button { display: inline-block !important; padding: 8px 15px !important; font-size: 0.9rem !important; margin-right: 10px !important; visibility: visible !important; opacity: 1 !important; transform: scale(1) !important; }
+    #history-pagination { gap: 8px !important; flex-wrap: wrap !important; width: 100% !important; box-sizing: border-box !important; }
+    #history-pagination .btn { font-size: 0.75rem !important; padding: 5px 12px !important; }
+    #history-pagination span { font-size: 0.8rem !important; padding: 4px 10px !important; }
+
+    /* File List Overrides (ตะกร้าข้อสอบ) */
+    .file-list-table { table-layout: fixed !important; width: 100% !important; }
+    .file-list-table th, .file-list-table td { padding: 6px 2px !important; font-size: 0.75rem !important; word-wrap: break-word !important; white-space: normal !important; vertical-align: middle !important; }
+    .file-list-table th:nth-child(1), .file-list-table td:nth-child(1) { width: 45% !important; } 
+    .file-list-table th:nth-child(2), .file-list-table td:nth-child(2) { width: 18% !important; text-align: center !important; } 
+    .file-list-table th:nth-child(3), .file-list-table td:nth-child(3) { width: 18% !important; text-align: center !important; } 
+    .file-list-table th:nth-child(4), .file-list-table td:nth-child(4) { width: 19% !important; text-align: center !important; } 
+    .file-list-table input[type="number"] { width: 35px !important; height: 25px !important; padding: 2px !important; font-size: 0.85rem !important; margin: 0 auto !important; }
+    .file-list-table td button.btn-red { padding: 4px !important; font-size: 0.7rem !important; width: 100% !important; display: flex !important; justify-content: center !important; }
+    .file-list-table tr:last-child td { font-size: 0.8rem !important; padding: 8px 2px !important; }
+    .file-list-table tr:last-child td:nth-child(3) { font-size: 1.1rem !important; }
+
+    #file-list-box { overflow-x: hidden !important; padding: 5px !important; width: 100% !important; box-sizing: border-box !important; }
+    #file-list, #file-list thead, #file-list tbody, #file-list th, #file-list td, #file-list tr { display: block !important; width: 100% !important; min-width: 0 !important; box-sizing: border-box !important; }
+    #file-list thead { display: none !important; }
+    #file-list tr { background: var(--card-bg, #ffffff) !important; border: 1px solid rgba(0, 240, 255, 0.4) !important; border-radius: 10px !important; margin-bottom: 5px !important; padding: 7px 10px !important; box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important; position: relative !important; }
+    #file-list td { display: flex !important; justify-content: flex-start !important; align-items: center !important; border-bottom: none !important; padding: 2px 0 !important; font-size: 0.78rem !important; text-align: left !important; }
+    #file-list td::before { content: attr(data-label) ": "; font-weight: bold !important; color: var(--secondary, #7000ff) !important; min-width: 72px !important; margin-right: 6px !important; flex-shrink: 0 !important; font-size: 0.75rem !important; }
+    #file-list td input[type="number"] { width: 55px !important; height: 26px !important; padding: 2px !important; font-size: 0.9rem !important; margin: 0 !important; }
+    /* แถวข้อสอบปกติ: ใช้ grid — ชื่อแถวบน, ข้อทั้งหมด+เลือกดึง+ลบ อยู่แถวเดียวกัน */
+    #file-list tr:not(.total-row) { display: grid !important; grid-template-columns: auto 1fr auto !important; width: 100% !important; }
+    #file-list tr:not(.total-row) td:nth-child(1) { grid-column: 1 / -1 !important; }
+    #file-list tr:not(.total-row) td:nth-child(2) { grid-column: 1 !important; align-self: center !important; }
+    #file-list tr:not(.total-row) td:nth-child(3) { grid-column: 2 !important; align-self: center !important; justify-content: center !important; }
+    #file-list tr:not(.total-row) td:nth-child(4) { grid-column: 3 !important; align-self: center !important; border-top: none !important; margin-top: 0 !important; padding-top: 2px !important; justify-content: flex-end !important; }
+    #file-list td:last-child::before { display: none !important; }
+
+    /* total-row: grid 2 คอลัมน์ — สรุปแถวบนเต็มความกว้าง, รวมทั้งหมด+รวมที่ดึง แถวล่างคู่กัน */
+    #file-list tr.total-row { display: grid !important; grid-template-columns: 1fr 1fr !important; background: rgba(0, 240, 255, 0.15) !important; border: 2px solid var(--secondary) !important; }
+    #file-list tr.total-row td:nth-child(1) { grid-row: 1 !important; grid-column: 1 / 3 !important; justify-content: center !important; font-size: 0 !important; padding: 4px 0 !important; }
+    #file-list tr.total-row td:nth-child(1)::before { content: attr(data-label) !important; font-size: 1.05rem !important; color: var(--accent) !important; font-weight: 900 !important; min-width: 0 !important; margin-right: 0 !important; text-align: center !important; width: 100% !important; display: block !important; }
+    #file-list tr.total-row td:nth-child(2) { grid-row: 2 !important; grid-column: 1 !important; justify-content: center !important; flex-direction: column !important; align-items: center !important; font-size: 0.85rem !important; }
+    #file-list tr.total-row td:nth-child(2)::before { min-width: 0 !important; margin-right: 0 !important; margin-bottom: 2px !important; font-size: 0.7rem !important; }
+    #file-list tr.total-row td:nth-child(3) { grid-row: 2 !important; grid-column: 2 !important; justify-content: center !important; flex-direction: column !important; align-items: center !important; }
+    #file-list tr.total-row td:nth-child(3)::before { min-width: 0 !important; margin-right: 0 !important; margin-bottom: 2px !important; font-size: 0.7rem !important; }
+    #file-list tr.total-row td:nth-child(4) { display: none !important; }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    #gamification-panel { grid-template-columns: 1fr !important; }
+    .full-panel { padding: 20px 15px; }
+    .q-text { font-size: 1.3rem !important; margin: 20px 0; }
+    .options-grid { grid-template-columns: 1fr !important; }
+    .opt-card { font-size: 1.1rem !important; padding: 15px !important; }
+    
+    #setup-screen > div:first-child > svg { display: none; }
+    
+    #ui-sum-done { font-size: 2.2rem !important; }
+    .stat-circle b { font-size: 2.5rem !important; }
+    
+    #ui-title { font-size: 2rem !important; }
+    #btn-start-builder { font-size: 1.2rem !important; padding: 15px 40px !important; width: 100%; }
+    #student-name-input { font-size: 1rem !important; }
+    .name-autocomplete-wrapper { width: 100% !important; }
+    
+    #server-exam-list label { padding: 8px 10px; }
+    #server-exam-list span { font-size: 0.85rem !important; }
+    .profile-badge { width: 100%; justify-content: space-between; }
+    
+    .sticky-action-bar { bottom: 50px; padding: 10px; }
+    .sticky-action-bar button, .sticky-action-bar label { padding: 12px !important; font-size: 1rem !important; }
+    
+    .reward-preview-bar { justify-content: center; }
+    .reward-chip { font-size: 0.75rem; padding: 4px 8px; }
+
+    #q-topic { font-size: 0.75rem !important; padding: 6px 15px !important; }
+    #q-skill, #q-diff { font-size: 0.70rem !important; padding: 5px 10px !important; }
+    #suspend-btn, #pause-btn-in { font-size: 0.75rem !important; padding: 8px 5px !important; }
+    .fancy-footer { font-size: 0.8rem !important; padding: 6px !important; }
+    .mobile-hide-text { display: none; }
+
+    /* Quiz Status Bar (Mobile Overrides) */
+    .quiz-status-bar {
+        position: sticky !important; top: 0px !important; background: var(--card-bg) !important;
+        border: 2px solid var(--secondary) !important; border-top: none !important;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15) !important; padding: 6px 10px !important;
+        margin-left: -15px !important; margin-right: -15px !important; margin-bottom: 12px !important;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important; z-index: 9998 !important;
+        border-radius: 0 0 12px 12px !important;
+    }
+    [data-theme="dark"] .quiz-status-bar { background: #161625 !important; box-shadow: 0 6px 18px rgba(0, 240, 255, 0.12) !important; }
+    .status-text { font-size: 0.65rem !important; }
+
+    /* topic badge เล็กลง */
+    .qsb-topic-row { margin-bottom: 4px; }
+    .qsb-topic-badge { font-size: 0.60rem !important; padding: 3px 8px !important; }
+
+    /* grid คอมแพ็คลง */
+    .qsb-grid { grid-template-columns: minmax(80px, auto) 1fr minmax(68px, auto) !important; column-gap: 4px !important; row-gap: 2px !important; }
+    .qsb-lc .skill-badge, .qsb-lc .diff-badge { font-size: 0.55rem !important; padding: 2px 6px !important; }
+    .qsb-rc span { font-size: 0.60rem !important; }
+    .qsb-rc2 { gap: 0px !important; }
+
+    /* timer เล็กลงมาก */
+    .timer-mega { font-size: 1.55rem !important; }
+
+    /* coin badge มือถือ */
+    .coin-badge { font-size: 0.60rem !important; padding: 1px 6px !important; }
+    .coin-icon { width: 0.9em !important; height: 0.9em !important; }
+
+    /* buff bar แน่นขึ้น */
+    .qsb-buff-row { gap: 3px !important; padding: 2px 0 !important; min-height: 20px !important; }
+    .qsb-buff-row .reward-chip { font-size: 0.52rem !important; padding: 1px 5px !important; }
+
+    /* action buttons เล็กลง */
+    .quiz-action-row { gap: 5px; margin-bottom: 5px; }
+    .quiz-action-row .btn { font-size: 0.72rem !important; padding: 7px 4px !important; }
+
+    /* progress bar บางลง */
+    #timer-bar-container { height: 4px !important; margin-top: 4px !important; }
+
+    /* Action Bar (Shopee Style V3 Override - Mobile) */
+    .action-bar {
+        top: 5px !important; padding: 8px 10px !important; display: flex !important;
+        flex-direction: row !important; flex-wrap: wrap !important; border-radius: 15px !important;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+    }
+    .action-bar .brand { width: calc(100% - 105px) !important; font-size: 1.1rem !important; margin-bottom: 5px !important; justify-content: flex-start !important; }
+    #user-profile-badge { position: absolute !important; top: 8px !important; right: 8px !important; margin: 0 !important; }
+    .profile-chip { padding: 2px 8px 2px 2px !important; font-size: 0.65rem !important; gap: 4px !important; }
+    .profile-chip .avatar { width: 20px !important; height: 20px !important; font-size: 0.7rem !important; }
+    
+    .action-bar .controls {
+        width: 100% !important; display: flex !important; flex-direction: row !important;
+        justify-content: space-between !important; gap: 4px !important; margin-top: 0 !important;
+    }
+    .action-bar .controls > .btn {
+        flex: 1 !important; padding: 6px 0 !important; font-size: 0.65rem !important; 
+        justify-content: center !important; min-width: 0 !important; white-space: nowrap !important; gap: 3px !important;
+    }
+    
+    .profile-menu {
+        position: fixed !important; top: 65px !important; left: 50% !important; transform: translateX(-50%) !important;
+        right: auto !important; width: 92% !important; max-width: 320px !important; margin: 0 !important;
+        padding: 15px !important; animation: dropDownMenuCenter 0.3s forwards !important; border-radius: var(--border-radius);
+        border: 2px solid var(--secondary); box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .profile-menu::before { display: none !important; }
+    
+    .mobile-menu-overlay {
+        position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(10, 10, 18, 0.4); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+        z-index: 1999; display: none; animation: fadeIn 0.3s forwards;
+    }
+    .mobile-menu-overlay.show { display: block; }
+}
+
+/* ==========================================================================
+   ✅ [END] MAIN STYLESHEET
+   สิ้นสุดการตั้งค่า CSS 
+   ========================================================================== */

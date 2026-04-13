@@ -1,0 +1,792 @@
+{
+  "metadata": {
+    "exam_title": {
+      "th": "วิทยาศาสตร์ ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว (ง่าย ชุดที่ 2)",
+      "en": "Science P.4 Term 1 - Unit 2 Chapter 1: Living Things Around Us (Easy Set 2)"
+    },
+    "total_questions": 30,
+    "difficulty_distribution": {
+      "description": {
+        "th": "คำแนะนำ: ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุด้านล่างนี้อย่างเคร่งครัด",
+        "en": "Guideline: When generating the exam, strictly ensure that the difficulty level of the questions matches the percentage distribution specified below."
+      },
+      "Easy": "100%",
+      "Medium": "0%",
+      "Hard": "0%",
+      "Extreme": "0%"
+    },
+    "dashboard_config": {
+      "theme": "modern_ai_bright",
+      "watermark_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "header_footer_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "active_recall_mode": true
+    },
+    "ai_prompt_guidelines": {
+      "description": "คำสั่งเฉพาะสำหรับ AI ในการสร้างข้อสอบ (Prompt Instructions)",
+      "rules": [
+        "1. ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุอย่างเคร่งครัด",
+        "2. สกิล (Skill): ชีววิทยา (Biology)",
+        "3. รูปภาพประกอบ (SVG): หากข้อสอบข้อไหนสามารถอธิบายด้วยภาพวาดได้ ให้ใช้ SVG code สร้างรูปภาพประกอบง่ายๆ สีสันสดใส แทรกไว้ในโจทย์หรือตัวเลือกด้วยเสมอ(ถ้าทำได้)",
+        "4. ภาษา (Language): ข้อมูลข้อสอบต้องรองรับ 2 ภาษา (th และ en) ทุกจุด ทั้งโจทย์ ตัวเลือก และเฉลย"
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถ้าเราจัดกลุ่มสิ่งมีชีวิตโดยใช้ 'การเคลื่อนที่' เป็นเกณฑ์ ข้อใดจัดอยู่ในกลุ่มที่เคลื่อนที่ไม่ได้?",
+        "en": "If we classify living things by 'movement', which of the following belongs to the group that cannot move?"
+      },
+      "options": {
+        "th": ["แมว", "ต้นทานตะวัน", "นกแก้ว", "ปลาทอง"],
+        "en": ["Cat", "Sunflower", "Parrot", "Goldfish"]
+      },
+      "answer": { "th": "ต้นทานตะวัน", "en": "Sunflower" },
+      "explanation": {
+        "th": "ต้นทานตะวันเป็นพืช ซึ่งเคลื่อนที่เปลี่ยนตำแหน่งด้วยตัวเองไม่ได้ แต่มีการเคลื่อนไหว เช่น การหันเข้าหาแสง",
+        "en": "Sunflowers are plants, which cannot move from place to place by themselves, though they do show movements like turning toward the sun."
+      },
+      "image_svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='40' r='15' fill='#FFD700'/><path d='M50 55 V90' stroke='#228B22' stroke-width='4'/><ellipse cx='35' cy='70' rx='10' ry='5' fill='#228B22'/><ellipse cx='65' cy='70' rx='10' ry='5' fill='#228B22'/></svg>"
+    },
+    {
+      "id": 2,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดคือหน้าที่หลักของ 'ดอก' ในพืชดอก?",
+        "en": "What is the main function of the 'flower' in flowering plants?"
+      },
+      "options": {
+        "th": ["ดูดน้ำ", "สร้างอาหาร", "สืบพันธุ์", "ค้ำจุนลำต้น"],
+        "en": ["Absorb water", "Make food", "Reproduction", "Support the stem"]
+      },
+      "answer": { "th": "สืบพันธุ์", "en": "Reproduction" },
+      "explanation": {
+        "th": "ดอกมีหน้าที่สำคัญในการสืบพันธุ์ เพื่อทำให้เกิดเมล็ดและขยายพันธุ์ต่อไป",
+        "en": "Flowers are essential for reproduction, producing seeds to continue the species."
+      },
+      "image_svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M50 50 Q70 20 50 10 Q30 20 50 50' fill='#FF69B4'/><path d='M50 50 Q80 70 90 50 Q80 30 50 50' fill='#FF69B4'/><path d='M50 50 Q30 80 50 90 Q70 80 50 50' fill='#FF69B4'/><path d='M50 50 Q20 30 10 50 Q20 70 50 50' fill='#FF69B4'/><circle cx='50' cy='50' r='8' fill='#FFFF00'/></svg>"
+    },
+    {
+      "id": 3,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์ในข้อใดจัดเป็นสัตว์ไม่มีกระดูกสันหลัง?",
+        "en": "Which of the following animals is an invertebrate?"
+      },
+      "options": {
+        "th": ["กบ", "แมงกะพรุน", "นกอินทรี", "งูเหลือม"],
+        "en": ["Frog", "Jellyfish", "Eagle", "Python"]
+      },
+      "answer": { "th": "แมงกะพรุน", "en": "Jellyfish" },
+      "explanation": {
+        "th": "แมงกะพรุนมีลำตัวนิ่มและไม่มีโครงกระดูกแข็งหรือกระดูกสันหลังอยู่ภายใน",
+        "en": "Jellyfish have soft bodies and do not have an internal skeleton or backbone."
+      }
+    },
+    {
+      "id": 4,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ส่วนประกอบใดของพืชที่ทำหน้าที่เปรียบเสมือน 'จมูก' ใช้ในการหายใจและคายน้ำ?",
+        "en": "Which part of the plant acts like a 'nose' for breathing and transpiration?"
+      },
+      "options": {
+        "th": ["รากแก้ว", "ท่อลำเลียง", "ปากใบ", "กลีบเลี้ยง"],
+        "en": ["Taproot", "Vascular bundle", "Stomata", "Sepal"]
+      },
+      "answer": { "th": "ปากใบ", "en": "Stomata" },
+      "explanation": {
+        "th": "ปากใบ (Stomata) เป็นรูเล็กๆ ที่ผิวใบ ทำหน้าที่แลกเปลี่ยนแก๊สและคายน้ำ",
+        "en": "Stomata are tiny openings on the leaf surface used for gas exchange and transpiration."
+      }
+    },
+    {
+      "id": 5,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์กลุ่มใดมีลักษณะผิวหนังแห้ง มีเกล็ด และออกลูกเป็นไข่?",
+        "en": "Which group of animals has dry skin, scales, and lays eggs?"
+      },
+      "options": {
+        "th": ["กลุ่มปลา", "กลุ่มสัตว์เลื้อยคลาน", "กลุ่มสัตว์ปีก", "กลุ่มสัตว์ครึ่งน้ำครึ่งบก"],
+        "en": ["Fish", "Reptiles", "Birds", "Amphibians"]
+      },
+      "answer": { "th": "กลุ่มสัตว์เลื้อยคลาน", "en": "Reptiles" },
+      "explanation": {
+        "th": "สัตว์เลื้อยคลาน เช่น งู จระเข้ เต่า มีผิวหนังแห้ง ปกคลุมด้วยเกล็ด และส่วนใหญ่ออกลูกเป็นไข่",
+        "en": "Reptiles, such as snakes, crocodiles, and turtles, have dry skin covered in scales and mostly lay eggs."
+      }
+    },
+    {
+      "id": 6,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เห็ดและรา ได้รับสารอาหารจากแหล่งใด?",
+        "en": "Where do mushrooms and fungi get their nutrients from?"
+      },
+      "options": {
+        "th": ["สร้างเองจากแสงแดด", "กินสัตว์ขนาดเล็ก", "ย่อยสลายซากสิ่งมีชีวิต", "ดูดจากอากาศ"],
+        "en": ["Make it from sunlight", "Eat small animals", "Decompose dead organisms", "Absorb from air"]
+      },
+      "answer": { "th": "ย่อยสลายซากสิ่งมีชีวิต", "en": "Decompose dead organisms" },
+      "explanation": {
+        "th": "เห็ดราสร้างอาหารเองไม่ได้ จึงต้องย่อยสลายซากพืชและสัตว์เพื่อนำมาเป็นอาหาร",
+        "en": "Fungi cannot make their own food; they must decompose dead plants and animals to gain nutrients."
+      },
+      "image_svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M30 60 Q50 20 70 60' fill='#FF4500'/><rect x='45' y='60' width='10' height='20' fill='#DEB887'/></svg>"
+    },
+    {
+      "id": 7,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดจัดเป็นพืชใบเลี้ยงเดี่ยว?",
+        "en": "Which of the following is a monocot plant?"
+      },
+      "options": {
+        "th": ["ต้นมะม่วง", "ต้นกุหลาบ", "ต้นข้าว", "ต้นถั่ว"],
+        "en": ["Mango tree", "Rose bush", "Rice plant", "Bean plant"]
+      },
+      "answer": { "th": "ต้นข้าว", "en": "Rice plant" },
+      "explanation": {
+        "th": "ต้นข้าวมีลักษณะใบเรียวยาว เส้นใบขนาน และมีรากฝอย ซึ่งเป็นลักษณะของพืชใบเลี้ยงเดี่ยว",
+        "en": "Rice plants have narrow leaves, parallel veins, and fibrous roots, which are characteristics of monocots."
+      }
+    },
+    {
+      "id": 8,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์ในข้อใดหายใจด้วยเหงือกตลอดชีวิต?",
+        "en": "Which animal breathes through gills throughout its entire life?"
+      },
+      "options": {
+        "th": ["วาฬ", "ปลาตะเพียน", "กบ", "เต่าทะเล"],
+        "en": ["Whale", "Carp (Fish)", "Frog", "Sea turtle"]
+      },
+      "answer": { "th": "ปลาตะเพียน", "en": "Carp (Fish)" },
+      "explanation": {
+        "th": "ปลาหายใจด้วยเหงือกเพื่อรับออกซิเจนจากในน้ำ ส่วนวาฬเป็นสัตว์เลี้ยงลูกด้วยนมที่หายใจด้วยปอด",
+        "en": "Fish breathe with gills to take oxygen from water. Whales, however, are mammals that breathe with lungs."
+      }
+    },
+    {
+      "id": 9,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "พืชในข้อใดใช้ 'สปอร์' ในการขยายพันธุ์แทนการใช้เมล็ด?",
+        "en": "Which plant uses 'spores' for reproduction instead of seeds?"
+      },
+      "options": {
+        "th": ["มะลิ", "เฟิร์น", "ทานตะวัน", "ขนุน"],
+        "en": ["Jasmine", "Fern", "Sunflower", "Jackfruit"]
+      },
+      "answer": { "th": "เฟิร์น", "en": "Fern" },
+      "explanation": {
+        "th": "เฟิร์นเป็นพืชไร้ดอก จึงไม่มีเมล็ด แต่จะสร้างสปอร์ใต้ใบเพื่อใช้ในการขยายพันธุ์",
+        "en": "Ferns are non-flowering plants and don't have seeds; they produce spores under their leaves to reproduce."
+      }
+    },
+    {
+      "id": 10,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "อวัยวะใดของปลาที่ช่วยในการควบคุมการทรงตัวและการเคลื่อนที่?",
+        "en": "Which organ of a fish helps control balance and movement?"
+      },
+      "options": {
+        "th": ["เกล็ด", "ครีบ", "ตา", "เหงือก"],
+        "en": ["Scales", "Fins", "Eyes", "Gills"]
+      },
+      "answer": { "th": "ครีบ", "en": "Fins" },
+      "explanation": {
+        "th": "ปลาใช้ครีบในการว่ายน้ำและทรงตัวในน้ำ",
+        "en": "Fish use their fins for swimming and maintaining balance in the water."
+      },
+      "image_svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M10 50 Q30 20 70 30 L90 10 L80 50 L90 90 L70 70 Q30 80 10 50' fill='#1E90FF'/><path d='M40 35 Q50 10 60 30' fill='#4682B4'/><path d='M40 65 Q50 90 60 70' fill='#4682B4'/></svg>"
+    },
+    {
+      "id": 11,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จุลินทรีย์ชนิดใดที่มีประโยชน์ในการทำนมเปรี้ยว?",
+        "en": "Which microorganism is useful for making yogurt?"
+      },
+      "options": {
+        "th": ["ไวรัส", "แบคทีเรีย", "พยาธิ", "เห็ดพิษ"],
+        "en": ["Virus", "Bacteria", "Parasite", "Poisonous mushroom"]
+      },
+      "answer": { "th": "แบคทีเรีย", "en": "Bacteria" },
+      "explanation": {
+        "th": "แบคทีเรียบางชนิดมีประโยชน์ เช่น แบคทีเรียที่ใช้เปลี่ยนนมให้กลายเป็นนมเปรี้ยวหรือโยเกิร์ต",
+        "en": "Certain bacteria are beneficial, such as those used to turn milk into yogurt."
+      }
+    },
+    {
+      "id": 12,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดเป็นลักษณะเด่นของสัตว์กลุ่ม 'นก'?",
+        "en": "What is a distinguishing characteristic of the 'Bird' group?"
+      },
+      "options": {
+        "th": ["มีขนเป็นเส้น", "มีขนเป็นแผง", "มีผิวหนังเปียกชื้น", "มีเกล็ดหนา"],
+        "en": ["Hair-like feathers", "Plumed/Vane-like feathers", "Moist skin", "Thick scales"]
+      },
+      "answer": { "th": "มีขนเป็นแผง", "en": "Plumed/Vane-like feathers" },
+      "explanation": {
+        "th": "นกมีลักษณะเฉพาะคือมีขนเป็นแผง (Feathers) ปกคลุมร่างกาย มีปีก และออกลูกเป็นไข่",
+        "en": "Birds are characterized by having feathers covering their bodies, wings, and laying eggs."
+      }
+    },
+    {
+      "id": 13,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์ไม่มีกระดูกสันหลังในข้อใดมีเปลือกแข็งหุ้มตัวและมีขาเป็นปล้อง?",
+        "en": "Which invertebrate has a hard exoskeleton and jointed legs?"
+      },
+      "options": {
+        "th": ["หอยทาก", "ดาวทะเล", "กุ้ง", "ไส้เดือนดิน"],
+        "en": ["Snail", "Starfish", "Shrimp", "Earthworm"]
+      },
+      "answer": { "th": "กุ้ง", "en": "Shrimp" },
+      "explanation": {
+        "th": "กุ้ง ปู และแมลง เป็นสัตว์ไม่มีกระดูกสันหลังที่มีเปลือกแข็งหุ้มภายนอกและมีขาเป็นข้อปล้อง",
+        "en": "Shrimp, crabs, and insects are invertebrates that have a hard exoskeleton and jointed legs."
+      }
+    },
+    {
+      "id": 14,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "รากแก้ว มีลักษณะสำคัญอย่างไร?",
+        "en": "What is a key characteristic of a taproot?"
+      },
+      "options": {
+        "th": ["เป็นเส้นเล็กๆ ขนาดเท่ากัน", "มีรากขนาดใหญ่หนึ่งรากโตลงสู่ดิน", "งอกจากลำต้นเหนือดิน", "ทำหน้าที่ล่อแมลง"],
+        "en": ["Small equal-sized threads", "One large main root growing down", "Grows from the stem above ground", "Attracts insects"]
+      },
+      "answer": { "th": "มีรากขนาดใหญ่หนึ่งรากโตลงสู่ดิน", "en": "One large main root growing down" },
+      "explanation": {
+        "th": "รากแก้วเป็นรากที่โตและแข็งแรงที่สุด ช่วยยึดลำต้นให้มั่นคง พบมากในพืชใบเลี้ยงคู่",
+        "en": "A taproot is the largest, strongest root that anchors the plant firmly; it's common in dicots."
+      }
+    },
+    {
+      "id": 15,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กลุ่มสิ่งมีชีวิตในข้อใดสามารถ 'เคลื่อนที่ไม่ได้และสร้างอาหารเองไม่ได้'?",
+        "en": "Which group of living things 'cannot move and cannot make food'?"
+      },
+      "options": {
+        "th": ["พืช", "สัตว์", "เห็ดรา", "ปลา"],
+        "en": ["Plants", "Animals", "Fungi", "Fish"]
+      },
+      "answer": { "th": "เห็ดรา", "en": "Fungi" },
+      "explanation": {
+        "th": "เห็ดราเคลื่อนที่เปลี่ยนตำแหน่งไม่ได้เหมือนพืช แต่สร้างอาหารเองไม่ได้เหมือนสัตว์",
+        "en": "Fungi cannot move from place to place like plants, but also cannot make their own food like animals."
+      }
+    },
+    {
+      "id": 16,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์ชนิดใดจัดเป็นสัตว์ 'เลือดอุ่น'?",
+        "en": "Which animal is 'warm-blooded'?"
+      },
+      "options": {
+        "th": ["งู", "กบ", "ลิง", "ปลาไหล"],
+        "en": ["Snake", "Frog", "Monkey", "Eel"]
+      },
+      "answer": { "th": "ลิง", "en": "Monkey" },
+      "explanation": {
+        "th": "สัตว์เลือดอุ่นคือสัตว์ที่รักษาอุณหภูมิร่างกายให้คงที่ ได้แก่ กลุ่มนกและสัตว์เลี้ยงลูกด้วยน้ำนม",
+        "en": "Warm-blooded animals maintain a constant body temperature; these include birds and mammals."
+      }
+    },
+    {
+      "id": 17,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สิ่งมีชีวิตในข้อใดมีจำนวนขา 8 ขา?",
+        "en": "Which organism has 8 legs?"
+      },
+      "options": {
+        "th": ["มด", "ผึ้ง", "แมงมุม", "ตั๊กแตน"],
+        "en": ["Ant", "Bee", "Spider", "Grasshopper"]
+      },
+      "answer": { "th": "แมงมุม", "en": "Spider" },
+      "explanation": {
+        "th": "แมงมุมเป็นสัตว์กลุ่มแมง (Arachnid) ซึ่งมี 8 ขา ส่วนมด ผึ้ง ตั๊กแตน เป็นแมลง (Insect) มี 6 ขา",
+        "en": "Spiders are arachnids and have 8 legs, while ants, bees, and grasshoppers are insects and have 6 legs."
+      }
+    },
+    {
+      "id": 18,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เรามักพบ 'รา' เติบโตได้ดีที่สุดในที่ลักษณะใด?",
+        "en": "Where does 'mold' usually grow best?"
+      },
+      "options": {
+        "th": ["ที่แห้งและเย็น", "ที่อับชื้นและมืด", "กลางแดดจัด", "ในน้ำลึก"],
+        "en": ["Dry and cold places", "Damp and dark places", "Bright sunlight", "Deep water"]
+      },
+      "answer": { "th": "ที่อับชื้นและมืด", "en": "Damp and dark places" },
+      "explanation": {
+        "th": "ราชอบความชื้นและไม่ชอบแสงแดดจัด มักขึ้นตามขนมปังหรือเสื้อผ้าที่อับชื้น",
+        "en": "Mold loves moisture and dislikes direct sunlight; it often grows on damp bread or clothing."
+      }
+    },
+    {
+      "id": 19,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "พืชใบเลี้ยงคู่ มีลักษณะเส้นใบเป็นอย่างไร?",
+        "en": "What kind of leaf veins do dicots have?"
+      },
+      "options": {
+        "th": ["เส้นใบขนาน", "เส้นใบเป็นร่างแห", "ไม่มีเส้นใบ", "เส้นใบวงกลม"],
+        "en": ["Parallel veins", "Netted veins", "No veins", "Circular veins"]
+      },
+      "answer": { "th": "เส้นใบเป็นร่างแห", "en": "Netted veins" },
+      "explanation": {
+        "th": "พืชใบเลี้ยงคู่ (เช่น มะม่วง กุหลาบ) จะมีเส้นใบแตกแขนงเป็นร่างแห",
+        "en": "Dicots (like mango and rose) have leaf veins that branch out in a netted pattern."
+      }
+    },
+    {
+      "id": 20,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์จำพวก 'เป็ด' และ 'ห่าน' จัดอยู่ในกลุ่มใด?",
+        "en": "Ducks and geese belong to which group?"
+      },
+      "options": {
+        "th": ["สัตว์เลี้ยงลูกด้วยนม", "สัตว์เลื้อยคลาน", "สัตว์ปีก", "สัตว์ครึ่งน้ำครึ่งบก"],
+        "en": ["Mammals", "Reptiles", "Birds", "Amphibians"]
+      },
+      "answer": { "th": "สัตว์ปีก", "en": "Birds" },
+      "explanation": {
+        "th": "เป็ดและห่านมีขนเป็นแผง มีปีก และออกลูกเป็นไข่ จึงจัดเป็นสัตว์ปีก",
+        "en": "Ducks and geese have feathers, wings, and lay eggs, so they are classified as birds."
+      }
+    },
+    {
+      "id": 21,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ส่วนใดของพืชทำหน้าที่ลำเลียงน้ำและแร่ธาตุไปยังใบ?",
+        "en": "Which part of the plant transports water and minerals to the leaves?"
+      },
+      "options": {
+        "th": ["รากฝอย", "ลำต้น", "ดอก", "ผล"],
+        "en": ["Fibrous roots", "Stem", "Flower", "Fruit"]
+      },
+      "answer": { "th": "ลำต้น", "en": "Stem" },
+      "explanation": {
+        "th": "ลำต้นมีท่อลำเลียงทำหน้าที่ส่งน้ำและแร่ธาตุจากรากขึ้นไปสู่ใบ",
+        "en": "The stem contains vascular tissues that transport water and minerals from the roots up to the leaves."
+      },
+      "image_svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect x='45' y='30' width='10' height='50' fill='#8B4513'/><path d='M50 30 Q70 10 90 30 Q70 50 50 30' fill='#228B22'/><path d='M50 30 Q30 10 10 30 Q30 50 50 30' fill='#228B22'/></svg>"
+    },
+    {
+      "id": 22,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์มีกระดูกสันหลังในกลุ่มใดที่ออกลูกเป็นตัวและเลี้ยงลูกด้วยน้ำนม?",
+        "en": "Which vertebrate group gives birth to live young and nurses them with milk?"
+      },
+      "options": {
+        "th": ["สัตว์ปีก", "ปลา", "สัตว์เลี้ยงลูกด้วยนม", "สัตว์เลื้อยคลาน"],
+        "en": ["Birds", "Fish", "Mammals", "Reptiles"]
+      },
+      "answer": { "th": "สัตว์เลี้ยงลูกด้วยนม", "en": "Mammals" },
+      "explanation": {
+        "th": "สัตว์เลี้ยงลูกด้วยนม (เช่น สุนัข แมว มนุษย์) มีลักษณะเด่นคือเลี้ยงลูกด้วยน้ำนม และส่วนใหญ่ออกลูกเป็นตัว",
+        "en": "Mammals (like dogs, cats, and humans) are characterized by nursing their young with milk and mostly giving birth to live young."
+      }
+    },
+    {
+      "id": 23,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดไม่ใช่ลักษณะของสัตว์กลุ่มสะเทินน้ำสะเทินบก (ครึ่งน้ำครึ่งบก)?",
+        "en": "Which is NOT a characteristic of amphibians?"
+      },
+      "options": {
+        "th": ["มีผิวหนังเปียกชื้น", "ไม่มีเกล็ด", "ออกลูกเป็นตัว", "ตัวอ่อนอาศัยในน้ำ"],
+        "en": ["Moist skin", "No scales", "Give birth to live young", "Larvae live in water"]
+      },
+      "answer": { "th": "ออกลูกเป็นตัว", "en": "Give birth to live young" },
+      "explanation": {
+        "th": "สัตว์ครึ่งน้ำครึ่งบกส่วนใหญ่ออกลูกเป็นไข่ในน้ำ เพื่อให้ลูกอ๊อดเจริญเติบโตต่อไป",
+        "en": "Most amphibians lay eggs in water for the tadpoles to hatch and grow."
+      }
+    },
+    {
+      "id": 24,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถ้านักเรียนใช้กล้องจุลทรรศน์ส่องดูน้ำในคูคลองแล้วพบสิ่งมีชีวิตขนาดเล็กมาก สิ่งนั้นน่าจะเป็นกลุ่มใด?",
+        "en": "If you use a microscope to look at canal water and find tiny living things, what group would they likely belong to?"
+      },
+      "options": {
+        "th": ["กลุ่มพืชดอก", "กลุ่มสัตว์เลื้อยคลาน", "กลุ่มจุลินทรีย์", "กลุ่มสัตว์ไม่มีกระดูกสันหลังขนาดใหญ่"],
+        "en": ["Flowering plants", "Reptiles", "Microorganisms", "Large invertebrates"]
+      },
+      "answer": { "th": "กลุ่มจุลินทรีย์", "en": "Microorganisms" },
+      "explanation": {
+        "th": "จุลินทรีย์เป็นสิ่งมีชีวิตที่มีขนาดเล็กมากจนต้องใช้กล้องจุลทรรศน์จึงจะมองเห็นได้",
+        "en": "Microorganisms are so small that they can only be seen through a microscope."
+      },
+      "image_svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='50' r='30' fill='none' stroke='#333' stroke-width='3'/><path d='M50 20 L50 10 M80 50 L90 50 M50 80 L50 90 M20 50 L10 50' stroke='#333'/><circle cx='45' cy='45' r='5' fill='#32CD32'/><circle cx='60' cy='55' r='3' fill='#32CD32'/></svg>"
+    },
+    {
+      "id": 25,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "พืชในข้อใดมีรากที่เป็น 'รากฝอย'?",
+        "en": "Which plant has 'fibrous roots'?"
+      },
+      "options": {
+        "th": ["ต้นมะพร้าว", "ต้นมะม่วง", "ต้นพริก", "ต้นถั่วเขียว"],
+        "en": ["Coconut tree", "Mango tree", "Chili plant", "Mung bean plant"]
+      },
+      "answer": { "th": "ต้นมะพร้าว", "en": "Coconut tree" },
+      "explanation": {
+        "th": "มะพร้าวเป็นพืชใบเลี้ยงเดี่ยว มีระบบรากฝอยที่แผ่กระจายไปตามผิวดิน",
+        "en": "Coconuts are monocots and have a fibrous root system that spreads near the soil surface."
+      }
+    },
+    {
+      "id": 26,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์ในข้อใดจัดเป็นสัตว์มีกระดูกสันหลังที่อาศัยอยู่ได้ทั้งบนบกและในน้ำ?",
+        "en": "Which vertebrate can live both on land and in water?"
+      },
+      "options": {
+        "th": ["ปลาทอง", "สุนัข", "คางคก", "ไก่"],
+        "en": ["Goldfish", "Dog", "Toad", "Chicken"]
+      },
+      "answer": { "th": "คางคก", "en": "Toad" },
+      "explanation": {
+        "th": "คางคกเป็นสัตว์ครึ่งน้ำครึ่งบก ตอนเป็นตัวอ่อนจะอยู่ในน้ำ และเมื่อโตเต็มวัยจะขึ้นมาอยู่บนบกได้",
+        "en": "Toads are amphibians; they live in water as larvae and move onto land as adults."
+      }
+    },
+    {
+      "id": 27,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ส่วนประกอบใดของดอกที่มักมีสีสวยงามเพื่อล่อแมลง?",
+        "en": "Which part of the flower is usually brightly colored to attract insects?"
+      },
+      "options": {
+        "th": ["เกสรเพศผู้", "เกสรเพศเมีย", "กลีบเลี้ยง", "กลีบดอก"],
+        "en": ["Stamen", "Pistil", "Sepal", "Petal"]
+      },
+      "answer": { "th": "กลีบดอก", "en": "Petal" },
+      "explanation": {
+        "th": "กลีบดอกมักมีสีสันและกลิ่นเพื่อดึงดูดแมลงให้มาช่วยในการผสมเกสร",
+        "en": "Petals often have colors and scents to attract insects for pollination."
+      }
+    },
+    {
+      "id": 28,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดคือความแตกต่างที่สำคัญระหว่าง 'พืชดอก' และ 'พืชไร้ดอก'?",
+        "en": "What is the main difference between 'flowering' and 'non-flowering' plants?"
+      },
+      "options": {
+        "th": ["การหายใจ", "การมีดอกเพื่อสืบพันธุ์", "การมีราก", "การต้องการแสงแดด"],
+        "en": ["Respiration", "Having flowers for reproduction", "Having roots", "Sunlight requirement"]
+      },
+      "answer": { "th": "การมีดอกเพื่อสืบพันธุ์", "en": "Having flowers for reproduction" },
+      "explanation": {
+        "th": "พืชดอกจะใช้ดอกในการขยายพันธุ์ ส่วนพืชไร้ดอกจะใช้สปอร์แทน",
+        "en": "Flowering plants use flowers to reproduce, while non-flowering plants use spores."
+      }
+    },
+    {
+      "id": 29,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สัตว์ในกลุ่มใดมีกระดูกสันหลังที่เป็นข้อๆ ต่อกันภายในร่างกาย?",
+        "en": "Which group of animals has a backbone made of connected vertebrae inside their bodies?"
+      },
+      "options": {
+        "th": ["กลุ่มสัตว์มีกระดูกสันหลัง", "กลุ่มสัตว์ไม่มีกระดูกสันหลัง", "กลุ่มพืช", "กลุ่มเห็ดรา"],
+        "en": ["Vertebrates", "Invertebrates", "Plants", "Fungi"]
+      },
+      "answer": { "th": "กลุ่มสัตว์มีกระดูกสันหลัง", "en": "Vertebrates" },
+      "explanation": {
+        "th": "สัตว์ที่มีโครงร่างแข็งหรือกระดูกสันหลังอยู่ภายในร่างกาย เรียกว่า สัตว์มีกระดูกสันหลัง",
+        "en": "Animals with an internal skeleton or backbone are called vertebrates."
+      }
+    },
+    {
+      "id": 30,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.4 เทอม 1 - หน่วยที่ 2 บทที่ 1 สิ่งมีชีวิตรอบตัว",
+        "en": "Basic Science P.4 Term 1 - Unit 2 Chapter 1 Living Things Around Us"
+      },
+      "skill": {
+        "th": "ชีววิทยา",
+        "en": "Biology"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดเป็นลักษณะเด่นของพืชใบเลี้ยงคู่?",
+        "en": "What is a prominent characteristic of dicot plants?"
+      },
+      "options": {
+        "th": ["มีรากฝอย", "เส้นใบขนาน", "มีกลีบดอก 4-5 กลีบหรือทวีคูณ", "ลำต้นเป็นข้อปล้องชัดเจน"],
+        "en": ["Fibrous roots", "Parallel veins", "4-5 petals or multiples", "Clear stem nodes"]
+      },
+      "answer": { "th": "มีกลีบดอก 4-5 กลีบหรือทวีคูณ", "en": "4-5 petals or multiples" },
+      "explanation": {
+        "th": "พืชใบเลี้ยงคู่มักมีระบบรากแก้ว เส้นใบเป็นร่างแห และมีกลีบดอกในจำนวน 4-5 หรือทวีคูณของ 4-5",
+        "en": "Dicots usually have a taproot system, netted leaf veins, and 4-5 petals or multiples of 4-5."
+      }
+    }
+  ]
+}

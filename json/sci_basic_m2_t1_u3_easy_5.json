@@ -1,0 +1,695 @@
+{
+  "metadata": {
+    "exam_title": {
+      "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย (ง่าย ชุดที่ 5)",
+      "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution (Easy Set 5)"
+    },
+    "total_questions": 30,
+    "difficulty_distribution": {
+      "description": {
+        "th": "คำแนะนำ: ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุด้านล่างนี้อย่างเคร่งครัด",
+        "en": "Guideline: When generating the exam, strictly ensure that the difficulty level of the questions matches the percentage distribution specified below."
+      },
+      "Easy": "100%",
+      "Medium": "0%",
+      "Hard": "0%",
+      "Extreme": "0%"
+    },
+    "dashboard_config": {
+      "theme": "modern_ai_bright",
+      "watermark_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "header_footer_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "active_recall_mode": true
+    },
+    "ai_prompt_guidelines": {
+      "description": "คำสั่งเฉพาะสำหรับ AI ในการสร้างข้อสอบวิทยาศาสตร์ (Science Prompt Instructions)",
+      "rules": [
+        "1. ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุอย่างเคร่งครัด",
+        "2. สกิล (Skill): ให้คัดลอก 1 ใน 5 สกิลนี้ไปใส่ในตัวแปร 'skill' ของแต่ละข้อ: 'ทักษะกระบวนการทางวิทยาศาสตร์', 'ชีววิทยา', 'เคมี', 'ฟิสิกส์', หรือ 'โลก ดาราศาสตร์และอวกาศ'",
+        "3. ภาษา (Language): ข้อมูลข้อสอบต้องรองรับ 2 ภาษา (th และ en) ทุกจุด ทั้งโจทย์ ตัวเลือก และเฉลย"
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สารละลายเนื้อเดียวที่แท้จริง หากตั้งทิ้งไว้บนโต๊ะข้ามคืนจะเกิดผลลัพธ์ตามข้อใด?",
+        "en": "If a true homogeneous solution is left to stand on a table overnight, what will be the result?"
+      },
+      "options": {
+        "th": ["ไม่มีการแยกชั้นหรือตกตะกอนใดๆ", "ตัวละลายจะตกตะกอนลงมากองที่ก้นแก้ว", "สีของสารละลายจะเข้มขึ้นเอง", "สารละลายจะกลายเป็นของแข็ง"],
+        "en": ["No separation or precipitation occurs at all", "The solute will precipitate at the bottom of the glass", "The color of the solution will darken by itself", "The solution will turn solid"]
+      },
+      "answer": { "th": "ไม่มีการแยกชั้นหรือตกตะกอนใดๆ", "en": "No separation or precipitation occurs at all" },
+      "explanation": {
+        "th": "คุณสมบัติสำคัญของสารละลายคืออนุภาคจะกระจายตัวอย่างสมบูรณ์และไม่มีวันตกตะกอนลงมาแม้ตั้งทิ้งไว้",
+        "en": "A key property of a solution is that particles are completely dispersed and will never precipitate, even if left standing."
+      }
+    },
+    {
+      "id": 2,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ระหว่าง น้ำทะเล กับ น้ำสระว่ายน้ำทั่วไป ข้อใดมีความเข้มข้นของ 'เกลือ' สูงกว่ากัน?",
+        "en": "Between Sea water and regular Swimming pool water, which has a higher concentration of 'salt'?"
+      },
+      "options": {
+        "th": ["น้ำทะเล", "น้ำสระว่ายน้ำ", "มีความเข้มข้นเท่ากัน", "ไม่มีเกลือในน้ำทั้งสองชนิด"],
+        "en": ["Sea water", "Swimming pool water", "They have equal concentration", "There is no salt in both waters"]
+      },
+      "answer": { "th": "น้ำทะเล", "en": "Sea water" },
+      "explanation": {
+        "th": "น้ำทะเลมีตัวละลายประเภทเกลือแร่ (โซเดียมคลอไรด์) ผสมอยู่เป็นปริมาณมาก จึงมีความเข้มข้นและรสเค็มจัด",
+        "en": "Sea water contains a large amount of dissolved minerals (sodium chloride), making it highly concentrated and very salty."
+      }
+    },
+    {
+      "id": 3,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "น้ำเชื่อมที่ 'ใสและไม่มีสีเลย' บ่งบอกถึงสิ่งใดในทางวิทยาศาสตร์?",
+        "en": "What does a 'clear and completely colorless' syrup indicate in science?"
+      },
+      "options": {
+        "th": ["ตัวละลายไม่มีสี ไม่ได้หมายความว่าความเข้มข้นเป็น 0%", "ความเข้มข้นของน้ำตาลคือ 0%", "น้ำเชื่อมแก้วนี้จืดสนิทแน่นอน", "ตัวทำละลายระเหยออกไปหมดแล้ว"],
+        "en": ["The solute is colorless, it does not mean the concentration is 0%", "The sugar concentration is 0%", "This syrup is definitely completely bland", "The solvent has completely evaporated"]
+      },
+      "answer": { "th": "ตัวละลายไม่มีสี ไม่ได้หมายความว่าความเข้มข้นเป็น 0%", "en": "The solute is colorless, it does not mean the concentration is 0%" },
+      "explanation": {
+        "th": "น้ำตาลทรายขาวเมื่อละลายน้ำจะใสไม่มีสี แต่ยังคงมีความหวานและความเข้มข้นแฝงอยู่",
+        "en": "White sugar dissolved in water is clear and colorless, but it still contains sweetness and a hidden concentration."
+      }
+    },
+    {
+      "id": 4,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ชั่งน้ำตาล 20 กรัม ผสมลงในน้ำเปล่า 80 กรัม สารละลายน้ำเชื่อมนี้เข้มข้นกี่ <b>% W/W</b>?",
+        "en": "Weigh 20 grams of sugar and mix it into 80 grams of plain water. What is the <b>% W/W</b> concentration of this syrup?"
+      },
+      "options": {
+        "th": ["20%", "25%", "80%", "100%"],
+        "en": ["20%", "25%", "80%", "100%"]
+      },
+      "answer": { "th": "20%", "en": "20%" },
+      "explanation": {
+        "th": "มวลรวมคือ 20 + 80 = 100 กรัมพอดี ดังนั้น % = 20/100 * 100 = 20% W/W",
+        "en": "Total mass is exactly 20 + 80 = 100 grams. Therefore, % = 20/100 * 100 = 20% W/W"
+      }
+    },
+    {
+      "id": 5,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ผสมน้ำมันหอมระเหย 10 mL ลงในแอลกอฮอล์จนได้ <b>ปริมาตรรวมเป็น 200 mL</b> สารละลายนี้เข้มข้นกี่ <b>% V/V</b>?",
+        "en": "Mix 10 mL of essential oil into alcohol until the <b>total volume is 200 mL</b>. What is the concentration in <b>% V/V</b>?"
+      },
+      "options": {
+        "th": ["5%", "10%", "20%", "2.5%"],
+        "en": ["5%", "10%", "20%", "2.5%"]
+      },
+      "answer": { "th": "5%", "en": "5%" },
+      "explanation": {
+        "th": "โจทย์ให้ปริมาตรรวมมาแล้วคือ 200 mL | คำนวณ (10 / 200) x 100 = 5%",
+        "en": "The total volume is already given as 200 mL | Calculate (10 / 200) x 100 = 5%"
+      }
+    },
+    {
+      "id": 6,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ละลายผงเกลือ 14 กรัม ปรับปริมาตรน้ำจนครบ <b>700 mL</b> สารละลายนี้เข้มข้นกี่ <b>% W/V</b>?",
+        "en": "Dissolve 14 grams of salt powder and adjust the water volume to <b>700 mL</b>. What is the concentration in <b>% W/V</b>?"
+      },
+      "options": {
+        "th": ["2%", "14%", "7%", "20%"],
+        "en": ["2%", "14%", "7%", "20%"]
+      },
+      "answer": { "th": "2%", "en": "2%" },
+      "explanation": {
+        "th": "เข้าสูตร W/V = (14 / 700) x 100 = 2%",
+        "en": "Apply W/V formula = (14 / 700) x 100 = 2%"
+      }
+    },
+    {
+      "id": 7,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถ้านำ 'สารละลายอิ่มตัว' ที่กำลังร้อนจัด ไปแช่ตู้เย็นให้ <b>เย็นลงอย่างรวดเร็ว</b> จะเกิดผลลัพธ์ใด?",
+        "en": "If a very hot 'saturated solution' is placed in the fridge to <b>cool down rapidly</b>, what will be the result?"
+      },
+      "options": {
+        "th": ["ตัวละลายบางส่วนจะตกตะกอนแยกตัวออกมา", "น้ำจะสามารถรับตัวละลายได้มากขึ้น", "ความเข้มข้นของสารละลายจะเพิ่มขึ้น", "สีของสารละลายจะใสขึ้น"],
+        "en": ["Some solute will precipitate/crystallize out", "The water will be able to hold more solute", "The concentration of the solution will increase", "The color of the solution will become clearer"]
+      },
+      "answer": { "th": "ตัวละลายบางส่วนจะตกตะกอนแยกตัวออกมา", "en": "Some solute will precipitate/crystallize out" },
+      "explanation": {
+        "th": "เมื่ออุณหภูมิลดลง ความสามารถในการละลายจะลดลงตาม ตัวละลายส่วนเกินที่น้ำอุ้มไว้ไม่ได้จึงต้องตกตะกอนหรือกลายเป็นผลึก",
+        "en": "When temperature drops, solubility decreases. The excess solute that the water can no longer hold must precipitate or crystallize."
+      }
+    },
+    {
+      "id": 8,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ผสมนมสดที่มีความมัน <b>12% ปริมาตร 50 mL</b> กับนมความมัน <b>2% ปริมาตร 50 mL</b> จะได้นมความมันระดับใหม่กี่เปอร์เซ็นต์?",
+        "en": "Mix fresh milk with <b>12% fat volume 50 mL</b> with <b>2% fat milk volume 50 mL</b>. What will be the new fat percentage?"
+      },
+      "options": {
+        "th": ["7%", "14%", "10%", "5%"],
+        "en": ["7%", "14%", "10%", "5%"]
+      },
+      "answer": { "th": "7%", "en": "7%" },
+      "explanation": {
+        "th": "ปริมาตรเท่ากันนำมาผสมกัน ความเข้มข้นใหม่จะอยู่กึ่งกลางพอดีระหว่าง 12 กับ 2 ซึ่งก็คือ 7%",
+        "en": "When mixing equal volumes, the new concentration is exactly halfway between 12 and 2, which is 7%."
+      }
+    },
+    {
+      "id": 9,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สารละลายเข้มข้น <b>60% ปริมาตร 10 mL</b> ต้องการเจือจางให้เหลือ <b>10%</b> ต้องทำปริมาตรรวมสุดท้ายให้เป็นกี่ <b>mL</b>?",
+        "en": "A <b>60%</b> concentrated solution with a volume of <b>10 mL</b> needs to be diluted to <b>10%</b>. What must the final total volume be in <b>mL</b>?"
+      },
+      "options": {
+        "th": ["60 mL", "50 mL", "100 mL", "600 mL"],
+        "en": ["60 mL", "50 mL", "100 mL", "600 mL"]
+      },
+      "answer": { "th": "60 mL", "en": "60 mL" },
+      "explanation": {
+        "th": "ใช้สูตร C1V1 = C2V2 | 60 x 10 = 10 x V2 | จะได้ V2 = 60 mL",
+        "en": "Use formula C1V1 = C2V2 | 60 x 10 = 10 x V2 | Resulting in V2 = 60 mL"
+      }
+    },
+    {
+      "id": 10,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "คำว่า <b>'เข้มข้น'</b> หรือ <b>'เจือจาง'</b> ในทางวิทยาศาสตร์ มีจุดประสงค์เพื่ออะไร?",
+        "en": "What is the purpose of using the terms <b>'concentrated'</b> or <b>'dilute'</b> in science?"
+      },
+      "options": {
+        "th": ["เพื่อเปรียบเทียบปริมาณตัวละลายอย่างคร่าวๆ ไม่ใช่ตัวเลขเป๊ะๆ", "เพื่อบอกมวลของสารเป็นหน่วยกรัม", "เพื่อระบุว่าสารนั้นอันตรายมากน้อยแค่ไหน", "เพื่อบอกสถานะของแข็ง ของเหลว แก๊ส"],
+        "en": ["To roughly compare the amount of solute, not exact numbers", "To state the mass of the substance in grams", "To indicate how dangerous the substance is", "To tell the state: solid, liquid, or gas"]
+      },
+      "answer": { "th": "เพื่อเปรียบเทียบปริมาณตัวละลายอย่างคร่าวๆ ไม่ใช่ตัวเลขเป๊ะๆ", "en": "To roughly compare the amount of solute, not exact numbers" },
+      "explanation": {
+        "th": "เป็นเพียงคำคุณศัพท์ที่ใช้บอกความรู้สึกหรือสัดส่วนคร่าวๆ หากต้องการความแม่นยำต้องคำนวณเป็นร้อยละ (%) เสมอ",
+        "en": "They are just adjectives used to describe a rough feeling or proportion. For precision, percentage (%) must always be calculated."
+      }
+    },
+    {
+      "id": 11,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ในสูตรความเข้มข้น <b>% W/V</b> ตัวอักษร W และ V ในระดับ ม.ต้น มักใช้หน่วยวัดตามข้อใด?",
+        "en": "In the <b>% W/V</b> concentration formula, what units are mostly used for W and V at the middle school level?"
+      },
+      "options": {
+        "th": ["W ใช้ กรัม (g), V ใช้ มิลลิลิตร (mL)", "W ใช้ กิโลกรัม (kg), V ใช้ ลิตร (L)", "W ใช้ มิลลิกรัม (mg), V ใช้ ลูกบาศก์เมตร", "W ใช้ กรัม (g), V ใช้ กรัม (g)"],
+        "en": ["W uses Grams (g), V uses Milliliters (mL)", "W uses Kilograms (kg), V uses Liters (L)", "W uses Milligrams (mg), V uses Cubic meters", "W uses Grams (g), V uses Grams (g)"]
+      },
+      "answer": { "th": "W ใช้ กรัม (g), V ใช้ มิลลิลิตร (mL)", "en": "W uses Grams (g), V uses Milliliters (mL)" },
+      "explanation": {
+        "th": "ในการทดลองทั่วไปของโรงเรียน W (มวลตัวละลาย) จะชั่งเป็นกรัม และ V (ปริมาตรสารละลาย) จะตวงเป็นมิลลิลิตร (หรือลูกบาศก์เซนติเมตร)",
+        "en": "In general school experiments, W (solute mass) is weighed in grams, and V (solution volume) is measured in milliliters (or cubic centimeters)."
+      }
+    },
+    {
+      "id": 12,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เราสามารถใช้ <b>'กระดาษกรอง'</b> เพื่อแยกสีผสมอาหารออกจากแก้วน้ำสี ได้หรือไม่?",
+        "en": "Can we use <b>'filter paper'</b> to separate food coloring out of a glass of colored water?"
+      },
+      "options": {
+        "th": ["ไม่ได้ เพราะสีผสมอาหารละลายเป็นสารละลายเนื้อเดียวไปแล้ว", "ได้ เพราะสียังคงเป็นของแข็งชิ้นเล็กๆ", "ได้ แต่ต้องพับกระดาษกรองหลายๆ ชั้น", "ไม่ได้ เพราะสีกัดกระดาษจนขาด"],
+        "en": ["No, because the food coloring has dissolved into a homogeneous solution", "Yes, because the color is still small solid pieces", "Yes, but the filter paper must be folded in many layers", "No, because the color corrodes and tears the paper"]
+      },
+      "answer": { "th": "ไม่ได้ เพราะสีผสมอาหารละลายเป็นสารละลายเนื้อเดียวไปแล้ว", "en": "No, because the food coloring has dissolved into a homogeneous solution" },
+      "explanation": {
+        "th": "สารละลายแท้จริงมีอนุภาคเล็กกว่ารูของกระดาษกรองมาก จึงไหลทะลุกระดาษไปได้ทั้งหมดพร้อมกับน้ำ",
+        "en": "A true solution has particles much smaller than the pores of filter paper, so it flows completely through along with the water."
+      }
+    },
+    {
+      "id": 13,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ละลายผงกาแฟ 30 กรัม ในน้ำร้อน 120 กรัม กาแฟแก้วนี้เข้มข้นกี่ <b>% W/W</b>?",
+        "en": "Dissolve 30 grams of coffee powder in 120 grams of hot water. What is the <b>% W/W</b> concentration of this coffee cup?"
+      },
+      "options": {
+        "th": ["20%", "25%", "30%", "15%"],
+        "en": ["20%", "25%", "30%", "15%"]
+      },
+      "answer": { "th": "20%", "en": "20%" },
+      "explanation": {
+        "th": "มวลรวมทั้งหมด = 30 + 120 = 150 กรัม | หาเปอร์เซ็นต์ (30 / 150) x 100 = 20%",
+        "en": "Total mass = 30 + 120 = 150 grams | Find percentage (30 / 150) x 100 = 20%"
+      }
+    },
+    {
+      "id": 14,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เติมน้ำผลไม้เข้มข้น 24 mL ผสมน้ำเปล่าจนได้ <b>ปริมาตรรวม 600 mL</b> น้ำผลไม้นี้เข้มข้นกี่ <b>% V/V</b>?",
+        "en": "Add 24 mL of concentrated fruit juice and mix with water until the <b>total volume is 600 mL</b>. What is the concentration in <b>% V/V</b>?"
+      },
+      "options": {
+        "th": ["4%", "24%", "12%", "6%"],
+        "en": ["4%", "24%", "12%", "6%"]
+      },
+      "answer": { "th": "4%", "en": "4%" },
+      "explanation": {
+        "th": "นำตัวละลายหารด้วยปริมาตรรวม: (24 / 600) x 100 = 4%",
+        "en": "Divide solute by total volume: (24 / 600) x 100 = 4%"
+      }
+    },
+    {
+      "id": 15,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "หากมีน้ำเกลือ 5% และต้องการทำให้มีความเข้มข้นเพิ่มเป็น 10% <b>'โดยห้ามเติมเกลือเพิ่ม'</b> ควรทำวิธีการใด?",
+        "en": "If you have 5% saltwater and want to increase its concentration to 10% <b>'without adding more salt'</b>, what method should you use?"
+      },
+      "options": {
+        "th": ["นำไปต้มให้น้ำระเหยออกไปครึ่งหนึ่ง", "นำไปแช่แข็งให้กลายเป็นน้ำแข็ง", "ใช้ช้อนคนให้แรงขึ้น", "เติมน้ำเปล่าเพิ่มเข้าไปอีก 1 เท่าตัว"],
+        "en": ["Boil to evaporate half of the water away", "Freeze it into ice", "Stir harder with a spoon", "Add double the amount of plain water"]
+      },
+      "answer": { "th": "นำไปต้มให้น้ำระเหยออกไปครึ่งหนึ่ง", "en": "Boil to evaporate half of the water away" },
+      "explanation": {
+        "th": "เมื่อน้ำ (ตัวทำละลาย) ระเหยออกไป ปริมาตรรวมจะลดลง แต่เนื้อเกลือยังมีเท่าเดิม ส่งผลให้สัดส่วนความเข้มข้นเพิ่มสูงขึ้น",
+        "en": "When water (solvent) evaporates, the total volume decreases, but the salt content remains the same, resulting in a higher concentration ratio."
+      }
+    },
+    {
+      "id": 16,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ในอากาศที่เราหายใจ แก๊สใดต่อไปนี้ทำหน้าที่เป็น <b>'ตัวละลาย (Solute)'</b>?",
+        "en": "In the air we breathe, which of the following gases acts as a <b>'Solute'</b>?"
+      },
+      "options": {
+        "th": ["แก๊สออกซิเจน", "แก๊สไนโตรเจน", "อากาศไม่มีตัวละลาย", "เป็นตัวละลายทั้งคู่"],
+        "en": ["Oxygen gas", "Nitrogen gas", "Air has no solute", "Both are solutes"]
+      },
+      "answer": { "th": "แก๊สออกซิเจน", "en": "Oxygen gas" },
+      "explanation": {
+        "th": "แก๊สไนโตรเจนมีปริมาณมากที่สุด (78%) จึงเป็นตัวทำละลาย ส่วนแก๊สอื่นๆ ที่เหลือรวมถึงออกซิเจน (21%) ถือเป็นตัวละลายทั้งหมด",
+        "en": "Nitrogen has the highest amount (78%) and is the solvent. The remaining gases, including Oxygen (21%), are all considered solutes."
+      }
+    },
+    {
+      "id": 17,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "นำ <b>น้ำเปล่า (0%)</b> ปริมาตร 150 mL มาผสม <b>น้ำเชื่อม 20%</b> ปริมาตร 150 mL ความหวานใหม่ของแก้วนี้จะเป็นกี่เปอร์เซ็นต์?",
+        "en": "Mix <b>plain water (0%)</b> of 150 mL volume with <b>20% syrup</b> of 150 mL volume. What will be the new sweetness percentage of this glass?"
+      },
+      "options": {
+        "th": ["10%", "20%", "0%", "15%"],
+        "en": ["10%", "20%", "0%", "15%"]
+      },
+      "answer": { "th": "10%", "en": "10%" },
+      "explanation": {
+        "th": "การผสมสารในปริมาตรที่เท่ากัน ความเข้มข้นใหม่คือค่าเฉลี่ยตรงกลางระหว่างสองแก้วเดิม (0 + 20) / 2 = 10%",
+        "en": "When mixing equal volumes, the new concentration is the exact average between the two original glasses: (0 + 20) / 2 = 10%."
+      }
+    },
+    {
+      "id": 18,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ทำไมเราถึงนิยมใช้สูตร <b>% V/V</b> ในการวัดสารละลายที่เป็นของเหลวผสมของเหลว?",
+        "en": "Why is the <b>% V/V</b> formula popularly used for measuring liquid-liquid solutions?"
+      },
+      "options": {
+        "th": ["เพราะการตวงปริมาตรของเหลวทำได้สะดวกและเร็วกว่าการนำไปชั่งน้ำหนัก", "เพราะของเหลวไม่มีมวลให้ชั่ง", "เพราะเครื่องชั่งน้ำหนักไม่สามารถวางของเหลวได้", "เพราะของเหลวจะเปลี่ยนสีถ้านำไปชั่ง"],
+        "en": ["Because measuring liquid volume is much more convenient and faster than weighing it", "Because liquids have no mass to weigh", "Because weighing scales cannot hold liquids", "Because liquids will change color if weighed"]
+      },
+      "answer": { "th": "เพราะการตวงปริมาตรของเหลวทำได้สะดวกและเร็วกว่าการนำไปชั่งน้ำหนัก", "en": "Because measuring liquid volume is much more convenient and faster than weighing it" },
+      "explanation": {
+        "th": "การเทของเหลวลงในกระบอกตวงเพื่อดูตัวเลขปริมาตร เป็นวิธีที่ง่ายและทำได้ทันทีในห้องปฏิบัติการ",
+        "en": "Pouring a liquid into a graduated cylinder to read the volume number is an easy and immediate method in the lab."
+      }
+    },
+    {
+      "id": 19,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถุงน้ำเกลือหนักรวม <b>500 กรัม</b> หากระบุว่ามีความเข้มข้น <b>10% W/W</b> จะมีเกลือบริสุทธิ์อยู่ในถุงกี่กรัม?",
+        "en": "A saltwater bag weighs <b>500 grams</b> in total. If it indicates a concentration of <b>10% W/W</b>, how many grams of pure salt are in the bag?"
+      },
+      "options": {
+        "th": ["50 กรัม", "10 กรัม", "500 กรัม", "5 กรัม"],
+        "en": ["50 grams", "10 grams", "500 grams", "5 grams"]
+      },
+      "answer": { "th": "50 กรัม", "en": "50 grams" },
+      "explanation": {
+        "th": "10% หมายความว่าใน 100 กรัม มีเกลืออยู่ 10 กรัม ดังนั้นถ้ามี 500 กรัม ก็จะมีเกลือ 10 x 5 = 50 กรัมนั่นเอง",
+        "en": "10% means there are 10g of salt in 100g. Therefore, in 500g, there will be 10 x 5 = 50 grams of salt."
+      }
+    },
+    {
+      "id": 20,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ยาน้ำขวดหนึ่งมี <b>ปริมาตรรวม 200 mL</b> และมีความเข้มข้น <b>5% W/V</b> มียาผสมอยู่กี่กรัม?",
+        "en": "A bottle of liquid medication has a <b>total volume of 200 mL</b> and a <b>5% W/V</b> concentration. How many grams of drug are mixed in?"
+      },
+      "options": {
+        "th": ["10 กรัม", "5 กรัม", "20 กรัม", "200 กรัม"],
+        "en": ["10 grams", "5 grams", "20 grams", "200 grams"]
+      },
+      "answer": { "th": "10 กรัม", "en": "10 grams" },
+      "explanation": {
+        "th": "จากสูตร 5 = (มวลยา / 200) x 100 | ย้ายข้างสมการ จะได้มวลยา = (5 x 200) / 100 = 10 กรัม",
+        "en": "From formula 5 = (Drug Mass / 200) x 100 | Rearrange equation to get Drug Mass = (5 x 200) / 100 = 10 grams"
+      }
+    },
+    {
+      "id": 21,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "น้ำยาฆ่าเชื้อ <b>80% ปริมาตร 5 mL</b> นำมาเติมน้ำเปล่าเพิ่มจนได้ <b>ปริมาตรรวม 40 mL</b> จะมีความเข้มข้นใหม่กี่เปอร์เซ็นต์?",
+        "en": "An <b>80%</b> disinfectant of <b>5 mL volume</b> is diluted with water until reaching a <b>total volume of 40 mL</b>. What will be its new percentage concentration?"
+      },
+      "options": {
+        "th": ["10%", "20%", "40%", "8%"],
+        "en": ["10%", "20%", "40%", "8%"]
+      },
+      "answer": { "th": "10%", "en": "10%" },
+      "explanation": {
+        "th": "ใช้สูตรการเจือจาง C1V1 = C2V2 | 80 x 5 = C2 x 40 | ย้ายข้างจะได้ C2 = 400 / 40 = 10%",
+        "en": "Use dilution formula C1V1 = C2V2 | 80 x 5 = C2 x 40 | Rearranging gives C2 = 400 / 40 = 10%"
+      }
+    },
+    {
+      "id": 22,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ผสมสารละลาย <b>5% ปริมาตร 100 mL</b> เข้ากับสารละลายชนิดเดียวกัน <b>25% ปริมาตร 100 mL</b> จะได้ความเข้มข้นใหม่เท่าใด?",
+        "en": "Mix a <b>5% solution (100 mL)</b> with another solution of the same type at <b>25% (100 mL)</b>. What will be the new concentration?"
+      },
+      "options": {
+        "th": ["15%", "30%", "20%", "10%"],
+        "en": ["15%", "30%", "20%", "10%"]
+      },
+      "answer": { "th": "15%", "en": "15%" },
+      "explanation": {
+        "th": "เมื่อผสมในปริมาตรที่เท่ากัน ค่าความเข้มข้นจะเฉลี่ยอยู่ตรงกลางพอดีระหว่าง 5 และ 25 (คือ 15%)",
+        "en": "When mixed in equal volumes, the concentration averages exactly in the middle between 5 and 25 (which is 15%)."
+      }
+    },
+    {
+      "id": 23,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "การใช้น้ำร้อนชงเครื่องดื่ม มีผลอย่างไรต่อ <b>'จุดอิ่มตัว'</b> ของสารละลาย?",
+        "en": "How does using hot water to brew a drink affect the <b>'saturation point'</b> of the solution?"
+      },
+      "options": {
+        "th": ["ทำให้น้ำรับตัวละลายได้มากขึ้นกว่าตอนที่เป็นน้ำเย็น", "ทำให้น้ำรับตัวละลายได้น้อยลง", "ทำให้ตัวละลายตกตะกอนทันที", "ไม่มีผลใดๆ ต่อการละลาย"],
+        "en": ["Allows water to hold more solute than cold water", "Makes water hold less solute", "Causes the solute to precipitate immediately", "Has no effect on dissolving"]
+      },
+      "answer": { "th": "ทำให้น้ำรับตัวละลายได้มากขึ้นกว่าตอนที่เป็นน้ำเย็น", "en": "Allows water to hold more solute than cold water" },
+      "explanation": {
+        "th": "ความร้อนทำให้อนุภาคของน้ำมีช่องว่างมากขึ้น จึงสามารถเพิ่มขีดจำกัด (จุดอิ่มตัว) ในการรับตัวละลายได้เยอะขึ้น",
+        "en": "Heat creates more space between water particles, thereby increasing the limit (saturation point) to hold more solute."
+      }
+    },
+    {
+      "id": 24,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ผสมตัวยารักษาสิว <b>2 กรัม</b> ลงในเนื้อครีมเปล่า <b>98 กรัม</b> ยาแต้มสิวหลอดนี้เข้มข้นกี่ <b>% W/W</b>?",
+        "en": "Mix <b>2 grams</b> of active acne drug into <b>98 grams</b> of plain cream base. What is the <b>% W/W</b> concentration of this acne spot cream?"
+      },
+      "options": {
+        "th": ["2%", "98%", "100%", "4%"],
+        "en": ["2%", "98%", "100%", "4%"]
+      },
+      "answer": { "th": "2%", "en": "2%" },
+      "explanation": {
+        "th": "มวลรวมทั้งหมดคือ 2 + 98 = 100 กรัมพอดี ดังนั้นความเข้มข้นคือ 2% W/W",
+        "en": "The total mass is exactly 2 + 98 = 100 grams. Therefore, the concentration is 2% W/W."
+      }
+    },
+    {
+      "id": 25,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "นำหัวน้ำหอม <b>45 mL</b> ผสมกับแอลกอฮอล์จนได้ <b>ปริมาตรรวม 450 mL</b> น้ำหอมขวดนี้เข้มข้นกี่ <b>% V/V</b>?",
+        "en": "Mix <b>45 mL</b> of fragrance oil with alcohol until reaching a <b>total volume of 450 mL</b>. What is the <b>% V/V</b> concentration of this perfume?"
+      },
+      "options": {
+        "th": ["10%", "45%", "9%", "20%"],
+        "en": ["10%", "45%", "9%", "20%"]
+      },
+      "answer": { "th": "10%", "en": "10%" },
+      "explanation": {
+        "th": "จากสูตร นำปริมาตรตัวละลายหารด้วยปริมาตรรวม: (45 / 450) x 100 = 10%",
+        "en": "From the formula, divide solute volume by total volume: (45 / 450) x 100 = 10%"
+      }
+    },
+    {
+      "id": 26,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดคือตัวอย่างของสารละลายที่มี <b>'ของแข็ง'</b> เป็นทั้งตัวทำละลายและตัวละลาย?",
+        "en": "Which of the following is an example of a solution where a <b>'solid'</b> is both the solvent and the solute?"
+      },
+      "options": {
+        "th": ["เหรียญทองแดงผสม (Bronze coin)", "เกลือแกง (Table salt)", "น้ำแข็ง (Ice)", "น้ำเกลือ (Saltwater)"],
+        "en": ["Bronze coin", "Table salt", "Ice", "Saltwater"]
+      },
+      "answer": { "th": "เหรียญทองแดงผสม (Bronze coin)", "en": "Bronze coin" },
+      "explanation": {
+        "th": "เหรียญโลหะผสมเกิดจากการหลอมของแข็ง (เช่น ทองแดงและดีบุก) ให้ละลายเข้าเป็นเนื้อเดียวกัน จึงเรียกว่าสารละลายสถานะของแข็ง",
+        "en": "Alloy coins are made by melting solids (like copper and tin) to dissolve homogeneously together, thus called a solid-state solution."
+      }
+    },
+    {
+      "id": 27,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ปลาในตู้ปลาสามารถหายใจได้ เพราะมี 'แก๊สออกซิเจน' ละลายอยู่ ในระบบนี้ <b>สารใดคือตัวทำละลาย</b>?",
+        "en": "Fish in a tank can breathe because 'oxygen gas' is dissolved. In this system, <b>which substance is the solvent</b>?"
+      },
+      "options": {
+        "th": ["น้ำ", "แก๊สออกซิเจน", "ตู้ปลา", "ปลา"],
+        "en": ["Water", "Oxygen gas", "Fish tank", "Fish"]
+      },
+      "answer": { "th": "น้ำ", "en": "Water" },
+      "explanation": {
+        "th": "น้ำมีปริมาณมากกว่าอย่างมหาศาลและเป็นสถานะหลักของสารละลายในตู้ปลา น้ำจึงทำหน้าที่เป็นตัวทำละลาย",
+        "en": "Water is present in a vastly larger amount and defines the main state of the solution in the tank, thus acting as the solvent."
+      }
+    },
+    {
+      "id": 28,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "น้ำยาลบคำผิด (ลิควิดเปเปอร์) ที่ต้อง <b>'เขย่าขวด'</b> ทุกครั้งก่อนใช้ จัดเป็นสารละลายที่แท้จริงหรือไม่?",
+        "en": "Is correction fluid (liquid paper) that needs <b>'shaking'</b> before every use considered a true solution?"
+      },
+      "options": {
+        "th": ["ไม่เป็น เพราะมีการแยกชั้นและตกตะกอน", "เป็น เพราะมันเป็นของเหลว", "เป็น เพราะมันมีสีขาว", "ไม่เป็น เพราะมันลบหมึกได้"],
+        "en": ["No, because it separates and precipitates", "Yes, because it is a liquid", "Yes, because it has a white color", "No, because it erases ink"]
+      },
+      "answer": { "th": "ไม่เป็น เพราะมีการแยกชั้นและตกตะกอน", "en": "No, because it separates and precipitates" },
+      "explanation": {
+        "th": "สารที่ต้องเขย่าก่อนใช้คือ 'สารแขวนลอย' เพราะอนุภาคมีขนาดใหญ่และตกตะกอนได้เมื่อตั้งทิ้งไว้ ไม่ใช่สารละลายเนื้อเดียว",
+        "en": "Substances that require shaking are 'suspensions' because particles are large and precipitate when left standing. They are not homogeneous solutions."
+      }
+    },
+    {
+      "id": 29,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "หากชั่งเกลือ <b>12 กรัม</b> ไปละลายในน้ำ <b>48 กรัม</b> มวลรวมของสารละลายแก้วนี้คือเท่าใด?",
+        "en": "If you weigh <b>12 grams</b> of salt and dissolve it in <b>48 grams</b> of water, what is the total mass of this solution cup?"
+      },
+      "options": {
+        "th": ["60 กรัม", "48 กรัม", "12 กรัม", "36 กรัม"],
+        "en": ["60 grams", "48 grams", "12 grams", "36 grams"]
+      },
+      "answer": { "th": "60 กรัม", "en": "60 grams" },
+      "explanation": {
+        "th": "มวลไม่มีวันสูญหาย (กฎทรงมวล) เมื่อนำมารวมกัน มวลรวมของสารละลายจึงต้องบวกกันเสมอ (12 + 48 = 60 กรัม)",
+        "en": "Mass never disappears (Law of Conservation of Mass). When combined, the total solution mass must always be the sum (12 + 48 = 60 grams)."
+      }
+    },
+    {
+      "id": 30,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ม.2 เทอม 1 - หน่วยที่ 2 สารละลาย บทที่ 2 ความเข้มข้นของสารละลาย",
+        "en": "Basic Science M.2 Term 1 - Unit 2 Solutions, Chapter 2: Concentration of Solution"
+      },
+      "skill": { "th": "เคมี", "en": "Chemistry" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จากอัตราส่วนของสารละลายต่อไปนี้ ข้อใดมี <b>ความเข้มข้นสูงที่สุด</b>?",
+        "en": "From the following solution ratios, which one has the <b>highest concentration</b>?"
+      },
+      "options": {
+        "th": ["น้ำตาล 40 กรัม ในน้ำ 60 กรัม", "น้ำตาล 20 กรัม ในน้ำ 80 กรัม", "น้ำตาล 10 กรัม ในน้ำ 90 กรัม", "น้ำตาล 5 กรัม ในน้ำ 95 กรัม"],
+        "en": ["40g sugar in 60g water", "20g sugar in 80g water", "10g sugar in 90g water", "5g sugar in 95g water"]
+      },
+      "answer": { "th": "น้ำตาล 40 กรัม ในน้ำ 60 กรัม", "en": "40g sugar in 60g water" },
+      "explanation": {
+        "th": "น้ำตาล 40g ในน้ำ 60g จะได้มวลรวม 100g ซึ่งคิดเป็นความเข้มข้นถึง 40% (สูงที่สุดในตัวเลือก)",
+        "en": "40g of sugar in 60g of water makes a total mass of 100g, which calculates to a 40% concentration (the highest among the choices)."
+      }
+    }
+  ]
+}

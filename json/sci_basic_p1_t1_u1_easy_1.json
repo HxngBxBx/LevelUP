@@ -1,0 +1,696 @@
+{
+  "metadata": {
+    "exam_title": {
+      "th": "วิทยาศาสตร์ ป.1 เทอม 1 - หน่วยที่ 1 บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์ (ง่าย ชุดที่ 1)",
+      "en": "Science P.1 Term 1 - Unit 1 L1: Learning like a scientist (Easy Set 1)"
+    },
+    "total_questions": 30,
+    "difficulty_distribution": {
+      "description": {
+        "th": "คำแนะนำ: ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุด้านล่างนี้อย่างเคร่งครัด",
+        "en": "Guideline: When generating the exam, strictly ensure that the difficulty level of the questions matches the percentage distribution specified below."
+      },
+      "Easy": "100%",
+      "Medium": "0%",
+      "Hard": "0%",
+      "Extreme": "0%"
+    },
+    "dashboard_config": {
+      "theme": "modern_ai_bright",
+      "watermark_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "header_footer_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "active_recall_mode": true
+    },
+    "ai_prompt_guidelines": {
+      "description": "คำสั่งเฉพาะสำหรับ AI ในการสร้างข้อสอบวิทยาศาสตร์ (Science Prompt Instructions)",
+      "rules": [
+        "1. ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุอย่างเคร่งครัด",
+        "2. สกิล (Skill): ให้คัดลอก 1 ใน 5 สกิลนี้ไปใส่ในตัวแปร 'skill' ของแต่ละข้อ: 'ทักษะกระบวนการทางวิทยาศาสตร์', 'ชีววิทยา', 'เคมี', 'ฟิสิกส์', หรือ 'โลก ดาราศาสตร์และอวกาศ'",
+        "3. รูปภาพประกอบ (SVG/Emoji): หากข้อสอบข้อไหนสามารถอธิบายด้วยภาพวาดได้ ให้ใช้ SVG code สร้างรูปภาพประกอบง่ายๆ สีสันสดใส หรือ Emoji แทรกไว้ในโจทย์หรือตัวเลือกด้วยเสมอ",
+        "4. ภาษา (Language): ข้อมูลข้อสอบต้องรองรับ 2 ภาษา (th และ en) ทุกจุด ทั้งโจทย์ ตัวเลือก และเฉลย"
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "อวัยวะใดที่เราใช้ในการ <b>มองเห็น</b> สีและรูปร่างของสิ่งต่างๆ? <br><div style='font-size:3rem; margin-top:10px;'>👁️</div>",
+        "en": "Which organ do we use to <b>see</b> colors and shapes? <br><div style='font-size:3rem; margin-top:10px;'>👁️</div>"
+      },
+      "options": {
+        "th": ["ตา", "หู", "จมูก", "ปาก"],
+        "en": ["Eyes", "Ears", "Nose", "Mouth"]
+      },
+      "answer": { "th": "ตา", "en": "Eyes" },
+      "explanation": {
+        "th": "เราใช้ 'ตา' ในการมองเห็นและสังเกตสิ่งต่างๆ รอบตัว",
+        "en": "We use our 'eyes' to see and observe things around us."
+      }
+    },
+    {
+      "id": 2,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "อวัยวะใดที่เราใช้ในการ <b>ฟังเสียง</b> นกร้อง? <br><div style='font-size:3rem; margin-top:10px;'>👂</div>",
+        "en": "Which organ do we use to <b>hear</b> a bird singing? <br><div style='font-size:3rem; margin-top:10px;'>👂</div>"
+      },
+      "options": {
+        "th": ["ตา", "หู", "จมูก", "มือ"],
+        "en": ["Eyes", "Ears", "Nose", "Hands"]
+      },
+      "answer": { "th": "หู", "en": "Ears" },
+      "explanation": {
+        "th": "เราใช้ 'หู' ในการรับฟังเสียงต่างๆ",
+        "en": "We use our 'ears' to listen to sounds."
+      }
+    },
+    {
+      "id": 3,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เราใช้สิ่งใดในการ <b>ดมกลิ่น</b> หอมของดอกไม้? <br><div style='font-size:3rem; margin-top:10px;'>👃🌸</div>",
+        "en": "What do we use to <b>smell</b> the scent of a flower? <br><div style='font-size:3rem; margin-top:10px;'>👃🌸</div>"
+      },
+      "options": {
+        "th": ["ตา", "หู", "จมูก", "ลิ้น"],
+        "en": ["Eyes", "Ears", "Nose", "Tongue"]
+      },
+      "answer": { "th": "จมูก", "en": "Nose" },
+      "explanation": {
+        "th": "เราใช้ 'จมูก' ในการรับกลิ่น",
+        "en": "We use our 'nose' to smell."
+      }
+    },
+    {
+      "id": 4,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "อวัยวะใดในปากที่ทำหน้าที่ <b>รับรสชาติ</b> ของอาหาร? <br><div style='font-size:3rem; margin-top:10px;'>👅🍦</div>",
+        "en": "Which organ in the mouth is responsible for <b>tasting</b> food? <br><div style='font-size:3rem; margin-top:10px;'>👅🍦</div>"
+      },
+      "options": {
+        "th": ["ฟัน", "ลิ้น", "เหงือก", "ริมฝีปาก"],
+        "en": ["Teeth", "Tongue", "Gums", "Lips"]
+      },
+      "answer": { "th": "ลิ้น", "en": "Tongue" },
+      "explanation": {
+        "th": "เราใช้ 'ลิ้น' ในการรับรส หวาน ขม เปรี้ยว เค็ม",
+        "en": "We use our 'tongue' to taste sweet, bitter, sour, and salty."
+      }
+    },
+    {
+      "id": 5,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เราจะรู้ได้อย่างไรว่าตุ๊กตาหมีตัวนี้นุ่มหรือแข็ง? <br><div style='font-size:3rem; margin-top:10px;'>🧸</div>",
+        "en": "How can we know if this teddy bear is soft or hard? <br><div style='font-size:3rem; margin-top:10px;'>🧸</div>"
+      },
+      "options": {
+        "th": ["ใช้ตามอง", "ใช้มือสัมผัส", "ใช้จมูกดม", "ใช้หูฟัง"],
+        "en": ["Look with eyes", "Touch with hands", "Smell with nose", "Listen with ears"]
+      },
+      "answer": { "th": "ใช้มือสัมผัส", "en": "Touch with hands" },
+      "explanation": {
+        "th": "เราใช้มือและผิวหนังในการสัมผัสเพื่อรับรู้ความนุ่ม แข็ง ร้อน หรือเย็น",
+        "en": "We use our hands and skin to touch and feel if something is soft, hard, hot, or cold."
+      }
+    },
+    {
+      "id": 6,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "นักวิทยาศาสตร์ที่ดีควรมีนิสัยอย่างไร? <br><div style='font-size:3rem; margin-top:10px;'>🧑‍🔬</div>",
+        "en": "What is a good habit of a scientist? <br><div style='font-size:3rem; margin-top:10px;'>🧑‍🔬</div>"
+      },
+      "options": {
+        "th": ["ช่างสังเกต", "ชอบนอนหลับ", "ไม่ชอบตั้งคำถาม", "เชื่อคนอื่นง่ายๆ"],
+        "en": ["Observant", "Likes to sleep", "Doesn't ask questions", "Believes others easily"]
+      },
+      "answer": { "th": "ช่างสังเกต", "en": "Observant" },
+      "explanation": {
+        "th": "นักวิทยาศาสตร์ต้องเป็นคนช่างสังเกตและชอบตั้งคำถามเพื่อหาคำตอบ",
+        "en": "A scientist must be observant and like to ask questions to find answers."
+      }
+    },
+    {
+      "id": 7,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เครื่องมือใดช่วยให้เรามองเห็นสิ่งเล็กๆ ให้มีขนาดใหญ่ขึ้น? <br><div style='font-size:3rem; margin-top:10px;'>🐜</div>",
+        "en": "Which tool helps us see small things in a larger size? <br><div style='font-size:3rem; margin-top:10px;'>🐜</div>"
+      },
+      "options": {
+        "th": ["ไม้บรรทัด", "แว่นขยาย", "เทอร์โมมิเตอร์", "ตาชั่ง"],
+        "en": ["Ruler", "Magnifying glass", "Thermometer", "Scale"]
+      },
+      "answer": { "th": "แว่นขยาย", "en": "Magnifying glass" },
+      "explanation": {
+        "th": "แว่นขยาย (Magnifying glass) เป็นเครื่องมือที่ช่วยขยายภาพสิ่งของเล็กๆ ให้มองเห็นได้ชัดเจนขึ้น",
+        "en": "A magnifying glass helps enlarge the image of small objects so they can be seen clearly."
+      }
+    },
+    {
+      "id": 8,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "มะนาวมีรสชาติอย่างไร? <br><div style='font-size:3rem; margin-top:10px;'>🍋</div>",
+        "en": "How does a lemon taste? <br><div style='font-size:3rem; margin-top:10px;'>🍋</div>"
+      },
+      "options": {
+        "th": ["หวาน", "เค็ม", "เปรี้ยว", "เผ็ด"],
+        "en": ["Sweet", "Salty", "Sour", "Spicy"]
+      },
+      "answer": { "th": "เปรี้ยว", "en": "Sour" },
+      "explanation": {
+        "th": "มะนาวมีรสเปรี้ยว ซึ่งเรารับรู้ได้โดยใช้ลิ้นในการชิมรส",
+        "en": "Lemons taste sour, which we perceive using our tongue."
+      }
+    },
+    {
+      "id": 9,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "น้ำแข็งมีความรู้สึกอย่างไรเมื่อเราใช้มือจับ? <br><div style='font-size:3rem; margin-top:10px;'>🧊</div>",
+        "en": "How does ice feel when we touch it with our hands? <br><div style='font-size:3rem; margin-top:10px;'>🧊</div>"
+      },
+      "options": {
+        "th": ["ร้อน", "เย็น", "อุ่น", "นุ่ม"],
+        "en": ["Hot", "Cold", "Warm", "Soft"]
+      },
+      "answer": { "th": "เย็น", "en": "Cold" },
+      "explanation": {
+        "th": "น้ำแข็งมีความเย็น ผิวหนังของเราจะรับรู้ได้เมื่อสัมผัสโดน",
+        "en": "Ice is cold. Our skin can feel it when touched."
+      }
+    },
+    {
+      "id": 10,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถ้าเราหลับตา เราจะไม่สามารถทำสิ่งใดได้? <br><div style='font-size:3rem; margin-top:10px;'>🙈</div>",
+        "en": "If we close our eyes, what can we NOT do? <br><div style='font-size:3rem; margin-top:10px;'>🙈</div>"
+      },
+      "options": {
+        "th": ["ดมกลิ่นดอกไม้", "ฟังเพลง", "มองเห็นสีของลูกบอล", "กินขนม"],
+        "en": ["Smell flowers", "Listen to music", "See the color of a ball", "Eat candy"]
+      },
+      "answer": { "th": "มองเห็นสีของลูกบอล", "en": "See the color of a ball" },
+      "explanation": {
+        "th": "ตาทำหน้าที่มองเห็น ถ้าหลับตาเราจะมองไม่เห็นสีหรือรูปร่าง แต่ยังคงใช้ประสาทสัมผัสอื่นได้",
+        "en": "Eyes are for seeing. If closed, we cannot see colors or shapes, but we can still use other senses."
+      }
+    },
+    {
+      "id": 11,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "สิ่งใดต่อไปนี้มี <b>กลิ่นหอม</b>? <br><div style='font-size:3rem; margin-top:10px;'>🤔</div>",
+        "en": "Which of the following has a <b>fragrant smell</b>? <br><div style='font-size:3rem; margin-top:10px;'>🤔</div>"
+      },
+      "options": {
+        "th": ["ขยะเปียก", "น้ำหอม", "ก้อนหิน", "น้ำแข็ง"],
+        "en": ["Wet garbage", "Perfume", "Rock", "Ice"]
+      },
+      "answer": { "th": "น้ำหอม", "en": "Perfume" },
+      "explanation": {
+        "th": "น้ำหอมถูกสร้างมาให้มีกลิ่นหอม ซึ่งเรารับรู้ได้ทางจมูก",
+        "en": "Perfume is made to have a pleasant, fragrant smell, perceived through the nose."
+      }
+    },
+    {
+      "id": 12,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เกลือมีรสชาติอย่างไร? <br><div style='font-size:3rem; margin-top:10px;'>🧂</div>",
+        "en": "How does salt taste? <br><div style='font-size:3rem; margin-top:10px;'>🧂</div>"
+      },
+      "options": {
+        "th": ["หวาน", "เค็ม", "เปรี้ยว", "จืด"],
+        "en": ["Sweet", "Salty", "Sour", "Bland"]
+      },
+      "answer": { "th": "เค็ม", "en": "Salty" },
+      "explanation": {
+        "th": "เกลือมีรสชาติเค็ม",
+        "en": "Salt has a salty taste."
+      }
+    },
+    {
+      "id": 13,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ก้อนหินมีความรู้สึกอย่างไรเมื่อสัมผัส? <br><div style='font-size:3rem; margin-top:10px;'>🪨</div>",
+        "en": "How does a rock feel when touched? <br><div style='font-size:3rem; margin-top:10px;'>🪨</div>"
+      },
+      "options": {
+        "th": ["นุ่ม", "เหลว", "แข็ง", "ร้อน"],
+        "en": ["Soft", "Liquid", "Hard", "Hot"]
+      },
+      "answer": { "th": "แข็ง", "en": "Hard" },
+      "explanation": {
+        "th": "ก้อนหินเป็นของแข็ง เมื่อจับจะรู้สึกแข็งและหนัก",
+        "en": "A rock is solid. When touched, it feels hard."
+      }
+    },
+    {
+      "id": 14,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถ้าเราเจอของเหลวสีแปลกๆ ที่เราไม่รู้จัก เราควรทำอย่างไร? <br><div style='font-size:3rem; margin-top:10px;'>🧪</div>",
+        "en": "If we find a strange-colored liquid we don't know, what should we do? <br><div style='font-size:3rem; margin-top:10px;'>🧪</div>"
+      },
+      "options": {
+        "th": ["ลองใช้ลิ้นชิมดู", "ลองใช้จมูกดมใกล้ๆ", "บอกคุณครูหรือผู้ใหญ่", "นำมาทาผิวหนัง"],
+        "en": ["Taste it with tongue", "Smell it closely", "Tell a teacher or an adult", "Apply it to the skin"]
+      },
+      "answer": { "th": "บอกคุณครูหรือผู้ใหญ่", "en": "Tell a teacher or an adult" },
+      "explanation": {
+        "th": "การชิม ดม หรือสัมผัสสารเคมีที่ไม่รู้จักเป็นอันตรายอย่างมาก ควรแจ้งผู้ใหญ่ทันที",
+        "en": "Tasting, smelling, or touching unknown chemicals is very dangerous. Always notify an adult."
+      }
+    },
+    {
+      "id": 15,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "การกระทำใดเป็นการใช้ทักษะ <b>'การสังเกต'</b> ด้วยตา? <br><div style='font-size:3rem; margin-top:10px;'>👀</div>",
+        "en": "Which action shows the use of <b>'observation'</b> with eyes? <br><div style='font-size:3rem; margin-top:10px;'>👀</div>"
+      },
+      "options": {
+        "th": ["ฟังวิทยุ", "ดูสีของใบไม้", "ดมกลิ่นอาหาร", "ชิมรสนม"],
+        "en": ["Listening to the radio", "Looking at the color of a leaf", "Smelling food", "Tasting milk"]
+      },
+      "answer": { "th": "ดูสีของใบไม้", "en": "Looking at the color of a leaf" },
+      "explanation": {
+        "th": "การดูสี รูปร่าง และขนาด เป็นการใช้ตาสังเกต",
+        "en": "Looking at color, shape, and size is using eyes for observation."
+      }
+    },
+    {
+      "id": 16,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เราใช้สิ่งใดในการ <b>อ่านหนังสือ</b>? <br><div style='font-size:3rem; margin-top:10px;'>📖</div>",
+        "en": "What do we use to <b>read a book</b>? <br><div style='font-size:3rem; margin-top:10px;'>📖</div>"
+      },
+      "options": {
+        "th": ["หู", "จมูก", "ตา", "ลิ้น"],
+        "en": ["Ears", "Nose", "Eyes", "Tongue"]
+      },
+      "answer": { "th": "ตา", "en": "Eyes" },
+      "explanation": {
+        "th": "เราใช้ตาในการมองเห็นและอ่านตัวหนังสือ",
+        "en": "We use our eyes to see and read letters."
+      }
+    },
+    {
+      "id": 17,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เราใช้สิ่งใดในการ <b>ดูการ์ตูนทีวี</b>? <br><div style='font-size:3rem; margin-top:10px;'>📺</div>",
+        "en": "What do we use to <b>watch a cartoon on TV</b>? <br><div style='font-size:3rem; margin-top:10px;'>📺</div>"
+      },
+      "options": {
+        "th": ["หูและจมูก", "ตาและหู", "ตาและลิ้น", "จมูกและมือ"],
+        "en": ["Ears and Nose", "Eyes and Ears", "Eyes and Tongue", "Nose and Hands"]
+      },
+      "answer": { "th": "ตาและหู", "en": "Eyes and Ears" },
+      "explanation": {
+        "th": "การดูทีวีต้องใช้ตาดูภาพและใช้หูฟังเสียง",
+        "en": "Watching TV requires eyes to see pictures and ears to hear sounds."
+      }
+    },
+    {
+      "id": 18,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เมื่อฝนตกแล้วมี <b>เสียงฟ้าร้อง</b> เราจะรับรู้ด้วยอวัยวะใด? <br><div style='font-size:3rem; margin-top:10px;'>⛈️</div>",
+        "en": "When it rains and there is <b>thunder</b>, which organ perceives it? <br><div style='font-size:3rem; margin-top:10px;'>⛈️</div>"
+      },
+      "options": {
+        "th": ["ตา", "หู", "จมูก", "ปาก"],
+        "en": ["Eyes", "Ears", "Nose", "Mouth"]
+      },
+      "answer": { "th": "หู", "en": "Ears" },
+      "explanation": {
+        "th": "ฟ้าร้องเป็น 'เสียง' ดังนั้นเราจึงรับรู้ได้ด้วยหู",
+        "en": "Thunder is a 'sound', so we perceive it with our ears."
+      }
+    },
+    {
+      "id": 19,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "กระดิ่งมีเสียงอย่างไร? <br><div style='font-size:3rem; margin-top:10px;'>🔔</div>",
+        "en": "What sound does a bell make? <br><div style='font-size:3rem; margin-top:10px;'>🔔</div>"
+      },
+      "options": {
+        "th": ["โฮ่ง โฮ่ง", "กรุ๊งกริ๊ง", "เหมียว เหมียว", "ซู่ ซู่"],
+        "en": ["Woof Woof", "Ring Ring", "Meow Meow", "Swoo Swoo"]
+      },
+      "answer": { "th": "กรุ๊งกริ๊ง", "en": "Ring Ring" },
+      "explanation": {
+        "th": "กระดิ่งเมื่อแกว่งจะเกิดเสียงดังกริ๊งๆ",
+        "en": "When swung, a bell makes a ringing sound."
+      }
+    },
+    {
+      "id": 20,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถ้าเรา <b>อุดหู</b> ทั้งสองข้าง เราจะไม่สามารถทำสิ่งใดได้ชัดเจน? <br><div style='font-size:3rem; margin-top:10px;'>🙉</div>",
+        "en": "If we <b>plug both ears</b>, what will we not be able to do clearly? <br><div style='font-size:3rem; margin-top:10px;'>🙉</div>"
+      },
+      "options": {
+        "th": ["กินข้าว", "มองดวงจันทร์", "ฟังเสียงเพื่อนพูด", "วิ่งเล่น"],
+        "en": ["Eat rice", "Look at the moon", "Hear a friend speaking", "Run and play"]
+      },
+      "answer": { "th": "ฟังเสียงเพื่อนพูด", "en": "Hear a friend speaking" },
+      "explanation": {
+        "th": "หูใช้สำหรับฟังเสียง ถ้าอุดหูไว้ก็จะไม่ได้ยินเสียงคนพูด",
+        "en": "Ears are for hearing. If plugged, we cannot hear people speaking clearly."
+      }
+    },
+    {
+      "id": 21,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "การสังเกตที่ดี ควรทำอย่างไร? <br><div style='font-size:3rem; margin-top:10px;'>🔍</div>",
+        "en": "What should be done for a good observation? <br><div style='font-size:3rem; margin-top:10px;'>🔍</div>"
+      },
+      "options": {
+        "th": ["รีบดูแล้วรีบไป", "ดูอย่างตั้งใจและละเอียด", "หลับตาแล้วเดาเอา", "ถามเพื่อนโดยไม่ดูเอง"],
+        "en": ["Look quickly and leave", "Look attentively and in detail", "Close eyes and guess", "Ask friends without looking"]
+      },
+      "answer": { "th": "ดูอย่างตั้งใจและละเอียด", "en": "Look attentively and in detail" },
+      "explanation": {
+        "th": "การสังเกตแบบนักวิทยาศาสตร์ ต้องอาศัยความตั้งใจและดูรายละเอียดต่างๆ อย่างครบถ้วน",
+        "en": "Scientific observation requires attention and looking at details completely."
+      }
+    },
+    {
+      "id": 22,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เราใช้สิ่งใดในการ <b>กินลูกอม</b> เพื่อให้รู้ว่าหวาน? <br><div style='font-size:3rem; margin-top:10px;'>🍬</div>",
+        "en": "What do we use to <b>eat candy</b> to know it is sweet? <br><div style='font-size:3rem; margin-top:10px;'>🍬</div>"
+      },
+      "options": {
+        "th": ["จมูก", "ตา", "หู", "ลิ้น"],
+        "en": ["Nose", "Eyes", "Ears", "Tongue"]
+      },
+      "answer": { "th": "ลิ้น", "en": "Tongue" },
+      "explanation": {
+        "th": "ความหวานเป็นรสชาติ ซึ่งต้องใช้ 'ลิ้น' ในการรับรส",
+        "en": "Sweetness is a taste, which requires the 'tongue' to perceive."
+      }
+    },
+    {
+      "id": 23,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ของสิ่งใดมีรส <b>หวาน</b>? <br><div style='font-size:3rem; margin-top:10px;'>😋</div>",
+        "en": "Which object tastes <b>sweet</b>? <br><div style='font-size:3rem; margin-top:10px;'>😋</div>"
+      },
+      "options": {
+        "th": ["มะนาว", "เกลือ", "น้ำตาล", "พริก"],
+        "en": ["Lemon", "Salt", "Sugar", "Chili"]
+      },
+      "answer": { "th": "น้ำตาล", "en": "Sugar" },
+      "explanation": {
+        "th": "น้ำตาลเป็นเครื่องปรุงที่มีรสหวาน",
+        "en": "Sugar is a sweet-tasting ingredient."
+      }
+    },
+    {
+      "id": 24,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ถ้าเรา <b>บีบจมูก</b> ไว้แน่นๆ เราจะไม่สามารถทำสิ่งใดได้? <br><div style='font-size:3rem; margin-top:10px;'>👃✋</div>",
+        "en": "If we <b>pinch our nose</b> tightly, what will we not be able to do? <br><div style='font-size:3rem; margin-top:10px;'>👃✋</div>"
+      },
+      "options": {
+        "th": ["ฟังเสียง", "ดมกลิ่น", "มองเห็น", "เดิน"],
+        "en": ["Hear sounds", "Smell odors", "See", "Walk"]
+      },
+      "answer": { "th": "ดมกลิ่น", "en": "Smell odors" },
+      "explanation": {
+        "th": "จมูกใช้ดมกลิ่นและหายใจ ถ้าบีบไว้เราจะไม่ได้กลิ่น",
+        "en": "The nose is for smelling and breathing. If pinched, we cannot smell odors."
+      }
+    },
+    {
+      "id": 25,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เมื่อเราจับแก้วน้ำร้อน เราควรใช้สิ่งใดในการรับความรู้สึก? <br><div style='font-size:3rem; margin-top:10px;'>☕</div>",
+        "en": "When holding a hot glass of water, what do we use to feel it? <br><div style='font-size:3rem; margin-top:10px;'>☕</div>"
+      },
+      "options": {
+        "th": ["ตา", "หู", "มือและผิวหนัง", "จมูก"],
+        "en": ["Eyes", "Ears", "Hands and skin", "Nose"]
+      },
+      "answer": { "th": "มือและผิวหนัง", "en": "Hands and skin" },
+      "explanation": {
+        "th": "ความร้อน สัมผัสได้ด้วยมือและผิวหนังของเรา",
+        "en": "Heat can be felt through our hands and skin."
+      }
+    },
+    {
+      "id": 26,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ขยะเปียกที่ทิ้งไว้นานๆ จะมีลักษณะอย่างไรเมื่อเราใช้จมูกสังเกต? <br><div style='font-size:3rem; margin-top:10px;'>🗑️</div>",
+        "en": "How does wet garbage left for a long time appear when observed with the nose? <br><div style='font-size:3rem; margin-top:10px;'>🗑️</div>"
+      },
+      "options": {
+        "th": ["มีเสียงดัง", "มีสีสวยงาม", "มีรสชาติอร่อย", "มีกลิ่นเหม็น"],
+        "en": ["Loud sound", "Beautiful colors", "Delicious taste", "Bad smell"]
+      },
+      "answer": { "th": "มีกลิ่นเหม็น", "en": "Bad smell" },
+      "explanation": {
+        "th": "การใช้จมูกสังเกตขยะเปียก จะรับรู้ได้ถึง 'กลิ่นเหม็น'",
+        "en": "Observing wet garbage with the nose will reveal a 'bad smell'."
+      }
+    },
+    {
+      "id": 27,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "นักวิทยาศาสตร์ใช้อะไรในการจดบันทึกสิ่งที่สังเกตได้? <br><div style='font-size:3rem; margin-top:10px;'>📝</div>",
+        "en": "What do scientists use to record their observations? <br><div style='font-size:3rem; margin-top:10px;'>📝</div>"
+      },
+      "options": {
+        "th": ["สมุดและดินสอ", "ช้อนและส้อม", "หมอนและผ้าห่ม", "รองเท้า"],
+        "en": ["Notebook and pencil", "Spoon and fork", "Pillow and blanket", "Shoes"]
+      },
+      "answer": { "th": "สมุดและดินสอ", "en": "Notebook and pencil" },
+      "explanation": {
+        "th": "นักวิทยาศาสตร์ใช้สมุดและดินสอในการวาดภาพหรือเขียนบันทึกข้อมูล",
+        "en": "Scientists use a notebook and pencil to draw or write down data."
+      }
+    },
+    {
+      "id": 28,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เราจะรู้ได้อย่างไรว่ากระเป๋าใบไหน <b>หนัก</b> กว่ากัน? <br><div style='font-size:3rem; margin-top:10px;'>🎒🎒</div>",
+        "en": "How can we know which bag is <b>heavier</b>? <br><div style='font-size:3rem; margin-top:10px;'>🎒🎒</div>"
+      },
+      "options": {
+        "th": ["ใช้ตามอง", "ใช้หูฟังเสียง", "ใช้มือยกดู", "ใช้จมูกดม"],
+        "en": ["Look with eyes", "Listen with ears", "Lift with hands", "Smell with nose"]
+      },
+      "answer": { "th": "ใช้มือยกดู", "en": "Lift with hands" },
+      "explanation": {
+        "th": "ความหนักเบา สามารถรับรู้ได้โดยการใช้กล้ามเนื้อมือและแขนในการออกแรงยก",
+        "en": "Weight can be perceived by using hand and arm muscles to lift."
+      }
+    },
+    {
+      "id": 29,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "อวัยวะใดทำหน้าที่เปรียบเสมือน <b>'กล้องถ่ายรูป'</b> ของร่างกายเรา? <br><div style='font-size:3rem; margin-top:10px;'>📷</div>",
+        "en": "Which organ acts like a <b>'camera'</b> for our body? <br><div style='font-size:3rem; margin-top:10px;'>📷</div>"
+      },
+      "options": {
+        "th": ["ตา", "หู", "จมูก", "ลิ้น"],
+        "en": ["Eyes", "Ears", "Nose", "Tongue"]
+      },
+      "answer": { "th": "ตา", "en": "Eyes" },
+      "explanation": {
+        "th": "ตาทำหน้าที่รับแสงและภาพ เหมือนกับกล้องถ่ายรูปที่บันทึกภาพสิ่งต่างๆ",
+        "en": "Eyes receive light and images, just like a camera records pictures."
+      }
+    },
+    {
+      "id": 30,
+      "topic": {
+        "th": "วิทยาศาสตร์พื้นฐาน ป.1 เทอม 1 - บทที่ 1 เรียนรู้แบบนักวิทยาศาสตร์",
+        "en": "Basic Science P.1 Term 1 - Unit 1: Learning like a scientist"
+      },
+      "skill": { "th": "ทักษะกระบวนการทางวิทยาศาสตร์", "en": "Science Process Skills" },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เมื่อเรากินยาที่มีรส <b>ขม</b> เราใช้ประสาทสัมผัสส่วนใด? <br><div style='font-size:3rem; margin-top:10px;'>💊</div>",
+        "en": "When we take medicine that tastes <b>bitter</b>, which sense are we using? <br><div style='font-size:3rem; margin-top:10px;'>💊</div>"
+      },
+      "options": {
+        "th": ["การมองเห็น (ตา)", "การดมกลิ่น (จมูก)", "การชิมรส (ลิ้น)", "การได้ยิน (หู)"],
+        "en": ["Sight (Eyes)", "Smell (Nose)", "Taste (Tongue)", "Hearing (Ears)"]
+      },
+      "answer": { "th": "การชิมรส (ลิ้น)", "en": "Taste (Tongue)" },
+      "explanation": {
+        "th": "ความขมเป็นรสชาติ ซึ่งต้องใช้ลิ้นในการรับรู้ (การชิมรส)",
+        "en": "Bitterness is a taste, which requires the tongue to perceive (tasting)."
+      }
+    }
+  ]
+}

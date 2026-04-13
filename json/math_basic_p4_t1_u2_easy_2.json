@@ -1,0 +1,786 @@
+{
+  "metadata": {
+    "exam_title": {
+      "th": "คณิตศาสตร์ ป.4 เทอม 1 - บทที่ 1 จำนวนนับที่มากกว่า 100,000 (ง่าย ชุดที่ 2)",
+      "en": "Math P.4 Term 1 - Unit 1: Numbers Greater Than 100,000 (Easy Set 2)"
+    },
+    "total_questions": 30,
+    "difficulty_distribution": {
+      "description": {
+        "th": "คำแนะนำ: ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุด้านล่างนี้อย่างเคร่งครัด",
+        "en": "Guideline: When generating the exam, strictly ensure that the difficulty level of the questions matches the percentage distribution specified below."
+      },
+      "Easy": "100%",
+      "Medium": "0%",
+      "Hard": "0%",
+      "Extreme": "0%"
+    },
+    "dashboard_config": {
+      "theme": "modern_ai_bright",
+      "watermark_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "header_footer_text": "ครูเฮงรับสอนพิเศษ วิชาคณิตศาสตร์วิทยาศาสตร์ฟิสิกส์เคมีจิตวิทยาและคอมพิวเตอร์ Tel:0629955188",
+      "active_recall_mode": true
+    },
+    "ai_prompt_guidelines": {
+      "description": "คำสั่งเฉพาะสำหรับ AI ในการสร้างข้อสอบ (Prompt Instructions)",
+      "rules": [
+        "1. ในการสร้างข้อสอบ ให้ประเมินและสร้างระดับความยากของโจทย์ให้ตรงกับสัดส่วนเปอร์เซ็นต์ที่ระบุอย่างเคร่งครัด",
+        "2. สกิล (Skill): ให้คัดลอก 1 ใน 4 สกิลนี้ไปใส่ในตัวแปร 'skill' ของแต่ละข้อ: 'จำนวนและพีชคณิต', 'การวัดและเรขาคณิต', 'สถิติและความน่าจะเป็น', หรือ 'แคลคูลัส'",
+        "3. รูปภาพประกอบ (SVG): หากข้อสอบข้อไหนสามารถอธิบายด้วยภาพวาดได้ ให้ใช้ SVG code สร้างรูปภาพประกอบง่ายๆ สีสันสดใส แทรกไว้ในโจทย์หรือตัวเลือกด้วยเสมอ(ถ้าทำได้)",
+        "4. ภาษา (Language): ข้อมูลข้อสอบต้องรองรับ 2 ภาษา (th และ en) ทุกจุด ทั้งโจทย์ ตัวเลือก และเฉลย"
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จำนวน 705,000 อ่านว่าอย่างไร?",
+        "en": "How do you read the number 705,000?"
+      },
+      "options": {
+        "th": ["เจ็ดแสนห้าหมื่น", "เจ็ดแสนห้าพัน", "เจ็ดหมื่นห้าพัน", "เจ็ดล้านห้าแสน"],
+        "en": ["Seven hundred fifty thousand", "Seven hundred five thousand", "Seventy-five thousand", "Seven million five hundred thousand"]
+      },
+      "answer": { "th": "เจ็ดแสนห้าพัน", "en": "Seven hundred five thousand" },
+      "explanation": {
+        "th": "ตัวเลข 7 อยู่ในหลักแสน และ 5 อยู่ในหลักพัน ส่วนหลักหมื่นเป็น 0 จึงอ่านข้ามไปเป็น 'เจ็ดแสนห้าพัน'",
+        "en": "The digit 7 is in the hundred thousands place and 5 is in the thousands place. The ten thousands place is 0, so it reads 'Seven hundred five thousand'."
+      }
+    },
+    {
+      "id": 2,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "\"เก้าแสนแปดหมื่นเอ็ด\" เขียนเป็นตัวเลขฮินดูอารบิกได้ตามข้อใด?",
+        "en": "\"Nine hundred eighty thousand one\" is written in Hindu-Arabic numerals as?"
+      },
+      "options": {
+        "th": ["980,001", "98,001", "908,001", "980,100"],
+        "en": ["980,001", "98,001", "908,001", "980,100"]
+      },
+      "answer": { "th": "980,001", "en": "980,001" },
+      "explanation": {
+        "th": "เก้าแสน (900,000) แปดหมื่น (80,000) และลงท้ายด้วยเอ็ด (1) รวมกันเป็น 980,001",
+        "en": "Nine hundred thousand (900,000), eighty thousand (80,000), and ending with one (1) combine to make 980,001."
+      }
+    },
+    {
+      "id": 3,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จำนวน 1,234,567 เขียนเป็นตัวเลขไทยได้อย่างไร?",
+        "en": "How is 1,234,567 written in Thai numerals?"
+      },
+      "options": {
+        "th": ["๑,๒๓๔,๕๖๗", "๑,๓๒๔,๕๖๗", "๗,๖๕๔,๓๒๑", "๑,๒๔๓,๕๖๗"],
+        "en": ["๑,๒๓๔,๕๖๗", "๑,๓๒๔,๕๖๗", "๗,๖๕๔,๓๒๑", "๑,๒๔๓,๕๖๗"]
+      },
+      "answer": { "th": "๑,๒๓๔,๕๖๗", "en": "๑,๒๓๔,๕๖๗" },
+      "explanation": {
+        "th": "แปลงตัวเลขทีละตัวตามลำดับ: 1=๑, 2=๒, 3=๓, 4=๔, 5=๕, 6=๖, 7=๗ จะได้ ๑,๒๓๔,๕๖๗",
+        "en": "Translate each digit in order: 1=๑, 2=๒, 3=๓, 4=๔, 5=๕, 6=๖, 7=๗ to get ๑,๒๓๔,๕๖๗."
+      }
+    },
+    {
+      "id": 4,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "3,400,000 อ่านว่าอย่างไร?",
+        "en": "How do you read 3,400,000?"
+      },
+      "options": {
+        "th": ["สามล้านสี่แสน", "สามแสนสี่หมื่น", "สามสิบสี่แสน", "สามล้านสี่หมื่น"],
+        "en": ["Three million four hundred thousand", "Three hundred forty thousand", "Thirty-four hundred thousand", "Three million forty thousand"]
+      },
+      "answer": { "th": "สามล้านสี่แสน", "en": "Three million four hundred thousand" },
+      "explanation": {
+        "th": "เลข 3 อยู่ในหลักล้าน และเลข 4 อยู่ในหลักแสน จึงอ่านว่า 'สามล้านสี่แสน'",
+        "en": "The digit 3 is in the millions place and 4 is in the hundred thousands place, so it reads 'Three million four hundred thousand'."
+      }
+    },
+    {
+      "id": 5,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดเป็นจำนวนที่ <b>น้อยกว่า</b> 200,000?",
+        "en": "Which of the following is a number <b>less than</b> 200,000?"
+      },
+      "options": {
+        "th": ["199,999", "200,001", "201,000", "2,000,000"],
+        "en": ["199,999", "200,001", "201,000", "2,000,000"]
+      },
+      "answer": { "th": "199,999", "en": "199,999" },
+      "explanation": {
+        "th": "199,999 มีหลักแสนคือเลข 1 ซึ่งน้อยกว่าเลข 2 ใน 200,000",
+        "en": "199,999 has a 1 in the hundred thousands place, which is less than the 2 in 200,000."
+      }
+    },
+    {
+      "id": 6,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ในจำนวน 6,543,210 เลขโดด 6 อยู่ในหลักใด?",
+        "en": "In the number 6,543,210, what place value is the digit 6 in?"
+      },
+      "options": {
+        "th": ["หลักล้าน", "หลักแสน", "หลักสิบล้าน", "หลักหมื่น"],
+        "en": ["Millions", "Hundred thousands", "Ten millions", "Ten thousands"]
+      },
+      "answer": { "th": "หลักล้าน", "en": "Millions" },
+      "explanation": {
+        "th": "นับจากขวาไปซ้าย: หน่วย, สิบ, ร้อย, พัน, หมื่น, แสน, ล้าน จะเห็นว่า 6 อยู่ในหลักล้าน",
+        "en": "Counting from right to left: ones, tens, hundreds, thousands, ten thousands, hundred thousands, millions. The 6 is in the millions place."
+      }
+    },
+    {
+      "id": 7,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ในจำนวน 890,000 เลขโดด 9 มีค่าเท่าใด?",
+        "en": "In the number 890,000, what is the value of the digit 9?"
+      },
+      "options": {
+        "th": ["90,000", "900,000", "9,000", "900"],
+        "en": ["90,000", "900,000", "9,000", "900"]
+      },
+      "answer": { "th": "90,000", "en": "90,000" },
+      "explanation": {
+        "th": "เลข 9 อยู่ในหลักหมื่น จึงมีค่า 9 x 10,000 = 90,000",
+        "en": "The digit 9 is in the ten thousands place, so its value is 9 x 10,000 = 90,000."
+      }
+    },
+    {
+      "id": 8,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จำนวนใดมีเลข 4 อยู่ใน \"หลักหมื่น\"?",
+        "en": "Which number has the digit 4 in the \"ten thousands\" place?"
+      },
+      "options": {
+        "th": ["245,000", "425,000", "254,000", "4,250,000"],
+        "en": ["245,000", "425,000", "254,000", "4,250,000"]
+      },
+      "answer": { "th": "245,000", "en": "245,000" },
+      "explanation": {
+        "th": "ในจำนวน 245,000 เลข 4 อยู่ในหลักหมื่น (มีค่าสี่หมื่น)",
+        "en": "In the number 245,000, the digit 4 is in the ten thousands place (value is forty thousand)."
+      }
+    },
+    {
+      "id": 9,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ในจำนวน 1,023,456 เลข 0 มีค่าเท่าใด?",
+        "en": "In the number 1,023,456, what is the value of the 0?"
+      },
+      "options": {
+        "th": ["0", "100,000", "10,000", "ไม่อาจทราบได้"],
+        "en": ["0", "100,000", "10,000", "Cannot be determined"]
+      },
+      "answer": { "th": "0", "en": "0" },
+      "explanation": {
+        "th": "เลข 0 ไม่ว่าจะอยู่ในหลักใด (ในที่นี้คือหลักแสน) ก็จะมีค่าเท่ากับ 0 เสมอ",
+        "en": "The digit 0 always has a value of 0, regardless of its place value (in this case, the hundred thousands place)."
+      }
+    },
+    {
+      "id": 10,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "20 หมื่น มีค่าเท่ากับเท่าใด?",
+        "en": "What is 20 ten-thousands equal to?"
+      },
+      "options": {
+        "th": ["2 แสน", "2 หมื่น", "2 ล้าน", "2 พัน"],
+        "en": ["2 hundred-thousands", "2 ten-thousands", "2 million", "2 thousand"]
+      },
+      "answer": { "th": "2 แสน", "en": "2 hundred-thousands" },
+      "explanation": {
+        "th": "20 หมื่น คือ 20 x 10,000 = 200,000 ซึ่งมีค่าเท่ากับ 2 แสน",
+        "en": "20 ten-thousands is 20 x 10,000 = 200,000, which equals 2 hundred-thousands."
+      }
+    },
+    {
+      "id": 11,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดคือการเขียน 350,000 ในรูปกระจายที่ถูกต้อง?",
+        "en": "Which of the following is the correct expanded form of 350,000?"
+      },
+      "options": {
+        "th": ["300,000 + 50,000", "30,000 + 5,000", "300,000 + 5,000", "3,000,000 + 50,000"],
+        "en": ["300,000 + 50,000", "30,000 + 5,000", "300,000 + 5,000", "3,000,000 + 50,000"]
+      },
+      "answer": { "th": "300,000 + 50,000", "en": "300,000 + 50,000" },
+      "explanation": {
+        "th": "350,000 ประกอบด้วย 3ในหลักแสน (300,000) และ 5 ในหลักหมื่น (50,000) นำมาบวกกัน",
+        "en": "350,000 consists of 3 in the hundred thousands place (300,000) and 5 in the ten thousands place (50,000) added together."
+      }
+    },
+    {
+      "id": 12,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "700,000 + 8,000 + 90 มีค่าตรงกับข้อใด?",
+        "en": "What is the value of 700,000 + 8,000 + 90?"
+      },
+      "options": {
+        "th": ["708,090", "780,090", "708,900", "7,800,090"],
+        "en": ["708,090", "780,090", "708,900", "7,800,090"]
+      },
+      "answer": { "th": "708,090", "en": "708,090" },
+      "explanation": {
+        "th": "เมื่อนำ เจ็ดแสน แปดพัน และ เก้าสิบ มารวมกัน จะได้ 708,090 (หลักหมื่นและหลักร้อยเป็น 0)",
+        "en": "Combining seven hundred thousand, eight thousand, and ninety gives 708,090 (ten thousands and hundreds places are 0)."
+      }
+    },
+    {
+      "id": 13,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดคือการเขียนในรูปกระจายของ 2,400,000?",
+        "en": "What is the expanded form of 2,400,000?"
+      },
+      "options": {
+        "th": ["2,000,000 + 400,000", "2,000,000 + 40,000", "200,000 + 40,000", "2,000,000 + 4,000"],
+        "en": ["2,000,000 + 400,000", "2,000,000 + 40,000", "200,000 + 40,000", "2,000,000 + 4,000"]
+      },
+      "answer": { "th": "2,000,000 + 400,000", "en": "2,000,000 + 400,000" },
+      "explanation": {
+        "th": "2,400,000 ประกอบด้วย 2 ล้าน (2,000,000) และ 4 แสน (400,000)",
+        "en": "2,400,000 has 2 millions (2,000,000) and 4 hundred-thousands (400,000)."
+      }
+    },
+    {
+      "id": 14,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาตัวเลขที่หายไป: 500,000 + [ ? ] + 300 = 560,300",
+        "en": "Find the missing number: 500,000 + [ ? ] + 300 = 560,300"
+      },
+      "options": {
+        "th": ["60,000", "600,000", "6,000", "600"],
+        "en": ["60,000", "600,000", "6,000", "600"]
+      },
+      "answer": { "th": "60,000", "en": "60,000" },
+      "explanation": {
+        "th": "560,300 ขาดหลักหมื่นไป ซึ่งก็คือเลข 6 ในหลักหมื่น มีค่า 60,000",
+        "en": "560,300 is missing the ten thousands place, which is the digit 6 representing 60,000."
+      }
+    },
+    {
+      "id": 15,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "1,000,000 + 1 มีค่าเท่ากับข้อใด?",
+        "en": "What is 1,000,000 + 1 equal to?"
+      },
+      "options": {
+        "th": ["1,000,001", "1,000,010", "1,100,000", "1,000,100"],
+        "en": ["1,000,001", "1,000,010", "1,100,000", "1,000,100"]
+      },
+      "answer": { "th": "1,000,001", "en": "1,000,001" },
+      "explanation": {
+        "th": "เมื่อบวก 1 ในหลักหน่วย จะได้เป็น 1,000,001",
+        "en": "Adding 1 to the ones place gives 1,000,001."
+      }
+    },
+    {
+      "id": 16,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "เปรียบเทียบจำนวนสองจำนวน ข้อใดถูกต้อง?",
+        "en": "Comparing the two numbers, which statement is true?"
+      },
+      "options": {
+        "th": ["850,000 > 805,000", "805,000 > 850,000", "850,000 = 805,000", "85,000 > 850,000"],
+        "en": ["850,000 > 805,000", "805,000 > 850,000", "850,000 = 805,000", "85,000 > 850,000"]
+      },
+      "answer": { "th": "850,000 > 805,000", "en": "850,000 > 805,000" },
+      "explanation": {
+        "th": "หลักแสนเท่ากัน (8) ให้ดูที่หลักหมื่น 5 หมื่น ย่อมมากกว่า 0 หมื่น ดังนั้น 850,000 > 805,000",
+        "en": "Hundred thousands are equal (8). Look at the ten thousands place: 50,000 is greater than 0. Therefore, 850,000 > 805,000."
+      }
+    },
+    {
+      "id": 17,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดมีค่า <b>มากที่สุด</b>?",
+        "en": "Which of the following has the <b>greatest</b> value?"
+      },
+      "options": {
+        "th": ["897,000", "789,000", "879,000", "798,000"],
+        "en": ["897,000", "789,000", "879,000", "798,000"]
+      },
+      "answer": { "th": "897,000", "en": "897,000" },
+      "explanation": {
+        "th": "เทียบหลักแสน: 8 แสน มีค่ามากกว่า 7 แสน จากนั้นเทียบหลักหมื่น: 9 หมื่น > 7 หมื่น ดังนั้น 897,000 มากที่สุด",
+        "en": "Compare hundred thousands: 8 is greater than 7. Then compare ten thousands: 9 > 7. Thus, 897,000 is the greatest."
+      }
+    },
+    {
+      "id": 18,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดมีค่า <b>น้อยที่สุด</b>?",
+        "en": "Which of the following has the <b>least</b> value?"
+      },
+      "options": {
+        "th": ["1,001,000", "1,110,000", "1,011,000", "1,101,000"],
+        "en": ["1,001,000", "1,110,000", "1,011,000", "1,101,000"]
+      },
+      "answer": { "th": "1,001,000", "en": "1,001,000" },
+      "explanation": {
+        "th": "ทุกจำนวนมี 1 ล้านเท่ากัน เมื่อพิจารณาหลักแสนและหลักหมื่น 1,001,000 มีค่าน้อยที่สุด",
+        "en": "All have 1 million. Looking at the hundred thousands and ten thousands places, 1,001,000 has the least value."
+      }
+    },
+    {
+      "id": 19,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ควรเติมเครื่องหมายใดลงในช่องว่าง: 4,500,000 [ ? ] 4,500,000",
+        "en": "Which symbol should fill in the blank: 4,500,000 [ ? ] 4,500,000"
+      },
+      "options": {
+        "th": ["=", ">", "<", "+"],
+        "en": ["=", ">", "<", "+"]
+      },
+      "answer": { "th": "=", "en": "=" },
+      "explanation": {
+        "th": "ตัวเลขทั้งสองฝั่งเหมือนกันทุกหลัก จึงมีค่าเท่ากัน",
+        "en": "The digits on both sides are identical in every place value, so they are equal."
+      }
+    },
+    {
+      "id": 20,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "คู่จำนวนใดมีค่า <b>เท่ากัน</b>?",
+        "en": "Which pair of numbers is <b>equal</b>?"
+      },
+      "options": {
+        "th": ["600,000 กับ หกแสน", "60,000 กับ หกแสน", "6,000,000 กับ หกแสน", "600,000 กับ หกหมื่น"],
+        "en": ["600,000 and Six hundred thousand", "60,000 and Six hundred thousand", "6,000,000 and Six hundred thousand", "600,000 and Sixty thousand"]
+      },
+      "answer": { "th": "600,000 กับ หกแสน", "en": "600,000 and Six hundred thousand" },
+      "explanation": {
+        "th": "600,000 อ่านว่า หกแสน ทั้งสองฝั่งจึงมีค่าเท่ากัน",
+        "en": "600,000 is read as 'Six hundred thousand', so both are equal."
+      }
+    },
+    {
+      "id": 21,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดเรียงลำดับจาก <b>น้อยไปมาก</b> ได้ถูกต้อง?",
+        "en": "Which of the following is ordered from <b>least to greatest</b> correctly?"
+      },
+      "options": {
+        "th": ["200,000 , 300,000 , 400,000", "400,000 , 300,000 , 200,000", "300,000 , 200,000 , 400,000", "400,000 , 200,000 , 300,000"],
+        "en": ["200,000 , 300,000 , 400,000", "400,000 , 300,000 , 200,000", "300,000 , 200,000 , 400,000", "400,000 , 200,000 , 300,000"]
+      },
+      "answer": { "th": "200,000 , 300,000 , 400,000", "en": "200,000 , 300,000 , 400,000" },
+      "explanation": {
+        "th": "พิจารณาหลักแสน 2 แสน < 3 แสน < 4 แสน จึงเรียงจากน้อยไปมากได้ถูกต้อง",
+        "en": "Looking at the hundred thousands place, 2 < 3 < 4. This sequence perfectly goes from least to greatest."
+      }
+    },
+    {
+      "id": 22,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดเรียงลำดับจาก <b>มากไปน้อย</b> ได้ถูกต้อง?",
+        "en": "Which of the following is ordered from <b>greatest to least</b> correctly?"
+      },
+      "options": {
+        "th": ["5,000,000 , 4,000,000 , 3,000,000", "3,000,000 , 4,000,000 , 5,000,000", "4,000,000 , 5,000,000 , 3,000,000", "3,000,000 , 5,000,000 , 4,000,000"],
+        "en": ["5,000,000 , 4,000,000 , 3,000,000", "3,000,000 , 4,000,000 , 5,000,000", "4,000,000 , 5,000,000 , 3,000,000", "3,000,000 , 5,000,000 , 4,000,000"]
+      },
+      "answer": { "th": "5,000,000 , 4,000,000 , 3,000,000", "en": "5,000,000 , 4,000,000 , 3,000,000" },
+      "explanation": {
+        "th": "พิจารณาหลักล้าน 5 ล้าน มากที่สุด รองลงมาคือ 4 ล้าน และน้อยที่สุดคือ 3 ล้าน",
+        "en": "Looking at the millions place, 5 million is the greatest, followed by 4 million, and 3 million is the least."
+      }
+    },
+    {
+      "id": 23,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จำนวนถัดไปในแบบรูป 150,000 , 250,000 , 350,000 , ... คือข้อใด?",
+        "en": "What is the next number in the pattern: 150,000 , 250,000 , 350,000 , ...?"
+      },
+      "options": {
+        "th": ["450,000", "400,000", "550,000", "1,000,000"],
+        "en": ["450,000", "400,000", "550,000", "1,000,000"]
+      },
+      "answer": { "th": "450,000", "en": "450,000" },
+      "explanation": {
+        "th": "แบบรูปนี้เป็นการเพิ่มขึ้นทีละ 100,000 ดังนั้นตัวต่อไปคือ 350,000 + 100,000 = 450,000",
+        "en": "This pattern increases by 100,000 each time. The next number is 350,000 + 100,000 = 450,000."
+      }
+    },
+    {
+      "id": 24,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จำนวนถัดไปในแบบรูป 900,000 , 800,000 , 700,000 , ... คือข้อใด?",
+        "en": "What is the next number in the pattern: 900,000 , 800,000 , 700,000 , ...?"
+      },
+      "options": {
+        "th": ["600,000", "650,000", "500,000", "1,000,000"],
+        "en": ["600,000", "650,000", "500,000", "1,000,000"]
+      },
+      "answer": { "th": "600,000", "en": "600,000" },
+      "explanation": {
+        "th": "แบบรูปนี้เป็นการลดลงทีละ 100,000 ดังนั้นตัวต่อไปคือ 700,000 - 100,000 = 600,000",
+        "en": "This pattern decreases by 100,000 each time. The next number is 700,000 - 100,000 = 600,000."
+      }
+    },
+    {
+      "id": 25,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "จงหาจำนวนที่หายไป: 2,000,000 , [ ? ] , 4,000,000 , 5,000,000",
+        "en": "Find the missing number: 2,000,000 , [ ? ] , 4,000,000 , 5,000,000"
+      },
+      "options": {
+        "th": ["3,000,000", "2,500,000", "3,500,000", "6,000,000"],
+        "en": ["3,000,000", "2,500,000", "3,500,000", "6,000,000"]
+      },
+      "answer": { "th": "3,000,000", "en": "3,000,000" },
+      "explanation": {
+        "th": "แบบรูปนี้เพิ่มขึ้นทีละ 1,000,000 ดังนั้น 2,000,000 + 1,000,000 = 3,000,000",
+        "en": "The pattern increases by 1,000,000 each time. So, 2,000,000 + 1,000,000 = 3,000,000."
+      }
+    },
+    {
+      "id": 26,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ค่าประมาณเป็นจำนวนเต็มแสนของ 230,000 คือข้อใด?",
+        "en": "What is 230,000 rounded to the nearest hundred thousand?"
+      },
+      "options": {
+        "th": ["200,000", "300,000", "250,000", "230,000"],
+        "en": ["200,000", "300,000", "250,000", "230,000"]
+      },
+      "answer": { "th": "200,000", "en": "200,000" },
+      "explanation": {
+        "th": "การประมาณเป็นจำนวนเต็มแสน ให้ดูที่หลักหมื่น เลข 3 มีค่าน้อยกว่า 5 ให้ปัดทิ้งเป็น 0 จะได้ 200,000",
+        "en": "To round to the nearest hundred thousand, look at the ten thousands digit. Since 3 is less than 5, round down to 200,000."
+      }
+    },
+    {
+      "id": 27,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ค่าประมาณเป็นจำนวนเต็มล้านของ 5,600,000 คือข้อใด?",
+        "en": "What is 5,600,000 rounded to the nearest million?"
+      },
+      "options": {
+        "th": ["6,000,000", "5,000,000", "5,500,000", "7,000,000"],
+        "en": ["6,000,000", "5,000,000", "5,500,000", "7,000,000"]
+      },
+      "answer": { "th": "6,000,000", "en": "6,000,000" },
+      "explanation": {
+        "th": "การประมาณเป็นจำนวนเต็มล้าน ให้ดูที่หลักแสน เลข 6 มีค่าตั้งแต่ 5 ขึ้นไป ให้ปัดขึ้นบวกหลักล้านอีก 1 จะได้ 6,000,000",
+        "en": "To round to the nearest million, look at the hundred thousands digit. Since 6 is 5 or more, round up by adding 1 to the millions place, giving 6,000,000."
+      }
+    },
+    {
+      "id": 28,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ค่าประมาณเป็นจำนวนเต็มแสนของ 750,000 คือข้อใด?",
+        "en": "What is 750,000 rounded to the nearest hundred thousand?"
+      },
+      "options": {
+        "th": ["800,000", "700,000", "750,000", "900,000"],
+        "en": ["800,000", "700,000", "750,000", "900,000"]
+      },
+      "answer": { "th": "800,000", "en": "800,000" },
+      "explanation": {
+        "th": "การประมาณเป็นจำนวนเต็มแสน ให้ดูที่หลักหมื่น เลข 5 ถือเป็นจุดกึ่งกลาง กฎคือให้ปัดขึ้น จะได้ 800,000",
+        "en": "To round to the nearest hundred thousand, look at the ten thousands digit. The digit 5 means round up, resulting in 800,000."
+      }
+    },
+    {
+      "id": 29,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ข้อใดมีค่าประมาณเป็นจำนวนเต็มล้านเท่ากับ 2,000,000?",
+        "en": "Which of the following numbers rounds to 2,000,000 when rounded to the nearest million?"
+      },
+      "options": {
+        "th": ["1,900,000", "2,600,000", "1,400,000", "2,800,000"],
+        "en": ["1,900,000", "2,600,000", "1,400,000", "2,800,000"]
+      },
+      "answer": { "th": "1,900,000", "en": "1,900,000" },
+      "explanation": {
+        "th": "1,900,000 หลักแสนคือ 9 จึงปัดขึ้นเป็น 2,000,000 (ส่วน 2,600,000 จะปัดขึ้นเป็น 3,000,000)",
+        "en": "For 1,900,000, the hundred thousands digit is 9, so it rounds up to 2,000,000 (whereas 2,600,000 would round up to 3,000,000)."
+      }
+    },
+    {
+      "id": 30,
+      "topic": {
+        "th": "คณิตศาสตร์พื้นฐาน ป.4 เทอม 1 - บทที่ 2 การบวกและการลบจำนวนนับที่มากกว่า 100,000",
+        "en": "Basic Mathematics P.4 Term 1 - Unit 2: Addition and Subtraction of Numbers Greater Than 100,000"
+      },
+      "skill": {
+        "th": "จำนวนและพีชคณิต",
+        "en": "Numbers & Algebra"
+      },
+      "difficulty": { "th": "ง่าย", "en": "Easy" },
+      "question": {
+        "th": "ค่าประมาณเป็นจำนวนเต็มแสนของ 849,999 คือข้อใด?",
+        "en": "What is 849,999 rounded to the nearest hundred thousand?"
+      },
+      "options": {
+        "th": ["800,000", "900,000", "850,000", "1,000,000"],
+        "en": ["800,000", "900,000", "850,000", "1,000,000"]
+      },
+      "answer": { "th": "800,000", "en": "800,000" },
+      "explanation": {
+        "th": "การประมาณเป็นจำนวนเต็มแสน ให้ดูที่หลักหมื่นเท่านั้น ซึ่งก็คือเลข 4 เลข 4 ให้ปัดทิ้ง จึงตอบ 800,000",
+        "en": "To round to the nearest hundred thousand, look ONLY at the ten thousands digit, which is 4. Since 4 is less than 5, round down to 800,000."
+      }
+    }
+  ]
+}
